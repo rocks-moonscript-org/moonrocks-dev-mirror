@@ -157,6 +157,15 @@ repository = {
          }
       }
    },
+   lapis = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    lazybag = {
       ['scm-0'] = {
          {
