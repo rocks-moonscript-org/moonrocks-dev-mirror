@@ -96,6 +96,13 @@ repository = {
          }
       }
    },
+   csv = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    cwtest = {
       ['scm-1'] = {
          {
@@ -700,6 +707,13 @@ repository = {
       }
    },
    mk = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   mmapfile = {
       ['scm-1'] = {
          {
             arch = "rockspec"
