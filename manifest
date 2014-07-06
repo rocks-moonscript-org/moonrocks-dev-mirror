@@ -1,6 +1,13 @@
 commands = {}
 modules = {}
 repository = {
+   adscaptcha = {
+      ['0.1-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    aesfileencrypt = {
       ['scm-0'] = {
          {
