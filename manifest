@@ -669,6 +669,13 @@ repository = {
          }
       }
    },
+   ['lzmq-beacon'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lzmq-ffi'] = {
       ['scm-0'] = {
          {
