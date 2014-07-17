@@ -1,5 +1,5 @@
 package = 'seawolf'
-version = '0.8-0'
+version = '1.0-0'
 source = {
   url = 'git://github.com/ophal/seawolf.git',
   tag = 'master',
@@ -16,12 +16,13 @@ dependencies = {
   'lpeg',
   'luasocket',
   'luafilesystem',
-  'md5',
-  'luuid',
+  'lsha2',
+  'luuid = 20120501-1',
 }
 build = {
   type = 'builtin',
   modules = {
+    ['seawolf'] = 'init.lua',
     ['seawolf.behaviour'] = 'behaviour/init.lua',
     ['seawolf.calendar'] = 'calendar/init.lua',
     ['seawolf.contrib'] = 'contrib/init.lua',
@@ -32,6 +33,5 @@ build = {
     ['seawolf.text'] = 'text/init.lua',
     ['seawolf.text.preg'] = 'text/preg.lua',
     ['seawolf.variable'] = 'variable/init.lua',
-    ['seawolf.variable.serialize'] = 'variable/serialize/init.lua',
   },
 }
