@@ -711,6 +711,13 @@ repository = {
          }
       }
    },
+   magic = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    md5 = {
       ['cvs-1'] = {
          {
