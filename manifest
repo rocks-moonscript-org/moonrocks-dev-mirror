@@ -462,6 +462,13 @@ repository = {
          }
       }
    },
+   luacwrap = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    luafcgi = {
       ['scm-1'] = {
          {
