@@ -117,6 +117,13 @@ repository = {
          }
       }
    },
+   evdev = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    fakeredis = {
       ['scm-1'] = {
          {
