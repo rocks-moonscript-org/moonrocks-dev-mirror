@@ -715,6 +715,13 @@ repository = {
          }
       }
    },
+   luatwit = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    luatz = {
       ['scm-0'] = {
          {
