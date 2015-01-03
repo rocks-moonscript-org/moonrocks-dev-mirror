@@ -145,6 +145,13 @@ repository = {
          }
       }
    },
+   ['graph-toolkit'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    haricot = {
       ['scm-1'] = {
          {
@@ -1140,6 +1147,15 @@ repository = {
       ['scm-0'] = {
          {
             arch = "rockspec"
+         }
+      }
+   },
+   vida = {
+      ['git-1'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
          }
       }
    },
