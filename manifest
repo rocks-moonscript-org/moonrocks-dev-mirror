@@ -22,6 +22,15 @@ repository = {
          }
       }
    },
+   bhttp = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    bit32 = {
       ['scm-1'] = {
          {
