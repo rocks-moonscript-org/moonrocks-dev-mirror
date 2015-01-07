@@ -112,6 +112,30 @@ repository = {
          }
       }
    },
+   cqueues = {
+      ['scm-51'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-52'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-53'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['cqueues-pgsql'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    csv = {
       ['scm-1'] = {
          {
