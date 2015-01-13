@@ -858,7 +858,7 @@ repository = {
       }
    },
    lzlib = {
-      ['git-1'] = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }

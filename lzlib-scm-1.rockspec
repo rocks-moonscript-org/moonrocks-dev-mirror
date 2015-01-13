@@ -1,8 +1,7 @@
 package="lzlib"
-version="git-1"
+version="scm-1"
 source = {
-   url = "git://github.com/LuaDist/lzlib.git",
-   branch = "master",
+   url = "git://github.com/hishamhm/lzlib",
 }
 description = {
    summary = "Lua bindings to the ZLib compression library",
@@ -15,7 +14,7 @@ description = {
    license = "MIT/X11"
 }
 dependencies = {
-   "lua ~> 5.1"
+   "lua >= 5.1, < 5.4"
 }
 external_dependencies = {
    ZLIB = {
