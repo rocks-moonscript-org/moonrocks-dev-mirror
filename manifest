@@ -15,6 +15,13 @@ repository = {
          }
       }
    },
+   arc4random = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    bcrypt = {
       ['scm-1'] = {
          {
@@ -678,6 +685,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-3'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    luaprofiler = {
@@ -1158,6 +1170,13 @@ repository = {
    },
    stdlib = {
       ['git-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   symmetric = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
