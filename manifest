@@ -320,6 +320,13 @@ repository = {
          }
       }
    },
+   lpeg_patterns = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lqt = {
       ['scm-1'] = {
          {
@@ -575,6 +582,11 @@ repository = {
          }
       },
       ['scm-7'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-8'] = {
          {
             arch = "rockspec"
          }
