@@ -1130,6 +1130,13 @@ repository = {
          }, {
             arch = "src"
          }
+      },
+      ['scm.trunk.nightly547-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
       }
    },
    ['redis-lua'] = {
