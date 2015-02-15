@@ -1026,6 +1026,13 @@ repository = {
          }
       }
    },
+   mmdblua = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    moonscript = {
       ['dev-1'] = {
          {
@@ -1201,6 +1208,13 @@ repository = {
    },
    sendmail = {
       ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   setuid = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
