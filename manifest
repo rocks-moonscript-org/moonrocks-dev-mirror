@@ -171,6 +171,13 @@ repository = {
          }
       }
    },
+   decomposition = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    evdev = {
       ['scm-1'] = {
          {
