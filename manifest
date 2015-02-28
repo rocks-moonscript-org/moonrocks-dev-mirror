@@ -59,6 +59,13 @@ repository = {
          }
       }
    },
+   busted = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    cgilua = {
       ['5.1.2rc1-1'] = {
          {
@@ -622,46 +629,6 @@ repository = {
    },
    luacheck = {
       ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['scm-2'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['scm-3'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['scm-4'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['scm-5'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['scm-6'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['scm-7'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['scm-8'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['scm-9'] = {
          {
             arch = "rockspec"
          }
@@ -1255,6 +1222,13 @@ repository = {
          }
       },
       ['scm-3'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   sandbox = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
