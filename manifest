@@ -385,6 +385,13 @@ repository = {
          }
       }
    },
+   ['lluv-redis'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lluv-ssl'] = {
       ['scm-0'] = {
          {
