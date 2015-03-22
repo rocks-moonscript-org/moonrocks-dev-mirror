@@ -59,6 +59,13 @@ repository = {
          }
       }
    },
+   brain = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    busted = {
       ['scm-0'] = {
          {
@@ -236,6 +243,13 @@ repository = {
          }
       }
    },
+   gbk = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['graph-toolkit'] = {
       ['scm-1'] = {
          {
@@ -315,8 +329,6 @@ repository = {
       ['dev-1'] = {
          {
             arch = "rockspec"
-         }, {
-            arch = "src"
          }
       }
    },
@@ -337,6 +349,13 @@ repository = {
       }
    },
    lazybag = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   lbuffer = {
       ['scm-0'] = {
          {
             arch = "rockspec"
@@ -400,6 +419,13 @@ repository = {
       }
    },
    ['lluv-websocket'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   lpath = {
       ['scm-0'] = {
          {
             arch = "rockspec"
@@ -1375,6 +1401,13 @@ repository = {
       }
    },
    try = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   unzip = {
       ['scm-0'] = {
          {
             arch = "rockspec"
