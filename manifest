@@ -1092,15 +1092,6 @@ repository = {
          }
       }
    },
-   milkyway = {
-      ['dev-1'] = {
-         {
-            arch = "rockspec"
-         }, {
-            arch = "src"
-         }
-      }
-   },
    mk = {
       ['scm-1'] = {
          {
