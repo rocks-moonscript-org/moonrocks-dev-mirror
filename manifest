@@ -437,6 +437,20 @@ repository = {
          }
       }
    },
+   ['lluv-memcached'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['lluv-poll-zmq'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lluv-redis'] = {
       ['scm-0'] = {
          {
