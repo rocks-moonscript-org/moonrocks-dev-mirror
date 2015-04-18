@@ -547,6 +547,15 @@ repository = {
          }
       }
    },
+   ['lua-dbus'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    ['lua-ev'] = {
       ['scm-1'] = {
          {
@@ -1162,6 +1171,13 @@ repository = {
    },
    moonscript = {
       ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   mpris = {
+      ['scm-0'] = {
          {
             arch = "rockspec"
          }
