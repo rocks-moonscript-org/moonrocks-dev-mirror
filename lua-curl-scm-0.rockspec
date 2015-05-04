@@ -1,5 +1,6 @@
 package = "Lua-cURL"
 version = "scm-0"
+
 source = {
   url = "https://github.com/Lua-cURL/Lua-cURLv3/archive/master.zip",
   dir = "Lua-cURLv3-master",
@@ -14,13 +15,7 @@ description = {
 }
 
 dependencies = {
-  "lua >= 5.1, < 5.3"
-}
-
-external_dependencies = {
-  CURL = {
-    header = "curl/curl.h"
-  }
+  "lua >= 5.1, < 5.4"
 }
 
 external_dependencies = {
@@ -41,6 +36,8 @@ external_dependencies = {
 }
 
 build = {
+  copy_directories = {'doc', 'examples'},
+
   type = "builtin",
 
   platforms = {
@@ -59,6 +56,7 @@ build = {
   modules = {
     ["cURL"           ] = "src/lua/cURL.lua",
     ["cURL.safe"      ] = "src/lua/cURL/safe.lua",
+    ["cURL.utils"     ] = "src/lua/cURL/utils.lua",
     ["cURL.impl.cURL" ] = "src/lua/cURL/impl/cURL.lua",
 
     lcurl = {

@@ -9,6 +9,7 @@ description = {
   summary = "Lua library for sanitizing untrusted HTML",
   license = "MIT",
   maintainer = "Leaf Corcoran <leafot@gmail.com>",
+  homepage = "https://github.com/leafo/web_sanitize",
 }
 
 dependencies = {
@@ -20,6 +21,10 @@ build = {
   type = "builtin",
   modules = {
     ["web_sanitize"] = "web_sanitize/init.lua",
+    ["web_sanitize.css"] = "web_sanitize/css.lua",
+    ["web_sanitize.css_types"] = "web_sanitize/css_types.lua",
+    ["web_sanitize.css_whitelist"] = "web_sanitize/css_whitelist.lua",
+    ["web_sanitize.html"] = "web_sanitize/html.lua",
     ["web_sanitize.whitelist"] = "web_sanitize/whitelist.lua",
   }
 }

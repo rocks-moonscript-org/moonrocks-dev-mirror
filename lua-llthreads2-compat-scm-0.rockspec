@@ -15,7 +15,7 @@ description = {
   ]],
 }
 dependencies = {
-  "lua >= 5.1, < 5.3",
+  "lua >= 5.1, < 5.4",
 }
 build = {
   type = "builtin",
@@ -39,6 +39,7 @@ build = {
     llthreads = {
       sources = { "src/l52util.c", "src/llthread.c" },
       defines = { "LLTHREAD_MODULE_NAME=llthreads"  },
-    }
+    },
+    ["llthreads.ex"] = "src/lua/llthreads2/ex.lua",
   }
 }

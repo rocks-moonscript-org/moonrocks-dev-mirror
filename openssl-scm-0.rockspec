@@ -32,12 +32,9 @@ build = {
       install_command = [[nmake -f makefile.win install]]
     },
     unix = {
-      type = "make",
-      variables = {
-        LUA_LUADIR = "$(LUADIR)",
-		LUA_LIBDIR = "$(LIBDIR)",
-		LUA_PREFIX  = "$(PREFIX)"
-      }
+      type = "command",
+      build_command = [[make]],
+      install_command = [[make install]]
 	}
   }
 }

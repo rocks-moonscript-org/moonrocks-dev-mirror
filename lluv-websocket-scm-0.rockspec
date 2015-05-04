@@ -15,13 +15,15 @@ description = {
 dependencies = {
   "lua >= 5.1, < 5.4",
   "lua-websockets-core",
-  "lluv",
+  "lluv > 0.1.1",
 }
 
 build = {
   type = "builtin",
 
   modules = {
-    ['lluv.websocket'] = 'src/lluv/websocket.lua',
+    ['lluv.websocket']                = 'src/lluv/websocket.lua',
+    ['lluv.websocket.utf8']           = 'src/lluv/websocket/utf8.lua',
+    ['lluv.websocket.utf8_validator'] = 'src/lluv/websocket/utf8_validator.lua',
   }
 }

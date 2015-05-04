@@ -12,6 +12,7 @@ description = {
 }
 dependencies = {
 	"lua ~> 5.1";
+	"luafilesystem";
 	"luasocket >= 2";
 	"luasec >= 0.5";
 	"luaexpat >= 1.3.0";
@@ -191,13 +192,13 @@ build = {
 --- -	2015-01-20 15:19:59.612575624 -0500
 +++ prosody	2015-01-20 15:17:38.751627764 -0500
 @@ -9,12 +9,13 @@
- 
+
  -- prosody - main executable for Prosody XMPP server
- 
+
 --- Will be modified by configure script if run --
 +require "luarocks.loader";
 +local luarocks_install_dir = require"luarocks.path".install_dir(assert(require "luarocks.show".pick_installed_rock("]] .. package .. [[", "]] .. version .. [[", nil)))
- 
+
  CFG_SOURCEDIR=os.getenv("PROSODY_SRCDIR");
 -CFG_CONFIGDIR=os.getenv("PROSODY_CFGDIR");
 -CFG_PLUGINDIR=os.getenv("PROSODY_PLUGINDIR");
@@ -205,9 +206,9 @@ build = {
 +CFG_CONFIGDIR=os.getenv("PROSODY_CFGDIR") or (luarocks_install_dir .. "/conf");
 +CFG_PLUGINDIR=os.getenv("PROSODY_PLUGINDIR") or (luarocks_install_dir .. "/plugins");
 +CFG_DATADIR=os.getenv("PROSODY_DATADIR") or (luarocks_install_dir .. "/data");
- 
+
  -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
- 
+
 ]]
 	};
 }

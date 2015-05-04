@@ -2,7 +2,7 @@ package = "penlight"
 version = "scm-1"
 
 source = {
-   url = "git://github.com/stevedonovan/Penlight.git"
+  url = "git://github.com/stevedonovan/Penlight.git",
 }
 
 description = {
@@ -18,12 +18,13 @@ on tables and sequences.
 }
 
 dependencies = {
-  "luafilesystem",
+  "luafilesystem"
 }
 
 build = {
   type = "builtin",
   modules = {
+    ["pl"] = "lua/pl/init.lua",
     ["pl.strict"] = "lua/pl/strict.lua",
     ["pl.dir"] = "lua/pl/dir.lua",
     ["pl.operator"] = "lua/pl/operator.lua",
@@ -38,6 +39,7 @@ build = {
     ["pl.stringx"] = "lua/pl/stringx.lua",
     ["pl.lexer"] = "lua/pl/lexer.lua",
     ["pl.utils"] = "lua/pl/utils.lua",
+    ["pl.compat"] = "lua/pl/compat.lua",
     ["pl.sip"] = "lua/pl/sip.lua",
     ["pl.permute"] = "lua/pl/permute.lua",
     ["pl.pretty"] = "lua/pl/pretty.lua",
@@ -45,7 +47,6 @@ build = {
     ["pl.List"] = "lua/pl/List.lua",
     ["pl.data"] = "lua/pl/data.lua",
     ["pl.Date"] = "lua/pl/Date.lua",
-    ["pl.init"] = "lua/pl/init.lua",
     ["pl.luabalanced"] = "lua/pl/luabalanced.lua",
     ["pl.comprehension"] = "lua/pl/comprehension.lua",
     ["pl.path"] = "lua/pl/path.lua",
@@ -59,7 +60,9 @@ build = {
     ["pl.OrderedMap"] = "lua/pl/OrderedMap.lua",
     ["pl.Set"] = "lua/pl/Set.lua",
     ["pl.xml"] = "lua/pl/xml.lua",
-    ["pl.platf.luajava"] = "lua/pl/platf/luajava.lua"
+    ["pl.url"] = "lua/pl/url.lua",
+    ["pl.types"] = "lua/pl/types.lua",
+    ["pl.import_into"] = "lua/pl/import_into.lua"
   },
+  copy_directories = {"doc", "tests"}
 }
-

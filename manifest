@@ -1188,6 +1188,13 @@ repository = {
          }
       }
    },
+   non = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    oauth_light = {
       ['scm-1'] = {
          {

@@ -3,7 +3,7 @@ version = "scm-0"
 
 source = {
   url = "https://github.com/moteus/lua-gntp/archive/master.zip",
-  dir = "lua-lluv-gntp-master",
+  dir = "lua-gntp-master",
 }
 
 description = {
@@ -27,7 +27,8 @@ build = {
 
   modules = {
     [ "gntp"                     ] = "src/lua/gntp.lua",
-    [ "gntp.connector.lluv"      ] = "src/gntp/connector/lluv.lua",
-    [ "gntp.connector.luasocket" ] = "src/gntp/connector/luasocket.lua",
+    [ "gntp.crypto"              ] = "src/lua/gntp/crypto.lua",
+    [ "gntp.connector.lluv"      ] = "src/lua/gntp/connector/lluv.lua",
+    [ "gntp.connector.luasocket" ] = "src/lua/gntp/connector/luasocket.lua",
   }
 }

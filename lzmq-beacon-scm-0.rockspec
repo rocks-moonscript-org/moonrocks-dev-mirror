@@ -3,7 +3,7 @@ version = "scm-0"
 
 source = {
   url = "https://github.com/moteus/lzmq-beacon/archive/master.zip",
-  dir = "lzmq-auth-master",
+  dir = "lzmq-beacon-master",
 }
 
 description = {

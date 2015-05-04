@@ -16,7 +16,7 @@ description = {
 }
 
 dependencies = {
-  "lua >= 5.1, < 5.3"
+  "lua >= 5.1, < 5.4"
 }
 
 external_dependencies = {
@@ -37,21 +37,26 @@ external_dependencies = {
 }
 
 build = {
-  copy_directories = {'doc', 'examples'},
+  copy_directories = {'doc', 'examples', 'test'},
 
   type = "builtin",
 
   platforms = {
     windows = { modules = {
       lluv = {
-        libraries = {"libuv", "ws2_32"},
+        libraries = {"libuv", "ws2_32", "Iphlpapi", "Psapi", "Advapi32"},
+      }
+    }},
+    linux   = { modules = {
+      lluv = {
+        libraries = {"uv", "rt"},
       }
     }},
     unix    = { modules = {
       lluv = {
-        libraries = {"uv", "rt"},
+        libraries = {"uv"},
       }
-    }}
+    }},
   },
 
   modules = {
@@ -65,10 +70,14 @@ build = {
         "src/lluv_check.c",    "src/lluv_poll.c",     "src/lluv_signal.c",
         "src/lluv_fs_event.c", "src/lluv_fs_poll.c",  "src/lluv_req.c",
         "src/lluv_misc.c",     "src/lluv_process.c",  "src/lluv_dns.c",
-        "src/l52util.c",     
+        "src/l52util.c",       "src/lluv_list.c"
       },
       incdirs   = { "$(UV_INCDIR)" },
       libdirs   = { "$(UV_LIBDIR)" }
     },
+    ["lluv.ftp"      ] = "src/lua/lluv/ftp.lua",
+    ["lluv.utils"    ] = "src/lua/lluv/utils.lua",
+    ["lluv.memcached"] = "src/lua/lluv/memcached.lua",
+    ["lluv.luasocket"] = "src/lua/lluv/luasocket.lua",
   }
 }

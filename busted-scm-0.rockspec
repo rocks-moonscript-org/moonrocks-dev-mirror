@@ -19,15 +19,15 @@ description = {
 }
 dependencies = {
   'lua >= 5.1',
-  'lua_cliargs >= 2.3-3',
+  'lua_cliargs >= 2.5-0',
   'luafilesystem >= 1.5.0',
   'dkjson >= 2.1.0',
-  'say >= 1.2-1',
-  'luassert >= 1.7.4-0',
-  'ansicolors >= 1.0-1',
+  'say >= 1.3-0',
+  'luassert >= 1.7.6-0',
   'lua-term >= 0.1-1',
-  'penlight >= 1.0.0-1',
-  'mediator_lua >= 1.1-3',
+  'penlight >= 1.3.2-2',
+  'mediator_lua >= 1.1.1-0',
+  'luasocket >= 2.0.1'
 }
 build = {
   type = 'builtin',
@@ -40,6 +40,8 @@ build = {
     ['busted.runner']                         = 'busted/runner.lua',
     ['busted.status']                         = 'busted/status.lua',
     ['busted.utils']                          = 'busted/utils.lua',
+    ['busted.block']                          = 'busted/block.lua',
+    ['busted.execute']                        = 'busted/execute.lua',
     ['busted.init']                           = 'busted/init.lua',
 
     ['busted.modules.configuration_loader']   = 'busted/modules/configuration_loader.lua',
@@ -47,6 +49,8 @@ build = {
     ['busted.modules.test_file_loader']       = 'busted/modules/test_file_loader.lua',
     ['busted.modules.output_handler_loader']  = 'busted/modules/output_handler_loader.lua',
     ['busted.modules.helper_loader']          = 'busted/modules/helper_loader.lua',
+    ['busted.modules.filter_loader']          = 'busted/modules/filter_loader.lua',
+    ['busted.modules.cli']                    = 'busted/modules/cli.lua',
 
     ['busted.modules.files.lua']              = 'busted/modules/files/lua.lua',
     ['busted.modules.files.moonscript']       = 'busted/modules/files/moonscript.lua',
@@ -58,11 +62,13 @@ build = {
     ['busted.outputHandlers.TAP']             = 'busted/outputHandlers/TAP.lua',
     ['busted.outputHandlers.json']            = 'busted/outputHandlers/json.lua',
     ['busted.outputHandlers.junit']           = 'busted/outputHandlers/junit.lua',
+    ['busted.outputHandlers.gtest']           = 'busted/outputHandlers/gtest.lua',
     ['busted.outputHandlers.sound']           = 'busted/outputHandlers/sound.lua',
 
     ['busted.languages.en']                   = 'busted/languages/en.lua',
     ['busted.languages.ar']                   = 'busted/languages/ar.lua',
     ['busted.languages.de']                   = 'busted/languages/de.lua',
+    ['busted.languages.es']                   = 'busted/languages/es.lua',
     ['busted.languages.fr']                   = 'busted/languages/fr.lua',
     ['busted.languages.ja']                   = 'busted/languages/ja.lua',
     ['busted.languages.nl']                   = 'busted/languages/nl.lua',
