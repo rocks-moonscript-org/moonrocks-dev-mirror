@@ -1034,6 +1034,15 @@ repository = {
          }
       }
    },
+   luautf8 = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    luavenster = {
       ['scm-1'] = {
          {
