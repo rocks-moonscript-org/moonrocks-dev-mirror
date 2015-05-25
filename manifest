@@ -1507,6 +1507,13 @@ repository = {
          }
       }
    },
+   testy = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    tlua = {
       ['scm-1'] = {
          {
