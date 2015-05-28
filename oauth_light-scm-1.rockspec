@@ -17,8 +17,8 @@ description = {
 
 dependencies = {
     "lua >= 5.1",
-    "lbase64 >= 20120820",
-    "luacrypto >= 0.3.2",
+    "lbase64",
+    "luaossl",
 }
 
 build = {
