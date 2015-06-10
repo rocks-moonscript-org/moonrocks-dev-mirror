@@ -38,7 +38,7 @@ build = {
 			defines = {
 				"_REENTRANT"; "_THREAD_SAFE";
 				"_GNU_SOURCE";
-				"LUA_COMPAT_APIUNSIGNED";
+				"LUA_COMPAT_APIINTCASTS";
 			};
 		};
 		["openssl"] = "src/openssl.lua";
@@ -48,14 +48,15 @@ build = {
 		["openssl.hmac"] = "src/openssl.hmac.lua";
 		["openssl.pkcs12"] = "src/openssl.pkcs12.lua";
 		["openssl.pkey"] = "src/openssl.pkey.lua";
+		["openssl.pubkey"] = "src/openssl.pubkey.lua";
 		["openssl.rand"] = "src/openssl.rand.lua";
 		["openssl.ssl.context"] = "src/openssl.ssl.context.lua";
 		["openssl.ssl"] = "src/openssl.ssl.lua";
+		["openssl.x509"] = "src/openssl.x509.lua";
 		["openssl.x509.altname"] = "src/openssl.x509.altname.lua";
 		["openssl.x509.chain"] = "src/openssl.x509.chain.lua";
 		["openssl.x509.crl"] = "src/openssl.x509.crl.lua";
 		["openssl.x509.extension"] = "src/openssl.x509.extension.lua";
-		["openssl.x509"] = "src/openssl.x509.lua";
 		["openssl.x509.name"] = "src/openssl.x509.name.lua";
 		["openssl.x509.store"] = "src/openssl.x509.store.lua";
 	}

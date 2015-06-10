@@ -21,7 +21,7 @@ dependencies = {
   'rs232',
   'lluv-poll-zmq',
   'lzmq >= 0.4.1',
-  'llthreads2',
+  'lua-llthreads2',
   'lua-log',
 }
 
@@ -34,6 +34,7 @@ build = {
   type = "builtin",
 
   modules = {
-    ['lluv.rs232'] = 'src/lua/lluv/rs232.lua',
+    ['lluv.rs232'   ] = 'src/lua/lluv/rs232.lua',
+    ['lluv.rs232.co'] = 'src/lua/lluv/rs232/co.lua',
   }
 }
