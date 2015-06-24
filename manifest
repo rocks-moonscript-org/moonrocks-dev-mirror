@@ -226,7 +226,7 @@ repository = {
       }
    },
    dinner = {
-      ['scm-1'] = {
+      ['scm-2'] = {
          {
             arch = "rockspec"
          }
@@ -236,10 +236,6 @@ repository = {
       ['scm-1'] = {
          {
             arch = "rockspec"
-         }, {
-            arch = "src"
-         }, {
-            arch = "all"
          }
       }
    },
@@ -247,10 +243,6 @@ repository = {
       ['scm-1'] = {
          {
             arch = "rockspec"
-         }, {
-            arch = "src"
-         }, {
-            arch = "all"
          }
       }
    },
@@ -982,6 +974,20 @@ repository = {
       }
    },
    ['luarocks-addon-hello'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['luarocks-addon-moonc'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['luarocks-addon-test'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
