@@ -1649,13 +1649,6 @@ repository = {
          }
       }
    },
-   tree = {
-      ['dev-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    try = {
       ['scm-0'] = {
          {
