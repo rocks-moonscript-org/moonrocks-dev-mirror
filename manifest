@@ -244,17 +244,8 @@ repository = {
          {
             arch = "rockspec"
          }
-      }
-   },
-   ['dinner-fork'] = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   ['dinner-pan'] = {
-      ['scm-1'] = {
+      },
+      ['scm-4'] = {
          {
             arch = "rockspec"
          }
@@ -312,6 +303,13 @@ repository = {
       }
    },
    gbk = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   getsize = {
       ['scm-0'] = {
          {
             arch = "rockspec"
@@ -994,15 +992,13 @@ repository = {
          }
       }
    },
-   ['luarocks-addon-hello'] = {
+   ['luarocks-addon-moonc'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
          }
-      }
-   },
-   ['luarocks-addon-moonc'] = {
-      ['scm-1'] = {
+      },
+      ['scm-2'] = {
          {
             arch = "rockspec"
          }
@@ -1010,6 +1006,11 @@ repository = {
    },
    ['luarocks-addon-test'] = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-2'] = {
          {
             arch = "rockspec"
          }

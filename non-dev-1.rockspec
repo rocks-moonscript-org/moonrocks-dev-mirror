@@ -2,12 +2,12 @@ package = "non"
 version = "dev-1"
 
 source = {
-  url = "git://github.com/non2d/non.git",
+  url = "git://github.com/nondev/non.git",
 }
 
 description = {
-  summary = "Make cross-platform games in Lua and MoonScript",
-  homepage = "http://nononsense.science",
+  summary = "Game engine for MoonScript, in MoonScript.",
+  homepage = "http://nondev.io",
   maintainer = "Thomas Slusny <slusnucky@gmail.com>",
   license = "MIT"
 }
@@ -20,20 +20,16 @@ dependencies = {
 build = {
   type = "command",
   
-  modules = {
-    ["non"] = "bin/non.lua"
-  },
-  
   install = {
     bin = { "bin/non.jar", "bin/non" }
   },
   
   platforms = {
     unix = {
-      build_command = "sh install"
+      build_command = "sh build.sh"
     },
     windows = {
-      build_command = "install"
+      build_command = "call build.bat"
     }
   }
 }
