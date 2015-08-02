@@ -251,6 +251,13 @@ repository = {
          }
       }
    },
+   elasticsearch = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    evdev = {
       ['scm-1'] = {
          {
