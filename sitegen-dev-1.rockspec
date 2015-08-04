@@ -20,7 +20,8 @@ dependencies = {
 	"luafilesystem >= 1.5",
 	"lua-cjson",
 	"date",
-	"yaml"
+	"yaml", -- remove me
+	"ansicolors",
 }
 
 build = {
@@ -28,6 +29,8 @@ build = {
 	modules = {
 		["sitegen"] = "sitegen/init.lua",
 		["sitegen.cache"] = "sitegen/cache.lua",
+		["sitegen.cmd.actions"] = "sitegen/cmd/actions.lua",
+		["sitegen.cmd.util"] = "sitegen/cmd/util.lua",
 		["sitegen.common"] = "sitegen/common.lua",
 		["sitegen.default.templates"] = "sitegen/default/templates.lua",
 		["sitegen.formatters.default"] = "sitegen/formatters/default.lua",
@@ -35,6 +38,7 @@ build = {
 		["sitegen.html"] = "sitegen/html.lua",
 		["sitegen.output"] = "sitegen/output.lua",
 		["sitegen.page"] = "sitegen/page.lua",
+		["sitegen.path"] = "sitegen/path.lua",
 		["sitegen.plugin"] = "sitegen/plugin.lua",
 		["sitegen.plugins.analytics"] = "sitegen/plugins/analytics.lua",
 		["sitegen.plugins.blog"] = "sitegen/plugins/blog.lua",
@@ -44,8 +48,10 @@ build = {
 		["sitegen.plugins.feed"] = "sitegen/plugins/feed.lua",
 		["sitegen.plugins.indexer"] = "sitegen/plugins/indexer.lua",
 		["sitegen.plugins.pygments"] = "sitegen/plugins/pygments.lua",
+		["sitegen.query"] = "sitegen/query.lua",
 		["sitegen.renderer"] = "sitegen/renderer.lua",
 		["sitegen.renderers.html"] = "sitegen/renderers/html.lua",
+		["sitegen.renderers.lapis"] = "sitegen/renderers/lapis.lua",
 		["sitegen.renderers.markdown"] = "sitegen/renderers/markdown.lua",
 		["sitegen.renderers.moon"] = "sitegen/renderers/moon.lua",
 		["sitegen.site"] = "sitegen/site.lua",
