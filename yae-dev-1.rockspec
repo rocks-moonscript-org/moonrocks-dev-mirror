@@ -1,13 +1,13 @@
-package = "non"
+package = "yae"
 version = "dev-1"
 
 source = {
-  url = "git://github.com/nondev/non.git",
+  url = "git://github.com/yaedev/yae.git",
 }
 
 description = {
   summary = "Game engine for MoonScript, in MoonScript.",
-  homepage = "http://nondev.io",
+  homepage = "http://yae.io",
   maintainer = "Thomas Slusny <slusnucky@gmail.com>",
   license = "MIT"
 }
@@ -19,17 +19,19 @@ dependencies = {
 
 build = {
   type = "command",
-  
+
   install = {
-    bin = { "bin/non.jar", "bin/non" }
+    bin = { "bin/yae" }
   },
-  
+
   platforms = {
     unix = {
-      build_command = "sh build.sh"
+      build_command = "sh build"
     },
     windows = {
-      build_command = "call build.bat"
+      build_command = "build"
     }
-  }
+  },
+
+  copy_directories = { "core", "res", "src" }
 }
