@@ -1420,15 +1420,6 @@ repository = {
          }
       }
    },
-   ['pandoc-cli-builder'] = {
-      ['cvs-1'] = {
-         {
-            arch = "rockspec"
-         }, {
-            arch = "src"
-         }
-      }
-   },
    parallel = {
       ['scm-0'] = {
          {
