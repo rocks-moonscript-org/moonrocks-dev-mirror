@@ -225,6 +225,13 @@ repository = {
          }
       }
    },
+   ctc = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    cwbase = {
       ['scm-1'] = {
          {
@@ -441,6 +448,13 @@ repository = {
       }
    },
    ['lapis-bayes'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['lapis-community'] = {
       ['dev-1'] = {
          {
             arch = "rockspec"
