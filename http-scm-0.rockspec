@@ -3,6 +3,7 @@ version = "scm-0"
 
 description = {
 	summary = "HTTP library for Lua";
+	homepage = "https://github.com/daurnimator/lua-http";
 	license = "MIT/X11";
 }
 
@@ -14,19 +15,33 @@ dependencies = {
 	"lua >= 5.1";
 	"compat53"; -- Only if lua < 5.3
 	"bit32"; -- Only if lua == 5.1
-	"cqueues";
+	"cqueues >= 20150907";
 	"luaossl >= 20150504";
 	"lbase64";
-	"lzlib"; -- or lua-zlib"
 	"lpeg_patterns";
+	"fifo";
+	-- the following are optional
+	-- "lzlib"; -- or lua-zlib;
 }
 
 build = {
 	type = "builtin";
 	modules = {
 		["http.bit"] = "http/bit.lua";
+		["http.client"] = "http/client.lua";
 		["http.h1_connection"] = "http/h1_connection.lua";
+		["http.h1_reason_phrases"] = "http/h1_reason_phrases.lua";
+		["http.h1_stream"] = "http/h1_stream.lua";
+		["http.h2_connection"] = "http/h2_connection.lua";
+		["http.h2_error"] = "http/h2_error.lua";
+		["http.h2_stream"] = "http/h2_stream.lua";
 		["http.headers"] = "http/headers.lua";
 		["http.hpack"] = "http/hpack.lua";
+		["http.request"] = "http/request.lua";
+		["http.server"] = "http/server.lua";
+		["http.stream_common"] = "http/stream_common.lua";
+		["http.tls"] = "http/tls.lua";
+		["http.util"] = "http/util.lua";
+		["http.zlib"] = "http/zlib.lua";
 	};
 }
