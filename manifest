@@ -617,6 +617,13 @@ repository = {
          }
       }
    },
+   lredis = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ltn12 = {
       ['scm-0'] = {
          {
