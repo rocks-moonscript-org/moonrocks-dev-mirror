@@ -13,10 +13,10 @@ source = {
 
 dependencies = {
 	"lua >= 5.1";
-	"compat53"; -- Only if lua < 5.3
+	"compat53 >= 0.3"; -- Only if lua < 5.3
 	"bit32"; -- Only if lua == 5.1
 	"cqueues >= 20150907";
-	"luaossl >= 20150504";
+	"luaossl >= 20150727";
 	"lbase64";
 	"lpeg_patterns";
 	"fifo";
