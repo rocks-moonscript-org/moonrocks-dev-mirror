@@ -302,6 +302,13 @@ repository = {
          }
       }
    },
+   fltk4lua = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ftp = {
       ['scm-0'] = {
          {
