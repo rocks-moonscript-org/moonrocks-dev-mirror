@@ -943,6 +943,15 @@ repository = {
          }
       }
    },
+   luaffi = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    luafilesystem = {
       ['1.4.1rc1-1'] = {
          {
