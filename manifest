@@ -589,6 +589,15 @@ repository = {
          }
       }
    },
+   ['love-release'] = {
+      ['git-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    lpath = {
       ['scm-0'] = {
          {
@@ -1513,6 +1522,13 @@ repository = {
    },
    pop3 = {
       ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   profi = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
