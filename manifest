@@ -1442,6 +1442,13 @@ repository = {
          }
       }
    },
+   nnsparse = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    oauth_light = {
       ['scm-1'] = {
          {
