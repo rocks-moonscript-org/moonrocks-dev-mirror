@@ -617,6 +617,13 @@ repository = {
          }, {
             arch = "src"
          }
+      },
+      ['git-1'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
       }
    },
    lpath = {
