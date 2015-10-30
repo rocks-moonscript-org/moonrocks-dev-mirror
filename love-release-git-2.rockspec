@@ -1,5 +1,5 @@
 package = "love-release"
-version = "git-1"
+version = "git-2"
 source = {
   url = "git://github.com/MisterDA/love-release.git",
   branch = "luarocks",
@@ -14,9 +14,11 @@ description = {
   homepage = "https://github.com/MisterDA/love-release",
 }
 dependencies = {
+  "lua >= 5.2",
   "luafilesystem",
   "lua-zip",
   "argparse",
+  "luasec",
 }
 build = {
   type = "none",
@@ -25,6 +27,9 @@ build = {
       ["love-release"] = "init.lua",
       ["love-release.project"] = "scripts/project.lua",
       ["love-release.utils"] = "scripts/utils.lua",
+      ["love-release.zip"] = "scripts/zip.lua",
+      ["love-release.platforms.love"] = "platforms/love.lua",
+      ["love-release.platforms.windows"] = "platforms/windows.lua",
     },
     bin = {
       ["love-release"] = "main.lua",

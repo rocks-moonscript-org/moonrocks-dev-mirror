@@ -618,11 +618,9 @@ repository = {
             arch = "src"
          }
       },
-      ['git-1'] = {
+      ['git-2'] = {
          {
             arch = "rockspec"
-         }, {
-            arch = "src"
          }
       }
    },
