@@ -823,6 +823,15 @@ repository = {
          }
       }
    },
+   ['lua-pb'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    ['lua-phpserialize'] = {
       ['scm-1'] = {
          {
