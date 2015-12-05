@@ -31,6 +31,7 @@ build = {
       ["love-release.zip"] = "scripts/zip.lua",
       ["love-release.platforms.love"] = "platforms/love.lua",
       ["love-release.platforms.windows"] = "platforms/windows.lua",
+      ["love-release.platforms.macosx"] = "platforms/macosx.lua",
     },
     bin = {
       ["love-release"] = "main.lua",
