@@ -1505,6 +1505,13 @@ repository = {
          }
       }
    },
+   ['ngx-oauth'] = {
+      ['dev-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    nozzle = {
       ['git-1'] = {
          {
