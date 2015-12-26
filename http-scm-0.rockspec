@@ -17,8 +17,8 @@ dependencies = {
 	"bit32"; -- Only if lua == 5.1
 	"cqueues >= 20150907";
 	"luaossl >= 20150727";
-	"lbase64";
-	"lpeg_patterns";
+	"basexx >= 0.2.0";
+	"lpeg_patterns >= 0.2";
 	"fifo";
 	-- the following are optional
 	-- "lzlib"; -- or lua-zlib;

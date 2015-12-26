@@ -40,6 +40,14 @@ build = {
 				"_GNU_SOURCE";
 				"LUA_COMPAT_APIINTCASTS";
 			};
+			incdirs = {
+				"$(OPENSSL_INCDIR)";
+				"$(CRYPTO_INCDIR)";
+			};
+			libdirs = {
+				"$(OPENSSL_LIBDIR)";
+				"$(CRYPTO_LIBDIR)";
+			};
 		};
 		["openssl"] = "src/openssl.lua";
 		["openssl.bignum"] = "src/openssl.bignum.lua";
