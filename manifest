@@ -577,6 +577,13 @@ repository = {
          }
       }
    },
+   lgsl = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lift = {
       ['scm-0'] = {
          {
