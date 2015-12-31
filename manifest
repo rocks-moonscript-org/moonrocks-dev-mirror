@@ -498,6 +498,13 @@ repository = {
          }
       }
    },
+   ['lapis-exceptions'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lapis-redis'] = {
       ['dev-1'] = {
          {
@@ -663,6 +670,13 @@ repository = {
    },
    ['love-release'] = {
       ['git-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   lovekit = {
+      ['dev-1'] = {
          {
             arch = "rockspec"
          }
