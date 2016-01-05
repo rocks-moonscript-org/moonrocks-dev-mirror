@@ -1708,6 +1708,20 @@ repository = {
          }
       }
    },
+   restserver = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['restserver-xavante'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    rings = {
       ['1.2.1rc1-1'] = {
          {
