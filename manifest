@@ -288,6 +288,13 @@ repository = {
          }
       }
    },
+   ['f-strings'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    fakeredis = {
       ['scm-1'] = {
          {

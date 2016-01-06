@@ -47,6 +47,8 @@ build = {
     ["community.models.category_group_categories"] = "community/models/category_group_categories.lua",
     ["community.models.category_groups"] = "community/models/category_groups.lua",
     ["community.models.category_members"] = "community/models/category_members.lua",
+    ["community.models.category_post_logs"] = "community/models/category_post_logs.lua",
+    ["community.models.category_tags"] = "community/models/category_tags.lua",
     ["community.models.community_users"] = "community/models/community_users.lua",
     ["community.models.moderation_log_objects"] = "community/models/moderation_log_objects.lua",
     ["community.models.moderation_logs"] = "community/models/moderation_logs.lua",
@@ -56,6 +58,7 @@ build = {
     ["community.models.post_reports"] = "community/models/post_reports.lua",
     ["community.models.posts"] = "community/models/posts.lua",
     ["community.models.topic_participants"] = "community/models/topic_participants.lua",
+    ["community.models.topic_subscriptions"] = "community/models/topic_subscriptions.lua",
     ["community.models.topic_tags"] = "community/models/topic_tags.lua",
     ["community.models.topics"] = "community/models/topics.lua",
     ["community.models.user_category_last_seens"] = "community/models/user_category_last_seens.lua",
@@ -63,6 +66,7 @@ build = {
     ["community.models.votes"] = "community/models/votes.lua",
     ["community.schema"] = "community/schema.lua",
     ["community.spec.factory"] = "community/spec/factory.lua",
+    ["community.version"] = "community/version.lua",
   }
 }
 
