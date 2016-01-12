@@ -161,6 +161,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['cvs-4'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    cosmo = {
