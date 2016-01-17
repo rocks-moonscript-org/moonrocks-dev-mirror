@@ -43,5 +43,6 @@ build = {
 		["http.tls"] = "http/tls.lua";
 		["http.util"] = "http/util.lua";
 		["http.zlib"] = "http/zlib.lua";
+		["http.compat.prosody"] = "http/compat/prosody.lua";
 	};
 }

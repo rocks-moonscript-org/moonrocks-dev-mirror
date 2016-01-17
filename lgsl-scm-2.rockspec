@@ -1,5 +1,5 @@
 package = "LGSL"
-version = "scm-1"
+version = "scm-2"
 source = {
    url = "https://github.com/ladc/lgsl/archive/master.zip",
    dir = "lgsl-master"
@@ -56,7 +56,6 @@ build = {
       ["lgsl.linfit"] = "lgsl/linfit.lua",
       ["lgsl.nlinfit"] = "lgsl/nlinfit.lua",
       ["lgsl.ode"] = "lgsl/ode.lua",
-      ["lgsl.quad_prepare"] = "lgsl/quad_prepare.lua",
       ["lgsl.vegas_prepare"] = "lgsl/vegas_prepare.lua",
       ["lgsl.demos"] = "demos/demos.lua",
    },
@@ -92,5 +91,5 @@ build = {
           ["lgsl.demos.wave-particle"] = "demos/wave-particle.lua",
       },
    },
-   copy_directories = { "demos" },
+   copy_directories = { "tests" },
 }
