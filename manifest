@@ -686,7 +686,7 @@ repository = {
       }
    },
    ['love-release'] = {
-      ['git-0'] = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
