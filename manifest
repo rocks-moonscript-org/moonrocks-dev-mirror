@@ -1897,6 +1897,13 @@ repository = {
          }
       }
    },
+   tableshape = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    tabletypes = {
       ['scm-1'] = {
          {
