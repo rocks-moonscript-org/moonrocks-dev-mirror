@@ -20,8 +20,6 @@ dependencies = {
 	"basexx >= 0.2.0";
 	"lpeg_patterns >= 0.2";
 	"fifo";
-	-- the following are optional
-	-- "lzlib"; -- or lua-zlib;
 }
 
 build = {
@@ -42,6 +40,7 @@ build = {
 		["http.stream_common"] = "http/stream_common.lua";
 		["http.tls"] = "http/tls.lua";
 		["http.util"] = "http/util.lua";
+		["http.version"] = "http/version.lua";
 		["http.zlib"] = "http/zlib.lua";
 		["http.compat.prosody"] = "http/compat/prosody.lua";
 	};
