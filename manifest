@@ -1599,15 +1599,6 @@ repository = {
          }
       }
    },
-   nozzle = {
-      ['git-1'] = {
-         {
-            arch = "rockspec"
-         }, {
-            arch = "src"
-         }
-      }
-   },
    oauth_light = {
       ['scm-1'] = {
          {
