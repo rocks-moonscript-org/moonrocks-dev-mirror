@@ -538,6 +538,13 @@ repository = {
          }
       }
    },
+   ['lapis-tarantool'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    laws = {
       ['scm-0'] = {
          {
@@ -615,6 +622,23 @@ repository = {
    },
    lightningmdb = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   liluat = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-2'] = {
          {
             arch = "rockspec"
          }
@@ -741,6 +765,13 @@ repository = {
    },
    ltrie = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['lua utf-8'] = {
+      ['scm-'] = {
          {
             arch = "rockspec"
          }
@@ -1449,6 +1480,13 @@ repository = {
             arch = "rockspec"
          }, {
             arch = "src"
+         }
+      }
+   },
+   lutf8 = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
          }
       }
    },
