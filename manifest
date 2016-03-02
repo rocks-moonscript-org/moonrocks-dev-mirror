@@ -1850,6 +1850,20 @@ repository = {
          }, {
             arch = "src"
          }
+      },
+      ['scm.trunk.nightly570-1'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      },
+      ['scm.trunk.nightly606-2'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
       }
    },
    ['redis-lua'] = {
