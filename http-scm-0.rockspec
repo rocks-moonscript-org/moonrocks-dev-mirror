@@ -20,9 +20,6 @@ dependencies = {
 	"basexx >= 0.2.0";
 	"lpeg_patterns >= 0.2";
 	"fifo";
-	-- the following are optional
-	-- "lzlib";
-	-- "lua-zlib";
 }
 
 build = {
@@ -46,6 +43,5 @@ build = {
 		["http.version"] = "http/version.lua";
 		["http.zlib"] = "http/zlib.lua";
 		["http.compat.prosody"] = "http/compat/prosody.lua";
-		["http.compat.socket"] = "http/compat/socket.lua";
 	};
 }

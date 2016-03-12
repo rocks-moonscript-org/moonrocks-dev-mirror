@@ -654,16 +654,6 @@ repository = {
       }
    },
    liluat = {
-      ['scm-0'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      },
       ['scm-2'] = {
          {
             arch = "rockspec"
@@ -1233,6 +1223,13 @@ repository = {
             arch = "rockspec"
          }
       },
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   lualol = {
       ['scm-1'] = {
          {
             arch = "rockspec"
