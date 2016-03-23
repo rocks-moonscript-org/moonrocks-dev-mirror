@@ -17,6 +17,16 @@ supported_platforms = {
 dependencies = {
 	"lua == 5.2";
 }
+external_dependencies = {
+	OPENSSL = {
+		header = "openssl/ssl.h";
+		library = "ssl";
+	};
+	CRYPTO = {
+		header = "openssl/crypto.h";
+		library = "crypto";
+	};
+}
 build = {
 	type = "make";
 	makefile = "GNUmakefile";
