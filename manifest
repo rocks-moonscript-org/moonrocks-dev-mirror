@@ -1043,7 +1043,21 @@ repository = {
          }
       }
    },
+   ['lua-websockets-extensions'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-websockets-lluv'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['lua-websockets-permessage-deflate'] = {
       ['scm-0'] = {
          {
             arch = "rockspec"
@@ -2106,6 +2120,15 @@ repository = {
       }
    },
    ['torch-pcl'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
+   ['torch-rnn'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
