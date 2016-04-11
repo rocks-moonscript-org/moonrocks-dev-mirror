@@ -1812,6 +1812,13 @@ repository = {
          }
       }
    },
+   payments = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    pdh = {
       ['scm-0'] = {
          {
