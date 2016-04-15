@@ -1092,6 +1092,13 @@ repository = {
          }
       }
    },
+   lua2go = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua5.1.js-file-packer'] = {
       ['scm-1'] = {
          {
