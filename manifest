@@ -27,6 +27,13 @@ repository = {
          }
       }
    },
+   annoy = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    arc4random = {
       ['scm-1'] = {
          {
@@ -2185,6 +2192,13 @@ repository = {
       }
    },
    tlua = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['torch-dataframe'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
