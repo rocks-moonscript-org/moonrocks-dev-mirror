@@ -15,11 +15,11 @@ description = {
 dependencies = {
 	"lua >= 5.1";
 	"cqueues";
-	"luapgsql >= 1.2.3";
+	"luapgsql >= 1.2.3, <= 1.4.10";
 }
 build = {
 	type = "builtin";
 	modules = {
-		['cqueues-pgsql'] = "cqueues-pgsql.lua";
+		['cqueues_pgsql'] = "cqueues_pgsql.lua";
 	};
 }
