@@ -347,6 +347,13 @@ repository = {
          }
       }
    },
+   dataload = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    decomposition = {
       ['scm-0'] = {
          {
