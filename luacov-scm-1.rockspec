@@ -13,11 +13,11 @@ description = {
       paths were not traversed, which is useful for verifying the
       effectiveness of a test suite.
    ]],
-   homepage = "http://luacov.luaforge.net/",
+   homepage = "http://keplerproject.github.io/luacov/",
    license = "MIT/X11"
 }
 dependencies = {
-   "lua >= 5.1"
+   "lua >= 5.1, < 5.4"
 }
 build = {
   type = "builtin",
@@ -25,9 +25,12 @@ build = {
     ["luacov.defaults"] = "src/luacov/defaults.lua",
     ["luacov"] = "src/luacov.lua",
     ["luacov.reporter"] = "src/luacov/reporter.lua",
+    ["luacov.reporter.default"] = "src/luacov/reporter/default.lua",
     ["luacov.runner"] = "src/luacov/runner.lua",
     ["luacov.stats"] = "src/luacov/stats.lua",
     ["luacov.tick"] = "src/luacov/tick.lua",
+    ["luacov.hook"] = "src/luacov/hook.lua",
+    ["luacov.util"] = "src/luacov/util.lua"
   },
   install = {
     bin = {
