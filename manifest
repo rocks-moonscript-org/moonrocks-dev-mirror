@@ -1951,6 +1951,13 @@ repository = {
          }
       }
    },
+   octopus = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    odbc = {
       ['scm-0'] = {
          {
