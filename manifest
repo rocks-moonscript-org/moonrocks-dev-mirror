@@ -69,6 +69,13 @@ repository = {
          }
       }
    },
+   audiodataload = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    base58 = {
       ['dev-1'] = {
          {
