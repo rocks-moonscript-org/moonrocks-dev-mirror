@@ -271,6 +271,15 @@ repository = {
          }
       }
    },
+   ['cosy-editor'] = {
+      ['dev-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    coxpcall = {
       ['1.12.0rc1-1'] = {
          {
@@ -692,6 +701,15 @@ repository = {
       ['scm-0'] = {
          {
             arch = "rockspec"
+         }
+      }
+   },
+   layeredata = {
+      ['dev-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
          }
       }
    },
