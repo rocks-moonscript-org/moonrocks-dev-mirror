@@ -389,6 +389,13 @@ repository = {
          }
       }
    },
+   dotty = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    elasticsearch = {
       ['scm-0'] = {
          {
@@ -1898,12 +1905,12 @@ repository = {
       }
    },
    moonmint = {
-      ['dev-1'] = {
+      ['scm-2'] = {
          {
             arch = "rockspec"
          }
       },
-      ['scm-1'] = {
+      ['scm-3'] = {
          {
             arch = "rockspec"
          }
@@ -2577,6 +2584,11 @@ repository = {
          }
       },
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-2'] = {
          {
             arch = "rockspec"
          }

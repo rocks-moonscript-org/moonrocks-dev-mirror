@@ -1,5 +1,5 @@
 package = "moonmint"
-version = "scm-1"
+version = "scm-3"
 source = {
     url = "git://github.com/bakpakin/moonmint.git",
     tag = "master"
@@ -39,6 +39,7 @@ build = {
         ["moonmint.deps.httpCodec"] = "moonmint/deps/httpCodec.lua",
         ["moonmint.deps.secure-socket.biowrap"] = "moonmint/deps/secure-socket/biowrap.lua",
         ["moonmint.deps.secure-socket.context"] = "moonmint/deps/secure-socket/context.lua",
+        ["moonmint.deps.secure-socket.root_ca"] = "moonmint/deps/secure-socket/root_ca.lua",
         ["moonmint.deps.secure-socket"] = "moonmint/deps/secure-socket/init.lua",
         ["moonmint.deps.pathjoin"] = "moonmint/deps/pathjoin.lua"
     }
