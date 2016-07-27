@@ -340,6 +340,13 @@ repository = {
          }
       }
    },
+   cudnn = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    cv = {
       ['scm-1'] = {
          {
