@@ -524,6 +524,13 @@ repository = {
          }
       }
    },
+   glyphify = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    gntp = {
       ['scm-0'] = {
          {
@@ -1325,6 +1332,13 @@ repository = {
          }
       },
       ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   luabot = {
+      ['scm-0'] = {
          {
             arch = "rockspec"
          }
