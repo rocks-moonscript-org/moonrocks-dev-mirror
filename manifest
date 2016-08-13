@@ -852,7 +852,7 @@ repository = {
       }
    },
    litcord = {
-      ['scm-16'] = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
