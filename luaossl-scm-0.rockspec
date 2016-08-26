@@ -20,7 +20,7 @@ external_dependencies = {
 		library = "ssl";
 	};
 	CRYPTO = {
-		header = "openssl/hmac.h"; -- Picked one of the many header files
+		header = "openssl/crypto.h";
 		library = "crypto";
 	};
 }
@@ -50,8 +50,10 @@ build = {
 			};
 		};
 		["openssl"] = "src/openssl.lua";
+		["openssl.auxlib"] = "src/openssl.auxlib.lua";
 		["openssl.bignum"] = "src/openssl.bignum.lua";
 		["openssl.cipher"] = "src/openssl.cipher.lua";
+		["openssl.des"] = "src/openssl.des.lua";
 		["openssl.digest"] = "src/openssl.digest.lua";
 		["openssl.hmac"] = "src/openssl.hmac.lua";
 		["openssl.pkcs12"] = "src/openssl.pkcs12.lua";
@@ -64,6 +66,7 @@ build = {
 		["openssl.x509.altname"] = "src/openssl.x509.altname.lua";
 		["openssl.x509.chain"] = "src/openssl.x509.chain.lua";
 		["openssl.x509.crl"] = "src/openssl.x509.crl.lua";
+		["openssl.x509.csr"] = "src/openssl.x509.csr.lua";
 		["openssl.x509.extension"] = "src/openssl.x509.extension.lua";
 		["openssl.x509.name"] = "src/openssl.x509.name.lua";
 		["openssl.x509.store"] = "src/openssl.x509.store.lua";
