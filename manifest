@@ -2255,6 +2255,13 @@ repository = {
          }
       }
    },
+   prefix_tree = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    procdata = {
       ['scm-1'] = {
          {
