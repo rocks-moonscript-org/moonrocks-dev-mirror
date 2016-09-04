@@ -1,5 +1,5 @@
 package = "luabot"
-version = "scm-0"
+version = "scm-1"
 source = {
    url = "git://github.com/aperezdc/luabot"
 }
@@ -47,7 +47,9 @@ build = {
       ["luabot.plugin.redmine"]          = "plugin/redmine.lua",
       ["luabot.plugin.shortcuts"]        = "plugin/shortcuts.lua",
       ["luabot.plugin.trac"]             = "plugin/trac.lua",
+      ["luabot.plugin.travis"]           = "plugin/travis.lua",
       ["luabot.plugin.urltitles"]        = "plugin/urltitles.lua",
+      ["luabot.plugin.webhook"]          = "plugin/webhook.lua",
 
       ["luabot.util.basexx"]             = "util/basexx.lua",
       ["luabot.util.cache"]              = "util/cache.lua",
@@ -64,6 +66,7 @@ build = {
       ["luabot.util.sasl.plain"]         = "util/sasl/plain.lua",
       ["luabot.util.sasl.scram"]         = "util/sasl/scram.lua",
       ["luabot.util.sha1"]               = "util/sha1.lua",
+      ["luabot.util.sha2"]               = "util/sha2.lua",
       ["luabot.util.stanza"]             = "util/stanza.lua",
       ["luabot.util.strutil"]            = "util/strutil.lua",
       ["luabot.util.timer"]              = "util/timer.lua",

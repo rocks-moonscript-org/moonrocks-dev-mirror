@@ -531,6 +531,13 @@ repository = {
          }
       }
    },
+   geoip = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    geometry2d = {
       ['scm-1'] = {
          {
@@ -1296,6 +1303,13 @@ repository = {
          }
       }
    },
+   ['lua-resty-repl'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-resty-tarantool'] = {
       ['dev-1'] = {
          {
@@ -1438,7 +1452,7 @@ repository = {
       }
    },
    luabot = {
-      ['scm-0'] = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
