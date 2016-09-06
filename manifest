@@ -1902,6 +1902,15 @@ repository = {
          }
       }
    },
+   lundler = {
+      ['dev-2'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    luq = {
       ['scm-0'] = {
          {
@@ -2034,6 +2043,11 @@ repository = {
    },
    mmapfile = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-2'] = {
          {
             arch = "rockspec"
          }
