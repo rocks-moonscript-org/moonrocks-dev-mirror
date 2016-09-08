@@ -587,6 +587,15 @@ repository = {
          }
       }
    },
+   gversion = {
+      ['dev-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    haricot = {
       ['scm-1'] = {
          {
@@ -703,7 +712,7 @@ repository = {
       }
    },
    lairs = {
-      ['dev-6'] = {
+      ['dev-7'] = {
          {
             arch = "rockspec"
          }, {
@@ -2763,6 +2772,13 @@ repository = {
             arch = "rockspec"
          }, {
             arch = "src"
+         }
+      }
+   },
+   vision = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
          }
       }
    },

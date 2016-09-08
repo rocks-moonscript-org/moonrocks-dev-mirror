@@ -1,11 +1,11 @@
 package = "lairs"
-version = "dev-6"
+version = "dev-7"
 source = {
    url = "https://github.com/Romaboy/lairs/raw/master/lairs.tar.gz"
 }
 description = {
    summary = "Openresty framework",
-   homepage = "http://no.homepage/yet",
+   homepage = "https://github.com/Romaboy/lairs",
    license = "MIT",
    maintainer = "Roman Kushin <romadzao@gmail.com>"
 }
