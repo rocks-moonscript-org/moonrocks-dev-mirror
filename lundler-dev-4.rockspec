@@ -1,7 +1,7 @@
 package = "lundler"
-version = "dev-2"
+version = "dev-4"
 source = {
-   url = "https://github.com/Romaboy/lundler"
+   url = "git://github.com/Romaboy/lundler.git"
 }
 description = {
    summary = "Resolve lua rocks with Rockfile",
