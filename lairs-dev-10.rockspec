@@ -1,5 +1,5 @@
 package = "lairs"
-version = "dev-9"
+version = "dev-10"
 source = {
    url = "https://github.com/Romaboy/lairs/raw/master/lairs.tar.gz"
 }
