@@ -1292,6 +1292,13 @@ repository = {
          }
       }
    },
+   ['lua-nums'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-path'] = {
       ['scm-0'] = {
          {
