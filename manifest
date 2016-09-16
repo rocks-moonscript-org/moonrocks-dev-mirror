@@ -316,6 +316,13 @@ repository = {
          }
       }
    },
+   cpml = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    cqueues = {
       ['scm-51'] = {
          {
@@ -2178,6 +2185,13 @@ repository = {
       }
    },
    nn = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   nnname = {
       ['scm-1'] = {
          {
             arch = "rockspec"
