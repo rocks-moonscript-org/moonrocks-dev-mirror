@@ -30,9 +30,9 @@ build = {
 		["_openssl"] = {
 			sources = { "src/openssl.c"; };
 			libraries = {
-				"ssl"; "crypto";
+				"ssl";
+				"crypto";
 				"pthread";
-				"dl";
 				"m";
 			};
 			defines = {
@@ -70,5 +70,15 @@ build = {
 		["openssl.x509.extension"] = "src/openssl.x509.extension.lua";
 		["openssl.x509.name"] = "src/openssl.x509.name.lua";
 		["openssl.x509.store"] = "src/openssl.x509.store.lua";
-	}
+	};
+	platforms = {
+		-- Only linux needs to link with libdl
+		linux = {
+			modules = {
+				["_openssl"] = {
+					libraries = {nil,nil,nil,nil,"dl"};
+				};
+			};
+		};
+	};
 }

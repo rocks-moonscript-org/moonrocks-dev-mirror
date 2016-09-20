@@ -937,6 +937,13 @@ repository = {
          }
       }
    },
+   libuilua = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lift = {
       ['scm-0'] = {
          {
