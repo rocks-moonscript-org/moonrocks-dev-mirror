@@ -559,6 +559,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    getsize = {
@@ -2116,6 +2121,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-3'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    mmdblua = {
@@ -2678,13 +2688,6 @@ repository = {
    },
    tableshape = {
       ['dev-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   tabletypes = {
-      ['scm-1'] = {
          {
             arch = "rockspec"
          }
