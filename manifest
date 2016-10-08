@@ -2721,6 +2721,13 @@ repository = {
          }
       }
    },
+   ['torch-nn-ext'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['torch-pcl'] = {
       ['scm-1'] = {
          {
