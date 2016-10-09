@@ -1154,13 +1154,6 @@ repository = {
          }
       }
    },
-   ['lua-cassandra'] = {
-      ['dev-0'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    ['lua-cbor'] = {
       ['scm-0'] = {
          {
