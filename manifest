@@ -301,6 +301,13 @@ repository = {
          }, {
             arch = "src"
          }
+      },
+      ['dev-56'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
       }
    },
    coxpcall = {
@@ -2820,6 +2827,13 @@ repository = {
       ['git-1'] = {
          {
             arch = "rockspec"
+         }
+      },
+      ['git-2'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
          }
       }
    },

@@ -1,13 +1,13 @@
 package = "bpf"
 version = "scm-1"
 source = {
-   url = "git+https://github.com/vavrusa/luajit-bpf.git"
+   url = "git://github.com/iovisor/bcc.git"
 }
 description = {
-   summary = "A LuaJIT to BPF compiler.",
+   summary = "BCC - LuaJIT to BPF compiler.",
    detailed = [[
    ]],
-   homepage = "https://gitlab.com/vavrusa/luajit-bpf",
+   homepage = "https://github.com/iovisor/bcc",
    license = "BSD"
 }
 dependencies = {
@@ -26,11 +26,12 @@ build = {
     }
   },
   modules = {
-    ["bpf.builtins"] = "bpf/builtins.lua",
-    ["bpf.cdef"] = "bpf/cdef.lua",
-    ["bpf.elf"] = "bpf/elf.lua",
-    ["bpf.proto"] = "bpf/proto.lua",
-    ["bpf.ljbytecode"] = "bpf/ljbytecode.lua",
-    bpf = "bpf.lua",
+    bpf = "src/lua/bpf/bpf.lua",
+    ["bpf.builtins"] = "src/lua/bpf/builtins.lua",
+    ["bpf.cdef"] = "src/lua/bpf/cdef.lua",
+    ["bpf.elf"] = "src/lua/bpf/elf.lua",
+    ["bpf.init"] = "src/lua/bpf/init.lua",
+    ["bpf.ljbytecode"] = "src/lua/bpf/ljbytecode.lua",
+    ["bpf.proto"] = "src/lua/bpf/proto.lua",
   }
 }
