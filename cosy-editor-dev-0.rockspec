@@ -22,16 +22,18 @@ dependencies = {
   "copas",
   "etlua",
   "layeredata",
+  "luasec",
   "luasocket",
-  "lua-cjson",
+  "lua-cjson-ol",
   "lua-websockets",
 }
 
 build = {
   type    = "builtin",
   modules = {
-    ["cosy.editor"    ] = "src/cosy/editor/init.lua",
-    ["cosy.editor.cli"] = "src/cosy/editor/cli.lua",
+    ["cosy.editor"     ] = "src/cosy/editor/init.lua",
+    ["cosy.editor.cli" ] = "src/cosy/editor/cli.lua",
+    ["cosy.editor.http"] = "src/cosy/editor/http.lua",
   },
   install = {
     bin = {

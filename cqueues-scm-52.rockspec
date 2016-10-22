@@ -33,7 +33,9 @@ build = {
 
 	build_target = "all5.2";
 	build_variables = {
-		CFLAGS = "$(CFLAGS)";
+		CPPFLAGS= '-I"$(OPENSSL_INCDIR)" -I"$(CRYPTO_INCDIR)"';
+		CFLAGS = '$(CFLAGS)';
+		LDFLAGS = '$(LIBFLAG) -L"$(OPENSSL_LIBDIR)" -L"$(CRYPTO_LIBDIR)"';
 		bindir = "$(LUA_BINDIR)";
 		includedir = "$(LUA_INCDIR)";
 		libdir = "$(LUA_LIBDIR)";
