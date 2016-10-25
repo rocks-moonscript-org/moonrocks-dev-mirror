@@ -763,16 +763,11 @@ repository = {
       }
    },
    lairs = {
-      ['dev-12'] = {
+      ['dev-14'] = {
          {
             arch = "rockspec"
          }, {
             arch = "src"
-         }
-      },
-      ['dev-13'] = {
-         {
-            arch = "rockspec"
          }
       }
    },
