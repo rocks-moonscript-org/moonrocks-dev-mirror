@@ -336,6 +336,20 @@ repository = {
          }, {
             arch = "src"
          }
+      },
+      ['dev-65'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      },
+      ['dev-66'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
       }
    },
    coxpcall = {

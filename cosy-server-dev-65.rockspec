@@ -1,5 +1,5 @@
 package = "cosy-server"
-version = "dev-0"
+version = "dev-65"
 source  = {
   url    = "git+https://github.com/cosyverif/server.git",
   branch = "dev",
@@ -43,12 +43,12 @@ local sources = {
   "src/cosy/server/jobs/stop.lua",
   "src/cosy/server/lock.lua",
   "src/cosy/server/model.lua",
+  "src/cosy/server/projects/aliases/alias.lua",
+  "src/cosy/server/projects/aliases/init.lua",
   "src/cosy/server/projects/init.lua",
   "src/cosy/server/projects/permissions/permission.lua",
   "src/cosy/server/projects/permissions/init.lua",
   "src/cosy/server/projects/project.lua",
-  "src/cosy/server/projects/resources/aliases/alias.lua",
-  "src/cosy/server/projects/resources/aliases/init.lua",
   "src/cosy/server/projects/resources/editor.lua",
   "src/cosy/server/projects/resources/executions/execution.lua",
   "src/cosy/server/projects/resources/executions/init.lua",

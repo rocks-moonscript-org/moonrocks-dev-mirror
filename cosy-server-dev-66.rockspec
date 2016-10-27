@@ -1,5 +1,5 @@
 package = "cosy-server"
-version = "dev-0"
+version = "dev-66"
 source  = {
   url    = "git+https://github.com/cosyverif/server.git",
   branch = "dev",
