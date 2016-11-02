@@ -1,8 +1,9 @@
 package = 'nginx-metrix'
 version = 'scm-1'
 source = {
-  url = "https://github.com/bankiru/nginx-metrix.git",
-  branch = "master"
+  url    = "git://github.com/bankiru/nginx-metrix.git",
+  branch = "master",
+  dir    = 'nginx-metrix',
 }
 description = {
   summary    = 'Extended Nginx status and metrics.',
@@ -32,7 +33,6 @@ build = {
     ['nginx-metrix.version']                           = 'nginx-metrix/version.lua',
 
     ['nginx-metrix.lib.is']                            = 'nginx-metrix/lib/is.lua',
-    ['nginx-metrix.lib.json']                          = 'nginx-metrix/lib/json.lua',
 
     ['nginx-metrix.collectors.request']                = 'nginx-metrix/collectors/request.lua',
     ['nginx-metrix.collectors.status']                 = 'nginx-metrix/collectors/status.lua',
@@ -45,5 +45,6 @@ build = {
     ['nginx-metrix.storage.dict']                      = 'nginx-metrix/storage/dict.lua',
     ['nginx-metrix.storage.namespaces']                = 'nginx-metrix/storage/namespaces.lua',
     ['nginx-metrix.storage.serializer']                = 'nginx-metrix/storage/serializer.lua',
+    ['nginx-metrix.storage.window']                    = 'nginx-metrix/storage/window.lua',
   },
 }
