@@ -309,6 +309,20 @@ repository = {
             arch = "src"
          }
       },
+      ['dev-51'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      },
+      ['dev-52'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      },
       ['dev-56'] = {
          {
             arch = "rockspec"
@@ -373,6 +387,13 @@ repository = {
          }
       },
       ['dev-71'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      },
+      ['dev-73'] = {
          {
             arch = "rockspec"
          }, {
