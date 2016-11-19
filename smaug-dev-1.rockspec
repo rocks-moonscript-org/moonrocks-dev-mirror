@@ -2,36 +2,43 @@ package = "smaug"
 version = "dev-1"
 
 source = {
-  url = "https://github.com/nilq/smaug-mirror",
+  url = "git://github.com/teasquat/smaug.git",
 }
 
 description = {
-  summary = "Game engine for MoonScript, in MoonScript.",
-  homepage = "https://smaug.io",
-  maintainer = "Nilq",
-  license = "MIT"
+  summary    = "A MoonScript game engine through LibGDX.",
+  homepage   = "www.github.com/teasquat/smaug.git",
+  maintainer = "Lord Niels N. Horn <i.am@nilq.dk>",
+  license    = "MIT",
 }
 
 dependencies = {
   "lua >= 5.1",
-  "moonscript"
+  "moonscript",
 }
 
 build = {
   type = "command",
 
   install = {
-    bin = { "bin/smaug" }
+    bin = {
+      "bin/smaug",
+    },
   },
 
   platforms = {
     unix = {
-      build_command = "sh build"
+      build_command = "sh build",
     },
+
     windows = {
-      build_command = "build"
-    }
+      build_command = "build",
+    },
   },
 
-  copy_directories = { "core", "res", "src" }
+  copy_directories = {
+    "egg",
+    "res",
+    "src",
+  },
 }
