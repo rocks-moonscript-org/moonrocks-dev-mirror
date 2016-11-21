@@ -2519,6 +2519,20 @@ repository = {
          }
       }
    },
+   ['se.zash.inet'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['se.zash.strbitop'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    seawolf = {
       ['1.0-0'] = {
          {
