@@ -1306,6 +1306,13 @@ repository = {
          }
       }
    },
+   ['lua-randxoxoxo'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-resty-repl'] = {
       ['scm-0'] = {
          {
