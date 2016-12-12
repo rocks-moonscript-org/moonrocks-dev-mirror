@@ -1295,6 +1295,13 @@ repository = {
          }
       }
    },
+   ['lua-mongo'] = {
+      ['git-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-nucleo'] = {
       ['scm-1'] = {
          {
