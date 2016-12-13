@@ -37,8 +37,8 @@ Hash functions:
 }
 
 dependencies = {
-       "lua >= 5.3",
-       "lua-nums"
+    "lua >= 5.3",
+    "lua-nums"
 }
 
 build = {
@@ -59,7 +59,7 @@ build = {
         ["hashings.sha512"]    = "hashings/sha512.lua",
         ["hashings.whirlpool"] = "hashings/whirlpool.lua",
 
-        ["hashings.hmac"]      = "hashings.hmac",
-        ["hashings.pbkdf2"]    = "hashings.pbkdf2"
+        ["hashings.hmac"]      = "hashings/hmac.lua",
+        ["hashings.pbkdf2"]    = "hashings/pbkdf2.lua"
     }
 }

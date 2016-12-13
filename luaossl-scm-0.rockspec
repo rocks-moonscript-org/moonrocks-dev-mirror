@@ -70,6 +70,7 @@ build = {
 		["openssl.x509.extension"] = "src/openssl.x509.extension.lua";
 		["openssl.x509.name"] = "src/openssl.x509.name.lua";
 		["openssl.x509.store"] = "src/openssl.x509.store.lua";
+		["openssl.x509.verify_param"] = "src/openssl.x509.verify_param.lua";
 	};
 	platforms = {
 		-- Only linux needs to link with libdl
