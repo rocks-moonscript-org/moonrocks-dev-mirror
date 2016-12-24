@@ -574,6 +574,13 @@ repository = {
          }
       }
    },
+   gifine = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    giflib = {
       ['dev-1'] = {
          {
@@ -2091,6 +2098,13 @@ repository = {
    },
    md5 = {
       ['cvs-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   mgcints = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
