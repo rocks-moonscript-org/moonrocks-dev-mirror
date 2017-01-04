@@ -779,6 +779,13 @@ repository = {
          }
       }
    },
+   l = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lallegro = {
       ['scm-1'] = {
          {

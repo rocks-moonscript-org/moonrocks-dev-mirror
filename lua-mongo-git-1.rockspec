@@ -6,7 +6,7 @@ source = {
 description = {
 	summary = 'MongoDB Driver for Lua',
 	detailed = [[
-		lua-mongo is a binding of the MongoDB C Driver (http://mongoc.org) for Lua.
+		lua-mongo is a binding to the MongoDB C Driver (http://mongoc.org) for Lua.
 	]],
 	license = 'MIT',
 	homepage = 'https://github.com/neoxic/lua-mongo',
@@ -30,6 +30,7 @@ build = {
 			sources = {
 				'src/bson.c',
 				'src/bsontype.c',
+				'src/bulkoperation.c',
 				'src/client.c',
 				'src/collection.c',
 				'src/cursor.c',
