@@ -1665,6 +1665,13 @@ repository = {
          }
       }
    },
+   lualit = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lualogging = {
       ['cvs-2'] = {
          {
