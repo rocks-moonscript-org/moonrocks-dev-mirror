@@ -716,6 +716,13 @@ repository = {
          }
       }
    },
+   idn2 = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    imap4 = {
       ['scm-0'] = {
          {
