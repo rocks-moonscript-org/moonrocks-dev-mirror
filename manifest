@@ -2699,6 +2699,24 @@ repository = {
          }
       }
    },
+   ['sh-parser'] = {
+      ['dev-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
+   ['sh-parser-cli'] = {
+      ['dev-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    shapefile = {
       ['scm-1'] = {
          {
