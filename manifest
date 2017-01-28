@@ -886,6 +886,13 @@ repository = {
          }
       }
    },
+   lcf = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ldbus = {
       ['scm-0'] = {
          {
@@ -988,6 +995,13 @@ repository = {
       }
    },
    lluv = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['lluv-busted'] = {
       ['scm-0'] = {
          {
             arch = "rockspec"
@@ -2360,6 +2374,15 @@ repository = {
    },
    optarg = {
       ['dev-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
+   option = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }, {
