@@ -2,29 +2,27 @@ package = "fun"
 version = "scm-1"
 
 source = {
-    url = "git://github.com/rtsisyk/luafun.git",
+    url = "git://github.com/luafun/luafun.git",
 }
 
 description = {
-    summary = "A high-performance functional programming library for LuaJIT",
-    homepage = "https://rtsisyk.github.io/luafun",
+    summary = "High-performance functional programming library for Lua",
+    homepage = "https://luafun.github.io/",
     license = "MIT/X11",
-    maintainer = "Roman Tsisyk <roman@tsisyk.com>",
+    maintainer = "Roman Tsisyk <roman@tarantool.org>",
     detailed = [[
-Lua Fun is a high-performance functional programming library designed for LuaJIT
-tracing just-in-time compiler.
+Lua Fun is a high-performance functional programming library for Lua
+designed with LuaJIT's trace compiler in mind.
 
-The library provides a set of more than 50 programming primitives typically
+Lua Fun provides a set of more than 50 programming primitives typically
 found in languages like Standard ML, Haskell, Erlang, JavaScript, Python and
-even Lisp. High-order functions such as map(), filter(), reduce(), zip() will
-help you to write simple and efficient functional code.
-
-Lua Fun. Simple, Efficient and Functional. In Lua. With JIT.
+even Lisp. High-order functions such as map, filter, reduce, zip, etc.,
+make it easy to write simple and efficient functional code.
 ]]
 }
 
 dependencies = {
-    "lua" -- actually "luajit >= 2.0"
+    "lua"
 }
 
 build = {
