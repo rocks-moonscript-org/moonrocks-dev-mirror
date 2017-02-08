@@ -3,6 +3,7 @@ version = 'scm-1'
 
 source = {
   url = 'git://github.com/martin-eden/lua_code_formatter.git',
+  branch = 'master',
 }
 
 description = {
@@ -10,9 +11,9 @@ description = {
   detailed = [[
 Formats any valid lua 5.3 code.
 
-Main advantage is that it wraps code lines at right margin (default
-is 70th character in line). Efforts are made to represent code in more
-easy to understand form, not the shortest one.
+Main advantage is that it wraps code lines to maintain readability.
+Efforts are made to represent code in more easy to understand form,
+not the shortest one.
 ]],
   license = 'GPL v3',
 }
@@ -98,16 +99,26 @@ build = {
     ['lcf.workshop.compile.lua.quote_string.intact'] = 'workshop/compile/lua/quote_string/intact.lua',
     ['lcf.workshop.compile.lua.quote_string.linear'] = 'workshop/compile/lua/quote_string/linear.lua',
     ['lcf.workshop.compile.lua.quote_string.quote_char'] = 'workshop/compile/lua/quote_string/quote_char.lua',
+    ['lcf.workshop.compile.lua.serialize_table.lua_code.get_result'] = 'workshop/compile/lua/serialize_table/lua_code/get_result.lua',
     ['lcf.workshop.compile.lua.serialize_table.lua_code.init'] = 'workshop/compile/lua/serialize_table/lua_code/init.lua',
     ['lcf.workshop.compile.lua.serialize_table.lua_code.interface'] = 'workshop/compile/lua/serialize_table/lua_code/interface.lua',
     ['lcf.workshop.compile.lua.serialize_table.lua_code.put_qualified_key'] = 'workshop/compile/lua/serialize_table/lua_code/put_qualified_key.lua',
     ['lcf.workshop.compile.lua.serialize_table.lua_code.serialize'] = 'workshop/compile/lua/serialize_table/lua_code/serialize.lua',
     ['lcf.workshop.compile.lua.serialize_table.lua_code.serialize_subtable'] = 'workshop/compile/lua/serialize_table/lua_code/serialize_subtable.lua',
+    ['lcf.workshop.compile.lua.serialize_table.lua_table.get_result'] = 'workshop/compile/lua/serialize_table/lua_table/get_result.lua',
     ['lcf.workshop.compile.lua.serialize_table.lua_table.init'] = 'workshop/compile/lua/serialize_table/lua_table/init.lua',
     ['lcf.workshop.compile.lua.serialize_table.lua_table.interface'] = 'workshop/compile/lua/serialize_table/lua_table/interface.lua',
     ['lcf.workshop.compile.lua.serialize_table.lua_table.serialize'] = 'workshop/compile/lua/serialize_table/lua_table/serialize.lua',
     ['lcf.workshop.compile.lua.serialize_table.lua_table.serialize_key'] = 'workshop/compile/lua/serialize_table/lua_table/serialize_key.lua',
     ['lcf.workshop.compile.lua.serialize_table.lua_table.serialize_key_value'] = 'workshop/compile/lua/serialize_table/lua_table/serialize_key_value.lua',
+    ['lcf.workshop.compile.lua.serialize_table.lua_table.serializers.boolean'] = 'workshop/compile/lua/serialize_table/lua_table/serializers/boolean.lua',
+    ['lcf.workshop.compile.lua.serialize_table.lua_table.serializers.function'] = 'workshop/compile/lua/serialize_table/lua_table/serializers/function.lua',
+    ['lcf.workshop.compile.lua.serialize_table.lua_table.serializers.nil'] = 'workshop/compile/lua/serialize_table/lua_table/serializers/nil.lua',
+    ['lcf.workshop.compile.lua.serialize_table.lua_table.serializers.number'] = 'workshop/compile/lua/serialize_table/lua_table/serializers/number.lua',
+    ['lcf.workshop.compile.lua.serialize_table.lua_table.serializers.string'] = 'workshop/compile/lua/serialize_table/lua_table/serializers/string.lua',
+    ['lcf.workshop.compile.lua.serialize_table.lua_table.serializers.table'] = 'workshop/compile/lua/serialize_table/lua_table/serializers/table.lua',
+    ['lcf.workshop.compile.lua.serialize_table.lua_table.serializers.thread'] = 'workshop/compile/lua/serialize_table/lua_table/serializers/thread.lua',
+    ['lcf.workshop.compile.lua.serialize_table.lua_table.serializers.userdata'] = 'workshop/compile/lua/serialize_table/lua_table/serializers/userdata.lua',
     ['lcf.workshop.compile.lua.token_givers.any'] = 'workshop/compile/lua/token_givers/any.lua',
     ['lcf.workshop.compile.lua.token_givers.readable'] = 'workshop/compile/lua/token_givers/readable.lua',
     ['lcf.workshop.file.as_string'] = 'workshop/file/as_string.lua',
@@ -131,6 +142,7 @@ build = {
     ['lcf.workshop.load_from.generic_loader'] = 'workshop/load_from/generic_loader.lua',
     ['lcf.workshop.load_from.lua'] = 'workshop/load_from/lua.lua',
     ['lcf.workshop.load_from.lua.serialize_table.lua_code'] = 'workshop/load_from/lua/serialize_table/lua_code.lua',
+    ['lcf.workshop.load_from.lua_table'] = 'workshop/load_from/lua_table.lua',
     ['lcf.workshop.parse.lua.formatter'] = 'workshop/parse/lua/formatter.lua',
     ['lcf.workshop.parse.lua.formatter.handlers.expression'] = 'workshop/parse/lua/formatter/handlers/expression.lua',
     ['lcf.workshop.parse.lua.formatter.handlers.expressions.bin_op'] = 'workshop/parse/lua/formatter/handlers/expressions/bin_op.lua',
@@ -238,23 +250,30 @@ build = {
     ['lcf.workshop.parse.syntaxes.lua.words.word'] = 'workshop/parse/syntaxes/lua/words/word.lua',
     ['lcf.workshop.save_to.lua'] = 'workshop/save_to/lua.lua',
     ['lcf.workshop.save_to.lua.serialize_table.lua_code'] = 'workshop/save_to/lua/serialize_table/lua_code.lua',
+    ['lcf.workshop.save_to.lua_table'] = 'workshop/save_to/lua_table.lua',
     ['lcf.workshop.string.content_attributes'] = 'workshop/string/content_attributes.lua',
     ['lcf.workshop.string.split'] = 'workshop/string/split.lua',
-    ['lcf.workshop.string.text_block.add_text'] = 'workshop/string/text_block/add_text.lua',
-    ['lcf.workshop.string.text_block.add_to_prev_text'] = 'workshop/string/text_block/add_to_prev_text.lua',
-    ['lcf.workshop.string.text_block.close_line'] = 'workshop/string/text_block/close_line.lua',
-    ['lcf.workshop.string.text_block.concat_text_block'] = 'workshop/string/text_block/concat_text_block.lua',
     ['lcf.workshop.string.text_block.dec_indent'] = 'workshop/string/text_block/dec_indent.lua',
-    ['lcf.workshop.string.text_block.get_line_length'] = 'workshop/string/text_block/get_line_length.lua',
-    ['lcf.workshop.string.text_block.get_text'] = 'workshop/string/text_block/get_text.lua',
-    ['lcf.workshop.string.text_block.get_text_width'] = 'workshop/string/text_block/get_text_width.lua',
     ['lcf.workshop.string.text_block.inc_indent'] = 'workshop/string/text_block/inc_indent.lua',
     ['lcf.workshop.string.text_block.init'] = 'workshop/string/text_block/init.lua',
     ['lcf.workshop.string.text_block.interface'] = 'workshop/string/text_block/interface.lua',
-    ['lcf.workshop.string.text_block.on_clean_line'] = 'workshop/string/text_block/on_clean_line.lua',
-    ['lcf.workshop.string.text_block.request_clean_line'] = 'workshop/string/text_block/request_clean_line.lua',
-    ['lcf.workshop.string.text_block.request_empty_line'] = 'workshop/string/text_block/request_empty_line.lua',
-    ['lcf.workshop.string.text_block.update_indent'] = 'workshop/string/text_block/update_indent.lua',
+    ['lcf.workshop.string.text_block.line.add'] = 'workshop/string/text_block/line/add.lua',
+    ['lcf.workshop.string.text_block.line.get_line'] = 'workshop/string/text_block/line/get_line.lua',
+    ['lcf.workshop.string.text_block.line.get_line_length'] = 'workshop/string/text_block/line/get_line_length.lua',
+    ['lcf.workshop.string.text_block.line.get_text_length'] = 'workshop/string/text_block/line/get_text_length.lua',
+    ['lcf.workshop.string.text_block.line.init'] = 'workshop/string/text_block/line/init.lua',
+    ['lcf.workshop.string.text_block.line.interface'] = 'workshop/string/text_block/line/interface.lua',
+    ['lcf.workshop.string.text_block.text.add_curline'] = 'workshop/string/text_block/text/add_curline.lua',
+    ['lcf.workshop.string.text_block.text.add_textline'] = 'workshop/string/text_block/text/add_textline.lua',
+    ['lcf.workshop.string.text_block.text.get_block_width'] = 'workshop/string/text_block/text/get_block_width.lua',
+    ['lcf.workshop.string.text_block.text.get_text'] = 'workshop/string/text_block/text/get_text.lua',
+    ['lcf.workshop.string.text_block.text.get_text_width'] = 'workshop/string/text_block/text/get_text_width.lua',
+    ['lcf.workshop.string.text_block.text.include'] = 'workshop/string/text_block/text/include.lua',
+    ['lcf.workshop.string.text_block.text.new_line'] = 'workshop/string/text_block/text/new_line.lua',
+    ['lcf.workshop.string.text_block.text.on_clean_line'] = 'workshop/string/text_block/text/on_clean_line.lua',
+    ['lcf.workshop.string.text_block.text.request_clean_line'] = 'workshop/string/text_block/text/request_clean_line.lua',
+    ['lcf.workshop.string.text_block.text.request_empty_line'] = 'workshop/string/text_block/text/request_empty_line.lua',
+    ['lcf.workshop.string.text_block.text.store_textline'] = 'workshop/string/text_block/text/store_textline.lua',
     ['lcf.workshop.string.trim_head_spaces'] = 'workshop/string/trim_head_spaces.lua',
     ['lcf.workshop.string.trim_tail_spaces'] = 'workshop/string/trim_tail_spaces.lua',
     ['lcf.workshop.table.clone'] = 'workshop/table/clone.lua',
