@@ -83,6 +83,18 @@ repository = {
          }
       }
    },
+   basics = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    bcrypt = {
       ['scm-1'] = {
          {
@@ -635,6 +647,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ['gobo-awesome-sound'] = {
@@ -1037,6 +1054,13 @@ repository = {
       }
    },
    ['lluv-memcached'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['lluv-pg'] = {
       ['scm-0'] = {
          {
             arch = "rockspec"
@@ -2020,6 +2044,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    luawt = {
@@ -2449,6 +2478,15 @@ repository = {
          }
       }
    },
+   panlunatic = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    parallel = {
       ['scm-0'] = {
          {
@@ -2492,6 +2530,13 @@ repository = {
       }
    },
    penlight = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   plain = {
       ['scm-1'] = {
          {
             arch = "rockspec"
@@ -2814,6 +2859,13 @@ repository = {
    },
    sitegen = {
       ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   skipthoughts = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
