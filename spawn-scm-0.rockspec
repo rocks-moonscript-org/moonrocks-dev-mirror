@@ -6,27 +6,26 @@ source = {
 description = {
 	summary = "A lua library to spawn programs";
 	homepage = "https://github.com/daurnimator/lua-spawn";
-	license = "MIT/X11";
+	license = "MIT";
 }
 supported_platforms = {
 	"unix";
 }
 dependencies = {
 	"lua >= 5.1, < 5.4";
+	"lunix";
 }
 build = {
 	type = "builtin";
 	modules = {
 		["spawn.init"] = "spawn/init.lua";
-		["spawn"] = {
+		["spawn.posix"] = {
 			defines = { "_POSIX_C_SOURCE=200809L" };
 			incdirs = { "vendor/compat-5.3/c-api/" };
 			sources = {
-				"spawn/kill.c";
 				"spawn/posix.c";
-				"spawn/sigset.c";
-				"spawn/wait.c";
 			};
 		};
+		["spawn.wait"] = "spawn/wait.lua";
 	}
 }
