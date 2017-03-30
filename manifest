@@ -2125,6 +2125,13 @@ repository = {
          }
       }
    },
+   lunix = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    luq = {
       ['scm-0'] = {
          {
