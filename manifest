@@ -245,6 +245,13 @@ repository = {
          }
       }
    },
+   chain = {
+      ['git-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    cifar = {
       ['scm-1'] = {
          {
@@ -777,6 +784,11 @@ repository = {
    },
    ['irc-engine'] = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-2'] = {
          {
             arch = "rockspec"
          }
@@ -2225,6 +2237,13 @@ repository = {
          }
       }
    },
+   mach = {
+      ['git-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    magic = {
       ['scm-1'] = {
          {
@@ -2671,6 +2690,13 @@ repository = {
          }
       }
    },
+   proxyquire = {
+      ['git-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    psl = {
       ['scm-0'] = {
          {
@@ -2768,6 +2794,13 @@ repository = {
          }
       },
       ['scm-3'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   rpio = {
+      ['git-0'] = {
          {
             arch = "rockspec"
          }
@@ -2976,6 +3009,13 @@ repository = {
          }
       },
       ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   switch = {
+      ['git-0'] = {
          {
             arch = "rockspec"
          }
