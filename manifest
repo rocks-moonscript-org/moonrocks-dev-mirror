@@ -2385,6 +2385,15 @@ repository = {
          }
       }
    },
+   ['naive-bayes'] = {
+      ['dev-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    namespace = {
       ['scm-1'] = {
          {
