@@ -38,7 +38,6 @@ build = {
 			defines = {
 				"_REENTRANT"; "_THREAD_SAFE";
 				"_GNU_SOURCE";
-				"LUA_COMPAT_APIINTCASTS";
 			};
 			incdirs = {
 				"$(OPENSSL_INCDIR)";
@@ -56,6 +55,8 @@ build = {
 		["openssl.des"] = "src/openssl.des.lua";
 		["openssl.digest"] = "src/openssl.digest.lua";
 		["openssl.hmac"] = "src/openssl.hmac.lua";
+		["openssl.ocsp.basic"] = "src/openssl.ocsp.basic.lua";
+		["openssl.ocsp.response"] = "src/openssl.ocsp.response.lua";
 		["openssl.pkcs12"] = "src/openssl.pkcs12.lua";
 		["openssl.pkey"] = "src/openssl.pkey.lua";
 		["openssl.pubkey"] = "src/openssl.pubkey.lua";
@@ -82,4 +83,15 @@ build = {
 			};
 		};
 	};
+	patches = {
+		["config.h.diff"] = [[
+--- a/src/openssl.c
++++ b/src/openssl.c
+@@ -26,3 +26 @@
+-#if HAVE_CONFIG_H
+-#include "config.h"
+-#endif
++#include "../config.h.guess"
+]];
+	}
 }
