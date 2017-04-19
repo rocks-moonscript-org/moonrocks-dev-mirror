@@ -782,6 +782,13 @@ repository = {
          }
       }
    },
+   interlu = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['irc-engine'] = {
       ['scm-1'] = {
          {
