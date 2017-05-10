@@ -25,6 +25,7 @@ build = {
     ['mach.not_all_calls_occurred_error'] ='mach/not_all_calls_occurred_error.lua',
     ['mach.format_call_status'] = 'mach/format_call_status.lua',
     ['mach.format_arguments'] = 'mach/format_arguments.lua',
+    ['mach.format_value'] = 'mach/format_value.lua',
     ['mach.deep_compare_matcher'] = 'mach/deep_compare_matcher.lua',
     ['mach.match'] = 'mach/match.lua',
     ['mach.any'] = 'mach/any.lua',

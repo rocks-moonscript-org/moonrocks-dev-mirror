@@ -2279,6 +2279,15 @@ repository = {
          }
       }
    },
+   ['markov-chain'] = {
+      ['dev-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    md5 = {
       ['cvs-1'] = {
          {

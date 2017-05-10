@@ -14,6 +14,8 @@ description = {
 dependencies = {
   'lua = 5.1',
   'luasocket',
+  'seawolf',
+  'mimetypes',
 }
 build = {
   type = 'builtin',
