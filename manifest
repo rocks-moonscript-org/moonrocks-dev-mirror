@@ -48,6 +48,13 @@ repository = {
          }
       }
    },
+   apicast = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    arc4random = {
       ['scm-1'] = {
          {
