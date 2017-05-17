@@ -1058,6 +1058,13 @@ repository = {
          }
       }
    },
+   ['liquid-lua'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    litcord = {
       ['scm-1'] = {
          {
@@ -2847,6 +2854,13 @@ repository = {
          }
       },
       ['scm-3'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   rpinit = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
