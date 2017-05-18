@@ -48,7 +48,7 @@ repository = {
          }
       }
    },
-   apicast = {
+   ['apicast-cli'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
@@ -1058,13 +1058,6 @@ repository = {
          }
       }
    },
-   ['liquid-lua'] = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    litcord = {
       ['scm-1'] = {
          {
@@ -1526,6 +1519,13 @@ repository = {
    },
    ['lua-resty-aries'] = {
       ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['lua-resty-env'] = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
