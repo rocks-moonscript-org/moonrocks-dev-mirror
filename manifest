@@ -209,6 +209,13 @@ repository = {
          }
       }
    },
+   ['busted-ffi'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    caffegraph = {
       ['scm-1'] = {
          {
