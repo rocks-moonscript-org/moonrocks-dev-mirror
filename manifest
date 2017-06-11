@@ -1249,6 +1249,13 @@ repository = {
          }
       }
    },
+   lrt = {
+      ['git-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ltcn = {
       ['scm-1'] = {
          {
