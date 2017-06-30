@@ -2584,6 +2584,13 @@ repository = {
          }
       }
    },
+   openhardwaremonitor = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    opennmt = {
       ['scm-1'] = {
          {
