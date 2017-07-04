@@ -1566,6 +1566,13 @@ repository = {
          }
       }
    },
+   ['lua-resty-url'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-sdl2'] = {
       ['2.0.3.1-1'] = {
          {
@@ -2492,6 +2499,13 @@ repository = {
       }
    },
    nfd = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['nginx-lua-frequency'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
