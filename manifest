@@ -2332,6 +2332,13 @@ repository = {
          }
       }
    },
+   ['lzmq-zmq'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    mach = {
       ['git-0'] = {
          {
