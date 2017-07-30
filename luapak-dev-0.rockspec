@@ -24,7 +24,7 @@ with Lua library and native extensions.]],
 
 dependencies = {
   'lua >= 5.1',
-  'brieflz ~> 0.1.0',
+  'brieflz ~> 0.1.2',
   'depgraph ~> 0.1',
   'lua-glob-pattern ~> 0.2',
   'luafilesystem ~> 1.6',
@@ -42,6 +42,7 @@ build = {
     ['luapak.build.toolchain.gnu'] = 'luapak/build/toolchain/gnu.lua',
     ['luapak.build.toolchain.msvc'] = 'luapak/build/toolchain/msvc.lua',
     ['luapak.build.toolchain.utils'] = 'luapak/build/toolchain/utils.lua',
+    ['luapak.build.warn_interceptor'] = 'luapak/build/warn_interceptor.lua',
     ['luapak.cli.analyse_deps'] = 'luapak/cli/analyse_deps.lua',
     ['luapak.cli.build_rock'] = 'luapak/cli/build_rock.lua',
     ['luapak.cli.make'] = 'luapak/cli/make.lua',
