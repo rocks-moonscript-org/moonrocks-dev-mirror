@@ -578,6 +578,15 @@ repository = {
          }
       }
    },
+   firebase = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    flirt = {
       ['scm-0'] = {
          {
@@ -1201,6 +1210,13 @@ repository = {
       }
    },
    ['lluv-websocket'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   llvm = {
       ['scm-0'] = {
          {
             arch = "rockspec"
