@@ -749,13 +749,6 @@ repository = {
          }
       }
    },
-   gumbo = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    gversion = {
       ['dev-0'] = {
          {
@@ -1783,6 +1776,13 @@ repository = {
    },
    luacwrap = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['luadbi-odbc'] = {
+      ['scm-0'] = {
          {
             arch = "rockspec"
          }
