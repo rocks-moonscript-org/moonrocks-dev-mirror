@@ -702,6 +702,13 @@ repository = {
          }
       }
    },
+   gnucrypt = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['gobo-awesome'] = {
       ['scm-1'] = {
          {
