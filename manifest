@@ -601,6 +601,13 @@ repository = {
          }
       }
    },
+   forget = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ftp = {
       ['scm-0'] = {
          {
