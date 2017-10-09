@@ -1048,6 +1048,16 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-3'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    lettersmith = {
