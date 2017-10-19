@@ -2815,6 +2815,13 @@ repository = {
          }
       }
    },
+   ['pegasus-router'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    penlight = {
       ['scm-1'] = {
          {
