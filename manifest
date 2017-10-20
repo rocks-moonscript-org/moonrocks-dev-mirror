@@ -1615,6 +1615,13 @@ repository = {
          }
       }
    },
+   ['lua-resty-execvp'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-resty-r3'] = {
       ['dev-1'] = {
          {
