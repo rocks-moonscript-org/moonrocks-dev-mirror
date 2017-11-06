@@ -506,6 +506,15 @@ repository = {
          }
       }
    },
+   euluna = {
+      ['dev-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    evdev = {
       ['scm-1'] = {
          {
