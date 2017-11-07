@@ -507,7 +507,7 @@ repository = {
       }
    },
    euluna = {
-      ['dev-0'] = {
+      ['dev-1'] = {
          {
             arch = "rockspec"
          }, {
@@ -879,6 +879,11 @@ repository = {
          }
       },
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-2'] = {
          {
             arch = "rockspec"
          }
