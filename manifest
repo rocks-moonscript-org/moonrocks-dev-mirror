@@ -188,6 +188,13 @@ repository = {
          }
       }
    },
+   ['blitz-extensions'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    box = {
       ['scm-1'] = {
          {
@@ -2856,6 +2863,13 @@ repository = {
       }
    },
    ['pegasus-router'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['pegasus-websocket'] = {
       ['scm-0'] = {
          {
             arch = "rockspec"
