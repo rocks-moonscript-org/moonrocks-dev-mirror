@@ -1464,6 +1464,13 @@ repository = {
          }
       }
    },
+   ['lua-complete'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-consul'] = {
       ['scm-0'] = {
          {
