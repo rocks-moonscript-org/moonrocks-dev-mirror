@@ -1751,6 +1751,13 @@ repository = {
          }
       }
    },
+   ['lua-sentencepiece'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-sophia'] = {
       ['scm-1'] = {
          {
