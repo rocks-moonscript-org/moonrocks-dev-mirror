@@ -1676,6 +1676,13 @@ repository = {
          }
       }
    },
+   ['lua-opencage-geocoder'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-path'] = {
       ['scm-0'] = {
          {
