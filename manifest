@@ -1205,6 +1205,13 @@ repository = {
          }
       }
    },
+   liquid = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    litcord = {
       ['scm-1'] = {
          {
