@@ -969,6 +969,15 @@ repository = {
          }
       }
    },
+   kong = {
+      ['0.13.0rc1-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    ['kong-churnzero'] = {
       ['0.1.0-1'] = {
          {
