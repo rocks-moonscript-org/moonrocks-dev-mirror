@@ -1249,6 +1249,18 @@ repository = {
          }
       }
    },
+   ljsonschema = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lluv = {
       ['scm-0'] = {
          {
