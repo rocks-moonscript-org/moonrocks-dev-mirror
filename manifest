@@ -983,6 +983,13 @@ repository = {
          }, {
             arch = "src"
          }
+      },
+      ['0.13.0rc2-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
       }
    },
    ['kong-churnzero'] = {
