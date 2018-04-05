@@ -680,13 +680,6 @@ repository = {
          }
       }
    },
-   geoip = {
-      ['dev-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    geometry2d = {
       ['scm-1'] = {
          {
