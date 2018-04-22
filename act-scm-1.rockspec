@@ -12,11 +12,11 @@ description = {
 dependencies = {
     "lua >= 5.1",
     "luarocks-fetch-gitrec >= 0.2",
-    "argv >= 0.2.0",
+    "argv >= 0.2.1",
     "minheap >= 0.1.1",
     "nosigpipe >= 0.1.0",
     "process >= 1.7.0",
-    "sentry >= 0.9.0",
+    "sentry >= 0.9.1",
 }
 build = {
     type = "builtin",
@@ -28,9 +28,9 @@ build = {
     modules = {
         act = "act.lua",
         ['act.aux'] = "lib/aux.lua",
-        ['act.aux.fileno'] = {
+        ['act.aux.syscall'] = {
             incdirs = { "deps/lauxhlib" },
-            sources = { "src/aux_fileno.c" }
+            sources = { "src/aux.c" }
         },
         ['act.callee'] = "lib/callee.lua",
         ['act.coro'] = {
@@ -42,8 +42,8 @@ build = {
             incdirs = { "deps/lauxhlib" },
             sources = { "src/hrtimer.c" }
         },
-        ['act.ipc'] = "lib/ipc.lua",
-        ['act.pipe'] = {
+        ['act.pipe'] = "lib/pipe.lua",
+        ['act.pipe.syscall'] = {
             incdirs = { "deps/lauxhlib" },
             sources = { "src/pipe.c" }
         },
