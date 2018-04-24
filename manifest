@@ -928,6 +928,13 @@ repository = {
          }
       }
    },
+   ['immutable-table'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    interlu = {
       ['scm-1'] = {
          {
