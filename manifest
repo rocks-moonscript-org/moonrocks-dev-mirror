@@ -76,13 +76,6 @@ repository = {
          }
       }
    },
-   argparse = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    async = {
       ['scm-0'] = {
          {
@@ -2087,13 +2080,6 @@ repository = {
    },
    luacom = {
       ['cvs-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   luacov = {
-      ['scm-1'] = {
          {
             arch = "rockspec"
          }
