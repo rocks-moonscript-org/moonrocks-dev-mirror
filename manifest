@@ -886,6 +886,13 @@ repository = {
          }
       }
    },
+   hotfix = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    htmlparser = {
       ['scm-0'] = {
          {
