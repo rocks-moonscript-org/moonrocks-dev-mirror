@@ -3725,6 +3725,13 @@ repository = {
          }
       }
    },
+   tmpl = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['torch-dataframe'] = {
       ['scm-1'] = {
          {
