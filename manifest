@@ -1237,6 +1237,13 @@ repository = {
          }
       }
    },
+   lgetopt = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lgsl = {
       ['scm-2'] = {
          {
@@ -2840,6 +2847,11 @@ repository = {
    },
    molde = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-2'] = {
          {
             arch = "rockspec"
          }
