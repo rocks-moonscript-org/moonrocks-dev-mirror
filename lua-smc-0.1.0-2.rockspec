@@ -1,7 +1,7 @@
 package = 'lua-Smc'
-version = '0.1.0-1'
+version = '0.1.0-2'
 source = {
-    url = 'http://sites.google.com/site/fperrad/lua-smc-0.1.0.tar.gz',
+    url = 'https://framagit.org/fperrad/lua-Smc/raw/releases/lua-smc-0.1.0.tar.gz',
     md5 = '319ef631bd8dc7986a71d6b1535b757a',
     dir = 'lua-Smc-0.1.0',
 }
