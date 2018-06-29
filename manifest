@@ -3132,6 +3132,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-9'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    opentracing = {
