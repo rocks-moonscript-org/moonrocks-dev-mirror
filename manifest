@@ -116,6 +116,13 @@ repository = {
          }
       }
    },
+   ['benchmark-ips'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['bgcrypto-aes'] = {
       ['scm-0'] = {
          {
@@ -1610,6 +1617,13 @@ repository = {
    },
    ['lua-amf'] = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['lua-amf3'] = {
+      ['git-1'] = {
          {
             arch = "rockspec"
          }
