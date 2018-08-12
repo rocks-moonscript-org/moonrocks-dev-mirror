@@ -872,6 +872,13 @@ repository = {
          }
       }
    },
+   grupp = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    gversion = {
       ['dev-0'] = {
          {
