@@ -2355,6 +2355,13 @@ repository = {
          }
       }
    },
+   lualink = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lualit = {
       ['dev-1'] = {
          {
