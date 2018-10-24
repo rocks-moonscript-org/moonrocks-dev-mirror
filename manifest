@@ -2221,6 +2221,13 @@ repository = {
          }
       }
    },
+   luacmdtable = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    luacom = {
       ['cvs-1'] = {
          {
