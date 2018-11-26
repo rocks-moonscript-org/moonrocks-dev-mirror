@@ -2010,6 +2010,13 @@ repository = {
          }
       }
    },
+   ['lua-resty-awbeci-test'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-resty-env'] = {
       ['scm-1'] = {
          {
@@ -2569,6 +2576,13 @@ repository = {
    },
    ['luarocks-build-cpp'] = {
       ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['luarocks-test'] = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
