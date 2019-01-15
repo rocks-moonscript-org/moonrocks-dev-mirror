@@ -3584,6 +3584,13 @@ repository = {
          }
       }
    },
+   pulseaudio_cli = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    randbytes = {
       ['scm-1'] = {
          {
