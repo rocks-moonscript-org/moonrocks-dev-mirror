@@ -1299,6 +1299,13 @@ repository = {
          }
       }
    },
+   legs = {
+      ['scm-3'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lenn = {
       ['scm-1'] = {
          {
