@@ -476,6 +476,13 @@ repository = {
          }
       }
    },
+   curves = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    cv = {
       ['scm-1'] = {
          {
@@ -1293,13 +1300,6 @@ repository = {
             arch = "rockspec"
          }
       },
-      ['scm-3'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   legs = {
       ['scm-3'] = {
          {
             arch = "rockspec"
