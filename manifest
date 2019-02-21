@@ -1353,6 +1353,13 @@ repository = {
          }
       }
    },
+   lhex = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    libatscc2lua = {
       ['scm-0'] = {
          {
