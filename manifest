@@ -3702,6 +3702,13 @@ repository = {
          }
       }
    },
+   restia = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    restserver = {
       ['scm-1'] = {
          {
