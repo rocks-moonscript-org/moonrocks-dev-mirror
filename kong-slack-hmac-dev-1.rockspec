@@ -2,7 +2,8 @@ package = "kong-slack-hmac"
 version = "dev-1"
 
 source = {
-   url = "git://github.com/erran/kong-slack-hmac"
+   url = "git://github.com/erran/kong-slack-hmac",
+   dir = "kong-slack-hmac",
 }
 
 description = {
@@ -23,5 +24,7 @@ build = {
 }
 
 dependencies = {
-  "lua = 5.1"
+  "lua = 5.1",
+  "lua-resty-hmac = v1.0-1",
+  "lua-resty-string = 0.09-0",
 }
