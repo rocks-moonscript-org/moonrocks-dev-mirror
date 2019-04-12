@@ -2000,6 +2000,13 @@ repository = {
          }
       }
    },
+   ['lua-ocrspace'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-opencage-geocoder'] = {
       ['scm-0'] = {
          {
