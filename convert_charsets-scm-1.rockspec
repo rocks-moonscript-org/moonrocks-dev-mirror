@@ -24,10 +24,10 @@ build = {
 		LUA = "$(LUA)"
 	},
 	install_variables = {
-		INST_PREFIX = "$(PREFIX)",
-		INST_BINDIR = "$(BINDIR)",
-		INST_LIBDIR = "$(LIBDIR)",
-		INST_LUADIR = "$(LUADIR)",
-		INST_CONFDIR = "$(CONFDIR)"
+		PREFIX = "$(PREFIX)",
+		LUA_BINDIR = "$(BINDIR)",
+		LUA_LIBDIR = "$(LIBDIR)",
+		LUA_LUADIR = "$(LUADIR)",
+		LUA_CONFDIR = "$(CONFDIR)"
 	}
 }
