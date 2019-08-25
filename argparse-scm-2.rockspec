@@ -5,7 +5,7 @@ source = {
 }
 description = {
    summary = "A feature-rich command-line argument parser",
-   detailed = "Argparse supports positional arguments, options, flags, optional arguments, subcommands and more. Argparse automatically generates usage, help and error messages.",
+   detailed = "Argparse supports positional arguments, options, flags, optional arguments, subcommands and more. Argparse automatically generates usage, help, and error messages, and can generate shell completion scripts.",
    homepage = "https://github.com/luarocks/argparse",
    license = "MIT"
 }
