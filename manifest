@@ -3362,6 +3362,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['dev-2'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    mpris = {
@@ -3958,6 +3963,11 @@ repository = {
          }
       },
       ['dev-3'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['dev-4'] = {
          {
             arch = "rockspec"
          }
