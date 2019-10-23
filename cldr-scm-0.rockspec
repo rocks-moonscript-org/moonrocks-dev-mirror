@@ -13,12 +13,14 @@ description = {
 }
 
 dependencies = {
-   "lua"
+   "lua",
+   "penlight"
 }
 
 build = {
    type = "builtin",
    modules = {
-      ["cldr.init"] = "cldr/init.lua"
+      ["cldr.init"] = "cldr/init.lua",
+      ["cldr.data.locales"] = "cldr/data/locales.lua",
    }
 }
