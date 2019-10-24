@@ -395,6 +395,13 @@ repository = {
          }
       }
    },
+   classyng = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    cldr = {
       ['scm-0'] = {
          {
