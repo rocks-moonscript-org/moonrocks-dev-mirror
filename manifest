@@ -1277,6 +1277,15 @@ repository = {
          }
       }
    },
+   kminser = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    ['kong-churnzero'] = {
       ['0.1.0-1'] = {
          {
@@ -2626,6 +2635,13 @@ repository = {
             arch = "rockspec"
          }, {
             arch = "src"
+         }
+      }
+   },
+   luaformatter = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
          }
       }
    },
