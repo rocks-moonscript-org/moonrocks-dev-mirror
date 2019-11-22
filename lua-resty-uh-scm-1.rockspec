@@ -9,7 +9,10 @@ description = {
 
 source = {
   url    = "git://github.com/reTsubasa/lua-resty-uh",
-  branch = "0.0.3"
+  branch = "scm"
+}
+dependencies = {
+  "penlight  == 1.7.0",
 }
 
 
