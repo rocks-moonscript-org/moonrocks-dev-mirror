@@ -3615,6 +3615,13 @@ repository = {
          }
       }
    },
+   oocairo = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    openhardwaremonitor = {
       ['scm-0'] = {
          {
