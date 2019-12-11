@@ -4,7 +4,7 @@ source = {
     url = "https://github.com/unifire-app/aspect/-/archive/master/aspect-master.zip"
 }
 description = {
-    summary = "Aspect is a compiling (HTML) templating engine for Lua and OpenResty.",
+    summary = "Aspect is a compiling templating engine for Lua and OpenResty with syntax Twig/Django/Jinja.",
     detailed = [[
 * Popular Django syntax compatible with Twig2 and Jinja2
 * Bytecode and lua code caching of compiled templates are available.
@@ -17,7 +17,7 @@ description = {
 * Custom behavior with userdata.
 * Supports work with OpenResty.
     ]],
-    license = "Apache 2.0",
+    license = "BSD-3-Clause",
 }
 dependencies = {
     "penlight",
@@ -27,9 +27,11 @@ dependencies = {
 build = {
     type = "builtin",
     modules = {
+        ["aspect"]             = "src/aspect/init.lua",
         ["aspect.config"]      = "src/aspect/config.lua",
         ["aspect.template"]    = "src/aspect/template.lua",
         ["aspect.compiler"]    = "src/aspect/compiler.lua",
+        ["aspect.output"]      = "src/aspect/output.lua",
         ["aspect.tags"]        = "src/aspect/tags.lua",
         ["aspect.err"]         = "src/aspect/err.lua",
         ["aspect.filters"]     = "src/aspect/filters.lua",
@@ -41,5 +43,6 @@ build = {
         ["aspect.ast.ops"]     = "src/aspect/ast/ops.lua",
         ["aspect.utils.batch"] = "src/aspect/utils/batch.lua",
         ["aspect.utils.range"] = "src/aspect/utils/range.lua",
+        ["aspect.loader.array"] = "src/aspect/loader/array.lua",
     }
 }
