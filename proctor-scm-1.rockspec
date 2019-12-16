@@ -1,8 +1,8 @@
 package = "proctor"
-version = "dev-1"
+version = "scm-1"
 source = {
    url = "git+https://github.com/stillunt1tled/proctor",
-   branch = "develop"
+   branch = "master"
 }
 description = {
    detailed = "Lua Proctor is a simple and straight-forward testing library for Lua 5.3, and works with plain lua with no extra libraries.",
