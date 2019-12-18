@@ -3111,6 +3111,13 @@ repository = {
          }
       }
    },
+   luazen = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lube = {
       ['scm-0'] = {
          {
