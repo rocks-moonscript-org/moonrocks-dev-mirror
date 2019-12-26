@@ -1739,6 +1739,13 @@ repository = {
          }
       }
    },
+   ln = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    loadconf = {
       ['scm-1'] = {
          {
@@ -3294,6 +3301,13 @@ repository = {
             arch = "rockspec"
          }, {
             arch = "src"
+         }
+      }
+   },
+   matio = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
          }
       }
    },
