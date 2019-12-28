@@ -708,15 +708,6 @@ repository = {
          }
       }
    },
-   euluna = {
-      ['dev-1'] = {
-         {
-            arch = "rockspec"
-         }, {
-            arch = "src"
-         }
-      }
-   },
    evdev = {
       ['scm-1'] = {
          {
