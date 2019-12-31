@@ -1756,6 +1756,13 @@ repository = {
          }
       }
    },
+   ['love-gltf'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['love-imgui'] = {
       ['scm-1'] = {
          {
