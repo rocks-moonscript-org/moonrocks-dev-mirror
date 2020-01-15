@@ -4046,6 +4046,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['dev-7'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    restserver = {
