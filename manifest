@@ -41,6 +41,13 @@ repository = {
          }
       }
    },
+   ai = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    amalg = {
       ['scm-0'] = {
          {
@@ -233,8 +240,22 @@ repository = {
          }
       }
    },
+   bit = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    bit32 = {
       ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   bitcoin = {
+      ['dev-1'] = {
          {
             arch = "rockspec"
          }
@@ -249,6 +270,13 @@ repository = {
    },
    bitness = {
       ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   bitproxy = {
+      ['dev-1'] = {
          {
             arch = "rockspec"
          }
@@ -411,6 +439,13 @@ repository = {
    },
    cldr = {
       ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   cloud = {
+      ['dev-1'] = {
          {
             arch = "rockspec"
          }
@@ -621,6 +656,13 @@ repository = {
    },
    danetool = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   data = {
+      ['dev-1'] = {
          {
             arch = "rockspec"
          }
@@ -1103,6 +1145,13 @@ repository = {
    },
    hell = {
       ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   hello = {
+      ['dev-1'] = {
          {
             arch = "rockspec"
          }
@@ -3323,6 +3372,13 @@ repository = {
          }
       }
    },
+   metanet = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    mgcints = {
       ['scm-1'] = {
          {
@@ -3865,6 +3921,13 @@ repository = {
          }
       }
    },
+   power = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    prefix_tree = {
       ['scm-0'] = {
          {
@@ -4169,6 +4232,13 @@ repository = {
    },
    sarnn = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   satoshi = {
+      ['dev-1'] = {
          {
             arch = "rockspec"
          }
