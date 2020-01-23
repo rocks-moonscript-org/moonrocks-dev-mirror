@@ -1,6 +1,6 @@
 rockspec_format = "3.0"
 package = "restia"
-version = "dev-2"
+version = "dev-1"
 source = {
 	url = "git://github.com/DarkWiiPlayer/restia.git";
 }
@@ -15,10 +15,16 @@ description = {
 }
 dependencies = {
 	"lua ~> 5";
-	"moonxml >= 3.2, < 4";
-	"xhmoon >= 1.2.0 < 2";
+	"moonxml";
+	"xhmoon";
 	"moonscript";
 	"lunamark";
+	"luafilesystem";
+	"lyaml";
+	"cosmo";
+	"busted";
+	"luacheck";
+  "luaossl";
 }
 build = {
 	type = "builtin",
@@ -26,7 +32,12 @@ build = {
 		['restia'] = 'restia/init.lua';
 		['restia.utils'] = 'restia/utils.lua';
 		['restia.commands'] = 'restia/commands.lua';
+		['restia.config'] = 'restia/config.lua';
 		['restia.colors'] = 'restia/colors.lua';
+		['restia.template'] = 'restia/template.lua';
+		['restia.markdown'] = 'restia/markdown.lua';
+		['restia.secret'] = 'restia/secret.lua';
+		['restia.contributors'] = 'contributors.lua';
 	};
 	install = {
 		bin = {

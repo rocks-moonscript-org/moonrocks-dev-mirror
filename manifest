@@ -4090,27 +4090,7 @@ repository = {
       }
    },
    restia = {
-      ['dev-2'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['dev-3'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['dev-4'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['dev-5'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['dev-7'] = {
+      ['dev-1'] = {
          {
             arch = "rockspec"
          }
