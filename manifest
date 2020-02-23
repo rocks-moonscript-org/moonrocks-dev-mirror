@@ -501,6 +501,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['cvs-6'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ['copas-async'] = {
