@@ -3275,6 +3275,13 @@ repository = {
          }
       }
    },
+   lurai = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lust = {
       ['scm-1'] = {
          {
