@@ -741,6 +741,13 @@ repository = {
          }
       }
    },
+   elscheduler = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    encrypto = {
       ['scm-0'] = {
          {
@@ -2998,6 +3005,13 @@ repository = {
          }
       }
    },
+   luaseq = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    luaservice = {
       ['scm-0'] = {
          {
@@ -3270,13 +3284,6 @@ repository = {
    },
    luq = {
       ['scm-0'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   lurai = {
-      ['dev-1'] = {
          {
             arch = "rockspec"
          }
