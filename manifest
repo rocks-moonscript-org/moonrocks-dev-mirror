@@ -2205,6 +2205,13 @@ repository = {
          }
       }
    },
+   ['lua-lcdproc'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-libmemcached'] = {
       ['scm-0'] = {
          {
