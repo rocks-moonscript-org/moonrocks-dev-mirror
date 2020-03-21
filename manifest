@@ -2077,6 +2077,13 @@ repository = {
          }
       }
    },
+   ['lua-covid-data'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-csv'] = {
       ['scm-1'] = {
          {
