@@ -7,12 +7,11 @@ description = {
    homepage = "https://github.com/gae1202/kong-plugin-upstream-auth-hmac",
    license = "*** please specify a license ***"
 }
-dependencies = {
-}
+dependencies = {}
 build = {
    type = "builtin",
    modules = {
-      ["plugin.upstream-auth-hmac.handler"] = "kong/plugin/upstream-auth-hmac/handler.lua",
-      ["plugin.upstream-auth-hmac.schema"] = "kong/plugin/upstream-auth-hmac/schema.lua"
+      ["kong.plugins.upstream-auth-hmac.handler"] = "kong/plugins/upstream-auth-hmac/handler.lua",
+      ["kong.plugins.upstream-auth-hmac.schema"] = "kong/plugins/upstream-auth-hmac/schema.lua"
    }
 }
