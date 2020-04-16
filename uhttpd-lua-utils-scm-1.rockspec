@@ -1,20 +1,18 @@
-package = "mail_parser"
+package = "uhttpd-lua-utils"
 version = "scm-1"
 source = {
-	url = "git+https://gitlab.com/rychly/mail-parser.git",
+	url = "git+https://gitlab.com/rychly/uhttpd-lua-utils.git",
 	branch = "master"
 }
 description = {
-	summary = "Lua scripts to parse mail messages, plain or in MIME format.",
+	summary = "Lua handler and request module for uHTTPd webserver.",
 	detailed = "",
-	homepage = "https://gitlab.com/rychly/mail-parser",
+	homepage = "https://gitlab.com/rychly/uhttpd-lua-utils",
 	license = "GNU/GPLv3"
 }
 dependencies = {
-	"lua >= 5.1, < 5.4",
-	"luafilesystem",
-	"luasocket",
-	"convert_charsets"
+	"lua = 5.1",
+	"handler-helpers",
 }
 build = {
 	type = "make",

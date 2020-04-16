@@ -1,17 +1,20 @@
-package = "convert_charsets"
+package = "smsd-event-handler"
 version = "scm-1"
 source = {
-	url = "git+https://gitlab.com/rychly/convert-charsets.git",
+	url = "git+https://gitlab.com/rychly/smsd-event-handler.git",
 	branch = "master"
 }
 description = {
-	summary = "Lua scripts to convert strings between UTF-8 and other charsets and from UTF-8 to ASCII.",
+	summary = "Handler and processors for SMS events produced by SMS Server Tools 3 (smstools3).",
 	detailed = "",
-	homepage = "https://gitlab.com/rychly/convert-charsets",
-	license = "GNU/GPLv2"
+	homepage = "https://gitlab.com/rychly/smsd-event-handler",
+	license = "GNU/GPLv3"
 }
 dependencies = {
-	"lua >= 5.1, < 5.4"
+	"lua = 5.1",
+	"smsd-helpers",
+	"handler-helpers",
+	"luafilesystem",
 }
 build = {
 	type = "make",
