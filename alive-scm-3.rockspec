@@ -1,5 +1,5 @@
 package = "alive"
-version = "scm-1"
+version = "scm-3"
 
 source = {
   url = "git://github.com/s-ol/alive.git",
@@ -48,6 +48,7 @@ build = {
       ["alv.init"] = "alv/init.moon",
       ["alv.invoke"] = "alv/invoke.moon",
       ["alv.logger"] = "alv/logger.moon",
+      ["alv.module"] = "alv/module.moon",
       ["alv.parsing"] = "alv/parsing.moon",
       ["alv.registry"] = "alv/registry.moon",
       ["alv.result"] = "alv/result.moon",
@@ -75,7 +76,7 @@ build = {
     },
     bin = {
       "bin/alv",
-      "bin/alv-copilot"
+      "bin/alv-wx"
     },
   },
 }
