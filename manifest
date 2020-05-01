@@ -4943,6 +4943,15 @@ repository = {
          }
       }
    },
+   ['wimbly-lib'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    windowsfirewall = {
       ['scm-0'] = {
          {
