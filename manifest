@@ -4933,6 +4933,13 @@ repository = {
          }
       }
    },
+   warn = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    wcwidth = {
       ['scm-0'] = {
          {
