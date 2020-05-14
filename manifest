@@ -49,7 +49,7 @@ repository = {
       }
    },
    alive = {
-      ['scm-3'] = {
+      ['scm-4'] = {
          {
             arch = "rockspec"
          }

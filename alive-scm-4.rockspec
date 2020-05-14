@@ -1,5 +1,5 @@
 package = "alive"
-version = "scm-3"
+version = "scm-4"
 
 source = {
   url = "git://github.com/s-ol/alive.git",
@@ -13,12 +13,12 @@ expressions persist and update until they are removed from the source code, and
 the interpreter keeps no state that you cannot manipulate directly in the
 source. This yields a direct-manipulation like experience with a purely
 text-based language and works without special editor support.]],
-  homepage = "https://alive.s-ol.nu",
+  homepage = "https://alv.s-ol.nu",
   license = "GPL-3",
 }
 
 dependencies = {
-  "lua >= 5.3",
+  "lua",
   "moonscript >= 0.5.0",
   "lpeg ~> 0.10",
   "luafilesystem",
@@ -40,6 +40,7 @@ build = {
       ["alv.base.input"] = "alv/base/input.moon",
       ["alv.base.match"] = "alv/base/match.moon",
       ["alv.base.op"] = "alv/base/op.moon",
+      ["alv.base.pureop"] = "alv/base/pureop.moon",
       ["alv.builtin"] = "alv/builtin.moon",
       ["alv.cell"] = "alv/cell.moon",
       ["alv.copilot"] = "alv/copilot.moon",
@@ -51,14 +52,17 @@ build = {
       ["alv.module"] = "alv/module.moon",
       ["alv.parsing"] = "alv/parsing.moon",
       ["alv.registry"] = "alv/registry.moon",
-      ["alv.result"] = "alv/result.moon",
+      ["alv.result.base"] = "alv/result/base.moon",
+      ["alv.result.const"] = "alv/result/const.moon",
+      ["alv.result.evt"] = "alv/result/evt.moon",
+      ["alv.result.init"] = "alv/result/init.moon",
+      ["alv.result.io"] = "alv/result/io.moon",
+      ["alv.result.sig"] = "alv/result/sig.moon",
+      ["alv.rtnode"] = "alv/rtnode.moon",
       ["alv.scope"] = "alv/scope.moon",
-      ["alv.stream.base"] = "alv/stream/base.moon",
-      ["alv.stream.event"] = "alv/stream/event.moon",
-      ["alv.stream.init"] = "alv/stream/init.moon",
-      ["alv.stream.io"] = "alv/stream/io.moon",
-      ["alv.stream.value"] = "alv/stream/value.moon",
       ["alv.tag"] = "alv/tag.moon",
+      ["alv.type"] = "alv/type.moon",
+      ["alv.util"] = "alv/util.moon",
       ["alv.version"] = "alv/version.moon",
 
       ["alv-lib.logic"] = "alv-lib/logic.moon",
@@ -76,7 +80,8 @@ build = {
     },
     bin = {
       "bin/alv",
-      "bin/alv-wx"
+      "bin/alv-wx",
+      "bin/alv-fltk",
     },
   },
 }
