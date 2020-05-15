@@ -1,5 +1,5 @@
 package = "alive"
-version = "scm-4"
+version = "scm-5"
 
 source = {
   url = "git://github.com/s-ol/alive.git",
@@ -20,7 +20,7 @@ text-based language and works without special editor support.]],
 dependencies = {
   "lua",
   "moonscript >= 0.5.0",
-  "lpeg ~> 0.10",
+  "lpeg",
   "luafilesystem",
   "luasystem",
   "luasocket",
@@ -43,7 +43,10 @@ build = {
       ["alv.base.pureop"] = "alv/base/pureop.moon",
       ["alv.builtin"] = "alv/builtin.moon",
       ["alv.cell"] = "alv/cell.moon",
-      ["alv.copilot"] = "alv/copilot.moon",
+      ["alv.copilot.base"] = "alv/copilot/base.moon",
+      ["alv.copilot.cli"] = "alv/copilot/cli.moon",
+      ["alv.copilot.fltk"] = "alv/copilot/fltk.moon",
+      ["alv.copilot.wx"] = "alv/copilot/wx.moon",
       ["alv.cycle"] = "alv/cycle.moon",
       ["alv.error"] = "alv/error.moon",
       ["alv.init"] = "alv/init.moon",
@@ -65,6 +68,7 @@ build = {
       ["alv.util"] = "alv/util.moon",
       ["alv.version"] = "alv/version.moon",
 
+      ["alv-lib.array"] = "alv-lib/array.moon",
       ["alv-lib.logic"] = "alv-lib/logic.moon",
       ["alv-lib.math"] = "alv-lib/math.moon",
       ["alv-lib.midi"] = "alv-lib/midi.moon",
@@ -75,6 +79,7 @@ build = {
       ["alv-lib.random"] = "alv-lib/random.moon",
       ["alv-lib.sc"] = "alv-lib/sc.moon",
       ["alv-lib.string"] = "alv-lib/string.moon",
+      ["alv-lib.struct"] = "alv-lib/struct.moon",
       ["alv-lib.time"] = "alv-lib/time.moon",
       ["alv-lib.util"] = "alv-lib/util.moon",
     },
