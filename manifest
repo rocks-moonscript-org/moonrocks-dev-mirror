@@ -1554,6 +1554,13 @@ repository = {
          }
       }
    },
+   lcqhttp = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ldbus = {
       ['scm-0'] = {
          {
