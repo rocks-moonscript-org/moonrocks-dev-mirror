@@ -760,6 +760,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    encrypto = {
@@ -3550,6 +3555,13 @@ repository = {
       }
    },
    mgcints = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   mgl = {
       ['scm-1'] = {
          {
             arch = "rockspec"
