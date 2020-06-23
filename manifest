@@ -3793,6 +3793,13 @@ repository = {
          }
       }
    },
+   nested = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    nfd = {
       ['scm-1'] = {
          {
