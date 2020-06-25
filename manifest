@@ -1616,6 +1616,13 @@ repository = {
          }
       }
    },
+   lgetchar = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lgetopt = {
       ['dev-1'] = {
          {
