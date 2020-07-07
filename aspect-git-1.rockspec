@@ -33,7 +33,8 @@ build = {
         ["aspect.utils"]       = "src/aspect/utils.lua",
         ["aspect.utils.batch"] = "src/aspect/utils/batch.lua",
         ["aspect.utils.range"] = "src/aspect/utils/range.lua",
-        ["aspect.utils.date"]  = "src/aspect/utils/date.lua",
+
+        ["aspect.date"]  = "src/aspect/date.lua",
 
         ["aspect.loader.array"]      = "src/aspect/loader/array.lua",
         ["aspect.loader.filesystem"] = "src/aspect/loader/filesystem.lua",
