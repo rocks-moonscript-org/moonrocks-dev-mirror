@@ -104,6 +104,13 @@ repository = {
          }
       }
    },
+   arrr = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    aspect = {
       ['git-1'] = {
          {
