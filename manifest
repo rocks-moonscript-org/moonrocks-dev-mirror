@@ -627,6 +627,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-54'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ['cqueues-pgsql'] = {
