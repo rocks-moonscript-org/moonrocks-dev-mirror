@@ -5133,6 +5133,13 @@ repository = {
          }
       }
    },
+   wildcard_pattern = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['wimbly-lib'] = {
       ['dev-1'] = {
          {
