@@ -60,6 +60,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-7'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    amalg = {
