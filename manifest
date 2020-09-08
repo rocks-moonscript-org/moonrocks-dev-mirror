@@ -336,6 +336,13 @@ repository = {
          }
       }
    },
+   bpfaas = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    brain = {
       ['scm-1'] = {
          {
