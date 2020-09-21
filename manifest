@@ -2574,6 +2574,13 @@ repository = {
          }
       }
    },
+   ['lua-resty-timer'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-resty-uh'] = {
       ['scm-1'] = {
          {
