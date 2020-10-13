@@ -2757,6 +2757,13 @@ repository = {
          }
       }
    },
+   ['lua-wzj-package'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-xwiimote'] = {
       ['dev-1'] = {
          {
@@ -4852,6 +4859,13 @@ repository = {
    },
    stdlib = {
       ['git-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   stnbhwd = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
