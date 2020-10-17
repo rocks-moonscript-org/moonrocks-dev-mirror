@@ -4474,6 +4474,13 @@ repository = {
          }
       }
    },
+   reactivex = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    reactor = {
       ['scm-1'] = {
          {
