@@ -807,13 +807,6 @@ repository = {
          }
       }
    },
-   drferron = {
-      ['dev-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    elasticsearch = {
       ['scm-0'] = {
          {
@@ -3591,6 +3584,23 @@ repository = {
    },
    lutrace = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   luxure = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['dev-2'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['dev-3'] = {
          {
             arch = "rockspec"
          }
