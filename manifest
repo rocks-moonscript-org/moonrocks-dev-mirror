@@ -1816,7 +1816,7 @@ repository = {
       }
    },
    ljndpi = {
-      ['scm-1'] = {
+      ['scm-2'] = {
          {
             arch = "rockspec"
          }
