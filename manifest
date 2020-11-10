@@ -5057,15 +5057,6 @@ repository = {
          }
       }
    },
-   ['tonos-client'] = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }, {
-            arch = "linux-x86_64"
-         }
-      }
-   },
    ['torch-dataframe'] = {
       ['scm-1'] = {
          {
