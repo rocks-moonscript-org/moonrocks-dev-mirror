@@ -3969,6 +3969,13 @@ repository = {
          }
       }
    },
+   ['nacos-sdk-lua'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['naive-bayes'] = {
       ['dev-0'] = {
          {
