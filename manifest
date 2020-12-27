@@ -5332,6 +5332,13 @@ repository = {
          }
       }
    },
+   vectorize = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    vicky = {
       ['dev-1'] = {
          {
