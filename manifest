@@ -4550,13 +4550,6 @@ repository = {
          }
       }
    },
-   randbytes = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    random = {
       ['dev-1'] = {
          {
@@ -5129,6 +5122,13 @@ repository = {
    },
    tmpl = {
       ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['tonos-client'] = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
