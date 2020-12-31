@@ -5529,6 +5529,13 @@ repository = {
          }
       }
    },
+   xhmoon = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    xzhtest = {
       ['dev-1'] = {
          {
