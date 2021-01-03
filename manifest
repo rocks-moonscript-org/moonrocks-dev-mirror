@@ -2480,6 +2480,13 @@ repository = {
          }
       }
    },
+   ['lua-mbedtls'] = {
+      ['git-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-mongo'] = {
       ['git-1'] = {
          {
