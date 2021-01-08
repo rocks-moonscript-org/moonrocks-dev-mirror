@@ -4072,6 +4072,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    netatmo = {
@@ -4981,6 +4986,13 @@ repository = {
       }
    },
    stnbhwd = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   stringstream = {
       ['scm-1'] = {
          {
             arch = "rockspec"
