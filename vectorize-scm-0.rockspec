@@ -1,5 +1,5 @@
 package = "vectorize"
-version = "scm-2"
+version = "scm-0"
 source = {
   url = "git://github.com/wqferr/lua-vectorize.git"
 }
@@ -15,15 +15,16 @@ Contributions are welcome!]],
 }
 
 dependencies = {
-  "lua >= 5.3, < 5.5"
+  "lua >= 5.2, < 5.5"
 }
 
 build = {
   type = "builtin",
   modules = {
-    vectorize = {
-      sources = {"vectorize.c", "vector.c"},
+    vec = {
+      sources = {"vectorize.c"},
       libraries = {"m"}
-    }
+    },
+    ["vec.ode"] = "ode.lua"
   }
 }
