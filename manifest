@@ -519,6 +519,13 @@ repository = {
          }
       }
    },
+   cloud_storage = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    co2 = {
       ['scm-0'] = {
          {
@@ -1603,6 +1610,13 @@ repository = {
       }
    },
    ['lapis-community'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['lapis-console'] = {
       ['dev-1'] = {
          {
             arch = "rockspec"
@@ -3760,6 +3774,13 @@ repository = {
    },
    magic = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   magick = {
+      ['dev-1'] = {
          {
             arch = "rockspec"
          }
