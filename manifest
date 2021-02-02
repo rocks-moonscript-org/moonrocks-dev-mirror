@@ -4819,6 +4819,13 @@ repository = {
          }
       }
    },
+   satelito = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    satoshi = {
       ['dev-1'] = {
          {
