@@ -1,7 +1,8 @@
 package = "satelito"
 version = "dev-1"
 source = {
-    url = "https://soucy.cc/satelito.tar.gz"
+    url = "git://soucy.cc/satelito.git",
+    tag = "Dev.1.0"
 }
 description = {
     homepage = "https://soucy.cc/git/satelito/files.html",
