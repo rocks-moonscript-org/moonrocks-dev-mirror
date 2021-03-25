@@ -645,6 +645,13 @@ repository = {
          }
       }
    },
+   cparser = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    cpml = {
       ['scm-1'] = {
          {
