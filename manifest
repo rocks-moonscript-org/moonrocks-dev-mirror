@@ -336,6 +336,13 @@ repository = {
          }
       }
    },
+   bling = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['blitz-extensions'] = {
       ['scm-0'] = {
          {
