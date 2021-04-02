@@ -2295,6 +2295,13 @@ repository = {
          }
       }
    },
+   ['lua-casbin'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-cbor'] = {
       ['scm-0'] = {
          {
