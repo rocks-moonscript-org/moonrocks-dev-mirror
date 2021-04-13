@@ -2943,6 +2943,13 @@ repository = {
          }
       }
    },
+   ['lua-xxtea'] = {
+      ['git-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-yajl'] = {
       ['scm-1'] = {
          {
