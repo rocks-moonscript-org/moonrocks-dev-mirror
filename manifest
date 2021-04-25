@@ -4184,6 +4184,13 @@ repository = {
          }
       }
    },
+   nanoid = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ncache = {
       ['scm-1'] = {
          {
