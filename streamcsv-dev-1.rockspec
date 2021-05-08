@@ -12,5 +12,6 @@ build = {
    modules = {
       ["streamcsv"]= "streamcsv/init.lua";
       ["streamcsv.read"] = "streamcsv/read.lua";
+      ["streamcsv.write"] = "streamcsv/write.lua";
    }
 }
