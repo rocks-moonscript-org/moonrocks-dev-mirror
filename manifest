@@ -4892,6 +4892,13 @@ repository = {
          }
       }
    },
+   rocksfs = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['roman-numerls'] = {
       ['git-1'] = {
          {
