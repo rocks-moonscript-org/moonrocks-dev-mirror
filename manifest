@@ -973,6 +973,13 @@ repository = {
          }
       }
    },
+   ['ffi-hyperparser'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    fifo = {
       ['scm-0'] = {
          {
