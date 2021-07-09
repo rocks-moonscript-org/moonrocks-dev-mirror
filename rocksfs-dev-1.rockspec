@@ -23,7 +23,25 @@ dependencies = {
 build = {
 	type = "builtin",
 	modules = {
-		rocksfs = "src/fs.lua"
+		["rocks.fs"] = "src/rocks/fs.lua",
+		["rocks.tar"] = "src/rocks/tar.lua",
+		["rocks.zip"] = "src/rocks/zip.lua",
+
+		["rocks.dir"] = "src/rocks/dir.lua",
+		["rocks.fun"] = "src/rocks/fun.lua",
+		["rocks.patch"] = "src/rocks/patch.lua",
+
+		["rocks.fs.unix.tools"] = "src/rocks/fs/unix/tools.lua",
+		["rocks.fs.win32.tools"] = "src/rocks/fs/win32/tools.lua",
+
+		["rocks.fs.freebsd"] = "src/rocks/fs/freebsd.lua",
+		["rocks.fs.linux"] = "src/rocks/fs/linux.lua",
+		["rocks.fs.macosx"] = "src/rocks/fs/macosx.lua",
+		["rocks.fs.native"] = "src/rocks/fs/native.lua",
+		["rocks.fs.netbsd"] = "src/rocks/fs/netbsd.lua",
+		["rocks.fs.tools"] = "src/rocks/fs/tools.lua",
+		["rocks.fs.unix"] = "src/rocks/fs/unix.lua",
+		["rocks.fs.win32"] = "src/rocks/fs/win32.lua",
 	}
 }
 test_dependencies = {
