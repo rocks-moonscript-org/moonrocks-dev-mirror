@@ -7,21 +7,22 @@ source = {
 dependencies = {
   'lua = 5.1',
   'bitlib',
-  'datafile',
   'lua-path',
+  'serpent',
+  'wowcig',
   'xml2lua',
 }
 build = {
   type = 'none',
   install = {
     lua = {
+      ['wowless.api'] = 'wowless/api.lua',
       ['wowless.env'] = 'wowless/env.lua',
       ['wowless.loader'] = 'wowless/loader.lua',
+      ['wowless.runner'] = 'wowless/runner.lua',
       ['wowless.util'] = 'wowless/util.lua',
       ['wowless.xml'] = 'wowless/xml.lua',
+      ['wowless.xmllang'] = 'wowless/xmllang.lua',
     },
-  },
-  copy_directories = {
-    'wowui',
   },
 }
