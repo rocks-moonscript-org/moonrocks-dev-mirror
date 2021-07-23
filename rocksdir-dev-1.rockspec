@@ -2,7 +2,7 @@ rockspec_format = "3.0"
 package = "rocksdir"
 version = "dev-1"
 source = {
-	url = "git@github.com:Deepak123bharat/rocks-dir.git",
+	url = "git://github.com/Deepak123bharat/rocks-dir.git",
 }
 description = {
 	summary = "Generic utilities for handling pathnames.",

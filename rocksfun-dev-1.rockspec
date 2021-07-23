@@ -2,7 +2,7 @@ rockspec_format = "3.0"
 package = "rocksfun"
 version = "dev-1"
 source = {
-	url = "git@github.com:Deepak123bharat/rocks-fun.git",
+	url = "git://github.com/Deepak123bharat/rocks-fun",
 }
 description = {
 	summary = "A set of basic functional utilities",
