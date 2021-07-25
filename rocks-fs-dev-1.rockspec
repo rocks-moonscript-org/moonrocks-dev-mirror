@@ -1,11 +1,11 @@
 rockspec_format = "3.0"
-package = "rocksfs"
+package = "rocks-fs"
 version = "dev-1"
 source = {
 	url = "git://github.com/Deepak123bharat/rocks-fs",
 }
 description = {
-	summary = "Module for filesystem and platform abstractions.",
+	summary = "Module for filesystem and platform abstractions. ",
 	detailed = [[
 		fs is a Lua implementation of filesystem and platform abstractions.
 	]],
@@ -13,7 +13,7 @@ description = {
 	license = "MIT" 
 }
 dependencies = {
-	"lua >= 5.1, < 5.4",
+	"lua >= 5.1, < 5.5",
 	"luafilesystem",
 	"luasocket",
 	"lmd5",

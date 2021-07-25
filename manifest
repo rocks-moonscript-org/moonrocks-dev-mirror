@@ -4927,42 +4927,42 @@ repository = {
          }
       }
    },
-   rocksdir = {
+   ['rocks-dir'] = {
       ['dev-1'] = {
          {
             arch = "rockspec"
          }
       }
    },
-   rocksfs = {
+   ['rocks-fs'] = {
       ['dev-1'] = {
          {
             arch = "rockspec"
          }
       }
    },
-   rocksfun = {
+   ['rocks-fun'] = {
       ['dev-1'] = {
          {
             arch = "rockspec"
          }
       }
    },
-   rockspatch = {
+   ['rocks-patch'] = {
       ['dev-1'] = {
          {
             arch = "rockspec"
          }
       }
    },
-   rockstar = {
+   ['rocks-tar'] = {
       ['dev-1'] = {
          {
             arch = "rockspec"
          }
       }
    },
-   rockszip = {
+   ['rocks-zip'] = {
       ['dev-1'] = {
          {
             arch = "rockspec"

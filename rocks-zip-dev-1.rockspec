@@ -1,24 +1,25 @@
 rockspec_format = "3.0"
-package = "rocksdir"
+package = "rocks-zip"
 version = "dev-1"
 source = {
-	url = "git://github.com/Deepak123bharat/rocks-dir.git",
+	url = "git://github.com/Deepak123bharat/rocks-zip",
 }
 description = {
-	summary = "Generic utilities for handling pathnames.",
+	summary = "A Lua implementation of .zip and .gz file compression and decompression",
 	detailed = [[
-		Module to handle pathnames.
+		Compression and decompression of .zip and .gz using only lzlib or lua-lzib.
 	]],
-	homepage = "https://github.com/Deepak123bharat/rocks-dir", 
+	homepage = "https://github.com/Deepak123bharat/rocks-zip", 
 	license = "MIT" 
 }
 dependencies = {
-	"lua >= 5.1, < 5.4",
+	"lua >= 5.1, < 5.5",
+	"lzlib",
 }
 build = {
 	type = "builtin",
 	modules = {
-		["rocks.dir"] = "src/rocks/dir.lua",
+		["rocks.zip"] = "src/rocks/zip.lua",
 	}
 }
 test_dependencies = {

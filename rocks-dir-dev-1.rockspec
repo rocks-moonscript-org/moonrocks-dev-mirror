@@ -1,24 +1,24 @@
 rockspec_format = "3.0"
-package = "rocksfun"
+package = "rocks-dir"
 version = "dev-1"
 source = {
-	url = "git://github.com/Deepak123bharat/rocks-fun",
+	url = "git://github.com/Deepak123bharat/rocks-dir.git",
 }
 description = {
-	summary = "A set of basic functional utilities",
+	summary = "Generic utilities for handling pathnames.",
 	detailed = [[
-		Basic functional utilities to manipulate tables.
+		Module to handle pathnames.
 	]],
-	homepage = "https://github.com/Deepak123bharat/rocks-fun", 
+	homepage = "https://github.com/Deepak123bharat/rocks-dir", 
 	license = "MIT" 
 }
 dependencies = {
-	"lua >= 5.1, < 5.4",
+	"lua >= 5.1, < 5.5",
 }
 build = {
 	type = "builtin",
 	modules = {
-		["rocks.fun"] = "src/rocks/fun.lua",
+		["rocks.dir"] = "src/rocks/dir.lua",
 	}
 }
 test_dependencies = {

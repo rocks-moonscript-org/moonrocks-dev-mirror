@@ -1,25 +1,27 @@
 rockspec_format = "3.0"
-package = "rockszip"
+package = "rocks-tar"
 version = "dev-1"
 source = {
-	url = "git://github.com/Deepak123bharat/rocks-zip",
+	url = "git://github.com/Deepak123bharat/rocks-tar",
 }
 description = {
-	summary = "A Lua implementation of .zip and .gz file compression and decompression",
+	summary = "A pure-Lua implementation of untar.",
 	detailed = [[
-		Compression and decompression of .zip and .gz using only lzlib or lua-lzib.
+		Module to unpacking .tar archives.
 	]],
-	homepage = "https://github.com/Deepak123bharat/rocks-zip", 
+	homepage = "https://github.com/Deepak123bharat/rocks-tar", 
 	license = "MIT" 
 }
 dependencies = {
-	"lua >= 5.1, < 5.4",
-	"lzlib",
+	"lua >= 5.1, < 5.5",
+	"rocksfs",
+	"rocksfun",
+	"rocksdir",
 }
 build = {
 	type = "builtin",
 	modules = {
-		["rocks.zip"] = "src/rocks/zip.lua",
+		["rocks.tar"] = "src/rocks/tar.lua",
 	}
 }
 test_dependencies = {

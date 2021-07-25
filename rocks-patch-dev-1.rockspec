@@ -1,5 +1,5 @@
 rockspec_format = "3.0"
-package = "rockspatch"
+package = "rocks-patch"
 version = "dev-1"
 source = {
 	url = "git://github.com/Deepak123bharat/rocks-patch",
@@ -19,7 +19,7 @@ description = {
 	license = "MIT" 
 }
 dependencies = {
-	"lua >= 5.1, < 5.4",
+	"lua >= 5.1, < 5.5",
 	"rocksfs",
 	"rocksfun",
 }
