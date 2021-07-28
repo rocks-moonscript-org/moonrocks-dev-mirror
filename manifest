@@ -1176,13 +1176,6 @@ repository = {
          }
       }
    },
-   gitsigns = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    ['gleam-lua'] = {
       ['scm-02'] = {
          {
@@ -4656,13 +4649,6 @@ repository = {
       }
    },
    plc = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   plenary = {
       ['scm-1'] = {
          {
             arch = "rockspec"
