@@ -3493,6 +3493,13 @@ repository = {
          }
       }
    },
+   ['luarocks-temp'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    luars232 = {
       ['scm-1'] = {
          {
