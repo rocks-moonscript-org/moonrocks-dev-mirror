@@ -3812,6 +3812,13 @@ repository = {
          }
       }
    },
+   ['lush.nvim'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lust = {
       ['scm-1'] = {
          {
