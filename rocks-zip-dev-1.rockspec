@@ -14,7 +14,7 @@ description = {
 }
 dependencies = {
 	"lua >= 5.1, < 5.5",
-	"lzlib",
+	"lzlib >= 0.4.1.53-1",
 }
 build = {
 	type = "builtin",

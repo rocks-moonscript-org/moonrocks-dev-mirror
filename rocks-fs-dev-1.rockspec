@@ -19,6 +19,7 @@ dependencies = {
 	"lmd5",
 	"lua-bz2",
 	"luaposix",
+	"rocks-dir",
 }
 build = {
 	type = "builtin",
