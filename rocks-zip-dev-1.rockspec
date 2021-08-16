@@ -15,6 +15,7 @@ description = {
 dependencies = {
 	"lua >= 5.1, < 5.5",
 	"lzlib >= 0.4.1.53-1",
+	"rocks-fs",
 }
 build = {
 	type = "builtin",
