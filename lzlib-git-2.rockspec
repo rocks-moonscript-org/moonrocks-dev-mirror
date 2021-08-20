@@ -1,7 +1,8 @@
 package="lzlib"
-version="scm-1"
+version="git-2"
 source = {
-   url = "git://github.com/hishamhm/lzlib",
+   url = "git://github.com/LuaDist/lzlib.git",
+   branch = "master",
 }
 description = {
    summary = "Lua bindings to the ZLib compression library",
@@ -14,12 +15,19 @@ description = {
    license = "MIT/X11"
 }
 dependencies = {
-   "lua >= 5.1, < 5.4"
+   "lua >= 5.1"
 }
 external_dependencies = {
    ZLIB = {
       header = "zlib.h",
       library = "z",
+   },
+   platforms = {
+      windows = {
+         ZLIB = {
+            library = "zlib",
+         }
+      }
    }
 }
 build = {
@@ -32,5 +40,14 @@ build = {
          libraries = "z",
       },
       gzip = "gzip.lua",
+   },
+   platforms = {
+      windows = {
+         modules = {
+            zlib = {
+               libraries = "zlib",
+            }
+         }
+      }
    }
 }

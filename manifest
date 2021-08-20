@@ -3895,7 +3895,7 @@ repository = {
       }
    },
    lzlib = {
-      ['scm-1'] = {
+      ['git-2'] = {
          {
             arch = "rockspec"
          }
@@ -5475,6 +5475,18 @@ repository = {
    },
    testy = {
       ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   thingsim = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['dev-2'] = {
          {
             arch = "rockspec"
          }
