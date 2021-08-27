@@ -16,6 +16,8 @@ dependencies = {
 	"lua >= 5.1, < 5.5",
 	"lzlib >= 0.4.1.53-1",
 	"rocks-fs",
+	"rocks-fun",
+	"rocks-dir",
 }
 build = {
 	type = "builtin",
@@ -25,6 +27,8 @@ build = {
 }
 test_dependencies = {
    "busted-htest",
+   "rocks-fs",
+   "rocks-sysdetect",
 }
 test = {
    type = "busted",

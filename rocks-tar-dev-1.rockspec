@@ -26,6 +26,10 @@ build = {
 }
 test_dependencies = {
    "busted-htest",
+   "rocks-fs",
+   "rocks-zip",
+   "rocks-sysdetect",
+   "luafilesystem",
 }
 test = {
    type = "busted",

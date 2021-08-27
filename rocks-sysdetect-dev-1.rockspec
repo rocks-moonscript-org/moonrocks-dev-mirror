@@ -12,7 +12,9 @@ description = {
 	homepage = "https://github.com/Deepak123bharat/rocks-sysdetect", 
 	license = "MIT" 
 }
-
+dependencies = {
+	"lua >= 5.1, < 5.5",
+}
 build = {
 	type = "builtin",
 	modules = {
