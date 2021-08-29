@@ -4135,6 +4135,13 @@ repository = {
          }
       }
    },
+   mooncake = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    moongarden = {
       ['dev-1'] = {
          {

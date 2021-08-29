@@ -9,12 +9,13 @@ dependencies = {
   'bitlib',
   'lua-path',
   'serpent',
-  'wowcig >= 0.4',
+  'wowcig >= 0.5',
   'xml2lua',
 }
 build = {
   type = 'none',
   install = {
+    bin = { wowless = 'wowless.lua' },
     lua = {
       ['wowless.api'] = 'wowless/api.lua',
       ['wowless.env'] = 'wowless/env.lua',
