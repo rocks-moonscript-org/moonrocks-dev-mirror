@@ -1404,6 +1404,13 @@ repository = {
          }
       }
    },
+   ['html-tags'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    htmlparser = {
       ['scm-0'] = {
          {
