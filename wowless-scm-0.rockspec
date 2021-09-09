@@ -8,8 +8,9 @@ dependencies = {
   'lua = 5.1',
   'bitlib',
   'lua-path',
+  'penlight',
   'serpent',
-  'wowcig >= 0.5',
+  'wowcig >= 0.7',
   'xml2lua',
 }
 build = {
