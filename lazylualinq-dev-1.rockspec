@@ -1,12 +1,17 @@
 package = "lazylualinq"
+rockspec_format = "3.0"
 version = "dev-1"
 source = {
    url = "git+ssh://git@github.com/Henkoglobin/lazylualinq.git",
-   tag = "feature/luarocks"
+   tag = "main"
 }
 description = {
    summary = "LazyLuaLinq provides a simple, lazy implementation of linq-like functions for Lua.",
-   detailed = "LazyLuaLinq provides a simple, lazy implementation of linq-like functions for Lua. With LazyLuaLinq, you can implement data transformation in elegant, expressive queries akin to SQL:",
+   detailed = [[
+      LazyLuaLinq provides a simple, lazy implementation of linq-like functions for Lua. 
+      With LazyLuaLinq, you can implement data transformation in elegant, 
+      expressive queries akin to SQL.
+   ]],
    homepage = "https://henkoglobin.github.io/lazylualinq",
    license = "Unlicense"
 }
@@ -16,8 +21,8 @@ dependencies = {
 build = {
    type = "builtin",
    modules = {
-      -- We want users to be able to just require('lazylualinq')
-      ["lazylualinq.init"] = "src/linq.lua",
-      ["lazylualinq.ordering"] = "src/ordering.lua",
+      ["lazylualinq.init"] = "lazylualinq/init.lua",
+      ["lazylualinq.linq"] = "lazylualinq/linq.lua",
+      ["lazylualinq.ordering"] = "lazylualinq/ordering.lua",
    }
 }
