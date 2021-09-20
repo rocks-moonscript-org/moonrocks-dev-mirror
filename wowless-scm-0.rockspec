@@ -10,7 +10,7 @@ dependencies = {
   'lua-path',
   'penlight',
   'serpent',
-  'wowcig >= 0.7',
+  'wowcig >= 0.9',
   'xml2lua',
 }
 build = {
@@ -23,6 +23,7 @@ build = {
       ['wowless.loader'] = 'wowless/loader.lua',
       ['wowless.runner'] = 'wowless/runner.lua',
       ['wowless.util'] = 'wowless/util.lua',
+      ['wowless.wowapi'] = 'wowless/wowapi.lua',
       ['wowless.xml'] = 'wowless/xml.lua',
       ['wowless.xmllang'] = 'wowless/xmllang.lua',
     },
