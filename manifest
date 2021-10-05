@@ -5522,6 +5522,13 @@ repository = {
          }
       }
    },
+   testluafilesystem = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    testrock = {
       ['dev-1'] = {
          {
