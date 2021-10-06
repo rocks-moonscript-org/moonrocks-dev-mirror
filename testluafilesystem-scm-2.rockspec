@@ -1,5 +1,5 @@
 package = "testluafilesystem"
-version = "scm-1"
+version = "scm-2"
 source = {
    url = "git://github.com/chengfangang/lua-package.git"
 }
