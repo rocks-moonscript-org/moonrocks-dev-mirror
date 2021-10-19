@@ -2542,6 +2542,13 @@ repository = {
          }
       }
    },
+   ['lua-globals'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-gozerian'] = {
       ['scm-1'] = {
          {
