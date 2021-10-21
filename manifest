@@ -4116,6 +4116,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-3'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    minifs = {
