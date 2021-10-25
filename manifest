@@ -964,6 +964,13 @@ repository = {
          }
       }
    },
+   farbig = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    fbtorch = {
       ['scm-1'] = {
          {
