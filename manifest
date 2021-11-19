@@ -3422,6 +3422,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-3'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    luaossl = {
@@ -3584,6 +3589,11 @@ repository = {
    },
    luaseq = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-2'] = {
          {
             arch = "rockspec"
          }
@@ -6065,6 +6075,13 @@ repository = {
    },
    xhmoon = {
       ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   xtype = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
