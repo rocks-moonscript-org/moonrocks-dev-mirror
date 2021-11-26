@@ -14,11 +14,9 @@ description = {
 
 dependencies = {
     'lua >= 5.1',
-    'tarantool-checks == 3.1.0-1',
-    'tarantool-errors == 2.2.1-1',
     'fun ==  0.1.3-1',
-    'inspect == 3.1.1-0',
     'lua-cjson = 2.1.0.6-1',
+    'tarantool-checks == 3.1.0-1',
 }
 
 build = {
