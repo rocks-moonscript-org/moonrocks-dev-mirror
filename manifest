@@ -4258,6 +4258,13 @@ repository = {
          }
       }
    },
+   ['moon-sand'] = {
+      ['dev-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    mooncake = {
       ['scm-1'] = {
          {
