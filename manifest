@@ -3198,6 +3198,13 @@ repository = {
          }
       }
    },
+   luacheck = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    luachild = {
       ['scm-1'] = {
          {
