@@ -819,6 +819,26 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-3'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-4'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-5'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    decide = {
@@ -5416,6 +5436,16 @@ repository = {
          }
       },
       ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-3'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-4'] = {
          {
             arch = "rockspec"
          }
