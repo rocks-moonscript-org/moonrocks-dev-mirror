@@ -217,6 +217,13 @@ repository = {
          }
       }
    },
+   based = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    basics = {
       ['scm-1'] = {
          {
