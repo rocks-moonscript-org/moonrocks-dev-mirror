@@ -1,13 +1,13 @@
-package = 'ljepsen'
+package = 'molly'
 version = 'scm-1'
 source = {
-    url = 'git+https://github.com/ligurio/ljepsen',
+    url = 'git+https://github.com/ligurio/molly',
     branch = 'master',
 }
 
 description = {
     summary = 'A framework for distributed systems verification, with fault injection',
-    homepage = 'https://github.com/ligurio/ljepsen',
+    homepage = 'https://github.com/ligurio/molly',
     maintainer = 'Sergey Bronnikov <estetus@gmail.com>',
     license = 'ISC',
 }
@@ -15,8 +15,6 @@ description = {
 dependencies = {
     'lua >= 5.1',
     'checks == 1.0-3',
-    'fun ==  0.1.3-1',
-    'lua-cjson == 2.1.0.6-1',
 }
 
 build = {
