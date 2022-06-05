@@ -5831,6 +5831,13 @@ repository = {
          }
       }
    },
+   tapis = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['tarantool-checks'] = {
       ['scm-1'] = {
          {
