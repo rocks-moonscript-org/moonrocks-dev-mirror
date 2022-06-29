@@ -14,6 +14,7 @@ dependencies = {
     ---
     "argparse >= 0.7.1-1",
     "etlua >= 0.6.0",
+    "inspect >= 3.1.1",
     "mimetypes >= 1.0.0-2",
     "lua-discount >= 1.2.10.1-1",
     "luafilesystem >= 1.8.0-1",
