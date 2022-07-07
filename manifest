@@ -3675,6 +3675,13 @@ repository = {
          }
       }
    },
+   luamt = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    luaoop = {
       ['scm-1'] = {
          {
@@ -5115,6 +5122,20 @@ repository = {
    },
    pop3 = {
       ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   postgres = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['postgres-decode'] = {
+      ['dev-1'] = {
          {
             arch = "rockspec"
          }
