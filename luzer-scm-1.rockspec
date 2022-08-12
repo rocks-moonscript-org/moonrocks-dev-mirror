@@ -6,7 +6,7 @@ source = {
 }
 
 description = {
-    summary = 'A framework for mutation and fuzzing testing',
+    summary = 'Practical mutation testing and fault injection for Lua',
     homepage = 'https://github.com/ligurio/luzer',
     maintainer = 'Sergey Bronnikov <estetus@gmail.com>',
     license = 'ISC',
