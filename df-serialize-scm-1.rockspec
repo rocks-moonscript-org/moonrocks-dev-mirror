@@ -8,7 +8,8 @@ description = {
     summary = "A brainless Lua table serialization library",
     homepage = "https://git.doublefourteen.io/lua/df-serialize",
     maintainer = "The DoubleFourteen Code Forge <info@doublefourteen.io>",
-    license = "zlib"
+    license = "zlib",
+    labels = { "serialization", "debug", "love" }
 }
 dependencies = {
     "lua >= 5.2"
