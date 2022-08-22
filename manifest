@@ -691,6 +691,13 @@ repository = {
          }
       }
    },
+   ['couyards.sile'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    coxpcall = {
       ['1.12.0rc1-1'] = {
          {
@@ -1546,6 +1553,13 @@ repository = {
       }
    },
    hill_noise = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   homie = {
       ['scm-1'] = {
          {
             arch = "rockspec"
@@ -4592,6 +4606,13 @@ repository = {
          }
       }
    },
+   ['moon-cache'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['moon-sand'] = {
       ['dev-0'] = {
          {
@@ -5466,6 +5487,13 @@ repository = {
          }
       }
    },
+   ['resilient.sile'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['reskeymod-plugin'] = {
       ['dev-1'] = {
          {
@@ -6138,6 +6166,13 @@ repository = {
    },
    ticmap2tmx = {
       ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   timerwheel = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
