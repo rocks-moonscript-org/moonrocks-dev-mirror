@@ -26,6 +26,7 @@ dependencies = {
    "copas >= 4.0",
    --"luamqtt",  -- do: "luarocks install Tieske/luamqtt --dev" for now
    "lualogging >= 1.6",
+   "penlight ~> 1",
 }
 build = {
    type = "builtin",
