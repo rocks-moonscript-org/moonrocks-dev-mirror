@@ -5548,6 +5548,13 @@ repository = {
          }
       }
    },
+   reflex = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    repler = {
       ['scm-0'] = {
          {
