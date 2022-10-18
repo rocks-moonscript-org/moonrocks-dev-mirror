@@ -1006,6 +1006,20 @@ repository = {
          }
       }
    },
+   ['enapter-sma'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['enapter-ucm'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    encrypto = {
       ['scm-0'] = {
          {
