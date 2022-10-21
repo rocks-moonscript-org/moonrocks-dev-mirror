@@ -1069,6 +1069,13 @@ repository = {
          }
       }
    },
+   expect = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    expirationd = {
       ['scm-1'] = {
          {
