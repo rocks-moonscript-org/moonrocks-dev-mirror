@@ -5899,6 +5899,13 @@ repository = {
          }
       }
    },
+   sh = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['sh-parser'] = {
       ['dev-0'] = {
          {
