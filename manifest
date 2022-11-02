@@ -1069,6 +1069,20 @@ repository = {
          }
       }
    },
+   ['expect-promise'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['expect-spy'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    expirationd = {
       ['scm-1'] = {
          {
