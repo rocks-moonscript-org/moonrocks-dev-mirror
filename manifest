@@ -1021,7 +1021,7 @@ repository = {
       }
    },
    ['enapter-ucm'] = {
-      ['dev-1'] = {
+      ['dev-0'] = {
          {
             arch = "rockspec"
          }
@@ -1955,6 +1955,13 @@ repository = {
       }
    },
    ['lapis-console'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['lapis-eswidget'] = {
       ['dev-1'] = {
          {
             arch = "rockspec"

@@ -1,8 +1,8 @@
 rockspec_format = "3.0"
 package = "enapter-ucm"
-version = "dev-1"
+version = "dev-0"
 source = {
-  url = "https://github.com/enapter/ucm.lua"
+  url = "git+ssh://git@github.com/Enapter/enapter-ucm.lua"
 }
 description = {
   homepage = "http://developers.enapter.com",
