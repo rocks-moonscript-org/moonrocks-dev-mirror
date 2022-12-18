@@ -4934,13 +4934,6 @@ repository = {
          }
       }
    },
-   nclassic = {
-      ['1.2.1-3'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    nested = {
       ['scm-1'] = {
          {
@@ -5083,6 +5076,13 @@ repository = {
       }
    },
    ['nvim-treesitter'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   nvim_lspconfig = {
       ['scm-1'] = {
          {
             arch = "rockspec"
