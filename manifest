@@ -1545,6 +1545,13 @@ repository = {
          }
       }
    },
+   ['haskell_tools.nvim'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['haxe-deps'] = {
       ['scm-1'] = {
          {
@@ -4929,6 +4936,13 @@ repository = {
    },
    ['ncl-formats'] = {
       ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   neotest = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
