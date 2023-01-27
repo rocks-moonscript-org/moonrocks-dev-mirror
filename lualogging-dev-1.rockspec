@@ -1,8 +1,16 @@
-package = "lualogging"
-version = "dev-2"
+local package_name = "lualogging"
+local package_version = "dev"
+local rockspec_revision = "1"
+local github_account_name = "lunarmodules"
+local github_repo_name = package_name
+
+
+package = package_name
+version = package_version.."-"..rockspec_revision
 source = {
-  url = "git://github.com/keplerproject/lualogging.git",
-  branch = "master"
+  url = "git://github.com/"..github_account_name.."/"..github_repo_name..".git",
+  branch = (package_version == "dev") and "master" or nil,
+  tag = (package_version ~= "dev") and ("v"..package_version) or nil,
 }
 description = {
   summary = "A simple API to use logging features",
@@ -11,7 +19,7 @@ description = {
     based on log4j. LuaLogging currently supports, through the use of appenders,
     console, file, rolling file, email, socket and SQL outputs.
   ]],
-  homepage = "https://github.com/keplerproject/lualogging",
+  homepage = "https://github.com/"..github_account_name.."/"..github_repo_name,
   license = "MIT/X11",
 }
 dependencies = {
@@ -28,6 +36,9 @@ build = {
       ['logging.email']        = "src/logging/email.lua",
       ['logging.sql']          = "src/logging/sql.lua",
       ['logging.socket']       = "src/logging/socket.lua",
+      ['logging.nginx']        = "src/logging/nginx.lua",
+      ['logging.rsyslog']      = "src/logging/rsyslog.lua",
+      ['logging.envconfig']    = "src/logging/envconfig.lua",
     }
   },
   copy_directories = {

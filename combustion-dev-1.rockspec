@@ -1,7 +1,7 @@
 package = "combustion"
 version = "dev-1"
 source = {
-    url = "https://github.com/Frityet/combustion.git"
+    url = "git://https://github.com/Frityet/combustion"
 }
 description = {
     homepage = "https://github.com/Frityet/combustion",
@@ -26,6 +26,13 @@ build = {
     modules = {
         ["executables"] = "src/executables/init.lua",
         ["executables.self-extract"] = "src/executables/self-extract.lua",
+        ["executables.package"] = "src/executables/package/init.lua",
+        ["executables.package.osx"] = "src/executables/package/osx.lua",
+        ["executables.package.linux"] = "src/executables/package/linux.lua",
+        ["executables.package.windows"] = "src/executables/package/windows.lua",
+
+
+
         ["utilities"] = "src/utilities.lua"
     }
 }
