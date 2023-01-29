@@ -1728,6 +1728,13 @@ repository = {
          }
       }
    },
+   icu = {
+      ['dev-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    idn2 = {
       ['scm-0'] = {
          {
@@ -2125,6 +2132,13 @@ repository = {
    },
    lettersmith = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   lfft = {
+      ['scm-0'] = {
          {
             arch = "rockspec"
          }
