@@ -1550,13 +1550,6 @@ repository = {
          }
       }
    },
-   ['haskell-tools.nvim'] = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    ['haxe-deps'] = {
       ['scm-1'] = {
          {
