@@ -1018,6 +1018,13 @@ repository = {
          }
       }
    },
+   ['embedders.sile'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['enapter-sma'] = {
       ['dev-1'] = {
          {
