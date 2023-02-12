@@ -11,23 +11,21 @@ description = {
 }
 dependencies = {
     "lua >= 5.1",
-    "errno >= 0.3.0",
-    "gpoll >= 0.1.0",
+    "gpoll >= 0.2.0",
     "io-wait >= 0.1.0",
     "isa >= 0.3.0",
-    "lauxhlib >= 0.5.0",
-    "libpq",
-    "metamodule >= 0.3.3",
+    "libpq >= 0.1.0",
+    "metamodule >= 0.4.0",
     "unpack >= 0.1.0",
-    "yyjson >= 0.4.0",
 }
 build = {
     type = "builtin",
     modules = {
         ["postgres"] = "postgres.lua",
         ["postgres.connection"] = "lib/connection.lua",
+        ["postgres.pool"] = "lib/pool.lua",
         ["postgres.result"] = "lib/result.lua",
-        ["postgres.reader"] = "lib/reader.lua",
-        ["postgres.reader.single"] = "lib/reader/single.lua",
+        ["postgres.rows"] = "lib/rows.lua",
+        ["postgres.rows.single"] = "lib/rows/single.lua",
     },
 }
