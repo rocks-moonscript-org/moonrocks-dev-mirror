@@ -7020,6 +7020,13 @@ repository = {
          }
       }
    },
+   treh = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['trepl-torchless'] = {
       ['scm-1'] = {
          {
