@@ -493,6 +493,23 @@ repository = {
          }
       }
    },
+   bustez = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['dev-2'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['dev-3'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    caffegraph = {
       ['scm-1'] = {
          {
