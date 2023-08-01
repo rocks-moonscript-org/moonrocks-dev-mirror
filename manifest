@@ -409,6 +409,13 @@ repository = {
          }
       }
    },
+   botgram = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    box = {
       ['scm-1'] = {
          {
