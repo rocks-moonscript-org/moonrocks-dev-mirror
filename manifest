@@ -6563,6 +6563,13 @@ repository = {
          }
       }
    },
+   ['silex.sile'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    sitegen = {
       ['dev-1'] = {
          {
