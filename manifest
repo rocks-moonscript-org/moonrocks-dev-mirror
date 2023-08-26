@@ -4734,6 +4734,13 @@ repository = {
          }
       }
    },
+   luaxmlgenerator = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    luaxmlrpc = {
       ['git-1'] = {
          {
