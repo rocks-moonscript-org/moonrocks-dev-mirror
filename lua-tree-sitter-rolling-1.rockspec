@@ -26,7 +26,7 @@ source = {
 build = {
 	type = 'builtin',
 	modules = {
-		['tree_sitter'] = {
+		['lua_tree_sitter'] = {
 			libdirs = { '$(TREE_SITTER_LIBDIR)' },
 			incdirs = { '$(TREE_SITTER_INCDIR)', 'include' },
 			libraries = { 'tree-sitter' },
@@ -38,9 +38,9 @@ build = {
 				'src/point.c',
 				'src/query/init.c',
 				'src/query/capture.c',
-				'src/query/capture_set.c',
 				'src/query/cursor.c',
 				'src/query/match.c',
+				'src/query/quantified_capture.c',
 				'src/query/runner.c',
 				'src/range/init.c',
 				'src/range/array.c',
