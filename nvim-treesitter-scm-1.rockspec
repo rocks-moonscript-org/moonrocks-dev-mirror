@@ -1,6 +1,7 @@
 local MODREV, SPECREV = 'scm', '-1'
 rockspec_format = '3.0'
 package = 'nvim-treesitter'
+local owner = 'teto'
 version = MODREV .. SPECREV
 
 description = {
@@ -15,7 +16,8 @@ dependencies = {
 }
 
 source = {
-  url = 'git://github.com/nvim-treesitter/nvim-treesitter',
+  url = 'git://github.com/'..owner..'/nvim-treesitter',
+  branch = "fix-rockspec"
 }
 
 build = {
