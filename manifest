@@ -668,13 +668,6 @@ repository = {
          }
       }
    },
-   clix = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    cloud = {
       ['dev-1'] = {
          {
@@ -6007,13 +6000,6 @@ repository = {
             arch = "rockspec"
          }, {
             arch = "src"
-         }
-      }
-   },
-   ['prosody-libs'] = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
          }
       }
    },
