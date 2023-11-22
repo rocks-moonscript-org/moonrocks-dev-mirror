@@ -3839,6 +3839,15 @@ repository = {
          }
       }
    },
+   ['lua-ubjson'] = {
+      ['0.0.1-1'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    ['lua-uca'] = {
       ['dev-1'] = {
          {
