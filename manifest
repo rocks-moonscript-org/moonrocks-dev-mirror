@@ -3058,6 +3058,20 @@ repository = {
          }
       }
    },
+   ['lsp-lib'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['lsp-lib-socket-provider'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ltcn = {
       ['scm-1'] = {
          {
