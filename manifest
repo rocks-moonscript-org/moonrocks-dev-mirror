@@ -5282,13 +5282,6 @@ repository = {
          }
       }
    },
-   ['moon-sand'] = {
-      ['dev-0'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    moonbreaker = {
       ['dev-1'] = {
          {
