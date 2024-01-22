@@ -6791,6 +6791,13 @@ repository = {
          }
       }
    },
+   stdfs = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    stdlib = {
       ['git-1'] = {
          {
