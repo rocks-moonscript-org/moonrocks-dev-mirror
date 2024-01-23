@@ -2979,6 +2979,13 @@ repository = {
          }
       }
    },
+   lpresence = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lproto = {
       ['dev-0'] = {
          {
@@ -3065,6 +3072,11 @@ repository = {
    },
    ['lsp-lib'] = {
       ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['dev-2'] = {
          {
             arch = "rockspec"
          }
