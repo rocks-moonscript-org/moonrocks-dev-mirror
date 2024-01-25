@@ -3080,6 +3080,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['dev-3'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ['lsp-lib-socket-provider'] = {
