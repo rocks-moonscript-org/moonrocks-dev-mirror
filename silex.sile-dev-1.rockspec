@@ -18,24 +18,25 @@ dependencies = {
 build = {
   type = "builtin",
   modules = {
-    ["sile.silex"]        = "silex/init.lua",
-    ["sile.silex.fork"]   = "silex/fork.lua",
-    ["sile.silex.lang"]   = "silex/lang.lua",
-    ["sile.silex.fixes"]  = "silex/fixes.lua",
-    ["sile.silex.compat"] = "silex/compat.lua",
-    ["sile.silex.ast"]    = "silex/ast.lua",
+    ["sile.silex"]          = "silex/init.lua",
+    ["sile.silex.fork"]     = "silex/fork.lua",
+    ["sile.silex.lang"]     = "silex/lang.lua",
+    ["sile.silex.fixes"]    = "silex/fixes.lua",
+    ["sile.silex.compat"]   = "silex/compat.lua",
+    ["sile.silex.ast"]      = "silex/ast.lua",
+    ["sile.silex.override"] = "silex/override.lua",
 
-    ["sile.classes.base"]     = "classes/base.lua",
-    ["sile.typesetters.base"] = "typesetters/base.lua",
+    ["sile.silex.classes.base"]     = "silex/classes/base.lua",
+    ["sile.silex.typesetters.base"] = "silex/typesetters/base.lua",
 
-    ["sile.packages.background"]  = "packages/background/init.lua",
-    ["sile.packages.cropmarks"]  = "packages/cropmarks/init.lua",
-    ["sile.packages.pdf"]  = "packages/pdf/init.lua",
-    ["sile.packages.rotate"]  = "packages/rotate/init.lua",
-    ["sile.packages.scalebox"]  = "packages/scalebox/init.lua",
-    ["sile.packages.url"]  = "packages/url/init.lua",
+    ["sile.silex.packages.background"]  = "silex/packages/background/init.lua",
+    ["sile.silex.packages.cropmarks"]   = "silex/packages/cropmarks/init.lua",
+    ["sile.silex.packages.pdf"]         = "silex/packages/pdf/init.lua",
+    ["sile.silex.packages.rotate"]      = "silex/packages/rotate/init.lua",
+    ["sile.silex.packages.scalebox"]    = "silex/packages/scalebox/init.lua",
+    ["sile.silex.packages.url"]         = "silex/packages/url/init.lua",
 
-    ["sile.outputters.base"]  = "outputters/base.lua",
-    ["sile.outputters.libtexpdf"]  = "outputters/libtexpdf.lua",
+    ["sile.silex.outputters.base"]      = "silex/outputters/base.lua",
+    ["sile.silex.outputters.libtexpdf"] = "silex/outputters/libtexpdf.lua",
   }
 }
