@@ -3374,6 +3374,13 @@ repository = {
          }
       }
    },
+   ['lua-gltf'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-gozerian'] = {
       ['scm-1'] = {
          {
