@@ -5514,6 +5514,13 @@ repository = {
          }
       }
    },
+   ['neotest-busted'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    nested = {
       ['scm-1'] = {
          {
@@ -7521,6 +7528,13 @@ repository = {
    },
    windowsfirewall = {
       ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['winmove.nvim'] = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
