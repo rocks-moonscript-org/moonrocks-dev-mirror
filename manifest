@@ -4076,6 +4076,13 @@ repository = {
          }
       }
    },
+   luabehave = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    luabins = {
       ['scm-1'] = {
          {
