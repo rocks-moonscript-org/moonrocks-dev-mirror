@@ -6,7 +6,7 @@ rockspec_format = "3.0"
 
 source = {
   url = "git+https://github.com/" .. github_account_name .. "/" .. package .. ".git",
-  tag = "v0.1"
+  tag = "v0.2"
 }
 
 description = {
