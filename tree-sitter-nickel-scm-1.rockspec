@@ -1,0 +1,34 @@
+local git_ref = '58baf89db8fdae54a84bcf22c80ff10ee3f929ed'
+local modrev = 'scm'
+local specrev = '1'
+
+local repo_url = 'https://github.com/nickel-lang/tree-sitter-nickel'
+
+rockspec_format = '3.0'
+package = 'tree-sitter-nickel'
+version = modrev ..'-'.. specrev
+
+description = {
+  summary = 'tree-sitter parser for nickel',
+  labels = { 'neovim', 'tree-sitter' } ,
+  homepage = 'https://github.com/nickel-lang/tree-sitter-nickel',
+  license = 'UNKNOWN'
+}
+
+dependencies = {
+  'luarocks-build-treesitter-parser',
+}
+
+source = {
+  url = repo_url .. '/archive/' .. git_ref .. '.zip',
+  dir = 'tree-sitter-nickel-' .. '58baf89db8fdae54a84bcf22c80ff10ee3f929ed',
+}
+
+build = {
+  type = "treesitter-parser",
+  lang = "nickel",
+  sources = { "src/parser.c", "src/scanner.c" },
+  generate_from_grammar = false,
+  generate_requires_npm = false,
+  location = nil,
+}
