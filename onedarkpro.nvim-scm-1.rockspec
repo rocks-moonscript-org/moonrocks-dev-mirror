@@ -1,4 +1,4 @@
-local git_ref = '0059f3f9b21daf3540f1108c2bab3fa9e9082331'
+local git_ref = 'e4fc3641aa3b52e30496bf34b87f70ef5506686e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'onedarkpro.nvim-' .. '0059f3f9b21daf3540f1108c2bab3fa9e9082331',
+  dir = 'onedarkpro.nvim-' .. 'e4fc3641aa3b52e30496bf34b87f70ef5506686e',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
@@ -33,5 +33,5 @@ end
 
 build = {
   type = 'builtin',
-  copy_directories = { 'colors', 'doc', 'plugin' } ,
+  copy_directories = { 'after', 'colors', 'doc', 'plugin' } ,
 }

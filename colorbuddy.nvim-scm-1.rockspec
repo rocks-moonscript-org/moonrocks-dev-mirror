@@ -1,4 +1,4 @@
-local git_ref = 'cdb5b0654d3cafe61d2a845e15b2b4b0e78e752a'
+local git_ref = '9e96ccd88f4510d0a54ce1d5c11119eac9fb217e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'colorbuddy.nvim-' .. 'cdb5b0654d3cafe61d2a845e15b2b4b0e78e752a',
+  dir = 'colorbuddy.nvim-' .. '9e96ccd88f4510d0a54ce1d5c11119eac9fb217e',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
@@ -33,5 +33,5 @@ end
 
 build = {
   type = 'builtin',
-  copy_directories = { },
+  copy_directories = { 'colors' } ,
 }

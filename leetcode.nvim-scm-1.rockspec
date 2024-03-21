@@ -1,4 +1,4 @@
-local git_ref = '05d4153787fab5c6163150d2a0acf29cd1ef297f'
+local git_ref = '765cc76df77072e3ff4c3fdc256b9a244af73b6d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'leetcode.nvim-' .. '05d4153787fab5c6163150d2a0acf29cd1ef297f',
+  dir = 'leetcode.nvim-' .. '765cc76df77072e3ff4c3fdc256b9a244af73b6d',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

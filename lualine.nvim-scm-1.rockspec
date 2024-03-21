@@ -1,4 +1,4 @@
-local git_ref = '8b56462bfb746760465264de41b4907310f113ec'
+local git_ref = 'b5e8bb642138f787a2c1c5aedc2a78cb2cebbd67'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'lualine.nvim-' .. '8b56462bfb746760465264de41b4907310f113ec',
+  dir = 'lualine.nvim-' .. 'b5e8bb642138f787a2c1c5aedc2a78cb2cebbd67',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

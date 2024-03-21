@@ -1,4 +1,4 @@
-local git_ref = '9abe4e986e924fc54a972c1b0ff52b65a0622624'
+local git_ref = '462e84e1659d984196d09f7d16690b19b9aee804'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'cloak.nvim-' .. '9abe4e986e924fc54a972c1b0ff52b65a0622624',
+  dir = 'cloak.nvim-' .. '462e84e1659d984196d09f7d16690b19b9aee804',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

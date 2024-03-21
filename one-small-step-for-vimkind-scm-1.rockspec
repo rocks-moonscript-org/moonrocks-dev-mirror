@@ -1,4 +1,4 @@
-local git_ref = 'aaee281bdaa3141d9d0cdb3dec468532da61124f'
+local git_ref = 'cd2500ab74addeed6ac260a008dd649c01d3ba12'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'one-small-step-for-vimkind-' .. 'aaee281bdaa3141d9d0cdb3dec468532da61124f',
+  dir = 'one-small-step-for-vimkind-' .. 'cd2500ab74addeed6ac260a008dd649c01d3ba12',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
