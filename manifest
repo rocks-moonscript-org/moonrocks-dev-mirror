@@ -3195,7 +3195,17 @@ repository = {
       }
    },
    liba = {
+      ['dev-0'] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['git-0'] = {
          {
             arch = "rockspec"
          }
@@ -8005,6 +8015,13 @@ repository = {
          }
       }
    },
+   ['rocks-treesitter.nvim'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['rocks-zip'] = {
       ['dev-1'] = {
          {
@@ -9892,6 +9909,13 @@ repository = {
       }
    },
    ['tree-sitter-julia'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['tree-sitter-just'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
