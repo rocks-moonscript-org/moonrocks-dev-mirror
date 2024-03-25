@@ -31,7 +31,7 @@ if modrev == 'scm' or modrev == 'dev' then
 end
 
 build = {
-  type = "tree-sitter",
+  type = "treesitter-parser",
   lang = "purescript",
   sources = { "src/parser.c", "src/scanner.c" },
   generate_from_grammar = false,
