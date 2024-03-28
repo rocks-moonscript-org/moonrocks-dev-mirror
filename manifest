@@ -9255,6 +9255,13 @@ repository = {
          }
       }
    },
+   ['tree-sitter-blueprint'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['tree-sitter-c'] = {
       ['scm-1'] = {
          {
@@ -9458,6 +9465,13 @@ repository = {
          }
       }
    },
+   ['tree-sitter-ecma'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['tree-sitter-eds'] = {
       ['scm-1'] = {
          {
@@ -9585,6 +9599,13 @@ repository = {
       }
    },
    ['tree-sitter-func'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['tree-sitter-fusion'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
@@ -9836,6 +9857,13 @@ repository = {
          }
       }
    },
+   ['tree-sitter-html_tags'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['tree-sitter-htmldjango'] = {
       ['scm-1'] = {
          {
@@ -9927,7 +9955,21 @@ repository = {
          }
       }
    },
+   ['tree-sitter-jsonc'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['tree-sitter-jsonnet'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['tree-sitter-jsx'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
@@ -10529,6 +10571,13 @@ repository = {
          }
       }
    },
+   ['tree-sitter-scfg'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['tree-sitter-scheme'] = {
       ['scm-1'] = {
          {
@@ -10691,6 +10740,13 @@ repository = {
       }
    },
    ['tree-sitter-systemtap'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['tree-sitter-t32'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
