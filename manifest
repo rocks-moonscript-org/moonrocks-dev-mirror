@@ -6183,6 +6183,13 @@ repository = {
          }
       }
    },
+   ['mini.diff'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['mini.doc'] = {
       ['scm-1'] = {
          {
