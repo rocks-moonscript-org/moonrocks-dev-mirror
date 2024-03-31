@@ -1,4 +1,4 @@
-local git_ref = 'c1eb14b130c37267be7c6bb38ce949c3077dd4b3'
+local git_ref = '3321077d7446c1b3b017c294fd56ce028ed817fe'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-vento'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for vento',
+  summary = 'tree-sitter parser and Neovim queries for vento',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/ventojs/tree-sitter-vento',
   license = 'UNKNOWN'
 }
 
 dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-vento-' .. 'c1eb14b130c37267be7c6bb38ce949c3077dd4b3',
+  dir = 'tree-sitter-vento-' .. '3321077d7446c1b3b017c294fd56ce028ed817fe',
 }
 
 build = {
