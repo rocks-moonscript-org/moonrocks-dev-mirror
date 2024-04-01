@@ -1,4 +1,4 @@
-local git_ref = 'bb89dfc44d889d8ababcb3c67c55c8be92cfc6e0'
+local git_ref = '4c6cf0d000c9a9b2ce474e0e28a7c80489b01f5e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'orgmode-' .. 'bb89dfc44d889d8ababcb3c67c55c8be92cfc6e0',
+  dir = 'orgmode-' .. '4c6cf0d000c9a9b2ce474e0e28a7c80489b01f5e',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
@@ -33,5 +33,5 @@ end
 
 build = {
   type = 'builtin',
-  copy_directories = { 'doc', 'ftplugin', 'indent', 'plugin', 'queries', 'syntax' } ,
+  copy_directories = { 'doc', 'ftplugin', 'indent', 'parser', 'plugin', 'queries', 'syntax' } ,
 }

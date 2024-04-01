@@ -5318,7 +5318,7 @@ repository = {
          }
       }
    },
-   ['luarocks-build-builtin-cmd'] = {
+   ['luarocks-build-builtin-with-command'] = {
       ['scm-0'] = {
          {
             arch = "rockspec"

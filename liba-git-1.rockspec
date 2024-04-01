@@ -2,6 +2,7 @@ package = "liba"
 version = "git-1"
 source = {
    url = "git+https://github.com/tqfx/liba",
+   branch = "main"
 }
 description = {
    summary = "An algorithm library based on C/C++ language",

@@ -1,11 +1,11 @@
-package = "luarocks-build-builtin-cmd"
+package = "luarocks-build-builtin-with-command"
 version = "scm-0"
 source = {
-   url = "https://codeberg.org/leso-kn/luarocks-build-builtin-cmd/archive/main.tar.gz",
-   dir = "luarocks-build-builtin-cmd"
+   url = "https://codeberg.org/leso-kn/luarocks-build-builtin-with-command/archive/main.zip",
+   dir = "luarocks-build-builtin-with-command"
 }
 description = {
-   homepage = "https://codeberg.org/leso-kn/luarocks-build-builtin-cmd",
+   homepage = "https://codeberg.org/leso-kn/luarocks-build-builtin-with-command",
    license = "MIT",
    summary = "A luarocks build backend combining the 'builtin' and 'command' backends."
 }

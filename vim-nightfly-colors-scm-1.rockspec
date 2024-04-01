@@ -1,4 +1,4 @@
-local git_ref = 'e61adcb7bfadc0526572aa98ff83d513de421be7'
+local git_ref = '06cd078edc8d92ded2d37270649bd8ed23dec43d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'vim-nightfly-colors-' .. 'e61adcb7bfadc0526572aa98ff83d513de421be7',
+  dir = 'vim-nightfly-colors-' .. '06cd078edc8d92ded2d37270649bd8ed23dec43d',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
