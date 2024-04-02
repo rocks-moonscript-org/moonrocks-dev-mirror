@@ -3722,6 +3722,13 @@ repository = {
          }
       }
    },
+   lrc = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    lredis = {
       ['scm-0'] = {
          {
@@ -5348,6 +5355,27 @@ repository = {
    },
    ['luarocks-build-fennel'] = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['luarocks-build-lr-hooks'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['luarocks-build-lrocket'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['luarocks-build-lrocket-next'] = {
+      ['scm-0'] = {
          {
             arch = "rockspec"
          }
@@ -8295,6 +8323,13 @@ repository = {
          }
       }
    },
+   sfs = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['sg.nvim'] = {
       ['scm-1'] = {
          {
@@ -10544,6 +10579,13 @@ repository = {
       }
    },
    ['tree-sitter-robot'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['tree-sitter-roc'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
