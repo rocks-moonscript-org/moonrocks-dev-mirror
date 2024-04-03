@@ -1,4 +1,4 @@
-local git_ref = 'e1cfe895a9984f09045f6a2462ade0ee131aa7a0'
+local git_ref = '63f176e7db5fca073b55b98b7e5e95afd1587fcb'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-djot'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for djot',
+  summary = 'tree-sitter parser and Neovim queries for djot',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/treeman/tree-sitter-djot',
   license = 'UNKNOWN'
 }
 
 dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-djot-' .. 'e1cfe895a9984f09045f6a2462ade0ee131aa7a0',
+  dir = 'tree-sitter-djot-' .. '63f176e7db5fca073b55b98b7e5e95afd1587fcb',
 }
 
 build = {
@@ -33,6 +33,15 @@ build = {
   location = nil,
   copy_directories = { "queries" },
   queries = {
+    ["folds.scm"] = [==[
+[
+  (section)
+  (code_block)
+  (raw_block)
+  (list)
+  (div)
+] @fold
+]==],
     ["highlights.scm"] = [==[
 (heading1) @markup.heading.1
 
@@ -57,7 +66,7 @@ build = {
   (code_block)
   (raw_block)
   (frontmatter)
-] @markup.raw
+] @markup.raw.block
   (#set! "priority" 90))
 
 ; Remove @markup.raw for code with a language spec
@@ -65,7 +74,8 @@ build = {
   .
   (code_block_marker_begin)
   (language)
-  (code) @none)
+  (code) @none
+  (#set! "priority" 90))
 
 [
   (code_block_marker_begin)
@@ -74,7 +84,11 @@ build = {
   (raw_block_marker_end)
 ] @punctuation.delimiter
 
-(language) @label
+(language) @attribute
+
+(inline_attribute
+  _ @conceal
+  (#set! conceal ""))
 
 ((language_marker) @punctuation.delimiter
   (#set! conceal ""))
@@ -96,7 +110,7 @@ build = {
 (table_caption
   (marker) @punctuation.special)
 
-(table_caption) @markup.heading
+(table_caption) @markup.italic
 
 [
   (list_marker_dash)
@@ -121,17 +135,45 @@ build = {
 ] @markup.list
 
 (list_marker_task
-  (unchecked) @constant.builtin) @markup.list.unchecked
+  (unchecked)) @markup.list.unchecked
 
 (list_marker_task
-  (checked) @constant.builtin) @markup.list.checked
+  (checked)) @markup.list.checked
+
+; Colorize `x` in `[x]`
+((checked) @constant.builtin
+  (#offset! @constant.builtin 0 1 0 -1))
 
 [
   (ellipsis)
   (en_dash)
   (em_dash)
-  (straight_quote)
+  (quotation_marks)
 ] @string.special
+
+(list_item
+  (term) @type.definition)
+
+; Conceal { and } but leave " and '
+((quotation_marks) @string.special
+  (#any-of? @string.special "\"}" "'}")
+  (#offset! @string.special 0 1 0 0)
+  (#set! conceal ""))
+
+((quotation_marks) @string.special
+  (#any-of? @string.special "\\\"" "\\'" "{'" "{\"")
+  (#offset! @string.special 0 0 0 -1)
+  (#set! conceal ""))
+
+[
+  (hard_line_break)
+  (backslash_escape)
+] @string.escape
+
+; Only conceal \ but leave escaped character.
+((backslash_escape) @string.escape
+  (#offset! @string.escape 0 0 0 -1)
+  (#set! conceal ""))
 
 (frontmatter_marker) @punctuation.delimiter
 
@@ -139,88 +181,107 @@ build = {
 
 (strong) @markup.strong
 
-(emphasis
-  (emphasis_begin) @punctuation.delimiter)
+(symbol) @string.special.symbol
 
-(emphasis
-  (emphasis_end) @punctuation.delimiter)
+(insert) @markup.underline
 
-(strong
-  (strong_begin) @punctuation.delimiter)
+(delete) @markup.strikethrough
 
-(strong
-  (strong_end) @punctuation.delimiter)
+[
+  (highlighted)
+  (superscript)
+  (subscript)
+] @string.special
 
+; We need to target tokens specifically because `{=` etc can exist as fallback symbols in
+; regular text, which we don't want to highlight or conceal.
 (highlighted
   [
     "{="
     "=}"
-  ] @punctuation.delimiter)
+  ] @punctuation.delimiter
+  (#set! conceal ""))
 
 (insert
   [
     "{+"
     "+}"
-  ] @punctuation.delimiter)
+  ] @punctuation.delimiter
+  (#set! conceal ""))
 
 (delete
   [
     "{-"
     "-}"
-  ] @punctuation.delimiter)
+  ] @punctuation.delimiter
+  (#set! conceal ""))
 
 (superscript
   [
     "^"
     "{^"
     "^}"
-  ] @punctuation.delimiter)
+  ] @punctuation.delimiter
+  (#set! conceal ""))
 
 (subscript
   [
     "~"
     "{~"
     "~}"
-  ] @punctuation.delimiter)
+  ] @punctuation.delimiter
+  (#set! conceal ""))
 
-(verbatim) @markup.raw
-
-[
+([
+  (emphasis_begin)
+  (emphasis_end)
+  (strong_begin)
+  (strong_end)
   (verbatim_marker_begin)
   (verbatim_marker_end)
-] @punctuation.delimiter
-
-(math) @markup.math
-
-[
   (math_marker)
   (math_marker_begin)
   (math_marker_end)
-] @punctuation.delimiter
-
-(raw_inline) @markup.raw
-
-[
   (raw_inline_attribute)
   (raw_inline_marker_begin)
   (raw_inline_marker_end)
 ] @punctuation.delimiter
+  (#set! conceal ""))
+
+((math) @markup.math
+  (#set! "priority" 90))
+
+(verbatim) @markup.raw
+
+((raw_inline) @markup.raw
+  (#set! "priority" 90))
+
+(comment
+  "%" @comment
+  (#set! conceal ""))
+
+(span
+  [
+    "["
+    "]"
+  ] @punctuation.bracket)
+
+(inline_attribute
+  [
+    "{"
+    "}"
+  ] @punctuation.bracket)
+
+(block_attribute
+  [
+    "{"
+    "}"
+  ] @punctuation.bracket)
 
 [
-  "{"
-  "}"
-  "!["
-  "["
-  "]"
-  "("
-  ")"
-  "<"
-  ">"
-] @punctuation.bracket
-
-(comment) @comment
-
-(class) @type
+  (class)
+  (class_name)
+] @type
 
 (identifier) @tag
 
@@ -233,10 +294,23 @@ build = {
 (key_value
   (value) @string)
 
-[
-  (backslash_escape)
-  (hard_line_break)
-] @string.escape
+(link_text
+  [
+    "["
+    "]"
+  ] @punctuation.bracket
+  (#set! conceal ""))
+
+(autolink
+  [
+    "<"
+    ">"
+  ] @punctuation.bracket
+  (#set! conceal ""))
+
+(inline_link
+  (inline_link_destination) @markup.link.url
+  (#set! conceal ""))
 
 (link_reference_definition
   ":" @punctuation.special)
@@ -245,7 +319,19 @@ build = {
   (link_text) @markup.link)
 
 (full_reference_link
-  (link_label) @markup.link.label)
+  (link_label) @markup.link.label
+  (#set! conceal ""))
+
+(collapsed_reference_link
+  "[]" @punctuation.bracket
+  (#set! conceal ""))
+
+(full_reference_link
+  [
+    "["
+    "]"
+  ] @punctuation.bracket
+  (#set! conceal ""))
 
 (collapsed_reference_link
   (link_text) @markup.link)
@@ -259,10 +345,47 @@ build = {
 (full_reference_image
   (link_label) @markup.link.label)
 
-(image_description) @markup.link.label
+(full_reference_image
+  [
+    "!["
+    "["
+    "]"
+  ] @punctuation.bracket)
+
+(collapsed_reference_image
+  [
+    "!["
+    "]"
+  ] @punctuation.bracket)
+
+(inline_image
+  [
+    "!["
+    "]"
+  ] @punctuation.bracket)
+
+(image_description) @markup.italic
+
+(image_description
+  [
+    "["
+    "]"
+  ] @punctuation.bracket)
+
+(link_reference_definition
+  [
+    "["
+    "]"
+  ] @punctuation.bracket)
 
 (link_reference_definition
   (link_label) @markup.link.label)
+
+(inline_link_destination
+  [
+    "("
+    ")"
+  ] @punctuation.bracket)
 
 [
   (autolink)
@@ -272,15 +395,21 @@ build = {
 ] @markup.link.url
 
 (footnote
-  (reference_label) @markup.link)
+  (reference_label) @markup.link.label)
 
 (footnote_reference
-  (reference_label) @markup.link)
+  (reference_label) @markup.link.label)
 
 [
   (footnote_marker_begin)
   (footnote_marker_end)
 ] @punctuation.bracket
+
+(todo) @comment.todo
+
+(note) @comment.note
+
+(fixme) @comment.error
 
 [
   (paragraph)
@@ -311,6 +440,18 @@ build = {
 (full_reference_image
   (link_label) @nospell)
 ]==],
+    ["indents.scm"] = [==[
+; The intention here is to rely on Neovims `autoindent` setting.
+; This allows us to not indent after just a single list item
+; so we can create narrow lists quickly, but indent blocks inside list items
+; to the previous paragraph.
+(list_item_content) @indent.auto
+
+(footnote_content) @indent.align
+
+((table_caption) @indent.begin
+  (#set! indent.immediate 1))
+]==],
     ["injections.scm"] = [==[
 (code_block
   (language) @injection.language
@@ -329,6 +470,25 @@ build = {
 (frontmatter
   (language) @injection.language
   (frontmatter_content) @injection.content)
+]==],
+    ["locals.scm"] = [==[
+(link_reference_definition
+  (link_label) @local.definition)
+
+(footnote
+  (reference_label) @local.definition)
+
+(collapsed_reference_link
+  (link_text) @local.reference)
+
+(full_reference_link
+  (link_label) @local.reference)
+
+(full_reference_image
+  (link_label) @local.reference)
+
+(footnote_reference
+  (reference_label) @local.reference)
 ]==],
   },
   extra_files = {
