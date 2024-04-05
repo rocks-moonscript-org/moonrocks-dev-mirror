@@ -1,4 +1,4 @@
-local git_ref = '44017499c51cb6431635ed51d5080e1fd05c2c21'
+local git_ref = '7fe453beacecf02c86f7736439f238f5bb8b5c9b'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-markdown_inline'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for markdown_inline',
+  summary = 'tree-sitter parser and Neovim queries for markdown_inline',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/MDeiml/tree-sitter-markdown',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-markdown-' .. '44017499c51cb6431635ed51d5080e1fd05c2c21',
+  dir = 'tree-sitter-markdown-' .. '7fe453beacecf02c86f7736439f238f5bb8b5c9b',
 }
 
 build = {

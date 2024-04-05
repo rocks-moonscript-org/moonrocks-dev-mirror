@@ -1,4 +1,4 @@
-local git_ref = '0cdfb1741323f38e9a33798674145c22cfc0092b'
+local git_ref = '13fdd899bfa62527cc39887abd74ec24cd626dec'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-slang'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for slang',
+  summary = 'tree-sitter parser and Neovim queries for slang',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/theHamsta/tree-sitter-slang',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-slang-' .. '0cdfb1741323f38e9a33798674145c22cfc0092b',
+  dir = 'tree-sitter-slang-' .. '13fdd899bfa62527cc39887abd74ec24cd626dec',
 }
 
 build = {

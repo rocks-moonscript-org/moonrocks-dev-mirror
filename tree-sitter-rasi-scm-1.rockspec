@@ -9,14 +9,14 @@ package = 'tree-sitter-rasi'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for rasi',
+  summary = 'tree-sitter parser and Neovim queries for rasi',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/Fymyte/tree-sitter-rasi',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

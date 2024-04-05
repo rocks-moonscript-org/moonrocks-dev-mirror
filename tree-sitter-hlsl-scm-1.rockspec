@@ -1,4 +1,4 @@
-local git_ref = 'ee24be127560f0de0c4741e382416f45ab47eb76'
+local git_ref = 'ef428a36b2faa20450ee979a618f802228b38318'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-hlsl'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for hlsl',
+  summary = 'tree-sitter parser and Neovim queries for hlsl',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/theHamsta/tree-sitter-hlsl',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-hlsl-' .. 'ee24be127560f0de0c4741e382416f45ab47eb76',
+  dir = 'tree-sitter-hlsl-' .. 'ef428a36b2faa20450ee979a618f802228b38318',
 }
 
 build = {

@@ -1,4 +1,4 @@
-local git_ref = 'f11359345a2475b434a8e1dd3cfa02f2bc9b7e21'
+local git_ref = '33211e61248d933f5c81d2d111931ce34eb319be'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-wing'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for wing',
+  summary = 'tree-sitter parser and Neovim queries for wing',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/winglang/wing',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'wing-' .. 'f11359345a2475b434a8e1dd3cfa02f2bc9b7e21',
+  dir = 'wing-' .. '33211e61248d933f5c81d2d111931ce34eb319be',
 }
 
 build = {

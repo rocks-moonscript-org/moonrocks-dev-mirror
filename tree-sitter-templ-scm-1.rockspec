@@ -1,4 +1,4 @@
-local git_ref = '592faa3186ef857c92e4bd1c31d73c07a4a334db'
+local git_ref = '044ad200092170727650fa6d368df66a8da98f9d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-templ'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for templ',
+  summary = 'tree-sitter parser and Neovim queries for templ',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/vrischmann/tree-sitter-templ',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-templ-' .. '592faa3186ef857c92e4bd1c31d73c07a4a334db',
+  dir = 'tree-sitter-templ-' .. '044ad200092170727650fa6d368df66a8da98f9d',
 }
 
 build = {

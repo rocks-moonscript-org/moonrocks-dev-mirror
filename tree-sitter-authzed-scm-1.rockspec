@@ -9,14 +9,14 @@ package = 'tree-sitter-authzed'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for authzed',
+  summary = 'tree-sitter parser and Neovim queries for authzed',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/mleonidas/tree-sitter-authzed',
   license = 'Apache-2.0'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

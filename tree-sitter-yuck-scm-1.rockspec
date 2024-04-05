@@ -9,14 +9,14 @@ package = 'tree-sitter-yuck'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for yuck',
+  summary = 'tree-sitter parser and Neovim queries for yuck',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/Philipp-M/tree-sitter-yuck',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

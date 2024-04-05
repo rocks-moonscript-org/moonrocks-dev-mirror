@@ -9,14 +9,14 @@ package = 'tree-sitter-git_config'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for git_config',
+  summary = 'tree-sitter parser and Neovim queries for git_config',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/the-mikedavis/tree-sitter-git-config',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

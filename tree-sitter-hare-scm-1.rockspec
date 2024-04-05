@@ -9,14 +9,14 @@ package = 'tree-sitter-hare'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for hare',
+  summary = 'tree-sitter parser and Neovim queries for hare',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/amaanq/tree-sitter-hare',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

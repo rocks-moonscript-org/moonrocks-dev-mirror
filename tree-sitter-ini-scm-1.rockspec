@@ -9,14 +9,14 @@ package = 'tree-sitter-ini'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for ini',
+  summary = 'tree-sitter parser and Neovim queries for ini',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/justinmk/tree-sitter-ini',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

@@ -9,14 +9,14 @@ package = 'tree-sitter-janet_simple'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for janet_simple',
+  summary = 'tree-sitter parser and Neovim queries for janet_simple',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/sogaiu/tree-sitter-janet-simple',
   license = 'Apache-2.0'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

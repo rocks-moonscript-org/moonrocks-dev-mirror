@@ -9,14 +9,14 @@ package = 'tree-sitter-ada'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for ada',
+  summary = 'tree-sitter parser and Neovim queries for ada',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/briot/tree-sitter-ada',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

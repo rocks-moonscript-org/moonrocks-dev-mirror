@@ -1,4 +1,4 @@
-local git_ref = 'cbd58ee33e24f46d16b9882b001eefb25a958ee2'
+local git_ref = '4d7b4697dd2598c60a6ccbc51db8b768cd8700b8'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-wgsl_bevy'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for wgsl_bevy',
+  summary = 'tree-sitter parser and Neovim queries for wgsl_bevy',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/theHamsta/tree-sitter-wgsl-bevy',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-wgsl-bevy-' .. 'cbd58ee33e24f46d16b9882b001eefb25a958ee2',
+  dir = 'tree-sitter-wgsl-bevy-' .. '4d7b4697dd2598c60a6ccbc51db8b768cd8700b8',
 }
 
 build = {

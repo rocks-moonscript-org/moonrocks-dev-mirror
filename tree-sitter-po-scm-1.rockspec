@@ -9,14 +9,14 @@ package = 'tree-sitter-po'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for po',
+  summary = 'tree-sitter parser and Neovim queries for po',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/erasin/tree-sitter-po',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

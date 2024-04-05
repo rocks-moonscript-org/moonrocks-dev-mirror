@@ -9,14 +9,14 @@ package = 'tree-sitter-nim_format_string'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for nim_format_string',
+  summary = 'tree-sitter parser and Neovim queries for nim_format_string',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/aMOPel/tree-sitter-nim-format-string',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

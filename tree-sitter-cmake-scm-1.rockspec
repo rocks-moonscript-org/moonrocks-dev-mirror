@@ -9,14 +9,14 @@ package = 'tree-sitter-cmake'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for cmake',
+  summary = 'tree-sitter parser and Neovim queries for cmake',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/uyha/tree-sitter-cmake',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

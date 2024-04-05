@@ -1,4 +1,4 @@
-local git_ref = '3a56481f8d13b6874a28752502a58520b9139dc7'
+local git_ref = 'b0cd98e1c60cb55dc358c6b6781346886b980e86'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-rust'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for rust',
+  summary = 'tree-sitter parser and Neovim queries for rust',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter/tree-sitter-rust',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-rust-' .. '3a56481f8d13b6874a28752502a58520b9139dc7',
+  dir = 'tree-sitter-rust-' .. 'b0cd98e1c60cb55dc358c6b6781346886b980e86',
 }
 
 build = {
@@ -518,10 +518,12 @@ build = {
   (struct_item)
   (enum_item)
   (impl_item)
-  (for_expression)
   (struct_expression)
   (struct_pattern)
+  (tuple_struct_pattern)
   (tuple_expression)
+  (tuple_type)
+  (tuple_pattern)
   (match_block)
   (call_expression)
   (assignment_expression)
@@ -602,6 +604,8 @@ build = {
 (struct_pattern
   "}" @indent.end)
 
+(tuple_struct_pattern
+  ")" @indent.end)
 ; Typing in "(" inside macro definitions breaks the tree entirely
 ; Making macro_definition becoming errors
 ; Offset this by adding back one indent for start of macro rules
@@ -611,6 +615,12 @@ build = {
   "(" @indent.begin
   (#set! indent.immediate)
   (#set! indent.start_at_same_line))
+
+(tuple_type
+  ")" @indent.end)
+
+(tuple_pattern
+  ")" @indent.end)
 
 (trait_item
   body: (declaration_list

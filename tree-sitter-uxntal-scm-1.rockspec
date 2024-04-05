@@ -9,14 +9,14 @@ package = 'tree-sitter-uxntal'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for uxntal',
+  summary = 'tree-sitter parser and Neovim queries for uxntal',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/amaanq/tree-sitter-uxntal',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

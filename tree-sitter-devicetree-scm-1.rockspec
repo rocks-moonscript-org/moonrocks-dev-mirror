@@ -9,14 +9,14 @@ package = 'tree-sitter-devicetree'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for devicetree',
+  summary = 'tree-sitter parser and Neovim queries for devicetree',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/joelspadin/tree-sitter-devicetree',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

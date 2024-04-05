@@ -1,4 +1,4 @@
-local git_ref = '7455f17038d551ecd2b082c39e4a63bcb403e158'
+local git_ref = 'c10ad7e82aa4d77fcb5c4aaec193c9f2dfd3afcb'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-tlaplus'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for tlaplus',
+  summary = 'tree-sitter parser and Neovim queries for tlaplus',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tlaplus-community/tree-sitter-tlaplus',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-tlaplus-' .. '7455f17038d551ecd2b082c39e4a63bcb403e158',
+  dir = 'tree-sitter-tlaplus-' .. 'c10ad7e82aa4d77fcb5c4aaec193c9f2dfd3afcb',
 }
 
 build = {

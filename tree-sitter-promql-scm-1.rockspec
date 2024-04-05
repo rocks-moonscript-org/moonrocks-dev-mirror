@@ -9,14 +9,14 @@ package = 'tree-sitter-promql'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for promql',
+  summary = 'tree-sitter parser and Neovim queries for promql',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/MichaHoffmann/tree-sitter-promql',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

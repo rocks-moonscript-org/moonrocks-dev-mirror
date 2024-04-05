@@ -1,4 +1,4 @@
-local git_ref = '6b5ec205c9d4f23eb36a163f1edc4f2db8c98e4a'
+local git_ref = '95a4f0023741b3bee0cc500f3dab9c5bab2dc2be'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-haskell'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for haskell',
+  summary = 'tree-sitter parser and Neovim queries for haskell',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter/tree-sitter-haskell',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-haskell-' .. '6b5ec205c9d4f23eb36a163f1edc4f2db8c98e4a',
+  dir = 'tree-sitter-haskell-' .. '95a4f0023741b3bee0cc500f3dab9c5bab2dc2be',
 }
 
 build = {

@@ -9,14 +9,14 @@ package = 'tree-sitter-elm'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for elm',
+  summary = 'tree-sitter parser and Neovim queries for elm',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/elm-tooling/tree-sitter-elm',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

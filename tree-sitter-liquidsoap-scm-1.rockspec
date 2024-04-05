@@ -9,14 +9,14 @@ package = 'tree-sitter-liquidsoap'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for liquidsoap',
+  summary = 'tree-sitter parser and Neovim queries for liquidsoap',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/savonet/tree-sitter-liquidsoap',
   license = 'Apache-2.0'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

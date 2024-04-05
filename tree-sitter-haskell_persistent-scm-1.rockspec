@@ -9,14 +9,14 @@ package = 'tree-sitter-haskell_persistent'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for haskell_persistent',
+  summary = 'tree-sitter parser and Neovim queries for haskell_persistent',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

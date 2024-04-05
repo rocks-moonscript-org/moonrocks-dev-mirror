@@ -1,4 +1,4 @@
-local git_ref = 'e0c1678a78731e78655b7d953efb4daecf58be46'
+local git_ref = 'd0b4e006ca3c4466f834d9a4bf709bfede13d359'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-cpp'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for cpp',
+  summary = 'tree-sitter parser and Neovim queries for cpp',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter/tree-sitter-cpp',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-cpp-' .. 'e0c1678a78731e78655b7d953efb4daecf58be46',
+  dir = 'tree-sitter-cpp-' .. 'd0b4e006ca3c4466f834d9a4bf709bfede13d359',
 }
 
 build = {

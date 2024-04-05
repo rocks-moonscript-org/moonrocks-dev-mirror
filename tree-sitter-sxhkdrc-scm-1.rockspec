@@ -9,14 +9,14 @@ package = 'tree-sitter-sxhkdrc'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for sxhkdrc',
+  summary = 'tree-sitter parser and Neovim queries for sxhkdrc',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/RaafatTurki/tree-sitter-sxhkdrc',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

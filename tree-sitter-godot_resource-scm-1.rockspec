@@ -1,4 +1,4 @@
-local git_ref = 'b6ef0768711086a86b3297056f9ffb5cc1d77b4a'
+local git_ref = '2ffb90de47417018651fc3b970e5f6b67214dc9d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-godot_resource'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for godot_resource',
+  summary = 'tree-sitter parser and Neovim queries for godot_resource',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/PrestonKnopp/tree-sitter-godot-resource',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-godot-resource-' .. 'b6ef0768711086a86b3297056f9ffb5cc1d77b4a',
+  dir = 'tree-sitter-godot-resource-' .. '2ffb90de47417018651fc3b970e5f6b67214dc9d',
 }
 
 build = {

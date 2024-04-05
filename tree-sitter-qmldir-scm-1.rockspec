@@ -9,14 +9,14 @@ package = 'tree-sitter-qmldir'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for qmldir',
+  summary = 'tree-sitter parser and Neovim queries for qmldir',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/Decodetalkers/tree-sitter-qmldir',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

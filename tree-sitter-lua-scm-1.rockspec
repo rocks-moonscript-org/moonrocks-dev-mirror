@@ -9,14 +9,14 @@ package = 'tree-sitter-lua'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for lua',
+  summary = 'tree-sitter parser and Neovim queries for lua',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/MunifTanjim/tree-sitter-lua',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
@@ -406,6 +406,15 @@ build = {
   (#eq? @_method "nvim_exec_lua")
   (#set! injection.language "lua"))
 
+; exec_lua [[ ... ]] in functionaltests
+((function_call
+  name: (identifier) @_function
+  arguments: (arguments
+    (string
+      content: (string_content) @injection.content)))
+  (#eq? @_function "exec_lua")
+  (#set! injection.language "lua"))
+
 ; vim.api.nvim_create_autocmd("FileType", { command = "injected here" })
 (function_call
   name: (_) @_vimcmd_identifier
@@ -540,6 +549,21 @@ build = {
 (comment
   content: (_) @injection.content
   (#set! injection.language "comment"))
+
+; vim.filetype.add({ pattern = { ["some lua pattern here"] = "filetype" } })
+((function_call
+  name: (_) @_filetypeadd_identifier
+  arguments: (arguments
+    (table_constructor
+      (field
+        name: (_) @_pattern_key
+        value: (table_constructor
+          (field
+            name: (string
+              content: _ @injection.content)))))))
+  (#set! injection.language "luap")
+  (#eq? @_filetypeadd_identifier "vim.filetype.add")
+  (#eq? @_pattern_key "pattern"))
 ]==],
     ["locals.scm"] = [==[
 ; Scopes

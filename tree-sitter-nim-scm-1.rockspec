@@ -9,14 +9,14 @@ package = 'tree-sitter-nim'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for nim',
+  summary = 'tree-sitter parser and Neovim queries for nim',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/alaviss/tree-sitter-nim',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

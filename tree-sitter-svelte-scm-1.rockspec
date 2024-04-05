@@ -1,4 +1,4 @@
-local git_ref = 'b974719d47447666687d49c68a51b278b2320e99'
+local git_ref = '6909efa7179cd655f9b48123357d65ce8fc661fd'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-svelte'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for svelte',
+  summary = 'tree-sitter parser and Neovim queries for svelte',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-svelte',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-svelte-' .. 'b974719d47447666687d49c68a51b278b2320e99',
+  dir = 'tree-sitter-svelte-' .. '6909efa7179cd655f9b48123357d65ce8fc661fd',
 }
 
 build = {

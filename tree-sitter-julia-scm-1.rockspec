@@ -9,14 +9,14 @@ package = 'tree-sitter-julia'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for julia',
+  summary = 'tree-sitter parser and Neovim queries for julia',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter/tree-sitter-julia',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
@@ -109,7 +109,7 @@ build = {
   (_)
   (operator) @_pipe
   (identifier) @function.call
-  (#eq? @_pipe "|>"))
+  (#any-of? @_pipe "|>" ".|>"))
 
 ; Builtins
 ((identifier) @function.builtin

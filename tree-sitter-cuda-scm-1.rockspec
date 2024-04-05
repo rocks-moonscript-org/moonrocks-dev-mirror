@@ -1,4 +1,4 @@
-local git_ref = '221179d4287a2c24c08e4c67ff383ef67dc32156'
+local git_ref = '4ec5afdf98041d137c25b555958a1f825c7c1272'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-cuda'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for cuda',
+  summary = 'tree-sitter parser and Neovim queries for cuda',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/theHamsta/tree-sitter-cuda',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-cuda-' .. '221179d4287a2c24c08e4c67ff383ef67dc32156',
+  dir = 'tree-sitter-cuda-' .. '4ec5afdf98041d137c25b555958a1f825c7c1272',
 }
 
 build = {
@@ -48,6 +48,7 @@ build = {
   "__host__"
   "__device__"
   "__global__"
+  "__managed__"
   "__forceinline__"
   "__noinline__"
 ] @keyword.modifier

@@ -9,14 +9,14 @@ package = 'tree-sitter-hcl'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for hcl',
+  summary = 'tree-sitter parser and Neovim queries for hcl',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/MichaHoffmann/tree-sitter-hcl',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

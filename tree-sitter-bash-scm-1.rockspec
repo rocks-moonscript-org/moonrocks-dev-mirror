@@ -9,14 +9,14 @@ package = 'tree-sitter-bash'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for bash',
+  summary = 'tree-sitter parser and Neovim queries for bash',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter/tree-sitter-bash',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
@@ -171,10 +171,15 @@ build = {
 (test_operator) @operator
 
 (command_substitution
-  "$(" @punctuation.bracket)
+  "$(" @punctuation.special
+  ")" @punctuation.special)
 
 (process_substitution
-  "<(" @punctuation.bracket)
+  [
+    "<("
+    ">("
+  ] @punctuation.special
+  ")" @punctuation.special)
 
 (arithmetic_expansion
   [

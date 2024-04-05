@@ -1,4 +1,4 @@
-local git_ref = '511ea5e0088779e4bdd76e12963ab9a5fe99983a'
+local git_ref = '868620e19f070a5e6b0b685dc6069a611a86259a'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-elixir'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for elixir',
+  summary = 'tree-sitter parser and Neovim queries for elixir',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/elixir-lang/tree-sitter-elixir',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-elixir-' .. '511ea5e0088779e4bdd76e12963ab9a5fe99983a',
+  dir = 'tree-sitter-elixir-' .. '868620e19f070a5e6b0b685dc6069a611a86259a',
 }
 
 build = {
@@ -36,6 +36,7 @@ build = {
     ["folds.scm"] = [==[
 [
   (anonymous_function)
+  (stab_clause)
   (arguments)
   (block)
   (do_block)

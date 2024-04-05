@@ -9,14 +9,14 @@ package = 'tree-sitter-hack'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for hack',
+  summary = 'tree-sitter parser and Neovim queries for hack',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/slackhq/tree-sitter-hack',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

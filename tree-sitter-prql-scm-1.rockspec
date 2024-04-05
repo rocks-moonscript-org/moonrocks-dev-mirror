@@ -9,14 +9,14 @@ package = 'tree-sitter-prql'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for prql',
+  summary = 'tree-sitter parser and Neovim queries for prql',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/PRQL/tree-sitter-prql',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

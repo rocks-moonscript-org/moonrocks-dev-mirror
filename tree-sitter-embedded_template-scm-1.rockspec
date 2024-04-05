@@ -9,14 +9,14 @@ package = 'tree-sitter-embedded_template'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for embedded_template',
+  summary = 'tree-sitter parser and Neovim queries for embedded_template',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter/tree-sitter-embedded-template',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

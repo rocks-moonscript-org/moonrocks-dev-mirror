@@ -1,4 +1,4 @@
-local git_ref = 'b239a95f94cfcc6e7b3e961bc73a28d55e214f02'
+local git_ref = 'a8ed2f5d600fed77f8ed3084d1479998c649bca1'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-solidity'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for solidity',
+  summary = 'tree-sitter parser and Neovim queries for solidity',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/JoranHonig/tree-sitter-solidity',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-solidity-' .. 'b239a95f94cfcc6e7b3e961bc73a28d55e214f02',
+  dir = 'tree-sitter-solidity-' .. 'a8ed2f5d600fed77f8ed3084d1479998c649bca1',
 }
 
 build = {

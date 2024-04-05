@@ -9,14 +9,14 @@ package = 'tree-sitter-ispc'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for ispc',
+  summary = 'tree-sitter parser and Neovim queries for ispc',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/fab4100/tree-sitter-ispc',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

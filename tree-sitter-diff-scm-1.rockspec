@@ -9,14 +9,14 @@ package = 'tree-sitter-diff'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for diff',
+  summary = 'tree-sitter parser and Neovim queries for diff',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/the-mikedavis/tree-sitter-diff',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

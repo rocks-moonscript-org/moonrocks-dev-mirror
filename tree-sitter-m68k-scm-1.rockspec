@@ -9,14 +9,14 @@ package = 'tree-sitter-m68k'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for m68k',
+  summary = 'tree-sitter parser and Neovim queries for m68k',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/grahambates/tree-sitter-m68k',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

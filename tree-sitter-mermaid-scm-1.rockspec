@@ -9,14 +9,14 @@ package = 'tree-sitter-mermaid'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for mermaid',
+  summary = 'tree-sitter parser and Neovim queries for mermaid',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/monaqa/tree-sitter-mermaid',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

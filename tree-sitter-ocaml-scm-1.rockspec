@@ -1,4 +1,4 @@
-local git_ref = 'f7e63111ed1bc1908eacafe6af1ee8d01bfcf7ae'
+local git_ref = '0b12614ded3ec7ed7ab7933a9ba4f695ba4c342e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-ocaml'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for ocaml',
+  summary = 'tree-sitter parser and Neovim queries for ocaml',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter/tree-sitter-ocaml',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-ocaml-' .. 'f7e63111ed1bc1908eacafe6af1ee8d01bfcf7ae',
+  dir = 'tree-sitter-ocaml-' .. '0b12614ded3ec7ed7ab7933a9ba4f695ba4c342e',
 }
 
 build = {

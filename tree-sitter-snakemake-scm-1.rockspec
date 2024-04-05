@@ -1,4 +1,4 @@
-local git_ref = '65a6c3b4671877821082164da0a310851b211953'
+local git_ref = 'ba1b3868eaa960b945593404af9a7c2f296d3643'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-snakemake'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for snakemake',
+  summary = 'tree-sitter parser and Neovim queries for snakemake',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/osthomas/tree-sitter-snakemake',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-snakemake-' .. '65a6c3b4671877821082164da0a310851b211953',
+  dir = 'tree-sitter-snakemake-' .. 'ba1b3868eaa960b945593404af9a7c2f296d3643',
 }
 
 build = {
@@ -120,6 +120,24 @@ build = {
   (#any-of? @label "input" "log" "output" "params" "resources" "threads" "wildcards")
   (#has-ancestor? @label "directive")
   (#has-ancestor? @label "block"))
+]==],
+    ["indents.scm"] = [==[
+; inherits: python
+
+((rule_definition) @indent.begin
+  (#set! indent.immediate 1))
+
+((checkpoint_definition) @indent.begin
+  (#set! indent.immediate 1))
+
+((rule_inheritance) @indent.begin
+  (#set! indent.immediate 1))
+
+((module_definition) @indent.begin
+  (#set! indent.immediate 1))
+
+((directive) @indent.begin
+  (#set! indent.immediate 1))
 ]==],
     ["injections.scm"] = [==[
 ; inherits: python

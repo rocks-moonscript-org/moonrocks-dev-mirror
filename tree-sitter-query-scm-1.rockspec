@@ -1,4 +1,4 @@
-local git_ref = '176a380df78800167565118bb0dadfc961abbd43'
+local git_ref = '2e31ca2771f6042b0e4e0c41a6290014a9e1face'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-query'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for query',
+  summary = 'tree-sitter parser and Neovim queries for query',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/nvim-treesitter/tree-sitter-query',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-query-' .. '176a380df78800167565118bb0dadfc961abbd43',
+  dir = 'tree-sitter-query-' .. '2e31ca2771f6042b0e4e0c41a6290014a9e1face',
 }
 
 build = {

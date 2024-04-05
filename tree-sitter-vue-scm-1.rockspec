@@ -1,4 +1,4 @@
-local git_ref = '3b9d52087100bdfce43dad2ca46d75b0e21613f6'
+local git_ref = '22bdfa6c9fc0f5ffa44c6e938ec46869ac8a99ff'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-vue'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for vue',
+  summary = 'tree-sitter parser and Neovim queries for vue',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-vue',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-vue-' .. '3b9d52087100bdfce43dad2ca46d75b0e21613f6',
+  dir = 'tree-sitter-vue-' .. '22bdfa6c9fc0f5ffa44c6e938ec46869ac8a99ff',
 }
 
 build = {

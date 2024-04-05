@@ -1,4 +1,4 @@
-local git_ref = 'cc53b6878a003cf26d213025af49c78388cebe21'
+local git_ref = 'bfa075d83c6b97cd48440b3829ab8d24a2319809'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-html'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for html',
+  summary = 'tree-sitter parser and Neovim queries for html',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter/tree-sitter-html',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-html-' .. 'cc53b6878a003cf26d213025af49c78388cebe21',
+  dir = 'tree-sitter-html-' .. 'bfa075d83c6b97cd48440b3829ab8d24a2319809',
 }
 
 build = {

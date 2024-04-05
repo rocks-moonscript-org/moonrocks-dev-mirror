@@ -1,4 +1,4 @@
-local git_ref = '3ebd060b1a2eec450ff46b73428c63f9148a07ff'
+local git_ref = 'bd17c824196ce70800f64ad39cfddd1b17acc13f'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-meson'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for meson',
+  summary = 'tree-sitter parser and Neovim queries for meson',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/Decodetalkers/tree-sitter-meson',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-meson-' .. '3ebd060b1a2eec450ff46b73428c63f9148a07ff',
+  dir = 'tree-sitter-meson-' .. 'bd17c824196ce70800f64ad39cfddd1b17acc13f',
 }
 
 build = {

@@ -1,4 +1,4 @@
-local git_ref = 'cf10fc38bc24faf0549d59217ff37c789973dfdc'
+local git_ref = 'a2a67494c223ccf8aa419ac419d9cdf483dbb8ca'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-commonlisp'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for commonlisp',
+  summary = 'tree-sitter parser and Neovim queries for commonlisp',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/theHamsta/tree-sitter-commonlisp',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-commonlisp-' .. 'cf10fc38bc24faf0549d59217ff37c789973dfdc',
+  dir = 'tree-sitter-commonlisp-' .. 'a2a67494c223ccf8aa419ac419d9cdf483dbb8ca',
 }
 
 build = {

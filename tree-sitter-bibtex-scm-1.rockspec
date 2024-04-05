@@ -9,14 +9,14 @@ package = 'tree-sitter-bibtex'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for bibtex',
+  summary = 'tree-sitter parser and Neovim queries for bibtex',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/latex-lsp/tree-sitter-bibtex',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

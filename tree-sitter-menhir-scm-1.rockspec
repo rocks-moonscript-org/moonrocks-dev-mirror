@@ -9,14 +9,14 @@ package = 'tree-sitter-menhir'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for menhir',
+  summary = 'tree-sitter parser and Neovim queries for menhir',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/Kerl13/tree-sitter-menhir',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

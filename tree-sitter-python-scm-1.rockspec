@@ -9,14 +9,14 @@ package = 'tree-sitter-python'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for python',
+  summary = 'tree-sitter parser and Neovim queries for python',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter/tree-sitter-python',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
@@ -140,7 +140,7 @@ build = {
 
 ((decorator
   (identifier) @attribute.builtin)
-  (#any-of? @attribute.builtin "classmethod" "property"))
+  (#any-of? @attribute.builtin "classmethod" "property" "staticmethod"))
 
 ; Builtin functions
 ((call

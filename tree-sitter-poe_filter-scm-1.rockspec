@@ -9,14 +9,14 @@ package = 'tree-sitter-poe_filter'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for poe_filter',
+  summary = 'tree-sitter parser and Neovim queries for poe_filter',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/ObserverOfTime/tree-sitter-poe-filter',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

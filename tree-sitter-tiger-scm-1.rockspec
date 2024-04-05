@@ -9,14 +9,14 @@ package = 'tree-sitter-tiger'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for tiger',
+  summary = 'tree-sitter parser and Neovim queries for tiger',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/ambroisie/tree-sitter-tiger',
   license = 'Apache-2.0'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

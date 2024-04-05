@@ -1,4 +1,4 @@
-local git_ref = 'bb3fe96bb65d9b71e2d04b7ebe27dc1947f2cd5d'
+local git_ref = '67ea4e9ea7302b731d392cd8b1aad7b8e79a5547'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-swift'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for swift',
+  summary = 'tree-sitter parser and Neovim queries for swift',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/alex-pinkus/tree-sitter-swift',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-swift-' .. 'bb3fe96bb65d9b71e2d04b7ebe27dc1947f2cd5d',
+  dir = 'tree-sitter-swift-' .. '67ea4e9ea7302b731d392cd8b1aad7b8e79a5547',
 }
 
 build = {
@@ -75,7 +75,7 @@ build = {
 (function_declaration
   (simple_identifier) @function.method)
 
-(function_declaration
+(init_declaration
   "init" @constructor)
 
 (throws) @keyword
@@ -116,6 +116,11 @@ build = {
   "convenience"
   "required"
   "some"
+  "any"
+  "weak"
+  "unowned"
+  "didSet"
+  "willSet"
 ] @keyword
 
 [
@@ -150,6 +155,15 @@ build = {
 
 (enum_entry
   "case" @keyword)
+
+; Attributes
+(modifiers
+  (attribute) @attribute.builtin)
+
+(modifiers
+  (attribute
+    (user_type
+      (type_identifier) @attribute.builtin)))
 
 ; Function calls
 (call_expression
@@ -311,6 +325,9 @@ build = {
   "++"
   "--"
   "&"
+  "&&"
+  "|"
+  "||"
   "~"
   "%="
   "!="

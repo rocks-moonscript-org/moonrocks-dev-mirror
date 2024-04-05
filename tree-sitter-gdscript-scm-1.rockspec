@@ -1,4 +1,4 @@
-local git_ref = 'b5dea4d852db65f0872d849c24533eb121e03c76'
+local git_ref = '1f1e782fe2600f50ae57b53876505b8282388d77'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-gdscript'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for gdscript',
+  summary = 'tree-sitter parser and Neovim queries for gdscript',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/PrestonKnopp/tree-sitter-gdscript',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-gdscript-' .. 'b5dea4d852db65f0872d849c24533eb121e03c76',
+  dir = 'tree-sitter-gdscript-' .. '1f1e782fe2600f50ae57b53876505b8282388d77',
 }
 
 build = {

@@ -9,14 +9,14 @@ package = 'tree-sitter-wgsl'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for wgsl',
+  summary = 'tree-sitter parser and Neovim queries for wgsl',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/szebniok/tree-sitter-wgsl',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

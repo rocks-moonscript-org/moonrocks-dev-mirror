@@ -1,4 +1,4 @@
-local git_ref = '72084f447c2051e01a7cd6c6e0477ec71a9297ed'
+local git_ref = 'ff7f769c2d7aa3f954ce4ae98311e09f6e863c9c'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-c'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for c',
+  summary = 'tree-sitter parser and Neovim queries for c',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter/tree-sitter-c',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-c-' .. '72084f447c2051e01a7cd6c6e0477ec71a9297ed',
+  dir = 'tree-sitter-c-' .. 'ff7f769c2d7aa3f954ce4ae98311e09f6e863c9c',
 }
 
 build = {
@@ -201,9 +201,6 @@ build = {
 (number_literal) @number
 
 (char_literal) @character
-
-((preproc_arg) @function.macro
-  (#set! "priority" 90))
 
 (preproc_defined) @function.macro
 

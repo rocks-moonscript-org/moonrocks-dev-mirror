@@ -9,14 +9,14 @@ package = 'tree-sitter-corn'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for corn',
+  summary = 'tree-sitter parser and Neovim queries for corn',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/jakestanger/tree-sitter-corn',
   license = 'Apache-2.0'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

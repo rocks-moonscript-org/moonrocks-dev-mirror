@@ -1,4 +1,4 @@
-local git_ref = 'f9176908c9eb2e11eb684d79e1d00f3b29bd65c9'
+local git_ref = 'a78aef9abc395c600c38a037ac779afc7e3cc9e0'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-fish'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for fish',
+  summary = 'tree-sitter parser and Neovim queries for fish',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/ram02z/tree-sitter-fish',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-fish-' .. 'f9176908c9eb2e11eb684d79e1d00f3b29bd65c9',
+  dir = 'tree-sitter-fish-' .. 'a78aef9abc395c600c38a037ac779afc7e3cc9e0',
 }
 
 build = {
@@ -50,6 +50,8 @@ build = {
   "&&"
   "||"
   "|"
+  "&|"
+  "2>|"
   "&"
   ".."
   "!"

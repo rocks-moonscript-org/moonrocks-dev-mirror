@@ -1,4 +1,4 @@
-local git_ref = '763168fa916a333a459434f1424b5d30645f015d'
+local git_ref = 'b3cda619248e7dd0f216088bd152f59ce0bbe488'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-nix'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for nix',
+  summary = 'tree-sitter parser and Neovim queries for nix',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/cstrahan/tree-sitter-nix',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-nix-' .. '763168fa916a333a459434f1424b5d30645f015d',
+  dir = 'tree-sitter-nix-' .. 'b3cda619248e7dd0f216088bd152f59ce0bbe488',
 }
 
 build = {
@@ -104,6 +104,7 @@ build = {
 [
   "."
   ";"
+  ":"
   ","
 ] @punctuation.delimiter
 
@@ -123,7 +124,7 @@ build = {
   "?"? @operator)
 
 ; `...` in `{ ... }`, used to ignore unknown named function arguments (see above)
-(ellipses) @punctuation.special
+(ellipses) @variable.parameter.builtin
 
 ; universal is the parameter of the function expression
 ; `:` in `x: y`, used to separate function argument from body (see above)
@@ -235,6 +236,12 @@ build = {
 ; binary operators
 (binary_expression
   operator: _ @operator)
+
+[
+  "="
+  "@"
+  "?"
+] @operator
 
 ; integers, also highlight a unary -
 [

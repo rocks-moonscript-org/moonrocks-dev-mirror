@@ -9,14 +9,14 @@ package = 'tree-sitter-llvm'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for llvm',
+  summary = 'tree-sitter parser and Neovim queries for llvm',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/benwilliamgraham/tree-sitter-llvm',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

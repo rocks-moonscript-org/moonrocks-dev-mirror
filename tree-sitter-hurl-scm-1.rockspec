@@ -9,14 +9,14 @@ package = 'tree-sitter-hurl'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for hurl',
+  summary = 'tree-sitter parser and Neovim queries for hurl',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/pfeiferj/tree-sitter-hurl',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

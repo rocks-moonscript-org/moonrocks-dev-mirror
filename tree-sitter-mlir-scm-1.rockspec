@@ -1,4 +1,4 @@
-local git_ref = '3da76a44a6a5db05aef03966a2045c7c73571d77'
+local git_ref = 'a89a5f2bbcf7e82e46b106138977c99d6a644db2'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-mlir'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for mlir',
+  summary = 'tree-sitter parser and Neovim queries for mlir',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/artagnon/tree-sitter-mlir',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-mlir-' .. '3da76a44a6a5db05aef03966a2045c7c73571d77',
+  dir = 'tree-sitter-mlir-' .. 'a89a5f2bbcf7e82e46b106138977c99d6a644db2',
 }
 
 build = {

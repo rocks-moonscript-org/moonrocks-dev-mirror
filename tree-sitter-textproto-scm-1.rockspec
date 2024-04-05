@@ -9,14 +9,14 @@ package = 'tree-sitter-textproto'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for textproto',
+  summary = 'tree-sitter parser and Neovim queries for textproto',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/PorterAtGoogle/tree-sitter-textproto',
   license = 'Apache-2.0'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

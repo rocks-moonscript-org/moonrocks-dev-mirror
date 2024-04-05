@@ -9,14 +9,14 @@ package = 'tree-sitter-ql'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for ql',
+  summary = 'tree-sitter parser and Neovim queries for ql',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter/tree-sitter-ql',
   license = 'Apache-2.0'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

@@ -9,14 +9,14 @@ package = 'tree-sitter-fsh'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for fsh',
+  summary = 'tree-sitter parser and Neovim queries for fsh',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/mgramigna/tree-sitter-fsh',
   license = 'Apache-2.0'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

@@ -1,4 +1,4 @@
-local git_ref = '94219a5ac207a0fadd680b285378d08669d5bbc8'
+local git_ref = 'e3d0dea39dbb8032e754bafe5aec3ed5a234d986'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-arduino'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for arduino',
+  summary = 'tree-sitter parser and Neovim queries for arduino',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/ObserverOfTime/tree-sitter-arduino',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-arduino-' .. '94219a5ac207a0fadd680b285378d08669d5bbc8',
+  dir = 'tree-sitter-arduino-' .. 'e3d0dea39dbb8032e754bafe5aec3ed5a234d986',
 }
 
 build = {

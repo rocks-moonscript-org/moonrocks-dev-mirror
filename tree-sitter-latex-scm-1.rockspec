@@ -1,4 +1,4 @@
-local git_ref = '6d764f17f4d28c9db736009fb0e10ffe04866661'
+local git_ref = 'ae2134af67f6c5e45587ace9ec748dd6e7b356a2'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,26 +9,26 @@ package = 'tree-sitter-latex'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for latex',
+  summary = 'tree-sitter parser and Neovim queries for latex',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/latex-lsp/tree-sitter-latex',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-latex-' .. '6d764f17f4d28c9db736009fb0e10ffe04866661',
+  dir = 'tree-sitter-latex-' .. 'ae2134af67f6c5e45587ace9ec748dd6e7b356a2',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "latex",
   sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = false,
+  generate_from_grammar = true,
   generate_requires_npm = false,
   location = nil,
   copy_directories = { "queries" },

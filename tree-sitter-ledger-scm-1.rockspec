@@ -9,14 +9,14 @@ package = 'tree-sitter-ledger'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for ledger',
+  summary = 'tree-sitter parser and Neovim queries for ledger',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/cbarrete/tree-sitter-ledger',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

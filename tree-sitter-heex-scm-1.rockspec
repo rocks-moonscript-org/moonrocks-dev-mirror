@@ -9,14 +9,14 @@ package = 'tree-sitter-heex'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for heex',
+  summary = 'tree-sitter parser and Neovim queries for heex',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/connorlay/tree-sitter-heex',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

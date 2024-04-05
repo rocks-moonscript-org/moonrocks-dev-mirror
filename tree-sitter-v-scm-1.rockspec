@@ -1,4 +1,4 @@
-local git_ref = 'b21db154e8be920277c494b1cb81367d4da40a98'
+local git_ref = '12f5f6a073f9c48fd8733f3102fe4162dcf1c514'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-v'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for v',
+  summary = 'tree-sitter parser and Neovim queries for v',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/vlang/v-analyzer',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'v-analyzer-' .. 'b21db154e8be920277c494b1cb81367d4da40a98',
+  dir = 'v-analyzer-' .. '12f5f6a073f9c48fd8733f3102fe4162dcf1c514',
 }
 
 build = {
@@ -326,10 +326,13 @@ build = {
 (none) @variable.builtin
 
 ; Comments
-(comment) @comment @spell
+[
+  (line_comment)
+  (block_comment)
+] @comment @spell
 
 (_
-  (comment)+ @comment.documentation
+  (line_comment)+ @comment.documentation
   [
     (function_declaration)
     (type_declaration)
@@ -353,10 +356,16 @@ build = {
 (parameter_list
   ")" @indent.branch)
 
-(comment) @indent.ignore
+[
+  (line_comment)
+  (block_comment)
+] @indent.ignore
 ]==],
     ["injections.scm"] = [==[
-((comment) @injection.content
+([
+  (line_comment)
+  (block_comment)
+] @injection.content
   (#set! injection.language "comment"))
 
 ; asm_statement if asm ever highlighted :)

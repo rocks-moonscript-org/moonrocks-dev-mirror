@@ -9,14 +9,14 @@ package = 'tree-sitter-glimmer'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for glimmer',
+  summary = 'tree-sitter parser and Neovim queries for glimmer',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/alexlafroscia/tree-sitter-glimmer',
   license = 'Apache-2.0'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

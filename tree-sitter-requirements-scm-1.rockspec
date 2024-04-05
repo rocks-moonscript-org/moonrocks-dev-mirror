@@ -9,14 +9,14 @@ package = 'tree-sitter-requirements'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for requirements',
+  summary = 'tree-sitter parser and Neovim queries for requirements',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/ObserverOfTime/tree-sitter-requirements',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

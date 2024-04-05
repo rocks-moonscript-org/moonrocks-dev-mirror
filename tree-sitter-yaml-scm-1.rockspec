@@ -1,4 +1,4 @@
-local git_ref = '9e59b9bbf839ba231fbcb953617d8b9b9a059e38'
+local git_ref = 'c9ee63b15c92656a89f7007f38a98f21c3eca81d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-yaml'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for yaml',
+  summary = 'tree-sitter parser and Neovim queries for yaml',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-yaml',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-yaml-' .. '9e59b9bbf839ba231fbcb953617d8b9b9a059e38',
+  dir = 'tree-sitter-yaml-' .. 'c9ee63b15c92656a89f7007f38a98f21c3eca81d',
 }
 
 build = {

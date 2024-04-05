@@ -9,14 +9,14 @@ package = 'tree-sitter-vimdoc'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for vimdoc',
+  summary = 'tree-sitter parser and Neovim queries for vimdoc',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/neovim/tree-sitter-vimdoc',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

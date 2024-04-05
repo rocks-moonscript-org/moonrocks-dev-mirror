@@ -9,14 +9,14 @@ package = 'tree-sitter-eex'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for eex',
+  summary = 'tree-sitter parser and Neovim queries for eex',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/connorlay/tree-sitter-eex',
   license = 'Apache-2.0'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

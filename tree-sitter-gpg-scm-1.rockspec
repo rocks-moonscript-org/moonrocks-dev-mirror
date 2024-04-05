@@ -9,14 +9,14 @@ package = 'tree-sitter-gpg'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for gpg',
+  summary = 'tree-sitter parser and Neovim queries for gpg',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/ObserverOfTime/tree-sitter-gpg-config',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

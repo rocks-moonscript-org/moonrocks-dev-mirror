@@ -9,14 +9,14 @@ package = 'tree-sitter-leo'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for leo',
+  summary = 'tree-sitter parser and Neovim queries for leo',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/r001/tree-sitter-leo',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

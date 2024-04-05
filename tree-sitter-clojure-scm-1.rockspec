@@ -9,14 +9,14 @@ package = 'tree-sitter-clojure'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for clojure',
+  summary = 'tree-sitter parser and Neovim queries for clojure',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/sogaiu/tree-sitter-clojure',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

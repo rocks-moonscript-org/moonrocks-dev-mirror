@@ -9,14 +9,14 @@ package = 'tree-sitter-pascal'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for pascal',
+  summary = 'tree-sitter parser and Neovim queries for pascal',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/Isopod/tree-sitter-pascal',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
