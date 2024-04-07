@@ -1,4 +1,4 @@
-local git_ref = '353bdf25e7af9c2830e254977fd3fb57ccaa8203'
+local git_ref = 'aad4302fb5a5176004b688fcab4ae7dcf36bf49a'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-zathurarc'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for zathurarc',
+  summary = 'tree-sitter parser and Neovim queries for zathurarc',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/Freed-Wu/tree-sitter-zathurarc',
   license = 'Apache-2.0'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-zathurarc-' .. '353bdf25e7af9c2830e254977fd3fb57ccaa8203',
+  dir = 'tree-sitter-zathurarc-' .. 'aad4302fb5a5176004b688fcab4ae7dcf36bf49a',
 }
 
 build = {

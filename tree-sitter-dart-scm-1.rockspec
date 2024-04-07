@@ -1,4 +1,4 @@
-local git_ref = '1a31399a08aefc93bc4cdbfadc0cb619136f86c1'
+local git_ref = '7861a4889e7682af453afa4811ae85b1d7a6e415'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-dart'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for dart',
+  summary = 'tree-sitter parser and Neovim queries for dart',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/UserNobody14/tree-sitter-dart',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-dart-' .. '1a31399a08aefc93bc4cdbfadc0cb619136f86c1',
+  dir = 'tree-sitter-dart-' .. '7861a4889e7682af453afa4811ae85b1d7a6e415',
 }
 
 build = {

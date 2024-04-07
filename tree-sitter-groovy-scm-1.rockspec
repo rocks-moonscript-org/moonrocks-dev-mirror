@@ -1,4 +1,4 @@
-local git_ref = '3c25d1ce6c1eb9da34215060372792dc9f439b0c'
+local git_ref = 'b398a5a243c67f0b4d54728c983fa586bd5cd52e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-groovy'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for groovy',
+  summary = 'tree-sitter parser and Neovim queries for groovy',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/murtaza64/tree-sitter-groovy',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-groovy-' .. '3c25d1ce6c1eb9da34215060372792dc9f439b0c',
+  dir = 'tree-sitter-groovy-' .. 'b398a5a243c67f0b4d54728c983fa586bd5cd52e',
 }
 
 build = {

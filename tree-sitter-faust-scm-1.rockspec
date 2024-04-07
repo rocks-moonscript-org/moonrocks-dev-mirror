@@ -9,14 +9,14 @@ package = 'tree-sitter-faust'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for faust',
+  summary = 'tree-sitter parser and Neovim queries for faust',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/khiner/tree-sitter-faust',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

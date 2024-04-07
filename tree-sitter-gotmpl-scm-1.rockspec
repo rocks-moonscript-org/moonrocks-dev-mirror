@@ -9,14 +9,14 @@ package = 'tree-sitter-gotmpl'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for gotmpl',
+  summary = 'tree-sitter parser and Neovim queries for gotmpl',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/ngalaiko/tree-sitter-go-template',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

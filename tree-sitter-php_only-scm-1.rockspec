@@ -9,14 +9,14 @@ package = 'tree-sitter-php_only'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for php_only',
+  summary = 'tree-sitter parser and Neovim queries for php_only',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter/tree-sitter-php',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
@@ -52,6 +52,173 @@ build = {
 ] @fold
 ]==],
     ["highlights.scm"] = [==[
+; Keywords
+[
+  "and"
+  "as"
+  "instanceof"
+  "or"
+  "xor"
+] @keyword.operator
+
+[
+  "fn"
+  "function"
+] @keyword.function
+
+[
+  "class"
+  "clone"
+  "declare"
+  "default"
+  "echo"
+  "enddeclare"
+  "enum"
+  "extends"
+  "global"
+  "goto"
+  "implements"
+  "insteadof"
+  "interface"
+  "print"
+  "namespace"
+  "new"
+  "trait"
+  "unset"
+] @keyword
+
+[
+  "abstract"
+  "const"
+  "final"
+  "private"
+  "protected"
+  "public"
+  "readonly"
+  (static_modifier)
+] @keyword.modifier
+
+(function_static_declaration
+  "static" @keyword.modifier)
+
+[
+  "return"
+  "exit"
+  "yield"
+] @keyword.return
+
+(yield_expression
+  "from" @keyword.return)
+
+[
+  "case"
+  "else"
+  "elseif"
+  "endif"
+  "endswitch"
+  "if"
+  "switch"
+  "match"
+  "??"
+] @keyword.conditional
+
+[
+  "break"
+  "continue"
+  "do"
+  "endfor"
+  "endforeach"
+  "endwhile"
+  "for"
+  "foreach"
+  "while"
+] @keyword.repeat
+
+[
+  "catch"
+  "finally"
+  "throw"
+  "try"
+] @keyword.exception
+
+[
+  "include_once"
+  "include"
+  "require_once"
+  "require"
+  "use"
+] @keyword.import
+
+[
+  ","
+  ";"
+  ":"
+  "\\"
+] @punctuation.delimiter
+
+[
+  (php_tag)
+  "?>"
+  "("
+  ")"
+  "["
+  "]"
+  "{"
+  "}"
+  "#["
+] @punctuation.bracket
+
+[
+  "="
+  "."
+  "-"
+  "*"
+  "/"
+  "+"
+  "%"
+  "**"
+  "~"
+  "|"
+  "^"
+  "&"
+  "<<"
+  ">>"
+  "<<<"
+  "->"
+  "?->"
+  "=>"
+  "<"
+  "<="
+  ">="
+  ">"
+  "<>"
+  "<=>"
+  "=="
+  "!="
+  "==="
+  "!=="
+  "!"
+  "&&"
+  "||"
+  ".="
+  "-="
+  "+="
+  "*="
+  "/="
+  "%="
+  "**="
+  "&="
+  "|="
+  "^="
+  "<<="
+  ">>="
+  "??="
+  "--"
+  "++"
+  "@"
+  "::"
+] @operator
+
 ; Variables
 (variable_name) @variable
 
@@ -79,6 +246,10 @@ build = {
     (qualified_name
       (name) @type)
   ])
+
+(named_type
+  (name) @type.builtin
+  (#any-of? @type.builtin "static" "self"))
 
 (class_declaration
   name: (name) @type)
@@ -150,6 +321,10 @@ build = {
 (list_literal
   "list" @function.builtin)
 
+(exit_statement
+  "exit" @function.builtin
+  "(")
+
 (method_declaration
   name: (name) @function.method)
 
@@ -171,6 +346,18 @@ build = {
 
 (nullsafe_member_call_expression
   name: (name) @function.method)
+
+(use_instead_of_clause
+  (class_constant_access_expression
+    (_)
+    (name) @function.method)
+  (name) @type)
+
+(use_as_clause
+  (class_constant_access_expression
+    (_)
+    (name) @function.method)*
+  (name) @function.method)
 
 (method_declaration
   name: (name) @constructor
@@ -269,165 +456,6 @@ build = {
 (comment) @comment @spell
 
 (named_label_statement) @label
-
-; Keywords
-[
-  "and"
-  "as"
-  "instanceof"
-  "or"
-  "xor"
-] @keyword.operator
-
-[
-  "fn"
-  "function"
-] @keyword.function
-
-[
-  "break"
-  "class"
-  "clone"
-  "declare"
-  "default"
-  "echo"
-  "enddeclare"
-  "enum"
-  "extends"
-  "global"
-  "goto"
-  "implements"
-  "insteadof"
-  "interface"
-  "namespace"
-  "new"
-  "trait"
-  "unset"
-] @keyword
-
-[
-  "abstract"
-  "const"
-  "final"
-  "private"
-  "protected"
-  "public"
-  "readonly"
-  "static"
-] @keyword.modifier
-
-[
-  "return"
-  "yield"
-] @keyword.return
-
-[
-  "case"
-  "else"
-  "elseif"
-  "endif"
-  "endswitch"
-  "if"
-  "switch"
-  "match"
-  "??"
-] @keyword.conditional
-
-[
-  "continue"
-  "do"
-  "endfor"
-  "endforeach"
-  "endwhile"
-  "for"
-  "foreach"
-  "while"
-] @keyword.repeat
-
-[
-  "catch"
-  "finally"
-  "throw"
-  "try"
-] @keyword.exception
-
-[
-  "include_once"
-  "include"
-  "require_once"
-  "require"
-  "use"
-] @keyword.import
-
-[
-  ","
-  ";"
-  ":"
-  "\\"
-] @punctuation.delimiter
-
-[
-  (php_tag)
-  "?>"
-  "("
-  ")"
-  "["
-  "]"
-  "{"
-  "}"
-  "#["
-] @punctuation.bracket
-
-[
-  "="
-  "."
-  "-"
-  "*"
-  "/"
-  "+"
-  "%"
-  "**"
-  "~"
-  "|"
-  "^"
-  "&"
-  "<<"
-  ">>"
-  "<<<"
-  "->"
-  "?->"
-  "=>"
-  "<"
-  "<="
-  ">="
-  ">"
-  "<>"
-  "<=>"
-  "=="
-  "!="
-  "==="
-  "!=="
-  "!"
-  "&&"
-  "||"
-  ".="
-  "-="
-  "+="
-  "*="
-  "/="
-  "%="
-  "**="
-  "&="
-  "|="
-  "^="
-  "<<="
-  ">>="
-  "??="
-  "--"
-  "++"
-  "@"
-  "::"
-] @operator
 ]==],
     ["indents.scm"] = [==[
 [

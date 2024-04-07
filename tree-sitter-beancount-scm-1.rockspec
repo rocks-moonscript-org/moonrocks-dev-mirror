@@ -1,4 +1,4 @@
-local git_ref = '6c665e7cf15d76a1687959643868a78fb381458d'
+local git_ref = 'c25f8034c977681653a8acd541c8b4877a58f474'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-beancount'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for beancount',
+  summary = 'tree-sitter parser and Neovim queries for beancount',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/polarmutex/tree-sitter-beancount',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-beancount-' .. '6c665e7cf15d76a1687959643868a78fb381458d',
+  dir = 'tree-sitter-beancount-' .. 'c25f8034c977681653a8acd541c8b4877a58f474',
 }
 
 build = {

@@ -1,4 +1,4 @@
-local git_ref = '67d9e23ca7aa22d9bce9d16c53d2c927dff5159a'
+local git_ref = '2f918f9c887109fdf1419f98158a0cfff644af75'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-muttrc'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for muttrc',
+  summary = 'tree-sitter parser and Neovim queries for muttrc',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/neomutt/tree-sitter-muttrc',
   license = 'Apache-2.0'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-muttrc-' .. '67d9e23ca7aa22d9bce9d16c53d2c927dff5159a',
+  dir = 'tree-sitter-muttrc-' .. '2f918f9c887109fdf1419f98158a0cfff644af75',
 }
 
 build = {

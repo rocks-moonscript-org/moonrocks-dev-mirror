@@ -1,4 +1,4 @@
-local git_ref = '24b662eb61e369757d13c4b5f0624284dc3fe7e8'
+local git_ref = '2282ad5cb8e815523e70d5c82404620bd9a1494c'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-xml'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for xml',
+  summary = 'tree-sitter parser and Neovim queries for xml',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-xml',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-xml-' .. '24b662eb61e369757d13c4b5f0624284dc3fe7e8',
+  dir = 'tree-sitter-xml-' .. '2282ad5cb8e815523e70d5c82404620bd9a1494c',
 }
 
 build = {

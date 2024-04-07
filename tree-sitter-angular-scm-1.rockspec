@@ -1,4 +1,4 @@
-local git_ref = '62179d7bbfb5fd8a8f7298495ac654d252a1bd52'
+local git_ref = 'b7a7167762e3863b3d6247c708b7f9bca1ca7bea'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-angular'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for angular',
+  summary = 'tree-sitter parser and Neovim queries for angular',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/dlvandenberg/tree-sitter-angular',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-angular-' .. '62179d7bbfb5fd8a8f7298495ac654d252a1bd52',
+  dir = 'tree-sitter-angular-' .. 'b7a7167762e3863b3d6247c708b7f9bca1ca7bea',
 }
 
 build = {

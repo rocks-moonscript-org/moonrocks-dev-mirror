@@ -1,4 +1,4 @@
-local git_ref = '5be34b0f6ea01b24f017c2c715729a3a919f57fd'
+local git_ref = '5305c061efce2841942dbbac6f9a5b21e3e4eb35'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-hlsplaylist'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for hlsplaylist',
+  summary = 'tree-sitter parser and Neovim queries for hlsplaylist',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/Freed-Wu/tree-sitter-hlsplaylist',
   license = 'Apache-2.0'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-hlsplaylist-' .. '5be34b0f6ea01b24f017c2c715729a3a919f57fd',
+  dir = 'tree-sitter-hlsplaylist-' .. '5305c061efce2841942dbbac6f9a5b21e3e4eb35',
 }
 
 build = {

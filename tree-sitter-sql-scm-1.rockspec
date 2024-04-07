@@ -9,14 +9,14 @@ package = 'tree-sitter-sql'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for sql',
+  summary = 'tree-sitter parser and Neovim queries for sql',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/derekstride/tree-sitter-sql',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

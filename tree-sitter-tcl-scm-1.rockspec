@@ -9,14 +9,14 @@ package = 'tree-sitter-tcl'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for tcl',
+  summary = 'tree-sitter parser and Neovim queries for tcl',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-tcl',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

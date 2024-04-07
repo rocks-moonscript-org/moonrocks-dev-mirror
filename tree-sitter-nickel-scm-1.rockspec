@@ -9,14 +9,14 @@ package = 'tree-sitter-nickel'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for nickel',
+  summary = 'tree-sitter parser and Neovim queries for nickel',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/nickel-lang/tree-sitter-nickel',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

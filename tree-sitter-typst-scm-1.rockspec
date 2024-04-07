@@ -1,4 +1,4 @@
-local git_ref = 'f457c77edffd4b93190794355ff5acf7acfb99c6'
+local git_ref = '1ad9724e4e4ea5ab81192e843e74cf664eacc59b'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -9,19 +9,19 @@ package = 'tree-sitter-typst'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for typst',
+  summary = 'tree-sitter parser and Neovim queries for typst',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/uben0/tree-sitter-typst',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-typst-' .. 'f457c77edffd4b93190794355ff5acf7acfb99c6',
+  dir = 'tree-sitter-typst-' .. '1ad9724e4e4ea5ab81192e843e74cf664eacc59b',
 }
 
 build = {

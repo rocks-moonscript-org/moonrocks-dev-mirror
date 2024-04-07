@@ -9,14 +9,14 @@ package = 'tree-sitter-readline'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for readline',
+  summary = 'tree-sitter parser and Neovim queries for readline',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/ribru17/tree-sitter-readline',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {

@@ -9,14 +9,14 @@ package = 'tree-sitter-sourcepawn'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser for sourcepawn',
+  summary = 'tree-sitter parser and Neovim queries for sourcepawn',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/nilshelmig/tree-sitter-sourcepawn',
   license = 'UNKNOWN'
 }
 
-dependencies = {
-  'luarocks-build-treesitter-parser >= 1.1.1',
+build_dependencies = {
+  'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
