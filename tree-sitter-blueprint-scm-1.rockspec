@@ -15,7 +15,7 @@ description = {
   license = 'UNKNOWN'
 }
 
-dependencies = {
+build_dependencies = {
   'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
