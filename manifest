@@ -13,6 +13,13 @@ repository = {
          }
       }
    },
+   a4l = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    abstk = {
       ['scm-1'] = {
          {
@@ -5185,13 +5192,6 @@ repository = {
          }
       }
    },
-   luamt = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    luamut = {
       ['scm-1'] = {
          {
@@ -6051,6 +6051,13 @@ repository = {
    },
    ['melange-nvim'] = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   meta = {
+      ['scm-0'] = {
          {
             arch = "rockspec"
          }
