@@ -1,28 +1,28 @@
-local git_ref = '3c3bf4d7d377b27151eb452558e1655f0b7eeeba'
+local git_ref = 'd38a2a023dfb1073dd0e8fee0c9be08855d3688f'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/tanvirtin/vgit.nvim'
+local repo_url = 'https://github.com/utilyre/barbecue.nvim'
 
 rockspec_format = '3.0'
-package = 'vgit.nvim'
+package = 'barbecue.nvim'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Visual git plugin for Neovim',
+  summary = 'A VS Code like winbar for Neovim',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/tanvirtin/vgit.nvim',
+  homepage = 'https://github.com/utilyre/barbecue.nvim',
   license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1', 'plenary.nvim' } 
+dependencies = { 'lua >= 5.1', 'nvim-navic', 'nvim-web-devicons' } 
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'vgit.nvim-' .. '3c3bf4d7d377b27151eb452558e1655f0b7eeeba',
+  dir = 'barbecue.nvim-' .. 'd38a2a023dfb1073dd0e8fee0c9be08855d3688f',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

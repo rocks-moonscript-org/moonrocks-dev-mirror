@@ -1,28 +1,28 @@
-local git_ref = '7bcc78080d322cb9e4f583065304d014fd4dbdc6'
+local git_ref = '15d85bad5556b5ea5ea612a80284d20bddac5f0b'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/tamago324/nlsp-settings.nvim'
+local repo_url = 'https://github.com/VonHeikemen/lsp-zero.nvim'
 
 rockspec_format = '3.0'
-package = 'nlsp-settings.nvim'
+package = 'lsp-zero.nvim'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'A plugin for setting Neovim LSP with JSON or YAML files',
+  summary = 'A starting point to setup some lsp related features in neovim.',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/tamago324/nlsp-settings.nvim',
+  homepage = 'https://github.com/VonHeikemen/lsp-zero.nvim',
   license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1', 'nvim-lspconfig' } 
+dependencies = { 'lua >= 5.1', 'nvim-lspconfig', 'cmp-nvim-lsp', 'nvim-cmp', 'luasnip' } 
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'nlsp-settings.nvim-' .. '7bcc78080d322cb9e4f583065304d014fd4dbdc6',
+  dir = 'lsp-zero.nvim-' .. '15d85bad5556b5ea5ea612a80284d20bddac5f0b',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

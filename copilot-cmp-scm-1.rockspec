@@ -1,28 +1,28 @@
-local git_ref = 'a92e764cda74331789210c6ff6587bf269e0ffaf'
+local git_ref = '72fbaa03695779f8349be3ac54fa8bd77eed3ee3'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/kawre/leetcode.nvim'
+local repo_url = 'https://github.com/zbirenbaum/copilot-cmp'
 
 rockspec_format = '3.0'
-package = 'leetcode.nvim'
+package = 'copilot-cmp'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'A Neovim plugin enabling you to solve LeetCode problems.',
+  summary = 'Lua plugin to turn github copilot into a cmp source',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/kawre/leetcode.nvim',
+  homepage = 'https://github.com/zbirenbaum/copilot-cmp',
   license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1', 'telescope.nvim', 'nui.nvim', 'nvim-treesitter' } 
+dependencies = { 'lua >= 5.1', 'copilot.lua' } 
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'leetcode.nvim-' .. 'a92e764cda74331789210c6ff6587bf269e0ffaf',
+  dir = 'copilot-cmp-' .. '72fbaa03695779f8349be3ac54fa8bd77eed3ee3',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

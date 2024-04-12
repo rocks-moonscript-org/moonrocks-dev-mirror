@@ -1,4 +1,4 @@
-local git_ref = '1212fb6082b7177dde17ea65e429e027835aeb40'
+local git_ref = 'b129892f783740e6cf741f2ea09fa5dd512aa584'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'mason-tool-installer.nvim-' .. '1212fb6082b7177dde17ea65e429e027835aeb40',
+  dir = 'mason-tool-installer.nvim-' .. 'b129892f783740e6cf741f2ea09fa5dd512aa584',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
