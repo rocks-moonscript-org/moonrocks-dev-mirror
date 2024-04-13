@@ -1,17 +1,17 @@
-local git_ref = '6c2f018ab1d90946c0ce029bb2f7d57f56895dff'
+local git_ref = 'fda374bd4e908b3a34be097b94857e08c22b1ec3'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/IndianBoy42/tree-sitter-just'
+local repo_url = 'https://github.com/glehmann/tree-sitter-earthfile'
 
 rockspec_format = '3.0'
-package = 'tree-sitter-just'
+package = 'tree-sitter-earthfile'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser and Neovim queries for just',
+  summary = 'tree-sitter parser and Neovim queries for earthfile',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/IndianBoy42/tree-sitter-just',
+  homepage = 'https://github.com/glehmann/tree-sitter-earthfile',
   license = 'UNKNOWN'
 }
 
@@ -21,256 +21,159 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-just-' .. '6c2f018ab1d90946c0ce029bb2f7d57f56895dff',
+  dir = 'tree-sitter-earthfile-' .. 'fda374bd4e908b3a34be097b94857e08c22b1ec3',
 }
 
 build = {
   type = "treesitter-parser",
-  lang = "just",
+  lang = "earthfile",
   sources = { "src/parser.c", "src/scanner.c" },
   generate_from_grammar = false,
   generate_requires_npm = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
-    ["folds.scm"] = [==[
-([
-  (recipe)
-  (string)
-  (external_command)
-] @fold
-  (#trim! @fold))
-]==],
     ["highlights.scm"] = [==[
-[
-  "true"
-  "false"
-] @boolean
+(string_array
+  "," @punctuation.delimiter)
+
+(string_array
+  [
+    "["
+    "]"
+  ] @punctuation.bracket)
 
 [
-  "if"
-  "else"
-] @keyword.conditional
-
-[
-  "alias"
-  "set"
-  "shell"
-  "mod"
+  "ARG"
+  "AS LOCAL"
+  "BUILD"
+  "CACHE"
+  "CMD"
+  "COPY"
+  "DO"
+  "ENTRYPOINT"
+  "ENV"
+  "EXPOSE"
+  "FROM DOCKERFILE"
+  "FROM"
+  "FUNCTION"
+  "GIT CLONE"
+  "HOST"
+  "IMPORT"
+  "LABEL"
+  "LET"
+  "PROJECT"
+  "RUN"
+  "SAVE ARTIFACT"
+  "SAVE IMAGE"
+  "SET"
+  "USER"
+  "VERSION"
+  "VOLUME"
+  "WORKDIR"
 ] @keyword
 
-[
-  "import"
-  "export"
-] @keyword.import
+(for_command
+  [
+    "FOR"
+    "IN"
+    "END"
+  ] @keyword.repeat)
+
+(if_command
+  [
+    "IF"
+    "END"
+  ] @keyword.conditional)
+
+(elif_block
+  "ELSE IF" @keyword.conditional)
+
+(else_block
+  "ELSE" @keyword.conditional)
+
+(import_command
+  [
+    "IMPORT"
+    "AS"
+  ] @keyword.import)
+
+(try_command
+  [
+    "TRY"
+    "FINALLY"
+    "END"
+  ] @keyword.exception)
+
+(wait_command
+  [
+    "WAIT"
+    "END"
+  ] @keyword)
+
+(with_docker_command
+  [
+    "WITH DOCKER"
+    "END"
+  ] @keyword)
 
 [
-  ":="
-  "?"
-  "=="
-  "!="
-  "=~"
-  "@"
-  "="
-  "$"
-  "*"
-  "+"
-  "&&"
-  "@-"
-  "-@"
-  "-"
-  "/"
-  ":"
-] @operator
+  (comment)
+  (line_continuation_comment)
+] @comment @spell
 
 [
-  "("
-  ")"
-  "["
-  "]"
-  "{{"
-  "}}"
-  "{"
-  "}"
-] @punctuation.bracket
+  (target_ref)
+  (target_artifact)
+  (function_ref)
+] @function
+
+(target
+  (identifier) @function)
 
 [
-  "`"
-  "```"
-] @punctuation.special
-
-"," @punctuation.delimiter
-
-(shebang) @keyword.directive
-
-(comment) @comment @spell
-
-[
-  (string)
-  (external_command)
+  (double_quoted_string)
+  (single_quoted_string)
 ] @string
+
+(unquoted_string) @string.special
 
 (escape_sequence) @string.escape
 
-(module
-  (identifier) @module)
+(variable) @variable
 
-(assignment
-  (identifier) @variable)
-
-(alias
-  (identifier) @variable)
-
-(value
-  (identifier) @variable)
-
-; Recipe definitions
-(recipe_header
-  (identifier) @function)
-
-(dependency
-  (identifier) @function.call)
-
-(dependency_expression
-  (identifier) @function.call)
-
-(parameter
-  (identifier) @variable.parameter)
-
-(dependency_expression
-  (expression
-    (value
-      (identifier) @variable.parameter)))
-
-; Fallback highlighting for recipe bodies
-(recipe
-  (recipe_body) @string
-  (#set! "priority" 90))
-
-; Ref: https://just.systems/man/en/chapter_26.html
-;(setting (identifier) @error)
-(setting
-  (identifier) @constant.builtin
-  (#any-of? @constant.builtin
-    "allow-duplicate-recipes" "dotenv-filename" "dotenv-load" "dotenv-path" "export" "fallback"
-    "ignore-comments" "positional-arguments" "tempdir" "windows-powershell" "windows-shell"))
-
-; Ref: https://just.systems/man/en/chapter_32.html
-;(recipe (attribute (identifier) @error))
-(recipe
-  (attribute
-    (identifier) @attribute)
-  (#any-of? @attribute
-    "confirm" "linux" "macos" "no-cd" "no-exit-message" "no-quiet" "private" "unix" "windows"))
-
-; Ref: https://just.systems/man/en/chapter_31.html
-;(function_call (identifier) @error)
-(function_call
-  (identifier) @function.call
-  (#any-of? @function.call
-    "arch" "num_cpus" "os" "os_family" "env_var" "env_var_or_default" "env" "invocation_directory"
-    "invocation_directory_native" "justfile" "justfile_directory" "just_executable" "quote"
-    "replace" "replace_regex" "trim" "trim_end" "trim_end_match" "trim_end_matches" "trim_start"
-    "trim_start_match" "trim_start_matches" "capitalize" "kebabcase" "lowercamelcase" "lowercase"
-    "shoutykebabcase" "shoutysnakecase" "snakecase" "titlecase" "uppercamelcase" "uppercase"
-    "absolute_path" "extension" "file_name" "file_stem" "parent_directory" "without_extension"
-    "clean" "join" "path_exists" "error" "sha256" "sha256_file" "uuid" "semver_matches"))
-]==],
-    ["indents.scm"] = [==[
-; Source: https://github.com/IndianBoy42/tree-sitter-just/blob/main/queries/just/indents.scm
-[
-  (recipe)
-  (string)
-  (external_command)
-] @indent.begin
-
-(string
+(expansion
   [
-    "'''"
-    "\"\"\""
-  ] @indent.branch @indent.end)
+    "$"
+    "{"
+    "}"
+    "("
+    ")"
+  ] @punctuation.special)
 
-(comment) @indent.auto
+(build_arg
+  [
+    "--"
+    (variable)
+  ] @variable.parameter)
+
+(options
+  (_) @property)
+
+"=" @operator
+
+(line_continuation) @operator
 ]==],
     ["injections.scm"] = [==[
-; The right side of =~ literals
-(regex_literal
-  (_) @injection.content
-  (#set! injection.language "regex"))
+((comment) @injection.content
+  (#set! injection.language "comment"))
 
-; Default to bash highlighting for non-shebang recipes and commands
-(recipe
-  (recipe_body
-    !shebang) @injection.content
-  (#set! injection.include-children)
-  (#set! injection.language "bash"))
+((line_continuation_comment) @injection.content
+  (#set! injection.language "comment"))
 
-(external_command
-  (command_body) @injection.content
-  (#set! injection.language "bash"))
-
-; For shebang recipes, use the shebang executable name as the language by default
-(recipe
-  (recipe_body
-    (shebang
-      (language) @injection.language)) @injection.content
-  (#not-any-of? @injection.language "python3" "nodejs" "node")
+((shell_fragment) @injection.content
+  (#set! injection.language "bash")
   (#set! injection.include-children))
-
-; python3 -> python
-(recipe
-  (recipe_body
-    (shebang
-      (language) @_lang)) @injection.content
-  (#eq? @_lang "python3")
-  (#set! injection.language "python")
-  (#set! injection.include-children))
-
-; node/nodejs -> javascript
-(recipe
-  (recipe_body
-    (shebang
-      (language) @_lang)) @injection.content
-  (#any-of? @_lang "node" "nodejs")
-  (#set! injection.language "javascript")
-  (#set! injection.include-children))
-]==],
-    ["locals.scm"] = [==[
-; Source: https://github.com/IndianBoy42/tree-sitter-just/blob/main/queries/just/locals.scm
-; Scope
-(recipe) @local.scope
-
-; Definitions
-(alias
-  left: (identifier) @local.definition.var)
-
-(assignment
-  left: (identifier) @local.definition.var)
-
-(module
-  name: (identifier) @local.definition.namespace)
-
-(parameter
-  name: (identifier) @local.definition.var)
-
-(recipe_header
-  name: (identifier) @local.definition.function)
-
-; References
-(alias
-  right: (identifier) @local.reference)
-
-(function_call
-  name: (identifier) @local.reference)
-
-(dependency
-  name: (identifier) @local.reference)
-
-(dependency_expression
-  name: (identifier) @local.reference)
-
-(value
-  (identifier) @local.reference)
 ]==],
   },
   extra_files = {

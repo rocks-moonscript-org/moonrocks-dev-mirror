@@ -1,4 +1,4 @@
-local git_ref = '649c3b68eb863f350f0aafeb68f4a8ca4f13081a'
+local git_ref = '7df2c0892e62efb81a7504d9799d4e0d0443d241'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -15,13 +15,13 @@ description = {
   license = 'UNKNOWN'
 }
 
-dependencies = {
+build_dependencies = {
   'luarocks-build-treesitter-parser >= 1.3.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-roc-' .. '649c3b68eb863f350f0aafeb68f4a8ca4f13081a',
+  dir = 'tree-sitter-roc-' .. '7df2c0892e62efb81a7504d9799d4e0d0443d241',
 }
 
 build = {

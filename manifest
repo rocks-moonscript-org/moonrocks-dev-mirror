@@ -537,15 +537,6 @@ repository = {
          }
       }
    },
-   brocatel = {
-      ['0.3.4-1'] = {
-         {
-            arch = "rockspec"
-         }, {
-            arch = "linux-x86_64"
-         }
-      }
-   },
    ['bufdelete.nvim'] = {
       ['scm-1'] = {
          {
@@ -9566,6 +9557,13 @@ repository = {
       }
    },
    ['tree-sitter-dtd'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['tree-sitter-earthfile'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
