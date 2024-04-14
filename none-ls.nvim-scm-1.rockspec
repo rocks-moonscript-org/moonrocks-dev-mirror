@@ -1,4 +1,4 @@
-local git_ref = 'fff481b65d88415933b9574dc0e1947724bcf64a'
+local git_ref = '09a7c58e9283dda582d9805f6b182b5b9f137ec7'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'null-ls.nvim reloaded / Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.',
   detailed = '',
-  labels = { },
+  labels = { 'lsp', 'neovim', 'neovim-lsp', 'neovim-plugin' } ,
   homepage = 'https://github.com/nvimtools/none-ls.nvim',
   license = 'Unlicense'
 }
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'none-ls.nvim-' .. 'fff481b65d88415933b9574dc0e1947724bcf64a',
+  dir = 'none-ls.nvim-' .. '09a7c58e9283dda582d9805f6b182b5b9f137ec7',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
