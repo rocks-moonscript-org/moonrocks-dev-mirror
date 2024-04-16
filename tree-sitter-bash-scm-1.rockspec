@@ -1,4 +1,4 @@
-local git_ref = 'f3f26f47a126797c011c311cec9d449d855c3eab'
+local git_ref = 'f8fb3274f72a30896075585b32b0c54cad65c086'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-bash-' .. 'f3f26f47a126797c011c311cec9d449d855c3eab',
+  dir = 'tree-sitter-bash-' .. 'f8fb3274f72a30896075585b32b0c54cad65c086',
 }
 
 build = {
@@ -294,9 +294,15 @@ build = {
   name: (command_name) @_command
   .
   argument: [
-    (string)
-    (raw_string)
-  ] @injection.content)
+    (string
+      (string_content) @injection.content)
+    (concatenation
+      (string
+        (string_content) @injection.content))
+    (raw_string) @injection.content
+    (concatenation
+      (raw_string) @injection.content)
+  ])
   (#eq? @_command "printf")
   (#set! injection.language "printf"))
 
@@ -308,9 +314,15 @@ build = {
   (_)
   .
   argument: [
-    (string)
-    (raw_string)
-  ] @injection.content)
+    (string
+      (string_content) @injection.content)
+    (concatenation
+      (string
+        (string_content) @injection.content))
+    (raw_string) @injection.content
+    (concatenation
+      (raw_string) @injection.content)
+  ])
   (#eq? @_command "printf")
   (#eq? @_arg "-v")
   (#set! injection.language "printf"))
@@ -321,9 +333,15 @@ build = {
   argument: (word) @_arg
   .
   argument: [
-    (string)
-    (raw_string)
-  ] @injection.content)
+    (string
+      (string_content) @injection.content)
+    (concatenation
+      (string
+        (string_content) @injection.content))
+    (raw_string) @injection.content
+    (concatenation
+      (raw_string) @injection.content)
+  ])
   (#eq? @_command "printf")
   (#eq? @_arg "--")
   (#set! injection.language "printf"))

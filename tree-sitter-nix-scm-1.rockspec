@@ -57,17 +57,6 @@ build = {
   "with"
 ] @keyword
 
-(variable_expression
-  name: (identifier) @keyword
-  (#eq? @keyword "derivation")
-  (#set! "priority" 101))
-
-; exceptions
-(variable_expression
-  name: (identifier) @keyword.exception
-  (#any-of? @keyword.exception "abort" "throw")
-  (#set! "priority" 101))
-
 ; if/then/else
 [
   "if"
@@ -82,11 +71,13 @@ build = {
 (comment) @comment @spell
 
 ; strings
-([
-  (string_expression)
-  (indented_string_expression)
-]
-  (#set! "priority" 99)) @string
+(string_fragment) @string
+
+(string_expression
+  "\"" @string)
+
+(indented_string_expression
+  "''" @string)
 
 ; paths and URLs
 [
@@ -160,16 +151,16 @@ build = {
 (variable_expression
   name: (identifier) @function.builtin
   (#any-of? @function.builtin
-    ; nix eval --impure --expr 'with builtins; filter (x: !(elem x [ "abort" "derivation" "import" "throw" ]) && isFunction builtins.${x}) (attrNames builtins)'
+    ; nix eval --impure --expr 'with builtins; filter (x: !(elem x [ "abort" "import" "throw" ]) && isFunction builtins.${x}) (attrNames builtins)'
     "add" "addErrorContext" "all" "any" "appendContext" "attrNames" "attrValues" "baseNameOf"
     "bitAnd" "bitOr" "bitXor" "break" "catAttrs" "ceil" "compareVersions" "concatLists" "concatMap"
-    "concatStringsSep" "deepSeq" "derivationStrict" "dirOf" "div" "elem" "elemAt" "fetchGit"
-    "fetchMercurial" "fetchTarball" "fetchTree" "fetchurl" "filter" "filterSource" "findFile"
-    "floor" "foldl'" "fromJSON" "fromTOML" "functionArgs" "genList" "genericClosure" "getAttr"
-    "getContext" "getEnv" "getFlake" "groupBy" "hasAttr" "hasContext" "hashFile" "hashString" "head"
-    "intersectAttrs" "isAttrs" "isBool" "isFloat" "isFunction" "isInt" "isList" "isNull" "isPath"
-    "isString" "length" "lessThan" "listToAttrs" "map" "mapAttrs" "match" "mul" "parseDrvName"
-    "partition" "path" "pathExists" "placeholder" "readDir" "readFile" "removeAttrs"
+    "concatStringsSep" "deepSeq" "derivation" "derivationStrict" "dirOf" "div" "elem" "elemAt"
+    "fetchGit" "fetchMercurial" "fetchTarball" "fetchTree" "fetchurl" "filter" "filterSource"
+    "findFile" "floor" "foldl'" "fromJSON" "fromTOML" "functionArgs" "genList" "genericClosure"
+    "getAttr" "getContext" "getEnv" "getFlake" "groupBy" "hasAttr" "hasContext" "hashFile"
+    "hashString" "head" "intersectAttrs" "isAttrs" "isBool" "isFloat" "isFunction" "isInt" "isList"
+    "isNull" "isPath" "isString" "length" "lessThan" "listToAttrs" "map" "mapAttrs" "match" "mul"
+    "parseDrvName" "partition" "path" "pathExists" "placeholder" "readDir" "readFile" "removeAttrs"
     "replaceStrings" "scopedImport" "seq" "sort" "split" "splitVersion" "storePath" "stringLength"
     "sub" "substring" "tail" "toFile" "toJSON" "toPath" "toString" "toXML" "trace" "traceVerbose"
     "tryEval" "typeOf" "unsafeDiscardOutputDependency" "unsafeDiscardStringContext"
@@ -258,6 +249,11 @@ build = {
     (float_expression))
   (float_expression)
 ] @number.float
+
+; exceptions
+(variable_expression
+  name: (identifier) @keyword.exception
+  (#any-of? @keyword.exception "abort" "throw"))
 ]==],
     ["injections.scm"] = [==[
 ((comment) @injection.content
@@ -272,6 +268,18 @@ build = {
       (string_fragment) @injection.content)
   ]
   (#gsub! @injection.language "/%*%s*([%w%p]+)%s*%*/" "%1")
+  (#set! injection.combined))
+
+; #-style Comments
+((comment) @injection.language
+  . ; this is to make sure only adjacent comments are accounted for the injections
+  [
+    (string_expression
+      (string_fragment) @injection.content)
+    (indented_string_expression
+      (string_fragment) @injection.content)
+  ]
+  (#gsub! @injection.language "#%s*([%w%p]+)%s*" "%1")
   (#set! injection.combined))
 
 (apply_expression

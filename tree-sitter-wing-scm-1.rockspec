@@ -1,8 +1,8 @@
-local git_ref = '33211e61248d933f5c81d2d111931ce34eb319be'
+local git_ref = '5b6c2a5818a602557778d1bfc265d016cafa0712'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/winglang/wing'
+local repo_url = 'https://github.com/winglang/tree-sitter-wing'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-wing'
@@ -11,8 +11,8 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for wing',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/winglang/wing',
-  license = 'UNKNOWN'
+  homepage = 'https://github.com/winglang/tree-sitter-wing',
+  license = 'Apache-2.0'
 }
 
 build_dependencies = {
@@ -21,16 +21,16 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'wing-' .. '33211e61248d933f5c81d2d111931ce34eb319be',
+  dir = 'tree-sitter-wing-' .. '5b6c2a5818a602557778d1bfc265d016cafa0712',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "wing",
   sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = true,
+  generate_from_grammar = false,
   generate_requires_npm = false,
-  location = "libs/tree-sitter-wing",
+  location = nil,
   copy_directories = { "queries" },
   queries = {
     ["folds.scm"] = [==[
@@ -147,6 +147,12 @@ build = {
   "if"
   "else"
 ] @keyword.conditional
+
+[
+  "pub"
+  "protected"
+  "internal"
+] @keyword.modifier
 
 "return" @keyword.return
 ]==],

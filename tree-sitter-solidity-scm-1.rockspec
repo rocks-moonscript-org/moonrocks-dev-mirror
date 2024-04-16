@@ -1,4 +1,4 @@
-local git_ref = 'a8ed2f5d600fed77f8ed3084d1479998c649bca1'
+local git_ref = '1653da09ccd183f4312fba819056a13af22a65f6'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-solidity-' .. 'a8ed2f5d600fed77f8ed3084d1479998c649bca1',
+  dir = 'tree-sitter-solidity-' .. '1653da09ccd183f4312fba819056a13af22a65f6',
 }
 
 build = {
@@ -130,7 +130,8 @@ build = {
 
 (emit_statement
   .
-  (identifier) @type)
+  (expression
+    (identifier)) @type)
 
 ; Handles ContractA, ContractB in function foo() override(ContractA, contractB) {}
 (override_specifier
@@ -155,20 +156,22 @@ build = {
 ; Handles expressions like structVariable.g();
 (call_expression
   .
-  (member_expression
-    (identifier) @function.method.call))
+  (expression
+    (member_expression
+      (identifier) @function.method.call)))
 
 ; Handles expressions like g();
 (call_expression
   .
-  (identifier) @function.call)
+  (expression
+    (identifier) @function.call))
 
 ; Function parameters
-(event_paramater
-  name: (identifier) @variable.parameter)
+(event_parameter
+  name: (_) @variable.parameter)
 
 (parameter
-  name: (identifier) @variable.parameter)
+  name: (_) @variable.parameter)
 
 ; Yul functions
 (yul_function_call
@@ -184,10 +187,10 @@ build = {
   "type" @keyword)
 
 (member_expression
-  property: (identifier) @variable.member)
+  property: (_) @variable.member)
 
 (call_struct_argument
-  name: (identifier) @variable.member)
+  name: (_) @variable.member)
 
 (struct_field_assignment
   name: (identifier) @variable.member)
@@ -218,7 +221,7 @@ build = {
 
 ; FIXME: update grammar
 ; (block_statement "unchecked" @keyword)
-(event_paramater
+(event_parameter
   "indexed" @keyword)
 
 [

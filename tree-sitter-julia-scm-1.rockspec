@@ -1,4 +1,4 @@
-local git_ref = 'e84f10db8eeb8b9807786bfc658808edaa1b4fa2'
+local git_ref = '0a80d33aca49dd257625ab25ef3a506e2b99a554'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-julia-' .. 'e84f10db8eeb8b9807786bfc658808edaa1b4fa2',
+  dir = 'tree-sitter-julia-' .. '0a80d33aca49dd257625ab25ef3a506e2b99a554',
 }
 
 build = {
@@ -56,14 +56,6 @@ build = {
 ; ;; If you want type highlighting based on Julia naming conventions (this might collide with mathematical notation)
 ; ((identifier) @type
 ;   (match? @type "^[A-Z][^_]"))  ; exception: Highlight `A_foo` sort of identifiers as variables
-(macro_identifier) @function.macro
-
-(macro_identifier
-  (identifier) @function.macro) ; for any one using the variable highlight
-
-(macro_definition
-  name: (identifier) @function.macro)
-
 (quote_expression
   ":" @string.special.symbol
   [
@@ -73,22 +65,6 @@ build = {
 
 (field_expression
   (identifier) @variable.member .)
-
-; Function names
-; Definitions
-(function_definition
-  name: (identifier) @function)
-
-(short_function_definition
-  name: (identifier) @function)
-
-(function_definition
-  name: (field_expression
-    (identifier) @function .))
-
-(short_function_definition
-  name: (field_expression
-    (identifier) @function .))
 
 ; calls
 (call_expression
@@ -111,6 +87,17 @@ build = {
   (identifier) @function.call
   (#any-of? @_pipe "|>" ".|>"))
 
+(macro_identifier) @function.macro
+
+(macro_identifier
+  (identifier) @function.macro) ; for any one using the variable highlight
+
+(macro_definition
+  (signature
+    (call_expression
+      .
+      (identifier) @function.macro)))
+
 ; Builtins
 ((identifier) @function.builtin
   (#any-of? @function.builtin
@@ -120,25 +107,6 @@ build = {
     "donotdelete" "fieldtype" "get_binding_type" "getfield" "ifelse" "invoke" "isa" "isdefined"
     "modifyfield!" "nfields" "replacefield!" "set_binding_type!" "setfield!" "sizeof" "svec"
     "swapfield!" "throw" "tuple" "typeassert" "typeof"))
-
-; Parameters
-(parameter_list
-  (identifier) @variable.parameter)
-
-(optional_parameter
-  .
-  (identifier) @variable.parameter)
-
-(slurp_parameter
-  (identifier) @variable.parameter)
-
-(typed_parameter
-  parameter: (identifier)? @variable.parameter
-  type: (_) @type)
-
-(function_expression
-  .
-  (identifier) @variable.parameter) ; Single parameter arrow functions
 
 ; Types
 ; Definitions
@@ -170,11 +138,8 @@ build = {
 (typed_expression
   (identifier) @type .)
 
-(function_definition
-  return_type: (identifier) @type)
-
-(short_function_definition
-  return_type: (identifier) @type)
+(unary_typed_expression
+  (identifier) @type .)
 
 (where_clause
   (identifier) @type)
@@ -439,7 +404,6 @@ build = {
     (abstract_definition)
     (struct_definition)
     (function_definition)
-    (short_function_definition)
     (assignment)
     (const_statement)
   ])
@@ -499,10 +463,6 @@ build = {
   (#set! indent.open_delimiter "(")
   (#set! indent.close_delimiter ")"))
 
-((parameter_list) @indent.align
-  (#set! indent.open_delimiter "(")
-  (#set! indent.close_delimiter ")"))
-
 ((curly_expression) @indent.align
   (#set! indent.open_delimiter "{")
   (#set! indent.close_delimiter "}"))
@@ -516,7 +476,6 @@ build = {
     (abstract_definition)
     (struct_definition)
     (function_definition)
-    (short_function_definition)
     (assignment)
     (const_statement)
   ]
@@ -578,35 +537,18 @@ build = {
 (import_statement
   (identifier) @local.definition.import)
 
-; Parameters
-(parameter_list
-  (identifier) @local.definition.parameter)
-
-(optional_parameter
-  .
-  (identifier) @local.definition.parameter)
-
-(slurp_parameter
-  (identifier) @local.definition.parameter)
-
-(typed_parameter
-  parameter: (identifier) @local.definition.parameter
-  (_))
-
-; Single parameter arrow function
-(function_expression
-  .
-  (identifier) @local.definition.parameter)
-
 ; Function/macro definitions
 (function_definition
-  name: (identifier) @local.definition.function) @local.scope
-
-(short_function_definition
-  name: (identifier) @local.definition.function) @local.scope
+  (signature
+    (call_expression
+      .
+      (identifier) @local.definition.function))) @local.scope
 
 (macro_definition
-  name: (identifier) @local.definition.macro) @local.scope
+  (signature
+    (call_expression
+      .
+      (identifier) @local.definition.function))) @local.scope
 
 (identifier) @local.reference
 

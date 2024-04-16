@@ -1,4 +1,4 @@
-local git_ref = '2aae502017d3aed587ba85e3c7e0cbc138f3e07a'
+local git_ref = '953abfc8bb3eb2f578e1f461edba4a9885f974b8'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-java-' .. '2aae502017d3aed587ba85e3c7e0cbc138f3e07a',
+  dir = 'tree-sitter-java-' .. '953abfc8bb3eb2f578e1f461edba4a9885f974b8',
 }
 
 build = {
@@ -266,6 +266,7 @@ build = {
   "else"
   "switch"
   "case"
+  "when"
 ] @keyword.conditional
 
 (ternary_expression

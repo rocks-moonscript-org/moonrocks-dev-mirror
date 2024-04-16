@@ -1,4 +1,4 @@
-local git_ref = 'b0cd98e1c60cb55dc358c6b6781346886b980e86'
+local git_ref = 'b77c0d8ac28a7c143224e6ed9b4f9e4bd044ff5b'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-rust-' .. 'b0cd98e1c60cb55dc358c6b6781346886b980e86',
+  dir = 'tree-sitter-rust-' .. 'b77c0d8ac28a7c143224e6ed9b4f9e4bd044ff5b',
 }
 
 build = {
@@ -494,7 +494,7 @@ build = {
 (macro_invocation
   "!" @function.macro)
 
-(empty_type
+(never_type
   "!" @type.builtin)
 
 (macro_invocation

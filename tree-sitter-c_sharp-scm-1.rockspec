@@ -1,4 +1,4 @@
-local git_ref = '92c0a9431400cd8b6b6ee7503f81da3ae83fc830'
+local git_ref = '9de565257ada70ac441c640e3b5d6850e2df5ab8'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-c-sharp-' .. '92c0a9431400cd8b6b6ee7503f81da3ae83fc830',
+  dir = 'tree-sitter-c-sharp-' .. '9de565257ada70ac441c640e3b5d6850e2df5ab8',
 }
 
 build = {
@@ -135,6 +135,7 @@ initializer: (initializer_expression) @fold
 
 [
   (string_literal)
+  (raw_string_literal)
   (verbatim_string_literal)
   (interpolated_string_expression)
 ] @string

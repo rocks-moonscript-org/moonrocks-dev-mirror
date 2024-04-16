@@ -1,4 +1,4 @@
-local git_ref = 'fd577c4358c28cbcb6748bbf65354cc85f1cf7a4'
+local git_ref = 'eb68645662a3f7bf7fdd4bcb9531585f54c8570e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-go-' .. 'fd577c4358c28cbcb6748bbf65354cc85f1cf7a4',
+  dir = 'tree-sitter-go-' .. 'eb68645662a3f7bf7fdd4bcb9531585f54c8570e',
 }
 
 build = {
@@ -96,7 +96,7 @@ build = {
 (method_declaration
   name: (field_identifier) @function.method)
 
-(method_spec
+(method_elem
   name: (field_identifier) @function.method)
 
 ; Constructors

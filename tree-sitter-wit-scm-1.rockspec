@@ -1,18 +1,18 @@
-local git_ref = 'f5980f534ee64256b1e64b0a42e2864d91154a5d'
+local git_ref = '39e81d6b4b0d811a62bcde46c876bf32e1475b5b'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/theHamsta/tree-sitter-wgsl-bevy'
+local repo_url = 'https://github.com/liamwh/tree-sitter-wit'
 
 rockspec_format = '3.0'
-package = 'tree-sitter-wgsl_bevy'
+package = 'tree-sitter-wit'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser and Neovim queries for wgsl_bevy',
+  summary = 'tree-sitter parser and Neovim queries for wit',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/theHamsta/tree-sitter-wgsl-bevy',
-  license = 'UNKNOWN'
+  homepage = 'https://github.com/liamwh/tree-sitter-wit',
+  license = 'Apache-2.0'
 }
 
 build_dependencies = {
@@ -21,76 +21,107 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-wgsl-bevy-' .. 'f5980f534ee64256b1e64b0a42e2864d91154a5d',
+  dir = 'tree-sitter-wit-' .. '39e81d6b4b0d811a62bcde46c876bf32e1475b5b',
 }
 
 build = {
   type = "treesitter-parser",
-  lang = "wgsl_bevy",
-  sources = { "src/parser.c", "src/scanner.c" },
+  lang = "wit",
+  sources = { "src/parser.c" },
   generate_from_grammar = false,
-  generate_requires_npm = true,
+  generate_requires_npm = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
-    ["folds.scm"] = [==[
-; inherits wgsl
-(preproc_ifdef) @fold
-]==],
     ["highlights.scm"] = [==[
-; inherits wgsl
-[
-  "virtual"
-  "override"
-] @keyword
+; Comments
+(line_comment) @comment
 
+(block_comment) @comment
+
+; Primitive Types
 [
-  "#import"
-  "#define_import_path"
-  "as"
+  "bool"
+  "s8"
+  "s16"
+  "s32"
+  "s64"
+  "u8"
+  "u16"
+  "u32"
+  "u64"
+  "float32"
+  "float64"
+  "char"
+  "string"
+  ; Container Types
+  "list"
+  "tuple"
+  "option"
+  "result"
+] @type.builtin
+
+"func" @keyword.function
+
+; Keywords for file structure and components
+[
+  "record"
+  "enum"
+  "variant"
+  "flags"
+  "resource"
+] @keyword.type
+
+; Keywords for importing and exporting
+[
+  "package"
+  "world"
+  "use"
+  "import"
 ] @keyword.import
 
-"::" @punctuation.delimiter
+; Resource Keywords
+"static" @keyword.modifier
 
-(function_declaration
-  (import_path
-    (identifier) @function .))
+; Named Types (Capitalized identifiers)
+((identifier) @type
+  (#match? @type "^[A-Z]"))
 
-(import_path
-  (identifier) @module
-  (identifier))
+((identifier) @variable
+  (#match? @variable "^[a-z_][a-zA-Z0-9_]*$"))
 
-(struct_declaration
-  (preproc_ifdef
-    (struct_member
-      (variable_identifier_declaration
-        (identifier) @variable.member))))
+; Constants (UPPER_CASE names and Enums)
+((identifier) @constant
+  (#match? @constant "^[A-Z][A-Z0-9_]+$"))
 
-(struct_declaration
-  (preproc_ifdef
-    (preproc_else
-      (struct_member
-        (variable_identifier_declaration
-          (identifier) @variable.member)))))
+; Functions and Methods (lowercase names followed by parentheses)
+((identifier) @function
+  (#match? @function "^[a-z_][a-zA-Z0-9_]*%("))
 
-(preproc_ifdef
-  name: (identifier) @constant.macro)
-
+; Punctuation
 [
-  "#ifdef"
-  "#ifndef"
-  "#endif"
-  "#else"
-] @keyword.directive
+  ";"
+  ":"
+  "->"
+] @punctuation.special
+
+; Delimiters
+"," @punctuation.delimiter
+
+; Brackets
+[
+  "{"
+  "}"
+  "("
+  ")"
+] @punctuation.bracket
 ]==],
-    ["indents.scm"] = [==[
-; inherits wgsl
-[
-  "#ifdef"
-  "#ifndef"
-  "#else"
-  "#endif"
-] @indent.zero
+    ["injections.scm"] = [==[
+((line_comment) @comment
+  (#set! injection.language "comment"))
+
+((block_comment) @comment
+  (#set! injection.language "comment"))
 ]==],
   },
   extra_files = {

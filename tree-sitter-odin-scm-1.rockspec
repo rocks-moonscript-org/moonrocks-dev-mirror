@@ -1,4 +1,4 @@
-local git_ref = 'f94c590ed5263e11f1e492d1b53356f8c8459b66'
+local git_ref = 'b5f668ef8918aab13812ce73acd89fe191fb8c5e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-odin-' .. 'f94c590ed5263e11f1e492d1b53356f8c8459b66',
+  dir = 'tree-sitter-odin-' .. 'b5f668ef8918aab13812ce73acd89fe191fb8c5e',
 }
 
 build = {
@@ -69,6 +69,7 @@ build = {
   "map"
   "bit_set"
   "matrix"
+  "bit_field"
 ] @keyword
 
 "proc" @keyword.function
@@ -193,6 +194,10 @@ build = {
   "::")
 
 (union_declaration
+  (identifier) @type
+  "::")
+
+(bit_field_declaration
   (identifier) @type
   "::")
 
@@ -389,24 +394,43 @@ build = {
     ["indents.scm"] = [==[
 [
   (block)
-  (procedure_declaration)
-  (overloaded_procedure_declaration)
   (enum_declaration)
   (union_declaration)
-  (if_statement)
-  (else_if_clause)
-  (else_clause)
-  (when_statement)
-  (else_when_clause)
-  (for_statement)
+  (bit_field_declaration)
+  (struct_declaration)
+  (struct)
+  (parameters)
+  (tuple_type)
+  (call_expression)
   (switch_case)
 ] @indent.begin
 
+; hello(
+((identifier)
+  .
+  (ERROR
+    "(" @indent.begin))
+
 [
-  "}"
   ")"
   "]"
 ] @indent.branch @indent.end
+
+; Have to do all closing brackets separately because the one for switch statements shouldn't end.
+(block
+  "}" @indent.branch @indent.end)
+
+(enum_declaration
+  "}" @indent.branch @indent.end)
+
+(union_declaration
+  "}" @indent.branch @indent.end)
+
+(struct_declaration
+  "}" @indent.branch @indent.end)
+
+(struct
+  "}" @indent.branch @indent.end)
 
 [
   (comment)
@@ -449,6 +473,10 @@ build = {
   "::")
 
 (union_declaration
+  (identifier) @local.definition.type
+  "::")
+
+(bit_field_declaration
   (identifier) @local.definition.type
   "::")
 

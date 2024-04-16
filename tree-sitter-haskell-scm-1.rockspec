@@ -127,7 +127,7 @@ build = {
 ; Keywords, operators, includes
 [
   "forall"
-  ; "∀" ; utf-8 is not cross-platform safe
+  "∀"
 ] @keyword.repeat
 
 (pragma) @keyword.directive
