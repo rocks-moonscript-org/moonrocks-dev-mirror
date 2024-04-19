@@ -1,4 +1,4 @@
-local git_ref = '8487a14874f3e3138877655f303322d9e7222cec'
+local git_ref = '6182836f4128725f1e74ce986840d7317021a015'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/-/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-t32-' .. '8487a14874f3e3138877655f303322d9e7222cec',
+  dir = 'tree-sitter-t32-' .. '6182836f4128725f1e74ce986840d7317021a015',
 }
 
 build = {
@@ -247,6 +247,9 @@ build = {
 (if_block
   command: (identifier) @keyword.conditional)
 
+(elif_block
+  command: (identifier) @keyword.conditional)
+
 (else_block
   command: (identifier) @keyword.conditional)
 
@@ -266,6 +269,8 @@ build = {
 
 (if_block
   (block)) @indent.dedent
+
+(elif_block) @indent.branch
 
 (else_block) @indent.branch
 
