@@ -1,4 +1,4 @@
-local git_ref = '40701b6151f8883980c1548647116de39b763540'
+local git_ref = 'd0ffd703b56d090d213b497ed4eb840495f14a11'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'sqlite.lua-' .. '40701b6151f8883980c1548647116de39b763540',
+  dir = 'sqlite.lua-' .. 'd0ffd703b56d090d213b497ed4eb840495f14a11',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
