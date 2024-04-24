@@ -7203,6 +7203,13 @@ repository = {
          }
       }
    },
+   ['nvim-parinfer'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['nvim-scrollbar'] = {
       ['scm-1'] = {
          {
