@@ -2,7 +2,7 @@ local git_ref = '62e61b6f5c0289c376d61a8c91faf6435cde9012'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-objc'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-objc'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-objc'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for objc',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-objc',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-objc',
   license = 'UNKNOWN'
 }
 

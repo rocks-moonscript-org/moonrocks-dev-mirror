@@ -2,7 +2,7 @@ local git_ref = '8666a4dfeb3107144398158bc3dd7a3f59d89ccb'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ObserverOfTime/tree-sitter-requirements'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-requirements'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-requirements'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for requirements',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ObserverOfTime/tree-sitter-requirements',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-requirements',
   license = 'UNKNOWN'
 }
 

@@ -2,7 +2,7 @@ local git_ref = 'bd17c824196ce70800f64ad39cfddd1b17acc13f'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/Decodetalkers/tree-sitter-meson'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-meson'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-meson'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for meson',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/Decodetalkers/tree-sitter-meson',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-meson',
   license = 'UNKNOWN'
 }
 

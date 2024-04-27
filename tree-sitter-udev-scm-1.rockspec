@@ -2,7 +2,7 @@ local git_ref = '8f58696e79092b4ad6bf197415bbd0970acf15cd'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ObserverOfTime/tree-sitter-udev'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-udev'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-udev'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for udev',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ObserverOfTime/tree-sitter-udev',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-udev',
   license = 'UNKNOWN'
 }
 

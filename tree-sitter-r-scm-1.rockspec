@@ -137,6 +137,8 @@ build = {
   "}"
 ] @punctuation.bracket
 
+"," @punctuation.delimiter
+
 (dollar
   _
   "$" @operator)

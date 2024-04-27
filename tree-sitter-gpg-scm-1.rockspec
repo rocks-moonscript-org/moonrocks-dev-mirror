@@ -2,7 +2,7 @@ local git_ref = 'f99323fb8f3f10b6c69db0c2f6d0a14bd7330675'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ObserverOfTime/tree-sitter-gpg-config'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-gpg-config'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-gpg'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for gpg',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ObserverOfTime/tree-sitter-gpg-config',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-gpg-config',
   license = 'UNKNOWN'
 }
 

@@ -1,8 +1,8 @@
-local git_ref = '16f930b250433cfcd4fb4144df92bb98ad344c20'
+local git_ref = '73ff874ae4c9e9b45462673cbc0a1e350e2522a7'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-pony'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-pony'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-pony'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for pony',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-pony',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-pony',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-pony-' .. '16f930b250433cfcd4fb4144df92bb98ad344c20',
+  dir = 'tree-sitter-pony-' .. '73ff874ae4c9e9b45462673cbc0a1e350e2522a7',
 }
 
 build = {

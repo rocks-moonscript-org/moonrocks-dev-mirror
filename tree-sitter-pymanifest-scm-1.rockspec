@@ -2,7 +2,7 @@ local git_ref = 'e3b82b78721aee07f676dac8473ae69db51debcf'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ObserverOfTime/tree-sitter-pymanifest'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-pymanifest'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-pymanifest'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for pymanifest',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ObserverOfTime/tree-sitter-pymanifest',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-pymanifest',
   license = 'UNKNOWN'
 }
 

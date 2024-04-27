@@ -2,7 +2,7 @@ local git_ref = '217ff2af3f2db15a79ab7e3d21ea1e0c17e71a1a'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ObserverOfTime/tree-sitter-pem'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-pem'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-pem'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for pem',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ObserverOfTime/tree-sitter-pem',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-pem',
   license = 'UNKNOWN'
 }
 

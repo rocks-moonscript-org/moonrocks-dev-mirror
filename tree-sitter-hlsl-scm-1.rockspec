@@ -2,7 +2,7 @@ local git_ref = 'd200375a29b24764b78d7051df0024ed7c2f1ab0'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/theHamsta/tree-sitter-hlsl'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-hlsl'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-hlsl'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for hlsl',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/theHamsta/tree-sitter-hlsl',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-hlsl',
   license = 'UNKNOWN'
 }
 
@@ -29,7 +29,7 @@ build = {
   lang = "hlsl",
   sources = { "src/parser.c", "src/scanner.c" },
   generate_from_grammar = false,
-  generate_requires_npm = true,
+  generate_requires_npm = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {

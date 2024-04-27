@@ -2,7 +2,7 @@ local git_ref = '41940e199ba5763abea1d21b4f717014b45f01ea'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ObserverOfTime/tree-sitter-gitattributes'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-gitattributes'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-gitattributes'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for gitattributes',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ObserverOfTime/tree-sitter-gitattributes',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-gitattributes',
   license = 'UNKNOWN'
 }
 

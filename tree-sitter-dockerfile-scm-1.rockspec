@@ -1,4 +1,4 @@
-local git_ref = '33e22c33bcdbfc33d42806ee84cfd0b1248cc392'
+local git_ref = '439c3e7b8a9bfdbf1f7d7c2beaae4173dc484cbf'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,13 +21,13 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-dockerfile-' .. '33e22c33bcdbfc33d42806ee84cfd0b1248cc392',
+  dir = 'tree-sitter-dockerfile-' .. '439c3e7b8a9bfdbf1f7d7c2beaae4173dc484cbf',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "dockerfile",
-  sources = { "src/parser.c" },
+  sources = { "src/parser.c", "src/scanner.c" },
   generate_from_grammar = false,
   generate_requires_npm = false,
   location = nil,
@@ -72,6 +72,15 @@ build = {
 
 (double_quoted_string) @string
 
+[
+  (heredoc_marker)
+  (heredoc_end)
+] @label
+
+((heredoc_block
+  (heredoc_line) @string)
+  (#set! "priority" 90))
+
 (expansion
   [
     "$"
@@ -98,7 +107,13 @@ build = {
 ((comment) @injection.content
   (#set! injection.language "comment"))
 
-((shell_command) @injection.content
+((shell_command
+  (shell_fragment) @injection.content)
+  (#set! injection.language "bash")
+  (#set! injection.combined))
+
+((run_instruction
+  (heredoc_block) @injection.content)
   (#set! injection.language "bash")
   (#set! injection.include-children))
 ]==],

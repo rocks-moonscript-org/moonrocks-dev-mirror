@@ -2,7 +2,7 @@ local git_ref = '9b2f9aec2106b94b4e099fe75e73ebd8ae707c04'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/fab4100/tree-sitter-ispc'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-ispc'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-ispc'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for ispc',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/fab4100/tree-sitter-ispc',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-ispc',
   license = 'UNKNOWN'
 }
 
@@ -29,7 +29,7 @@ build = {
   lang = "ispc",
   sources = { "src/parser.c" },
   generate_from_grammar = false,
-  generate_requires_npm = true,
+  generate_requires_npm = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {

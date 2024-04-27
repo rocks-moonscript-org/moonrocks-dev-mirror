@@ -2,7 +2,7 @@ local git_ref = 'debd26fed283d80456ebafa33a06957b0c52e451'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/Philipp-M/tree-sitter-ungrammar'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-ungrammar'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-ungrammar'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for ungrammar',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/Philipp-M/tree-sitter-ungrammar',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-ungrammar',
   license = 'UNKNOWN'
 }
 

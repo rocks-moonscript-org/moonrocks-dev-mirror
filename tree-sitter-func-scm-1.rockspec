@@ -2,7 +2,7 @@ local git_ref = '0834e35ecf8b23fbf9ad15b088af6a897e19d4a8'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-func'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-func'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-func'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for func',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-func',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-func',
   license = 'UNKNOWN'
 }
 

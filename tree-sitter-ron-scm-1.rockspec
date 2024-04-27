@@ -1,8 +1,8 @@
-local git_ref = 'ce6086b2c9e8e71065b8129d6c2289c5f66d1879'
+local git_ref = 'f0ddc95a4b7bb21a7308642255a80f5496e69c5b'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-ron'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-ron'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-ron'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for ron',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-ron',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-ron',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-ron-' .. 'ce6086b2c9e8e71065b8129d6c2289c5f66d1879',
+  dir = 'tree-sitter-ron-' .. 'f0ddc95a4b7bb21a7308642255a80f5496e69c5b',
 }
 
 build = {

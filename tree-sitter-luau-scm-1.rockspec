@@ -1,8 +1,8 @@
-local git_ref = 'e5f7a020967407f73959592decdb147bb5fc30bb'
+local git_ref = '5b088fac748f2666a315cafd1638a214388eb23e'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-luau'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-luau'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-luau'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for luau',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-luau',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-luau',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-luau-' .. 'e5f7a020967407f73959592decdb147bb5fc30bb',
+  dir = 'tree-sitter-luau-' .. '5b088fac748f2666a315cafd1638a214388eb23e',
 }
 
 build = {

@@ -123,17 +123,16 @@ build = {
   (angle_unit)
   (integer_distance_unit)
   (float_distance_unit)
-] @type
+] @string
 
 (percentage) @number
 
 (percentage
-  "%" @type)
+  "%" @string)
 
-[
-  (global_selector)
-  (id_selector)
-] @module
+(global_selector) @character.special
+
+(id_selector) @constant
 
 (id_selector_view
   [
@@ -179,7 +178,7 @@ build = {
   "env" @function.builtin
   (identifier) @variable)
 
-(property_name) @variable
+(property_name) @property
 ]==],
     ["indents.scm"] = [==[
 (rule_set) @indent.begin
@@ -188,6 +187,10 @@ build = {
   "}" @indent.branch)
 
 (comment) @indent.ignore
+]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
 ]==],
     ["locals.scm"] = [==[
 (rule_set

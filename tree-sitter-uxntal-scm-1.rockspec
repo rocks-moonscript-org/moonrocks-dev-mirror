@@ -2,7 +2,7 @@ local git_ref = '4c5ecd6326ebd61f6f9a22a370cbd100e0d601da'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-uxntal'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-uxntal'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-uxntal'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for uxntal',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-uxntal',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-uxntal',
   license = 'UNKNOWN'
 }
 

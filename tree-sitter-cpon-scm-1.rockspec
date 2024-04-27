@@ -1,8 +1,8 @@
-local git_ref = 'f4b3cbc8b0bd4e13035d39940fef09f1392e8739'
+local git_ref = '594289eadfec719198e560f9d7fd243c4db678d5'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-cpon'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-cpon'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-cpon'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for cpon',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-cpon',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-cpon',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-cpon-' .. 'f4b3cbc8b0bd4e13035d39940fef09f1392e8739',
+  dir = 'tree-sitter-cpon-' .. '594289eadfec719198e560f9d7fd243c4db678d5',
 }
 
 build = {

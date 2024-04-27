@@ -1,4 +1,4 @@
-local git_ref = '1f9dae9c273136551684cb41461d00e565150e23'
+local git_ref = '4bedd882d47c55f22226307fe6bc6a7a87a94f43'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-templ-' .. '1f9dae9c273136551684cb41461d00e565150e23',
+  dir = 'tree-sitter-templ-' .. '4bedd882d47c55f22226307fe6bc6a7a87a94f43',
 }
 
 build = {
@@ -45,6 +45,8 @@ build = {
   (self_closing_tag)
   (style_element)
 ] @tag
+
+(doctype) @constant
 
 (attribute
   name: (attribute_name) @tag.attribute)
@@ -76,6 +78,14 @@ build = {
 (component_render) @function.call
 
 (element_comment) @comment @spell
+
+[
+  "<"
+  ">"
+  "</"
+  "/>"
+  "<!"
+] @tag.delimiter
 
 "@" @operator
 

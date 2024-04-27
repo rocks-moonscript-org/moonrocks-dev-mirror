@@ -2,7 +2,7 @@ local git_ref = 'a750758da90955c86fcc22fcbb6fa44a7d009865'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-doxygen'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-doxygen'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-doxygen'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for doxygen',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-doxygen',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-doxygen',
   license = 'UNKNOWN'
 }
 

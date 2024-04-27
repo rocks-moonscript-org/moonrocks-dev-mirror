@@ -2,7 +2,7 @@ local git_ref = 'b950ddf54c564fec0efead602268b6e0d3e5f26e'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/theHamsta/tree-sitter-slang'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-slang'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-slang'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for slang',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/theHamsta/tree-sitter-slang',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-slang',
   license = 'UNKNOWN'
 }
 
@@ -29,7 +29,7 @@ build = {
   lang = "slang",
   sources = { "src/parser.c", "src/scanner.c" },
   generate_from_grammar = false,
-  generate_requires_npm = true,
+  generate_requires_npm = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {

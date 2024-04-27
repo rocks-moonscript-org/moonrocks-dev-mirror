@@ -2,7 +2,7 @@ local git_ref = 'b5f668ef8918aab13812ce73acd89fe191fb8c5e'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-odin'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-odin'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-odin'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for odin',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-odin',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-odin',
   license = 'UNKNOWN'
 }
 

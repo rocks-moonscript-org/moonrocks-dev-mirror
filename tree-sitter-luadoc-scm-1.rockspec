@@ -2,7 +2,7 @@ local git_ref = '873612aadd3f684dd4e631bdf42ea8990c57634e'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-luadoc'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-luadoc'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-luadoc'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for luadoc',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-luadoc',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-luadoc',
   license = 'UNKNOWN'
 }
 

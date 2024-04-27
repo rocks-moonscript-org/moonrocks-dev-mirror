@@ -2,7 +2,7 @@ local git_ref = '6216c6ee5e9fc0649c4bd7b1aedd884a55bdd9ef'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-cairo'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-cairo'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-cairo'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for cairo',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-cairo',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-cairo',
   license = 'UNKNOWN'
 }
 

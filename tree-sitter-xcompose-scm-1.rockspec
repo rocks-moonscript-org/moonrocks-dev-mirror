@@ -2,7 +2,7 @@ local git_ref = '2383cc69a2c42cfade41c7cb971fb3862bec6df1'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ObserverOfTime/tree-sitter-xcompose'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-xcompose'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-xcompose'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for xcompose',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ObserverOfTime/tree-sitter-xcompose',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-xcompose',
   license = 'UNKNOWN'
 }
 

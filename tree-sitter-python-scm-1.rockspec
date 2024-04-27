@@ -265,19 +265,41 @@ build = {
   (comment)*
   .
   (expression_statement
-    (string) @string.documentation @spell))
+    (string) @string.documentation))
 
 (class_definition
   body: (block
     .
     (expression_statement
-      (string) @string.documentation @spell)))
+      (string) @string.documentation)))
 
 (function_definition
   body: (block
     .
     (expression_statement
-      (string) @string.documentation @spell)))
+      (string) @string.documentation)))
+
+(module
+  .
+  (comment)*
+  .
+  (expression_statement
+    (string
+      (string_content) @spell)))
+
+(class_definition
+  body: (block
+    .
+    (expression_statement
+      (string
+        (string_content) @spell))))
+
+(function_definition
+  body: (block
+    .
+    (expression_statement
+      (string
+        (string_content) @spell))))
 
 ; Tokens
 [

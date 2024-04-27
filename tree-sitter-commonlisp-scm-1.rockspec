@@ -2,7 +2,7 @@ local git_ref = '83ae738bed7e914cee9090c3fe4c80a32ab45905'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/theHamsta/tree-sitter-commonlisp'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-commonlisp'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-commonlisp'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for commonlisp',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/theHamsta/tree-sitter-commonlisp',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-commonlisp',
   license = 'UNKNOWN'
 }
 
@@ -29,7 +29,7 @@ build = {
   lang = "commonlisp",
   sources = { "src/parser.c" },
   generate_from_grammar = false,
-  generate_requires_npm = true,
+  generate_requires_npm = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {

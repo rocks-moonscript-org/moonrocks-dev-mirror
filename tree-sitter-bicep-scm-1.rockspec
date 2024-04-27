@@ -1,8 +1,8 @@
-local git_ref = 'c3451d1049c80074b18078ba50007b7c00e063f8'
+local git_ref = '0092c7d1bd6bb22ce0a6f78497d50ea2b87f19c0'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-bicep'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-bicep'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-bicep'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for bicep',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-bicep',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-bicep',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-bicep-' .. 'c3451d1049c80074b18078ba50007b7c00e063f8',
+  dir = 'tree-sitter-bicep-' .. '0092c7d1bd6bb22ce0a6f78497d50ea2b87f19c0',
 }
 
 build = {

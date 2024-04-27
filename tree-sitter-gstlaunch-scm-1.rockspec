@@ -2,7 +2,7 @@ local git_ref = '549aef253fd38a53995cda1bf55c501174372bf7'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/theHamsta/tree-sitter-gstlaunch'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-gstlaunch'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-gstlaunch'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for gstlaunch',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/theHamsta/tree-sitter-gstlaunch',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-gstlaunch',
   license = 'UNKNOWN'
 }
 

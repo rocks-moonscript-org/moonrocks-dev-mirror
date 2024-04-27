@@ -1,8 +1,8 @@
-local git_ref = '300f6a490e71f895e644ed2deec6920860a2e107'
+local git_ref = '6b7eb096621443627cc5e29c8c34ff1fde482cf3'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-tablegen'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-tablegen'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-tablegen'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for tablegen',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-tablegen',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-tablegen',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-tablegen-' .. '300f6a490e71f895e644ed2deec6920860a2e107',
+  dir = 'tree-sitter-tablegen-' .. '6b7eb096621443627cc5e29c8c34ff1fde482cf3',
 }
 
 build = {

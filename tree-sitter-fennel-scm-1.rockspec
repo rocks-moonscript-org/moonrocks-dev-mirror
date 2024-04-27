@@ -1,4 +1,4 @@
-local git_ref = '215e3913524abc119daa9db7cf6ad2f2f5620189'
+local git_ref = '325a3315be968b3d8ecdc5c414159be3c8bab212'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,52 +21,69 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-fennel-' .. '215e3913524abc119daa9db7cf6ad2f2f5620189',
+  dir = 'tree-sitter-fennel-' .. '325a3315be968b3d8ecdc5c414159be3c8bab212',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "fennel",
-  sources = { "src/parser.c" },
+  sources = { "src/parser.c", "src/scanner.c" },
   generate_from_grammar = false,
   generate_requires_npm = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
     ["folds.scm"] = [==[
+; compounds
 [
   (list)
   (table)
   (sequence)
 ] @fold
 
-(list
-  .
-  (symbol) @_let
-  (#eq? @_let "let")
-  .
-  (sequence) @fold) @fold
+; sub-forms / special compounds
+[
+  (list_binding)
+  (table_binding)
+  (sequence_binding)
+  (table_metadata)
+  (sequence_arguments)
+  (let_vars)
+  (case_guard_or_special)
+  (case_guard)
+  (case_catch)
+] @fold
 
-(list
-  .
-  (symbol) @_local
-  (#eq? @_local "local")) @fold
+; forms
+[
+  (quote_form)
+  (unquote_form)
+  (local_form)
+  (var_form)
+  (set_form)
+  (global_form)
+  (let_form)
+  (fn_form)
+  (lambda_form)
+  (hashfn_form)
+  (each_form)
+  (collect_form)
+  (icollect_form)
+  (accumulate_form)
+  (for_form)
+  (fcollect_form)
+  (faccumulate_form)
+  (case_form)
+  (match_form)
+  (case_try_form)
+  (match_try_form)
+] @fold
 
-(list
-  .
-  (symbol) @_global
-  (#eq? @_global "global")) @fold
+; reader macros
+(quote_reader_macro
+  expression: (_) @fold)
 
-(list
-  .
-  (symbol) @_fn
-  (#any-of? @_fn "fn" "lambda" "λ" "hashfn")) @fold
-
-(reader_macro
-  macro: [
-    "'"
-    "`"
-  ]
+(quasi_quote_reader_macro
   expression: (_) @fold)
 ]==],
     ["highlights.scm"] = [==[
@@ -84,44 +101,97 @@ build = {
   "]"
 ] @punctuation.bracket
 
-(nil) @constant.builtin
+[
+  (nil)
+  (nil_binding)
+] @constant.builtin
 
-(boolean) @boolean
+[
+  (boolean)
+  (boolean_binding)
+] @boolean
 
-(number) @number
+[
+  (number)
+  (number_binding)
+] @number
 
-(string) @string
+[
+  (string)
+  (string_binding)
+] @string
+
+[
+  (symbol)
+  (symbol_binding)
+] @variable
+
+(symbol_option) @keyword.directive
 
 (escape_sequence) @string.escape
-
-(symbol) @variable
 
 (multi_symbol
   "." @punctuation.delimiter
   member: (symbol_fragment) @variable.member)
 
 (list
-  .
-  (symbol) @function.call)
+  call: (symbol) @function.call)
 
 (list
-  .
-  (multi_symbol
+  call: (multi_symbol
     member: (symbol_fragment) @function.call .))
 
 (multi_symbol_method
   ":" @punctuation.delimiter
-  method: (symbol_fragment) @function.method.call .)
+  method: (symbol_fragment) @function.method.call)
 
-; Just `&` is only used in destructuring
-((symbol) @punctuation.special
-  (#eq? @punctuation.special "&"))
+(quasi_quote_reader_macro
+  macro: _ @punctuation.special)
 
-; BUG: $ arguments should only be valid inside hashfn of any depth, but
-; it's impossible to express such query at the moment of writing.
-; See tree-sitter/tree-sitter#880
+(quote_reader_macro
+  macro: _ @punctuation.special)
+
+(unquote_reader_macro
+  macro: _ @punctuation.special)
+
+(hashfn_reader_macro
+  macro: _ @keyword.function)
+
+(sequence_arguments
+  (symbol_binding) @variable.parameter)
+
+(sequence_arguments
+  (rest_binding
+    rhs: (symbol_binding) @variable.parameter))
+
+(docstring) @string.documentation
+
+(fn_form
+  name: [
+    (symbol) @function
+    (multi_symbol
+      member: (symbol_fragment) @function .)
+  ])
+
+(lambda_form
+  name: [
+    (symbol) @function
+    (multi_symbol
+      member: (symbol_fragment) @function .)
+  ])
+
+; NOTE: The macro name is highlighted as @variable because it
+; gives a nicer contrast instead of everything being the same
+; color. Rust queries use this workaround too for `macro_rules!`.
+(macro_form
+  name: [
+    (symbol) @variable
+    (multi_symbol
+      member: (symbol_fragment) @variable .)
+  ])
+
 ((symbol) @variable.parameter
-  (#eq? @variable.parameter "$..."))
+  (#any-of? @variable.parameter "$" "$..."))
 
 ((symbol) @variable.parameter
   (#lua-match? @variable.parameter "^%$[1-9]$"))
@@ -146,8 +216,11 @@ build = {
     ; other
     "length"))
 
-(reader_macro
-  macro: "#" @keyword.function)
+(case_guard
+  call: (_) @keyword.conditional)
+
+(case_guard_or_special
+  call: (_) @keyword.conditional)
 
 ((symbol) @keyword.function
   (#any-of? @keyword.function "fn" "lambda" "λ" "hashfn"))
@@ -156,7 +229,7 @@ build = {
   (#any-of? @keyword.repeat "for" "each" "while"))
 
 ((symbol) @keyword.conditional
-  (#any-of? @keyword.conditional "if" "when" "match" "case"))
+  (#any-of? @keyword.conditional "if" "when" "match" "case" "match-try" "case-try"))
 
 ((symbol) @keyword
   (#any-of? @keyword
@@ -164,12 +237,20 @@ build = {
     "quote" "tset" "values" "tail!"))
 
 ((symbol) @keyword.import
-  (#any-of? @keyword.import "require" "require-macros" "import-macros" "include"))
+  (#any-of? @keyword.import "require-macros" "import-macros" "include"))
 
 ((symbol) @function.macro
   (#any-of? @function.macro
     "collect" "icollect" "fcollect" "accumulate" "faccumulate" "->" "->>" "-?>" "-?>>" "?." "doto"
     "macro" "macrodebug" "partial" "pick-args" "pick-values" "with-open"))
+
+(case_catch
+  call: (symbol) @keyword)
+
+(import_macros_form
+  imports: (table_binding
+    (table_binding_pair
+      value: (symbol_binding) @function.macro)))
 
 ; TODO: Highlight builtin methods (`table.unpack`, etc) as @function.builtin
 ([
@@ -199,116 +280,47 @@ build = {
     "assert" "collectgarbage" "dofile" "error" "getmetatable" "ipairs" "load" "loadfile" "next"
     "pairs" "pcall" "print" "rawequal" "rawget" "rawlen" "rawset" "require" "select" "setmetatable"
     "tonumber" "tostring" "type" "warn" "xpcall" "module" "setfenv" "loadstring" "unpack"))
-
-(table
-  (table_pair
-    key: (symbol) @keyword.directive
-    (#eq? @keyword.directive "&as")))
-
-(list
-  .
-  (symbol) @keyword.function
-  (#any-of? @keyword.function "fn" "lambda" "λ")
-  .
-  [
-    (symbol) @function
-    (multi_symbol
-      (symbol_fragment) @function .)
-  ]
-  .
-  (sequence
-    ((symbol) @variable.parameter
-      (#not-any-of? @variable.parameter "&" "..."))))
-
-(list
-  .
-  (symbol) @function.macro
-  (#any-of? @function.macro "collect" "icollect" "fcollect")
-  .
-  (sequence
-    [
-      (symbol)
-      (string)
-    ] @keyword.directive
-    (#any-of? @keyword.directive "&into" ":into")))
-
-(list
-  .
-  (symbol) @function.macro
-  (#any-of? @function.macro "for" "each" "collect" "icollect" "fcollect" "accumulate" "faccumulate")
-  .
-  (sequence
-    [
-      (symbol)
-      (string)
-    ] @keyword.directive
-    (#any-of? @keyword.directive "&until" ":until")))
-
-(list
-  .
-  (symbol) @keyword.conditional
-  (#any-of? @keyword.conditional "match" "case")
-  .
-  (_)
-  .
-  ((list
-    .
-    (symbol) @keyword
-    (#eq? @keyword "where"))
-    .
-    (_))*
-  .
-  (list
-    .
-    (symbol) @keyword
-    (#eq? @keyword "where"))
-  .
-  (_)? .)
 ]==],
     ["injections.scm"] = [==[
-((comment) @injection.content
+((comment_body) @injection.content
   (#set! injection.language "comment"))
 
 (list
-  .
-  (multi_symbol) @_vimcmd_identifier
+  call: (multi_symbol) @_vimcmd_identifier
   (#any-of? @_vimcmd_identifier "vim.cmd" "vim.api.nvim_command" "vim.api.nvim_exec2")
   .
-  (string
+  item: (string
     (string_content) @injection.content
     (#set! injection.language "vim")))
 
 ; NOTE: Matches *exactly* `ffi.cdef`
 (list
-  .
-  (multi_symbol) @_cdef_identifier
+  call: (multi_symbol) @_cdef_identifier
   (#eq? @_cdef_identifier "ffi.cdef")
   .
-  (string
+  item: (string
     (string_content) @injection.content
     (#set! injection.language "c")))
 
 (list
-  .
-  (multi_symbol) @_ts_query_identifier
+  call: (multi_symbol) @_ts_query_identifier
   (#any-of? @_ts_query_identifier "vim.treesitter.query.set" "vim.treesitter.query.parse")
   .
-  (_)
+  item: (_)
   .
-  (_)
+  item: (_)
   .
-  (string
+  item: (string
     (string_content) @injection.content
     (#set! injection.language "query")))
 
 (list
-  .
-  (multi_symbol) @_vimcmd_identifier
+  call: (multi_symbol) @_vimcmd_identifier
   (#eq? @_vimcmd_identifier "vim.api.nvim_create_autocmd")
   .
-  (_)
+  item: (_)
   .
-  (table
+  item: (table
     (table_pair
       key: (string
         (string_content) @_command
@@ -318,54 +330,50 @@ build = {
         (#set! injection.language "vim")))))
 
 (list
-  .
-  (multi_symbol) @_user_cmd
+  call: (multi_symbol) @_user_cmd
   (#eq? @_user_cmd "vim.api.nvim_create_user_command")
   .
-  (_)
+  item: (_)
   .
-  (string
+  item: (string
     (string_content) @injection.content
     (#set! injection.language "vim")))
 
 (list
-  .
-  (multi_symbol) @_user_cmd
+  call: (multi_symbol) @_user_cmd
   (#eq? @_user_cmd "vim.api.nvim_buf_create_user_command")
   .
-  (_)
+  item: (_)
   .
-  (_)
+  item: (_)
   .
-  (string
+  item: (string
     (string_content) @injection.content
     (#set! injection.language "vim")))
 
 (list
-  .
-  (multi_symbol) @_map
+  call: (multi_symbol) @_map
   (#any-of? @_map "vim.api.nvim_set_keymap" "vim.keymap.set")
   .
-  (_)
+  item: (_)
   .
-  (_)
+  item: (_)
   .
-  (string
+  item: (string
     (string_content) @injection.content
     (#set! injection.language "vim")))
 
 (list
-  .
-  (multi_symbol) @_map
+  call: (multi_symbol) @_map
   (#eq? @_map "vim.api.nvim_buf_set_keymap")
   .
-  (_)
+  item: (_)
   .
-  (_)
+  item: (_)
   .
-  (_)
+  item: (_)
   .
-  (string
+  item: (string
     (string_content) @injection.content
     (#set! injection.language "vim")))
 
@@ -375,73 +383,97 @@ build = {
   (#lua-match? @injection.content "^%s*;+%s?query")
   (#set! injection.language "query"))
 
-; ──────────────────────────────────────────────────────────────────────
 ; (string.match "123" "%d+")
 (list
-  .
-  (multi_symbol
+  call: (multi_symbol
     member: (symbol_fragment) @_func
     .
     (#any-of? @_func "find" "match" "gmatch" "gsub"))
   .
-  (_)
+  item: (_)
   .
-  (string
+  item: (string
     (string_content) @injection.content
     (#set! injection.language "luap")
     (#set! injection.include-children)))
 
 ; (my-string:match "%d+")
 (list
-  .
-  (multi_symbol_method
+  call: (multi_symbol_method
     method: (symbol_fragment) @_method
     (#any-of? @_method "find" "match" "gmatch" "gsub"))
   .
-  (string
+  item: (string
     (string_content) @injection.content
     (#set! injection.language "luap")
     (#set! injection.include-children)))
 
 ; (string.format "pi = %.2f" 3.14159)
 (list
-  .
-  (multi_symbol) @_func
+  call: (multi_symbol) @_func
   (#eq? @_func "string.format")
   .
-  (string
+  item: (string
     (string_content) @injection.content
     (#set! injection.language "printf")))
 ]==],
     ["locals.scm"] = [==[
-; TODO: Add tests
-; TODO: Improve queries
 (program) @local.scope
-
-((list
-  .
-  (symbol) @_call) @local.scope
-  (#any-of? @_call
-    "let" "fn" "lambda" "λ" "while" "each" "for" "if" "when" "do" "collect" "icollect" "accumulate"
-    "case" "match"))
 
 (symbol) @local.reference
 
+[
+  (let_form)
+  (fn_form)
+  (lambda_form)
+  (each_form)
+  (for_form)
+  (collect_form)
+  (icollect_form)
+  (accumulate_form)
+  (for_form)
+  (fcollect_form)
+  (faccumulate_form)
+  (case_form)
+  (match_form)
+  (case_try_form)
+  (match_try_form)
+  (if_form)
+] @local.scope
+
 (list
-  .
-  (symbol) @_fn
-  (#any-of? @_fn "fn" "lambda" "λ")
-  .
-  [
+  call: (symbol) @_call
+  (#any-of? @_call "while" "when" "do")) @local.scope
+
+(fn_form
+  name: [
     (symbol) @local.definition.function
     (multi_symbol
       member: (symbol_fragment) @local.definition.function .)
   ]
-  (#set! definition.function.scope "parent")
-  .
-  (sequence
-    (symbol)* @local.definition.parameter
-    (#not-contains? @local.definition.parameter "&")))
+  args: (sequence_arguments
+    (symbol_binding) @local.definition.parameter)
+  (#set! definition.function.scope "parent"))
+
+(lambda_form
+  name: [
+    (symbol) @local.definition.function
+    (multi_symbol
+      member: (symbol_fragment) @local.definition.function .)
+  ]
+  args: (sequence_arguments
+    (symbol_binding) @local.definition.parameter)
+  (#set! definition.function.scope "parent"))
+
+(macro_form
+  name: [
+    (symbol) @local.definition.function
+    (multi_symbol
+      member: (symbol_fragment) @local.definition.function .)
+  ]
+  args: (sequence_arguments
+    (symbol_binding) @local.definition.parameter)
+  (#set! definition.function.scope "parent"))
 ]==],
   },
   extra_files = {

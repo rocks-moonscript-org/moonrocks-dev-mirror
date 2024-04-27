@@ -2,7 +2,7 @@ local git_ref = 'f99011a3554213b654985a4b0a65b3b032ec4621'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-linkerscript'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-linkerscript'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-linkerscript'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for linkerscript',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-linkerscript',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-linkerscript',
   license = 'UNKNOWN'
 }
 

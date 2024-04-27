@@ -1,8 +1,8 @@
-local git_ref = '5849f9694197a6e822872945b415429c285fdd54'
+local git_ref = '584522f32495d648b18a53ccb52d988e60de127d'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-puppet'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-puppet'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-puppet'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for puppet',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-puppet',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-puppet',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-puppet-' .. '5849f9694197a6e822872945b415429c285fdd54',
+  dir = 'tree-sitter-puppet-' .. '584522f32495d648b18a53ccb52d988e60de127d',
 }
 
 build = {

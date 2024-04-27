@@ -1,8 +1,8 @@
-local git_ref = '4ddf79edaa87170ec12bd6a8d03a8ac528fe0ae7'
+local git_ref = '8518c3fa6b8562af545a496d55c9abd78f53e732'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ObserverOfTime/tree-sitter-arduino'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-arduino'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-arduino'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for arduino',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ObserverOfTime/tree-sitter-arduino',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-arduino',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-arduino-' .. '4ddf79edaa87170ec12bd6a8d03a8ac528fe0ae7',
+  dir = 'tree-sitter-arduino-' .. '8518c3fa6b8562af545a496d55c9abd78f53e732',
 }
 
 build = {

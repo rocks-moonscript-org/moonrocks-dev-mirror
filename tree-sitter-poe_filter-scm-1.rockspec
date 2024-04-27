@@ -2,7 +2,7 @@ local git_ref = '592476d81f95d2451f2ca107dc872224c76fecdf'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ObserverOfTime/tree-sitter-poe-filter'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-poe-filter'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-poe_filter'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for poe_filter',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ObserverOfTime/tree-sitter-poe-filter',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-poe-filter',
   license = 'UNKNOWN'
 }
 

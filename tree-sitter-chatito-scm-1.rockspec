@@ -2,7 +2,7 @@ local git_ref = 'fe7a2a75d3d74c1215141b7a7ebebb57ae17a370'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ObserverOfTime/tree-sitter-chatito'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-chatito'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-chatito'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for chatito',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ObserverOfTime/tree-sitter-chatito',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-chatito',
   license = 'UNKNOWN'
 }
 

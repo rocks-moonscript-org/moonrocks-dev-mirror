@@ -2,7 +2,7 @@ local git_ref = '6b2b5e41734bd6f07ea4c36ac20fb6f14061c841'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/Decodetalkers/tree-sitter-qmldir'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-qmldir'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-qmldir'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for qmldir',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/Decodetalkers/tree-sitter-qmldir',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-qmldir',
   license = 'UNKNOWN'
 }
 

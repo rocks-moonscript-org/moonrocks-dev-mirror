@@ -1,8 +1,8 @@
-local git_ref = 'c348825d3f86dec71dee0e1223c6bd73114e3579'
+local git_ref = 'a513732feb813426b51d1ead8397a9c285c411be'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/Philipp-M/tree-sitter-yuck'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-yuck'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-yuck'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for yuck',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/Philipp-M/tree-sitter-yuck',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-yuck',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-yuck-' .. 'c348825d3f86dec71dee0e1223c6bd73114e3579',
+  dir = 'tree-sitter-yuck-' .. 'a513732feb813426b51d1ead8397a9c285c411be',
 }
 
 build = {

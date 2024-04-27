@@ -1,8 +1,8 @@
-local git_ref = '052279cd5e1d73b075640c64cef97e7bdcd32611'
+local git_ref = 'b448ca63f972ade12c373c808acdd2bf972937db'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/neovim/tree-sitter-vim'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-vim'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-vim'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for vim',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/neovim/tree-sitter-vim',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-vim',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-vim-' .. '052279cd5e1d73b075640c64cef97e7bdcd32611',
+  dir = 'tree-sitter-vim-' .. 'b448ca63f972ade12c373c808acdd2bf972937db',
 }
 
 build = {
@@ -168,6 +168,7 @@ build = {
   "view"
   "eval"
   "sign"
+  "abort"
 ] @keyword
 
 (map_statement
@@ -319,8 +320,6 @@ build = {
   "/"
   "%"
   ".."
-  "is"
-  "isnot"
   "=="
   "!="
   ">"
@@ -339,8 +338,14 @@ build = {
   "..="
   "<<"
   "=<<"
+  "->"
   (match_case)
 ] @operator
+
+[
+  "is"
+  "isnot"
+] @keyword.operator
 
 ; Some characters have different meanings based on the context
 (unary_operation

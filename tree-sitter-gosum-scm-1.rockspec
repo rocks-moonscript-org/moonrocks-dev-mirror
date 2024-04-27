@@ -2,7 +2,7 @@ local git_ref = 'e2ac513b2240c7ff1069ae33b2df29ce90777c11'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-go-sum'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-go-sum'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-gosum'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for gosum',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-go-sum',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-go-sum',
   license = 'UNKNOWN'
 }
 

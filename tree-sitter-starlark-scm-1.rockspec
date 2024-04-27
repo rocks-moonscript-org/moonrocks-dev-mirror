@@ -2,7 +2,7 @@ local git_ref = 'b31a616aac5d05f927f3f9dd809789db7805b632'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-starlark'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-starlark'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-starlark'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for starlark',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-starlark',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-starlark',
   license = 'UNKNOWN'
 }
 

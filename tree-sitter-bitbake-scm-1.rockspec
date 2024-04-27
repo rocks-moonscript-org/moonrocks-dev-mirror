@@ -2,7 +2,7 @@ local git_ref = '7e0e2ac6f1d0da1a91ab84f35edddfdfece54f1a'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-bitbake'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-bitbake'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-bitbake'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for bitbake',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-bitbake',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-bitbake',
   license = 'UNKNOWN'
 }
 

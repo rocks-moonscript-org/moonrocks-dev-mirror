@@ -1,8 +1,8 @@
-local git_ref = 'e8b5835296f931bcaa1477d3c5a68a0c5c2ba034'
+local git_ref = 'f93fd2864dd05cc39b0490145fd86a1a93bfa3a3'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-squirrel'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-squirrel'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-squirrel'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for squirrel',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-squirrel',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-squirrel',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-squirrel-' .. 'e8b5835296f931bcaa1477d3c5a68a0c5c2ba034',
+  dir = 'tree-sitter-squirrel-' .. 'f93fd2864dd05cc39b0490145fd86a1a93bfa3a3',
 }
 
 build = {

@@ -2,7 +2,7 @@ local git_ref = 'e936d3fef8bac884661472dce71ad82284761eb1'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/MichaHoffmann/tree-sitter-hcl'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-hcl'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-hcl'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for hcl',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/MichaHoffmann/tree-sitter-hcl',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-hcl',
   license = 'UNKNOWN'
 }
 

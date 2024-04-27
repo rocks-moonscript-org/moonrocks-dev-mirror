@@ -1,8 +1,8 @@
-local git_ref = 'd4deb1bd9e848f2dbe81103a151d99e8546de480'
+local git_ref = '68fd0d80943a828d9e6f49c58a74be1e9ca142cf'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/duskmoon314/tree-sitter-thrift'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-thrift'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-thrift'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for thrift',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/duskmoon314/tree-sitter-thrift',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-thrift',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-thrift-' .. 'd4deb1bd9e848f2dbe81103a151d99e8546de480',
+  dir = 'tree-sitter-thrift-' .. '68fd0d80943a828d9e6f49c58a74be1e9ca142cf',
 }
 
 build = {

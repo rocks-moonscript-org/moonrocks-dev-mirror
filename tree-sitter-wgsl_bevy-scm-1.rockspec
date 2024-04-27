@@ -2,7 +2,7 @@ local git_ref = 'f5980f534ee64256b1e64b0a42e2864d91154a5d'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/theHamsta/tree-sitter-wgsl-bevy'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-wgsl_bevy'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for wgsl_bevy',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/theHamsta/tree-sitter-wgsl-bevy',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy',
   license = 'UNKNOWN'
 }
 
@@ -29,7 +29,7 @@ build = {
   lang = "wgsl_bevy",
   sources = { "src/parser.c", "src/scanner.c" },
   generate_from_grammar = false,
-  generate_requires_npm = true,
+  generate_requires_npm = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {

@@ -1,4 +1,4 @@
-local git_ref = 'd2c875ad758885429a4d91f471a9590ab7c47aee'
+local git_ref = '5d1af86e954be775fc338396d27cd5858d0286be'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,14 +21,14 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-unison-' .. 'd2c875ad758885429a4d91f471a9590ab7c47aee',
+  dir = 'tree-sitter-unison-' .. '5d1af86e954be775fc338396d27cd5858d0286be',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "unison",
   sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = true,
+  generate_from_grammar = false,
   generate_requires_npm = false,
   location = nil,
   copy_directories = { "queries" },

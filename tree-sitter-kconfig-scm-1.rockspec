@@ -2,7 +2,7 @@ local git_ref = '486fea71f61ad9f3fd4072a118402e97fe88d26c'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-kconfig'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-kconfig'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-kconfig'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for kconfig',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-kconfig',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-kconfig',
   license = 'UNKNOWN'
 }
 

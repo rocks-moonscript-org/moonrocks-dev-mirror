@@ -1,4 +1,4 @@
-local git_ref = 'c2845c1c0b23e2faf6febfa72a042e5346374ebf'
+local git_ref = 'c930b5f4a1fceec146b9074b8eb54bedcc266e56'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,14 +21,14 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-mlir-' .. 'c2845c1c0b23e2faf6febfa72a042e5346374ebf',
+  dir = 'tree-sitter-mlir-' .. 'c930b5f4a1fceec146b9074b8eb54bedcc266e56',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "mlir",
   sources = { "src/parser.c" },
-  generate_from_grammar = true,
+  generate_from_grammar = false,
   generate_requires_npm = false,
   location = nil,
   copy_directories = { "queries" },

@@ -1,8 +1,8 @@
-local git_ref = 'dc28c9f4212809eab74d10996086297853eb34e5'
+local git_ref = '7b0883c03e5edd34ef7bcf703194204299d7099f'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-capnp'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-capnp'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-capnp'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for capnp',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-capnp',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-capnp',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-capnp-' .. 'dc28c9f4212809eab74d10996086297853eb34e5',
+  dir = 'tree-sitter-capnp-' .. '7b0883c03e5edd34ef7bcf703194204299d7099f',
 }
 
 build = {

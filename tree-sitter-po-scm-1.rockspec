@@ -1,8 +1,8 @@
-local git_ref = 'd6aed225290bc71a15ab6f06305cb11419360c56'
+local git_ref = 'bd860a0f57f697162bf28e576674be9c1500db5e'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/erasin/tree-sitter-po'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-po'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-po'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for po',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/erasin/tree-sitter-po',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-po',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-po-' .. 'd6aed225290bc71a15ab6f06305cb11419360c56',
+  dir = 'tree-sitter-po-' .. 'bd860a0f57f697162bf28e576674be9c1500db5e',
 }
 
 build = {

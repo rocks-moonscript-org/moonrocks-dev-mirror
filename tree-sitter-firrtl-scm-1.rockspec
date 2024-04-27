@@ -1,8 +1,8 @@
-local git_ref = '2b5adae629c8cba528c7b1e4aa67a8ae28934ea5'
+local git_ref = '8503d3a0fe0f9e427863cb0055699ff2d29ae5f5'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-firrtl'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-firrtl'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-firrtl'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for firrtl',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-firrtl',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-firrtl',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-firrtl-' .. '2b5adae629c8cba528c7b1e4aa67a8ae28934ea5',
+  dir = 'tree-sitter-firrtl-' .. '8503d3a0fe0f9e427863cb0055699ff2d29ae5f5',
 }
 
 build = {

@@ -2,7 +2,7 @@ local git_ref = 'cda48a5e890b30619da5bc3ff55be1b1d3d08c8d'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-csv'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-csv'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-psv'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for psv',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-csv',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-csv',
   license = 'UNKNOWN'
 }
 

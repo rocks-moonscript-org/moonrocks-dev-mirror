@@ -2,7 +2,7 @@ local git_ref = '50a28f4600c559e3d19a1825e854dfe6dcac1d49'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/theHamsta/tree-sitter-cuda'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-cuda'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-cuda'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for cuda',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/theHamsta/tree-sitter-cuda',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-cuda',
   license = 'UNKNOWN'
 }
 
@@ -29,7 +29,7 @@ build = {
   lang = "cuda",
   sources = { "src/parser.c", "src/scanner.c" },
   generate_from_grammar = false,
-  generate_requires_npm = true,
+  generate_requires_npm = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {

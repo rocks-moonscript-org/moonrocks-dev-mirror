@@ -1,8 +1,8 @@
-local git_ref = '514695df4985f56455b8f139a319453a2325cdcf'
+local git_ref = '77450e8bce8853921512348f83c73c168c71fdfb'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ObserverOfTime/tree-sitter-ssh-config'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-ssh-config'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-ssh_config'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for ssh_config',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ObserverOfTime/tree-sitter-ssh-config',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-ssh-config',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-ssh-config-' .. '514695df4985f56455b8f139a319453a2325cdcf',
+  dir = 'tree-sitter-ssh-config-' .. '77450e8bce8853921512348f83c73c168c71fdfb',
 }
 
 build = {

@@ -2,7 +2,7 @@ local git_ref = '8bd2056818b21860e3d756b5a58c4f6e05fb744e'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ikatyang/tree-sitter-toml'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-toml'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-toml'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for toml',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ikatyang/tree-sitter-toml',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-toml',
   license = 'UNKNOWN'
 }
 
@@ -29,7 +29,7 @@ build = {
   lang = "toml",
   sources = { "src/parser.c", "src/scanner.c" },
   generate_from_grammar = false,
-  generate_requires_npm = true,
+  generate_requires_npm = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {

@@ -1,8 +1,8 @@
-local git_ref = '3d4af179414525a35dd069ba0208c9b71093d8b3'
+local git_ref = '070524937539eb8bb4f10debd9c83b66c434f3a2'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-hare'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-hare'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-hare'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for hare',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-hare',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-hare',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-hare-' .. '3d4af179414525a35dd069ba0208c9b71093d8b3',
+  dir = 'tree-sitter-hare-' .. '070524937539eb8bb4f10debd9c83b66c434f3a2',
 }
 
 build = {

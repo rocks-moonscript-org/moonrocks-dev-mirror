@@ -44,7 +44,8 @@ build = {
 ] @fold
 ]==],
     ["highlights.scm"] = [==[
-; temporarily removed the ecma inherit due to it breaking
+; inherits: ecma
+
 "pragma" @keyword.import
 
 ; Annotations
@@ -113,40 +114,6 @@ build = {
   (nested_identifier
     (identifier) @module))
 
-; Properties
-;-----------
-(property_identifier) @property
-
-; function
-(call_expression
-  function: (member_expression
-    object: (identifier) @variable
-    property: (property_identifier) @function))
-
-; js
-; Literals
-;---------
-[
-  (true)
-  (false)
-] @boolean
-
-[
-  (null)
-  (undefined)
-] @constant.builtin
-
-(comment) @comment @spell
-
-[
-  (string)
-  (template_string)
-] @string
-
-(regex) @string.regexp
-
-(number) @number
-
 ; Tokens
 ;-------
 [
@@ -163,9 +130,6 @@ build = {
 (type_identifier) @type
 
 (predefined_type) @type.builtin
-
-((identifier) @type
-  (#lua-match? @type "^%u"))
 
 (type_arguments
   "<" @punctuation.bracket
@@ -188,11 +152,15 @@ build = {
   "export"
   "implements"
   "interface"
-  "keyof"
   "namespace"
   "type"
   "override"
 ] @keyword
+
+"keyof" @keyword.operator
+]==],
+    ["injections.scm"] = [==[
+; inherits: ecma
 ]==],
   },
   extra_files = {

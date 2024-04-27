@@ -2,7 +2,7 @@ local git_ref = '7fe453beacecf02c86f7736439f238f5bb8b5c9b'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/MDeiml/tree-sitter-markdown'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-markdown'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-markdown_inline'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for markdown_inline',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/MDeiml/tree-sitter-markdown',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-markdown',
   license = 'UNKNOWN'
 }
 
