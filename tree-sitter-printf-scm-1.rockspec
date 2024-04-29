@@ -2,7 +2,7 @@ local git_ref = '0e0aceabbf607ea09e03562f5d8a56f048ddea3d'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ObserverOfTime/tree-sitter-printf'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-printf'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-printf'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for printf',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ObserverOfTime/tree-sitter-printf',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-printf',
   license = 'UNKNOWN'
 }
 

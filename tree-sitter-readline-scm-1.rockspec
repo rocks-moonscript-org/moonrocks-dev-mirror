@@ -1,8 +1,8 @@
-local git_ref = 'e436eaef452266a3d00c195f0eb757d6502c767a'
+local git_ref = '3d4768b04d7cfaf40533e12b28672603428b8f31'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ribru17/tree-sitter-readline'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-readline'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-readline'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for readline',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ribru17/tree-sitter-readline',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-readline',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-readline-' .. 'e436eaef452266a3d00c195f0eb757d6502c767a',
+  dir = 'tree-sitter-readline-' .. '3d4768b04d7cfaf40533e12b28672603428b8f31',
 }
 
 build = {

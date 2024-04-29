@@ -2,7 +2,7 @@ local git_ref = '14e6da1627aaef21d2b2aa0c37d04269766dcc1d'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/amaanq/tree-sitter-nqc'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-nqc'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-nqc'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for nqc',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/amaanq/tree-sitter-nqc',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-nqc',
   license = 'UNKNOWN'
 }
 

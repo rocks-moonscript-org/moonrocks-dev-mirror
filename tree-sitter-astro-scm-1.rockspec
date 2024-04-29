@@ -1,4 +1,4 @@
-local git_ref = 'dfa0893bdc4bdfada102043404758c66e3580568'
+local git_ref = '4be180759ec13651f72bacee65fa477c64222a1a'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-astro-' .. 'dfa0893bdc4bdfada102043404758c66e3580568',
+  dir = 'tree-sitter-astro-' .. '4be180759ec13651f72bacee65fa477c64222a1a',
 }
 
 build = {
@@ -66,12 +66,20 @@ build = {
 ; inherits: html_tags
 
 (frontmatter
-  (raw_text) @injection.content
+  (frontmatter_js_block) @injection.content
   (#set! injection.language "typescript"))
 
-(interpolation
-  (raw_text) @injection.content
-  (#set! injection.language "tsx"))
+(attribute_interpolation
+  (attribute_js_expr) @injection.content
+  (#set! injection.language "typescript"))
+
+(attribute
+  (attribute_backtick_string) @injection.content
+  (#set! injection.language "typescript"))
+
+(html_interpolation
+  (permissible_text) @injection.content
+  (#set! injection.language "typescript"))
 
 (script_element
   (raw_text) @injection.content

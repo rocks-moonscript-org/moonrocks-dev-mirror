@@ -2,7 +2,7 @@ local git_ref = 'e5da7d0aa44403153e0394d87d9edea4e5bd6609'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/luckasRanarison/tree-sitter-hyprlang'
+local repo_url = 'https://github.com/tree-sitter-grammars/tree-sitter-hyprlang'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-hyprlang'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for hyprlang',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/luckasRanarison/tree-sitter-hyprlang',
+  homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-hyprlang',
   license = 'Apache-2.0'
 }
 

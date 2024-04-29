@@ -1,4 +1,4 @@
-local git_ref = 'afdc3d5da18d42cbb471c0f40527dbed9cace7ad'
+local git_ref = 'b0306e9bb2ebe01c6562f1aef265cc42ccc53070'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-asm-' .. 'afdc3d5da18d42cbb471c0f40527dbed9cace7ad',
+  dir = 'tree-sitter-asm-' .. 'b0306e9bb2ebe01c6562f1aef265cc42ccc53070',
 }
 
 build = {
@@ -36,7 +36,10 @@ build = {
     ["highlights.scm"] = [==[
 ; General
 (label
-  (ident) @label)
+  [
+    (ident)
+    (word)
+  ] @label)
 
 (reg) @variable.builtin
 
@@ -45,6 +48,9 @@ build = {
 
 (instruction
   kind: (_) @function.builtin)
+
+(const
+  name: (word) @constant)
 
 ; Comments
 [
@@ -67,6 +73,8 @@ build = {
   "qword"
   "ptr"
   "rel"
+  "label"
+  "const"
 ] @keyword
 
 ; Operators & Punctuation
@@ -74,6 +82,11 @@ build = {
   "+"
   "-"
   "*"
+  "/"
+  "%"
+  "|"
+  "^"
+  "&"
 ] @operator
 
 [

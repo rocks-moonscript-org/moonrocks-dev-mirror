@@ -49,6 +49,7 @@ build = {
   (enum_declaration)
   (function_static_declaration)
   (method_declaration)
+  (namespace_use_declaration)+
 ] @fold
 ]==],
     ["highlights.scm"] = [==[
@@ -371,10 +372,12 @@ build = {
   ])
 
 ; Parameters
-[
-  (simple_parameter)
-  (variadic_parameter)
-] @variable.parameter
+(variadic_parameter
+  "..." @operator
+  name: (variable_name) @variable.parameter)
+
+(simple_parameter
+  name: (variable_name) @variable.parameter)
 
 (argument
   (name) @variable.parameter)
@@ -416,7 +419,9 @@ build = {
 (attribute_list) @attribute
 
 ; Conditions ( ? : )
-(conditional_expression) @keyword.conditional
+(conditional_expression
+  "?" @keyword.conditional.ternary
+  ":" @keyword.conditional.ternary)
 
 ; Directives
 (declare_directive
