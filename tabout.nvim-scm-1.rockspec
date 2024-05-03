@@ -1,4 +1,4 @@
-local git_ref = 'c442ae7788c30dbd41d259c51df4046cb8269a96'
+local git_ref = '26cf934f872e2fbfab55d572c5eb7dad0e82238e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,13 +16,13 @@ description = {
   license = 'Unlicense'
 }
 
-dependencies = { 'lua >= 5.1', 'nvim-treesitter' } 
+dependencies = { 'lua >= 5.1' } 
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tabout.nvim-' .. 'c442ae7788c30dbd41d259c51df4046cb8269a96',
+  dir = 'tabout.nvim-' .. '26cf934f872e2fbfab55d572c5eb7dad0e82238e',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
