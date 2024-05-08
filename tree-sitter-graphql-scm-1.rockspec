@@ -159,10 +159,6 @@ build = {
   "subscription"
   "fragment"
   "scalar"
-  "type"
-  "interface"
-  "union"
-  "enum"
   "input"
   "extend"
   "directive"
@@ -171,6 +167,13 @@ build = {
   "repeatable"
   "implements"
 ] @keyword
+
+[
+  "enum"
+  "union"
+  "type"
+  "interface"
+] @keyword.type
 
 ; Punctuation
 ;------------

@@ -1,4 +1,4 @@
-local git_ref = 'f93fd2864dd05cc39b0490145fd86a1a93bfa3a3'
+local git_ref = '0a50d31098e83c668d34d1160a0f6c7d23b571cc'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-squirrel-' .. 'f93fd2864dd05cc39b0490145fd86a1a93bfa3a3',
+  dir = 'tree-sitter-squirrel-' .. '0a50d31098e83c668d34d1160a0f6c7d23b571cc',
 }
 
 build = {
@@ -61,15 +61,18 @@ build = {
     ["highlights.scm"] = [==[
 ; Keywords
 [
-  "class"
   "clone"
   "delete"
-  "enum"
   "extends"
   "rawcall"
   "resume"
   "var"
 ] @keyword
+
+[
+  "class"
+  "enum"
+] @keyword.type
 
 "function" @keyword.function
 

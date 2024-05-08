@@ -126,13 +126,10 @@ build = {
   (where)
   "let"
   "in"
-  "class"
   "instance"
   "derive"
   "foreign"
   "data"
-  "newtype"
-  "type"
   "as"
   "hiding"
   "do"
@@ -143,6 +140,12 @@ build = {
   "infixl"
   "infixr"
 ] @keyword
+
+[
+  "type"
+  "newtype"
+  "class"
+] @keyword.type
 
 (class_instance
   "else" @keyword)

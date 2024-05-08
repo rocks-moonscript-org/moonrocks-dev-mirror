@@ -224,8 +224,6 @@ build = {
 
 [
   "case"
-  "class"
-  "enum"
   "extends"
   "derives"
   "finally"
@@ -234,8 +232,6 @@ build = {
   "object"
   "override"
   "package"
-  "trait"
-  "type"
   "val"
   "var"
   "with"
@@ -246,6 +242,13 @@ build = {
   "extension"
   "with"
 ] @keyword
+
+[
+  "enum"
+  "class"
+  "trait"
+  "type"
+] @keyword.type
 
 [
   "abstract"

@@ -132,11 +132,12 @@ build = {
 [
   "as"
   "bring"
-  "class"
   "let"
   "new"
   (inflight_specifier)
 ] @keyword
+
+"class" @keyword.type
 
 [
   "for"

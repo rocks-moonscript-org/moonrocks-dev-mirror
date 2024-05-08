@@ -74,13 +74,7 @@ build = {
 
 ; Keywords
 [
-  "type"
-  "actor"
-  "class"
   "primitive"
-  "interface"
-  "trait"
-  "struct"
   "embed"
   "let"
   "var"
@@ -91,6 +85,15 @@ build = {
   "object"
   "where"
 ] @keyword
+
+[
+  "class"
+  "struct"
+  "type"
+  "interface"
+  "trait"
+  "actor"
+] @keyword.type
 
 "fun" @keyword.function
 

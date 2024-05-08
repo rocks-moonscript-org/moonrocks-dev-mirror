@@ -1,4 +1,4 @@
-local git_ref = '1653da09ccd183f4312fba819056a13af22a65f6'
+local git_ref = 'fa5c61c7c5a2d9e8e99439e2cec90225f4acb86b'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-solidity-' .. '1653da09ccd183f4312fba819056a13af22a65f6',
+  dir = 'tree-sitter-solidity-' .. 'fa5c61c7c5a2d9e8e99439e2cec90225f4acb86b',
 }
 
 build = {
@@ -199,12 +199,8 @@ build = {
 
 ; Keywords
 [
-  "contract"
-  "interface"
   "library"
   "is"
-  "struct"
-  "enum"
   "event"
   "assembly"
   "emit"
@@ -218,6 +214,13 @@ build = {
   "receive"
   (virtual)
 ] @keyword
+
+[
+  "enum"
+  "struct"
+  "contract"
+  "interface"
+] @keyword.type
 
 ; FIXME: update grammar
 ; (block_statement "unchecked" @keyword)

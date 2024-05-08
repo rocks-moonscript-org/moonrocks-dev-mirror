@@ -487,7 +487,6 @@ build = {
   "const"
   "let"
   "var"
-  "type"
   "concept"
   "asm"
   "bind"
@@ -495,13 +494,17 @@ build = {
   "do"
   "mixin"
   "static"
-  "object"
   "tuple"
-  "enum"
   "block"
   "using"
   "discard"
 ] @keyword
+
+[
+  "enum"
+  "object"
+  "type"
+] @keyword.type
 
 ; =============================================================================
 ; @keyword.function    ; keywords that define a function (e.g. `func` in Go, `def` in Python)

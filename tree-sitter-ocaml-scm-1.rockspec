@@ -188,7 +188,6 @@ build = {
   "as"
   "assert"
   "begin"
-  "class"
   "constraint"
   "end"
   "external"
@@ -200,15 +199,19 @@ build = {
   "method"
   "module"
   "new"
-  "object"
   "of"
   "sig"
-  "struct"
-  "type"
   "val"
   "when"
   "with"
 ] @keyword
+
+[
+  "object"
+  "class"
+  "struct"
+  "type"
+] @keyword.type
 
 [
   "lazy"

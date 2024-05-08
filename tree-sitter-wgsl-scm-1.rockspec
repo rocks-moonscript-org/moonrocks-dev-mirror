@@ -75,7 +75,6 @@ build = {
   (type_declaration) @function.call)
 
 [
-  "struct"
   "bitcast"
   "discard"
   "enable"
@@ -86,6 +85,8 @@ build = {
   "override"
   (texel_format)
 ] @keyword
+
+"struct" @keyword.type
 
 [
   "private"

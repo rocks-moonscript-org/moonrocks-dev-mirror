@@ -1,4 +1,4 @@
-local git_ref = 'f5980f534ee64256b1e64b0a42e2864d91154a5d'
+local git_ref = '59d5fbd562c0e17c45312f49485098cce467f5ac'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-wgsl-bevy-' .. 'f5980f534ee64256b1e64b0a42e2864d91154a5d',
+  dir = 'tree-sitter-wgsl-bevy-' .. '59d5fbd562c0e17c45312f49485098cce467f5ac',
 }
 
 build = {

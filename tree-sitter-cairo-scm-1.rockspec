@@ -1,4 +1,4 @@
-local git_ref = '6216c6ee5e9fc0649c4bd7b1aedd884a55bdd9ef'
+local git_ref = '6238f609bea233040fe927858156dee5515a0745'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-cairo-' .. '6216c6ee5e9fc0649c4bd7b1aedd884a55bdd9ef',
+  dir = 'tree-sitter-cairo-' .. '6238f609bea233040fe927858156dee5515a0745',
 }
 
 build = {
@@ -158,8 +158,6 @@ build = {
 [
   ; 0.x
   "using"
-  "namespace"
-  "struct"
   "let"
   "const"
   "local"
@@ -173,15 +171,20 @@ build = {
   "call"
   "nondet"
   ; 1.0
-  "type"
   "impl"
   "implicits"
   "of"
   "ref"
   "mut"
-  "trait"
-  "enum"
 ] @keyword
+
+[
+  "struct"
+  "enum"
+  "namespace"
+  "type"
+  "trait"
+] @keyword.type
 
 [
   "func"

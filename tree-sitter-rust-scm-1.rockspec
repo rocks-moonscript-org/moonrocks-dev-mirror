@@ -1,4 +1,4 @@
-local git_ref = 'b77c0d8ac28a7c143224e6ed9b4f9e4bd044ff5b'
+local git_ref = '9c84af007b0f144954adb26b3f336495cbb320a7'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-rust-' .. 'b77c0d8ac28a7c143224e6ed9b4f9e4bd044ff5b',
+  dir = 'tree-sitter-rust-' .. '9c84af007b0f144954adb26b3f336495cbb320a7',
 }
 
 build = {
@@ -45,7 +45,7 @@ build = {
   (type_item)
   (union_item)
   (const_item)
-  (use_declaration)
+  (use_declaration)+
   (let_declaration)
   (loop_expression)
   (for_expression)
@@ -305,17 +305,20 @@ build = {
 
 [
   "default"
-  "enum"
   "impl"
   "let"
   "move"
-  "struct"
-  "trait"
-  "type"
-  "union"
   "unsafe"
   "where"
 ] @keyword
+
+[
+  "enum"
+  "struct"
+  "union"
+  "trait"
+  "type"
+] @keyword.type
 
 [
   "async"

@@ -1,4 +1,4 @@
-local git_ref = '02b4ee757654b7d54fe35352fd8e53a8a4385d42'
+local git_ref = 'f6be52c3d1cdb1c5e4dd7d8bce0a57497f55d6af'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-css-' .. '02b4ee757654b7d54fe35352fd8e53a8a4385d42',
+  dir = 'tree-sitter-css-' .. 'f6be52c3d1cdb1c5e4dd7d8bce0a57497f55d6af',
 }
 
 build = {
@@ -34,7 +34,10 @@ build = {
   copy_directories = { "queries" },
   queries = {
     ["folds.scm"] = [==[
-(rule_set) @fold
+[
+  (rule_set)
+  (import_statement)+
+] @fold
 ]==],
     ["highlights.scm"] = [==[
 [
@@ -141,6 +144,8 @@ build = {
   ")"
   "("
   "}"
+  "["
+  "]"
 ] @punctuation.bracket
 ]==],
     ["indents.scm"] = [==[

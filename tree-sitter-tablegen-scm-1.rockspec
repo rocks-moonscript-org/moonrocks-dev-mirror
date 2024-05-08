@@ -1,4 +1,4 @@
-local git_ref = '6b7eb096621443627cc5e29c8c34ff1fde482cf3'
+local git_ref = 'b1170880c61355aaf38fc06f4af7d3c55abdabc4'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-tablegen-' .. '6b7eb096621443627cc5e29c8c34ff1fde482cf3',
+  dir = 'tree-sitter-tablegen-' .. 'b1170880c61355aaf38fc06f4af7d3c55abdabc4',
 }
 
 build = {
@@ -58,8 +58,6 @@ build = {
 ; Keywords
 [
   "assert"
-  "class"
-  "multiclass"
   "field"
   "let"
   "def"
@@ -67,6 +65,11 @@ build = {
   "defset"
   "defvar"
 ] @keyword
+
+[
+  "multiclass"
+  "class"
+] @keyword.type
 
 "in" @keyword.operator
 
@@ -203,7 +206,7 @@ build = {
   (multiline_comment)
 ] @comment @spell
 
-((comment) @keyword.directive
+((comment) @keyword.directive @nospell
   (#lua-match? @keyword.directive "^.*RUN"))
 ]==],
     ["indents.scm"] = [==[

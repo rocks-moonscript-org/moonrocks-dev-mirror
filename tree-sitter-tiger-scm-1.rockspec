@@ -97,7 +97,6 @@ build = {
   "then"
   "type"
   "var"
-  "class"
   "extends"
   "_cast"
   "_chunks"
@@ -105,6 +104,8 @@ build = {
   "_lvalue"
   "_namety"
 ] @keyword
+
+"class" @keyword.type
 
 ; }}}
 ; Operators {{{

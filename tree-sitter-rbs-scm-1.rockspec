@@ -1,4 +1,4 @@
-local git_ref = '519a61132a51222e3ce73d3b7ef07465f587f346'
+local git_ref = 'e5e807a50fcd104a2d740d354632fc671700a0bf'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-rbs-' .. '519a61132a51222e3ce73d3b7ef07465f587f346',
+  dir = 'tree-sitter-rbs-' .. 'e5e807a50fcd104a2d740d354632fc671700a0bf',
 }
 
 build = {
@@ -59,10 +59,7 @@ build = {
 [
   "use"
   "as"
-  "class"
   "module"
-  "interface"
-  "type"
   "def"
   "attr_reader"
   "attr_writer"
@@ -70,6 +67,18 @@ build = {
   "end"
   "alias"
 ] @keyword
+
+[
+  "interface"
+  "type"
+  "class"
+] @keyword.type
+
+(class_decl
+  "end" @keyword.type)
+
+(interface_decl
+  "end" @keyword.type)
 
 "def" @keyword.function
 

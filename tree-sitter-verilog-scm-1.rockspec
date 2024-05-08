@@ -1,4 +1,4 @@
-local git_ref = '2dfddfcb891f74a1cdb9d8ce480a997d11846e17'
+local git_ref = '075ebfc84543675f12e79a955f79d717772dcef3'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-verilog-' .. '2dfddfcb891f74a1cdb9d8ce480a997d11846e17',
+  dir = 'tree-sitter-verilog-' .. '075ebfc84543675f12e79a955f79d717772dcef3',
 }
 
 build = {
@@ -50,10 +50,6 @@ build = {
   "endmodule"
   "program"
   "endprogram"
-  "class"
-  "endclass"
-  "interface"
-  "endinterface"
   "package"
   "endpackage"
   "checker"
@@ -83,6 +79,16 @@ build = {
   "extern"
   (unique_priority)
 ] @keyword
+
+[
+  "class"
+  "endclass"
+  "interface"
+  "endinterface"
+  "enum"
+  "struct"
+  "union"
+] @keyword.type
 
 [
   "function"
@@ -308,10 +314,6 @@ build = {
 (type_declaration
   (data_type
     "packed" @keyword.modifier))
-
-(struct_union) @type
-
-"enum" @type
 
 (enum_name_declaration
   (enum_identifier

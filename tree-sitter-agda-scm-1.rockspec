@@ -112,8 +112,9 @@ build = {
   "infix"
   "infixl"
   "infixr"
-  "record"
 ] @keyword
+
+"record" @keyword.type
 
 ;(expr
 ;	f_name: (atom) @function)

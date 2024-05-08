@@ -1,4 +1,4 @@
-local git_ref = '260afd9a92bac51b3a4546303103c3d40a430639'
+local git_ref = 'eca05edbab1918d7d36a0d30d086ba7b6b1e8803'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-kotlin-' .. '260afd9a92bac51b3a4546303103c3d40a430639',
+  dir = 'tree-sitter-kotlin-' .. 'eca05edbab1918d7d36a0d30d086ba7b6b1e8803',
 }
 
 build = {
@@ -293,12 +293,15 @@ build = {
 [
   "val"
   "var"
+  ;	"typeof" ; NOTE: It is reserved for future use
+] @keyword
+
+[
   "enum"
   "class"
   "object"
   "interface"
-  ;	"typeof" ; NOTE: It is reserved for future use
-] @keyword
+] @keyword.type
 
 [
   "return"

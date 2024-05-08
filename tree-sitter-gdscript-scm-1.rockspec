@@ -274,11 +274,9 @@ build = {
 
 [
   "pass"
-  "class"
   "class_name"
   "extends"
   "signal"
-  "enum"
   "var"
   "onready"
   "export"
@@ -290,6 +288,11 @@ build = {
   "mastersync"
   "puppetsync"
 ] @keyword
+
+[
+  "enum"
+  "class"
+] @keyword.type
 
 "func" @keyword.function
 

@@ -265,7 +265,7 @@ build = {
 
 ((source_file
   .
-  (line_comment) @keyword.directive)
+  (line_comment) @keyword.directive @nospell)
   (#lua-match? @keyword.directive "^#!/"))
 ]==],
     ["indents.scm"] = [==[

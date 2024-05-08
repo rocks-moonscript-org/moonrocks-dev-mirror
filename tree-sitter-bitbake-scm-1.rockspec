@@ -1,4 +1,4 @@
-local git_ref = '7e0e2ac6f1d0da1a91ab84f35edddfdfece54f1a'
+local git_ref = 'a5d04fdb5a69a02b8fa8eb5525a60dfb5309b73b'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-bitbake-' .. '7e0e2ac6f1d0da1a91ab84f35edddfdfece54f1a',
+  dir = 'tree-sitter-bitbake-' .. 'a5d04fdb5a69a02b8fa8eb5525a60dfb5309b73b',
 }
 
 build = {

@@ -1,4 +1,4 @@
-local git_ref = 'a22761025cdac6c314b7e3aa48fb44fa9e594d6a'
+local git_ref = '71778c2a472ed00a64abf4219544edbf8e4b86d7'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-python-' .. 'a22761025cdac6c314b7e3aa48fb44fa9e594d6a',
+  dir = 'tree-sitter-python-' .. '71778c2a472ed00a64abf4219544edbf8e4b86d7',
 }
 
 build = {
@@ -57,6 +57,11 @@ build = {
   (dictionary)
   (string)
 ] @fold
+
+[
+  (import_statement)
+  (import_from_statement)
+]+ @fold
 ]==],
     ["highlights.scm"] = [==[
 ; From tree-sitter-python licensed under MIT License
@@ -249,7 +254,7 @@ build = {
 
 ((module
   .
-  (comment) @keyword.directive)
+  (comment) @keyword.directive @nospell)
   (#lua-match? @keyword.directive "^#!/"))
 
 (string) @string
@@ -361,7 +366,6 @@ build = {
 
 [
   "assert"
-  "class"
   "exec"
   "global"
   "nonlocal"
@@ -369,8 +373,12 @@ build = {
   "print"
   "with"
   "as"
-  "type"
 ] @keyword
+
+[
+  "type"
+  "class"
+] @keyword.type
 
 [
   "async"

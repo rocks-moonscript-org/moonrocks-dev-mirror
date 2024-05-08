@@ -159,14 +159,17 @@ build = {
   "default"
   "defer"
   "goto"
-  "interface"
   "range"
   "select"
-  "struct"
-  "type"
   "var"
   "fallthrough"
 ] @keyword
+
+[
+  "type"
+  "struct"
+  "interface"
+] @keyword.type
 
 "func" @keyword.function
 

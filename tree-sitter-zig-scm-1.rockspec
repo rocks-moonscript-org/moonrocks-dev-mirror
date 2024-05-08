@@ -150,12 +150,15 @@ field_constant: (IDENTIFIER) @constant
   "defer"
   "errdefer"
   "test"
-  "struct"
-  "union"
-  "enum"
   "opaque"
   "error"
 ] @keyword
+
+[
+  "struct"
+  "union"
+  "enum"
+] @keyword.type
 
 [
   "async"

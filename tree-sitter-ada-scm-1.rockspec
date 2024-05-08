@@ -89,7 +89,6 @@ build = {
   "private"
   "protected"
   "range"
-  "record"
   "separate"
   "subtype"
   "synchronized"
@@ -100,6 +99,8 @@ build = {
   "until"
   "when"
 ] @keyword
+
+"record" @keyword.type
 
 [
   "aliased"

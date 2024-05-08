@@ -1,4 +1,4 @@
-local git_ref = '8518c3fa6b8562af545a496d55c9abd78f53e732'
+local git_ref = 'babb6d4da69b359bbb80adbf1fe39c0da9175210'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-arduino-' .. '8518c3fa6b8562af545a496d55c9abd78f53e732',
+  dir = 'tree-sitter-arduino-' .. 'babb6d4da69b359bbb80adbf1fe39c0da9175210',
 }
 
 build = {

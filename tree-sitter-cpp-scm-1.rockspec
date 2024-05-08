@@ -1,4 +1,4 @@
-local git_ref = '72fd00128f1c38319670cbf4bcedbba0dc849d96'
+local git_ref = '2369fa991eba294e9238e28280ffcd58132f94bc'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-cpp-' .. '72fd00128f1c38319670cbf4bcedbba0dc849d96',
+  dir = 'tree-sitter-cpp-' .. '2369fa991eba294e9238e28280ffcd58132f94bc',
 }
 
 build = {
@@ -254,19 +254,22 @@ build = {
 ] @keyword.exception
 
 [
-  "class"
   "decltype"
   "explicit"
   "friend"
-  "namespace"
   "override"
-  "template"
-  "typename"
   "using"
-  "concept"
   "requires"
   "constexpr"
 ] @keyword
+
+[
+  "class"
+  "namespace"
+  "template"
+  "typename"
+  "concept"
+] @keyword.type
 
 [
   "co_await"

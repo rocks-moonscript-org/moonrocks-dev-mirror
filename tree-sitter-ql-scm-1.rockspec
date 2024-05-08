@@ -1,4 +1,4 @@
-local git_ref = 'ff04ba61857ba05b80221e71b423b2728dbebe1e'
+local git_ref = 'fa5c3821dd2161f5c8528a8cbdb258daa6dc4de6'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -12,7 +12,7 @@ description = {
   summary = 'tree-sitter parser and Neovim queries for ql',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter/tree-sitter-ql',
-  license = 'Apache-2.0'
+  license = 'UNKNOWN'
 }
 
 build_dependencies = {
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-ql-' .. 'ff04ba61857ba05b80221e71b423b2728dbebe1e',
+  dir = 'tree-sitter-ql-' .. 'fa5c3821dd2161f5c8528a8cbdb258daa6dc4de6',
 }
 
 build = {
@@ -46,13 +46,11 @@ build = {
 [
   "as"
   "by"
-  "class"
   "extends"
   "from"
   "implies"
   "in"
   "module"
-  "newtype"
   "order"
   "select"
   "where"
@@ -60,6 +58,11 @@ build = {
   (result)
   (specialId)
 ] @keyword
+
+[
+  "newtype"
+  "class"
+] @keyword.type
 
 [
   "and"

@@ -52,6 +52,7 @@ build = {
   (preproc_function_def)
   (initializer_list)
   (gnu_asm_expression)
+  (preproc_include)+
 ] @fold
 
 (compound_statement
@@ -67,14 +68,17 @@ build = {
 
 [
   "default"
-  "enum"
-  "struct"
-  "typedef"
-  "union"
   "goto"
   "asm"
   "__asm__"
 ] @keyword
+
+[
+  "enum"
+  "struct"
+  "union"
+  "typedef"
+] @keyword.type
 
 [
   "sizeof"
@@ -508,8 +512,13 @@ build = {
   function: (identifier) @_function
   arguments: (argument_list
     .
-    (string_literal
-      (string_content) @injection.content)))
+    [
+      (string_literal
+        (string_content) @injection.content)
+      (concatenated_string
+        (string_literal
+          (string_content) @injection.content))
+    ]))
   ; format-ignore
   (#any-of? @_function 
     "printf" "printf_s"
@@ -530,8 +539,13 @@ build = {
   arguments: (argument_list
     (_)
     .
-    (string_literal
-      (string_content) @injection.content)))
+    [
+      (string_literal
+        (string_content) @injection.content)
+      (concatenated_string
+        (string_literal
+          (string_content) @injection.content))
+    ]))
   ; format-ignore
   (#any-of? @_function 
     "fprintf" "fprintf_s"
@@ -563,8 +577,13 @@ build = {
     .
     (_)
     .
-    (string_literal
-      (string_content) @injection.content)))
+    [
+      (string_literal
+        (string_content) @injection.content)
+      (concatenated_string
+        (string_literal
+          (string_content) @injection.content))
+    ]))
   ; format-ignore
   (#any-of? @_function 
     "sprintf_s"
@@ -588,8 +607,13 @@ build = {
     .
     (_)
     .
-    (string_literal
-      (string_content) @injection.content)))
+    [
+      (string_literal
+        (string_content) @injection.content)
+      (concatenated_string
+        (string_literal
+          (string_content) @injection.content))
+    ]))
   (#any-of? @_function "mvwprintw" "mvwscanw")
   (#set! injection.language "printf"))
 

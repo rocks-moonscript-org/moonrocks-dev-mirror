@@ -1,4 +1,4 @@
-local git_ref = 'ab8c30bde2df0e58c4b3f01f220fb0125ecb57a7'
+local git_ref = '4e0875f724d94d0c2ff36f9b8cb0b12f8b20d216'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-usd-' .. 'ab8c30bde2df0e58c4b3f01f220fb0125ecb57a7',
+  dir = 'tree-sitter-usd-' .. '4e0875f724d94d0c2ff36f9b8cb0b12f8b20d216',
 }
 
 build = {
@@ -78,10 +78,11 @@ build = {
   (identifier) @module)
 
 [
-  "class"
   "def"
   "over"
 ] @keyword.function
+
+"class" @keyword.type
 
 [
   "("

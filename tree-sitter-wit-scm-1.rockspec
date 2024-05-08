@@ -1,4 +1,4 @@
-local git_ref = 'ed13e0a3ee77833900a095d57d2685a1f7f91237'
+local git_ref = '3d6124cfe88555ecee1ba97d6d76c70d13af927a'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-wit-' .. 'ed13e0a3ee77833900a095d57d2685a1f7f91237',
+  dir = 'tree-sitter-wit-' .. '3d6124cfe88555ecee1ba97d6d76c70d13af927a',
 }
 
 build = {
@@ -34,93 +34,159 @@ build = {
   copy_directories = { "queries" },
   queries = {
     ["highlights.scm"] = [==[
-; Comments
-(line_comment) @comment
+(comment) @comment @spell
 
-(block_comment) @comment
+(ty
+  (id)) @type
 
-; Primitive Types
+(package_decl
+  (id)) @module
+
+(valid_semver) @string.special
+
+(world_item
+  name: (id) @module)
+
+(interface_item
+  name: (id) @module)
+
+(import_item
+  name: (id) @module
+  (extern_type
+    (interface_body)))
+
+(import_item
+  name: (id) @function
+  (extern_type
+    (func_type)))
+
+(export_item
+  name: (id) @module
+  (extern_type
+    (interface_body)))
+
+(export_item
+  name: (id) @function
+  (extern_type
+    (func_type)))
+
+(type_item
+  alias: (id) @type.definition)
+
+(func_item
+  name: (id) @function)
+
+(handle
+  (id) @type)
+
+(named_type
+  name: (id) @variable.parameter)
+
+(record_item
+  name: (id) @type)
+
+(record_field
+  name: (id) @variable.member)
+
+(flags_items
+  name: (id) @type)
+
+(flags_body
+  (id) @variable.member)
+
+(variant_items
+  name: (id) @type)
+
+(variant_case
+  name: (id) @type)
+
+(enum_items
+  name: (id) @type)
+
+(enum_body
+  enum_cases: (id) @constant)
+
+(resource_item
+  name: (id) @type)
+
+(resource_method
+  "constructor" @constructor)
+
+(toplevel_use_item
+  "use" @keyword.import)
+
+(use_item
+  "use" @keyword.import)
+
+(use_path
+  (id) @module)
+
+"func" @keyword.function
+
 [
-  "bool"
-  "s8"
-  "s16"
-  "s32"
-  "s64"
+  "type"
+  "interface"
+  "world"
+  "package"
+  "resource"
+  "record"
+  "enum"
+  "flags"
+  "variant"
+] @keyword.type
+
+"static" @keyword.modifier
+
+[
+  "include"
+  "import"
+  "export"
+] @keyword.import
+
+[
   "u8"
   "u16"
   "u32"
   "u64"
-  "float32"
-  "float64"
+  "s8"
+  "s16"
+  "s32"
+  "s64"
+  "f32"
+  "f64"
   "char"
+  "bool"
   "string"
-  ; Container Types
-  "list"
   "tuple"
+  "list"
   "option"
   "result"
+  "borrow"
 ] @type.builtin
 
-"func" @keyword.function
-
-; Keywords for file structure and components
 [
-  "record"
-  "enum"
-  "variant"
-  "flags"
-  "resource"
-] @keyword.type
-
-; Keywords for importing and exporting
-[
-  "package"
-  "world"
-  "use"
-  "import"
-] @keyword.import
-
-; Resource Keywords
-"static" @keyword.modifier
-
-; Named Types (Capitalized identifiers)
-((identifier) @type
-  (#match? @type "^[A-Z]"))
-
-((identifier) @variable
-  (#match? @variable "^[a-z_][a-zA-Z0-9_]*$"))
-
-; Constants (UPPER_CASE names and Enums)
-((identifier) @constant
-  (#match? @constant "^[A-Z][A-Z0-9_]+$"))
-
-; Functions and Methods (lowercase names followed by parentheses)
-((identifier) @function
-  (#match? @function "^[a-z_][a-zA-Z0-9_]*%("))
-
-; Punctuation
-[
-  ";"
-  ":"
+  "@"
   "->"
 ] @punctuation.special
 
-; Delimiters
-"," @punctuation.delimiter
+[
+  "/"
+  ";"
+  ":"
+  ","
+] @punctuation.delimiter
 
-; Brackets
 [
   "{"
   "}"
   "("
   ")"
 ] @punctuation.bracket
+
+"=" @operator
 ]==],
     ["injections.scm"] = [==[
-((line_comment) @comment
-  (#set! injection.language "comment"))
-
-((block_comment) @comment
+((comment) @injection.content
   (#set! injection.language "comment"))
 ]==],
   },

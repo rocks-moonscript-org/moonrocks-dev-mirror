@@ -218,7 +218,7 @@ build = {
 
 ((program
   .
-  (comment) @keyword.directive)
+  (comment) @keyword.directive @nospell)
   (#lua-match? @keyword.directive "^#!/"))
 ]==],
     ["indents.scm"] = [==[

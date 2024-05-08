@@ -1,4 +1,4 @@
-local git_ref = '123d8b472e949b59f348c32e245107a34a3d8945'
+local git_ref = '854a40e99f7c70258e522bdb8ab584ede6196e2e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-lalrpop-' .. '123d8b472e949b59f348c32e245107a34a3d8945',
+  dir = 'tree-sitter-lalrpop-' .. '854a40e99f7c70258e522bdb8ab584ede6196e2e',
 }
 
 build = {
@@ -33,15 +33,28 @@ build = {
   location = nil,
   copy_directories = { "queries" },
   queries = {
-    ["highlights.scm"] = [==[
+    ["folds.scm"] = [==[
 [
-  "enum"
-  "extern"
-  "grammar"
-  "match"
+  (grammar_item)
+  (use)+
+  (action)
+] @fold
+]==],
+    ["highlights.scm"] = [==[
+(comment) @comment @spell
+
+"grammar" @keyword
+
+[
   "type"
+  "enum"
+] @keyword.type
+
+[
   "pub"
-] @keyword
+  "extern"
+  (mut)
+] @keyword.modifier
 
 [
   "match"
@@ -56,28 +69,25 @@ build = {
   ; =>
   "=>@L"
   "=>@R"
+  "="
+  "&"
 ] @operator
-
-(grammar_type_params
-  [
-    "<"
-    ">"
-  ] @punctuation.bracket)
-
-(symbol
-  [
-    "<"
-    ">"
-  ] @punctuation.bracket)
-
-(binding_symbol
-  [
-    "<"
-    ">"
-  ] @punctuation.bracket)
 
 (binding_symbol
   name: (identifier) @variable.parameter)
+
+(annotation
+  "#" @punctuation.special)
+
+(grammar_parameter
+  (identifier) @variable.parameter)
+
+(associated_type
+  (identifier) @type)
+
+(parametrized_type
+  (path
+    (identifier) @type))
 
 (bare_symbol
   (macro
@@ -100,11 +110,17 @@ build = {
   ")"
   "["
   "]"
+  "}"
+  "{"
+  ">"
+  "<"
 ] @punctuation.bracket
 
 [
   ";"
   ":"
+  "::"
+  ","
 ] @punctuation.delimiter
 
 (lifetime
@@ -125,6 +141,9 @@ build = {
   (id) @function.macro)
 ]==],
     ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+
 ([
   (normal_action)
   (failible_action)

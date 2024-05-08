@@ -1,4 +1,4 @@
-local git_ref = 'f8fb3274f72a30896075585b32b0c54cad65c086'
+local git_ref = '2fbd860f802802ca76a6661ce025b3a3bca2d3ed'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-bash-' .. 'f8fb3274f72a30896075585b32b0c54cad65c086',
+  dir = 'tree-sitter-bash-' .. '2fbd860f802802ca76a6661ce025b3a3bca2d3ed',
 }
 
 build = {
@@ -275,7 +275,7 @@ build = {
 
 ((program
   .
-  (comment) @keyword.directive)
+  (comment) @keyword.directive @nospell)
   (#lua-match? @keyword.directive "^#!/"))
 ]==],
     ["injections.scm"] = [==[

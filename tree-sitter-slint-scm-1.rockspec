@@ -1,4 +1,4 @@
-local git_ref = 'd5fbeaf0c26683f1417d00b6a5ab1cca445031f2'
+local git_ref = '0701312b74b87fe20e61aa662ba41c5815b5d428'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-slint-' .. 'd5fbeaf0c26683f1417d00b6a5ab1cca445031f2',
+  dir = 'tree-sitter-slint-' .. '0701312b74b87fe20e61aa662ba41c5815b5d428',
 }
 
 build = {
@@ -263,7 +263,7 @@ build = {
   ] @keyword)
 
 (enum_definition
-  "enum" @keyword)
+  "enum" @keyword.type)
 
 (for_loop
   [
@@ -299,7 +299,7 @@ build = {
   ] @keyword)
 
 (struct_definition
-  "struct" @keyword)
+  "struct" @keyword.type)
 
 (transitions_definition
   [

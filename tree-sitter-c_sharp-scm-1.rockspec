@@ -1,4 +1,4 @@
-local git_ref = '9de565257ada70ac441c640e3b5d6850e2df5ab8'
+local git_ref = 'e1384e2f132936019b43aaaae154cd780fb497ce'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-c-sharp-' .. '9de565257ada70ac441c640e3b5d6850e2df5ab8',
+  dir = 'tree-sitter-c-sharp-' .. 'e1384e2f132936019b43aaaae154cd780fb497ce',
 }
 
 build = {
@@ -44,7 +44,10 @@ accessors: (accessor_list) @fold
 
 initializer: (initializer_expression) @fold
 
-(block) @fold
+[
+  (block)
+  (using_directive)+
+] @fold
 ]==],
     ["highlights.scm"] = [==[
 (identifier) @variable
@@ -452,18 +455,10 @@ initializer: (initializer_expression) @fold
   "implicit"
   "explicit"
   "override"
-  "class"
-  "delegate"
-  "enum"
-  "interface"
-  "namespace"
-  "struct"
   "get"
   "set"
   "init"
   "where"
-  "record"
-  "event"
   "add"
   "remove"
   "checked"
@@ -471,6 +466,17 @@ initializer: (initializer_expression) @fold
   "fixed"
   "alias"
 ] @keyword
+
+[
+  "enum"
+  "record"
+  "class"
+  "struct"
+  "interface"
+  "namespace"
+  "event"
+  "delegate"
+] @keyword.type
 
 [
   "async"

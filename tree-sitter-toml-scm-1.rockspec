@@ -1,4 +1,4 @@
-local git_ref = '8bd2056818b21860e3d756b5a58c4f6e05fb744e'
+local git_ref = '16a30c83ce427385b8d14939c45c137fcfca6c42'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-toml-' .. '8bd2056818b21860e3d756b5a58c4f6e05fb744e',
+  dir = 'tree-sitter-toml-' .. '16a30c83ce427385b8d14939c45c137fcfca6c42',
 }
 
 build = {
@@ -61,6 +61,8 @@ build = {
 (comment) @comment @spell
 
 (string) @string
+
+(escape_sequence) @string.escape
 
 (integer) @number
 

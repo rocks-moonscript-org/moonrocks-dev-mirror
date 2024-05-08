@@ -56,15 +56,21 @@ build = {
 ; Keywords
 [
   "arguments"
-  "classdef"
   "end"
-  "enumeration"
   "events"
   "global"
   "methods"
   "persistent"
   "properties"
 ] @keyword
+
+"enumeration" @keyword.type
+
+(class_definition
+  [
+    "classdef"
+    "end"
+  ] @keyword.type)
 
 ; Conditionals
 (if_statement

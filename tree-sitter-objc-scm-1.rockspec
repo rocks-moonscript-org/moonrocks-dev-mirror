@@ -104,8 +104,8 @@ build = {
 ] @keyword
 
 (class_declaration
-  "@" @keyword
-  "class" @keyword) ; I hate Obj-C for allowing "@ class" :)
+  "@" @keyword.type
+  "class" @keyword.type) ; I hate Obj-C for allowing "@ class" :)
 
 (method_definition
   [

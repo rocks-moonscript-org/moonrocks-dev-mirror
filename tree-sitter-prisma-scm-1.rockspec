@@ -47,12 +47,15 @@ build = {
 
 [
   "datasource"
-  "enum"
   "generator"
   "model"
-  "type"
   "view"
 ] @keyword
+
+[
+  "type"
+  "enum"
+] @keyword.type
 
 (comment) @comment @spell
 

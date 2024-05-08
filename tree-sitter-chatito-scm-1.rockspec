@@ -1,4 +1,4 @@
-local git_ref = 'fe7a2a75d3d74c1215141b7a7ebebb57ae17a370'
+local git_ref = 'a461f20dedb43905febb12c1635bc7d2e43e96f0'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-chatito-' .. 'fe7a2a75d3d74c1215141b7a7ebebb57ae17a370',
+  dir = 'tree-sitter-chatito-' .. 'a461f20dedb43905febb12c1635bc7d2e43e96f0',
 }
 
 build = {

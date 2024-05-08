@@ -169,18 +169,21 @@ build = {
 
 ; Keywords
 [
-  "enum"
   "exception"
   "extends"
-  "interaction"
-  "namespace"
-  "senum"
-  "service"
-  "struct"
   "typedef"
-  "union"
   "uri"
 ] @keyword
+
+[
+  "enum"
+  "struct"
+  "union"
+  "senum"
+  "interaction"
+  "namespace"
+  "service"
+] @keyword.type
 
 ; Deprecated Keywords
 [
@@ -287,7 +290,7 @@ build = {
 ((comment) @comment.documentation
   (#lua-match? @comment.documentation "^///$"))
 
-((comment) @keyword.directive
+((comment) @keyword.directive @nospell
   (#lua-match? @keyword.directive "#!.*"))
 ]==],
     ["indents.scm"] = [==[

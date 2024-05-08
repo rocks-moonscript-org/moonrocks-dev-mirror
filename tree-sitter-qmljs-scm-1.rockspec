@@ -1,4 +1,4 @@
-local git_ref = '9fa49ff3315987f715ce5666ff979a7742fa8a98'
+local git_ref = '2c57cac27e207425f8df15327884434cb12365a3'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-qmljs-' .. '9fa49ff3315987f715ce5666ff979a7742fa8a98',
+  dir = 'tree-sitter-qmljs-' .. '2c57cac27e207425f8df15327884434cb12365a3',
 }
 
 build = {
@@ -148,14 +148,17 @@ build = {
   "property"
   "signal"
   "declare"
-  "enum"
   "export"
   "implements"
-  "interface"
-  "namespace"
-  "type"
   "override"
 ] @keyword
+
+[
+  "interface"
+  "type"
+  "enum"
+  "namespace"
+] @keyword.type
 
 "keyof" @keyword.operator
 ]==],

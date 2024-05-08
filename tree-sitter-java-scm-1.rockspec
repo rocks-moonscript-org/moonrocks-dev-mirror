@@ -40,6 +40,7 @@ build = {
   (constructor_declaration)
   (argument_list)
   (annotation_argument_list)
+  (import_declaration)+
 ] @fold
 ]==],
     ["highlights.scm"] = [==[
@@ -132,6 +133,9 @@ build = {
 (constructor_declaration
   name: (identifier) @type)
 
+(compact_constructor_declaration
+  name: (identifier) @type)
+
 (type_identifier) @type
 
 ((type_identifier) @type.builtin
@@ -213,19 +217,22 @@ build = {
 ; Keywords
 [
   "assert"
-  "class"
-  "record"
   "default"
-  "enum"
   "extends"
   "implements"
   "instanceof"
-  "interface"
   "@interface"
   "permits"
   "to"
   "with"
 ] @keyword
+
+[
+  "record"
+  "class"
+  "enum"
+  "interface"
+] @keyword.type
 
 (synchronized_statement
   "synchronized" @keyword)

@@ -1,4 +1,4 @@
-local git_ref = '8327eb84d55639ffbe08c9dc82da7fff72a1ad07'
+local git_ref = 'fa898ac0885d1da9a253695c3e0e91f5efc587cd'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-smithy-' .. '8327eb84d55639ffbe08c9dc82da7fff72a1ad07',
+  dir = 'tree-sitter-smithy-' .. 'fa898ac0885d1da9a253695c3e0e91f5efc587cd',
 }
 
 build = {
@@ -52,7 +52,13 @@ build = {
   "list"
   "map"
   "set"
-] @type.builtin
+  "structure"
+  "union"
+  "namespace"
+  "service"
+  "operation"
+  "resource"
+] @keyword.type
 
 ; Fields (Members)
 ; (field) @variable.member
@@ -93,12 +99,6 @@ build = {
 
 ; Keywords
 [
-  "namespace"
-  "service"
-  "structure"
-  "operation"
-  "union"
-  "resource"
   "metadata"
   "apply"
   "for"

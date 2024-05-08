@@ -61,15 +61,19 @@ build = {
 
 (doc_comment) @comment.documentation @spell
 
-"method" @keyword.function
-
 [
   "service"
   "errors"
-  "data"
+] @keyword
+
+"method" @keyword.function
+
+[
   "enum"
-  "extern"
-] @type.builtin
+  "data"
+] @keyword.type
+
+"extern" @keyword.modifier
 
 (type) @type.builtin
 
