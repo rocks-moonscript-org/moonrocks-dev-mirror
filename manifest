@@ -8609,6 +8609,13 @@ repository = {
          }
       }
    },
+   snaphelpers = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    socks5 = {
       ['dev-1'] = {
          {
