@@ -43,8 +43,9 @@ build = {
   "const"
   "varying"
   "uniform"
-  "struct"
 ] @keyword
+
+"struct" @keyword.type
 
 [
   (precision_qualifier)

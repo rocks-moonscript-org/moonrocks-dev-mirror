@@ -312,8 +312,6 @@ build = {
   "__nullable__"
   "defined"
   "delete"
-  "enum"
-  "funcenum"
   "functag"
   "get"
   "methodmap"
@@ -321,11 +319,16 @@ build = {
   "property"
   "public"
   "set"
-  "struct"
-  "typedef"
   "typeset"
   "void"
 ] @keyword
+
+[
+  "enum"
+  "funcenum"
+  "struct"
+  "typedef"
+] @keyword.type
 
 [
   "const"

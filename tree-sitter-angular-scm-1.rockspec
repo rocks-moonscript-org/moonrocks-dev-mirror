@@ -1,4 +1,4 @@
-local git_ref = 'b7a7167762e3863b3d6247c708b7f9bca1ca7bea'
+local git_ref = '10f21f3f1b10584e62ecc113ab3cda1196d0ceb8'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-angular-' .. 'b7a7167762e3863b3d6247c708b7f9bca1ca7bea',
+  dir = 'tree-sitter-angular-' .. '10f21f3f1b10584e62ecc113ab3cda1196d0ceb8',
 }
 
 build = {
@@ -140,6 +140,12 @@ build = {
   (defer_end_expression)
 ] @punctuation.bracket
 
+(two_way_binding
+  [
+    "[("
+    ")]"
+  ] @punctuation.bracket)
+
 [
   "{{"
   "}}"
@@ -157,6 +163,10 @@ build = {
 
 (concatenation_expression
   "+" @operator)
+
+(icu_clause) @keyword.operator
+
+(icu_category) @keyword.conditional
 
 (binary_expression
   [

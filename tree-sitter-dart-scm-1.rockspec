@@ -1,4 +1,4 @@
-local git_ref = '4e101058b4ec7ce4ba92496311a7dd10a4c9c66a'
+local git_ref = 'ac0bb849ccd1a923963af47573b5e396736ff582'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-dart-' .. '4e101058b4ec7ce4ba92496311a7dd10a4c9c66a',
+  dir = 'tree-sitter-dart-' .. 'ac0bb849ccd1a923963af47573b5e396736ff582',
 }
 
 build = {
@@ -246,10 +246,7 @@ build = {
   (case_builtin)
   "late"
   "required"
-  "extension"
   "on"
-  "class"
-  "enum"
   "extends"
   "in"
   "is"
@@ -257,6 +254,12 @@ build = {
   "super"
   "with"
 ] @keyword
+
+[
+  "class"
+  "enum"
+  "extension"
+] @keyword.type
 
 "return" @keyword.return
 

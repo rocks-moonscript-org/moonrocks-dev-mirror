@@ -1,4 +1,4 @@
-local git_ref = '81c2a8667846b1e60db68b5601d864fe00fd1d3a'
+local git_ref = '4ebe237c1cf64cf3826fc249e9ec0988fe07e58e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-cooklang-' .. '81c2a8667846b1e60db68b5601d864fe00fd1d3a',
+  dir = 'tree-sitter-cooklang-' .. '4ebe237c1cf64cf3826fc249e9ec0988fe07e58e',
 }
 
 build = {

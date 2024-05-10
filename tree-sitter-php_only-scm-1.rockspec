@@ -1,4 +1,4 @@
-local git_ref = '29838ad107f50b1f5f51a0beefa9c9d834fce2b3'
+local git_ref = 'd5aea05a70c5d021fa746516391f156d35658875'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-php-' .. '29838ad107f50b1f5f51a0beefa9c9d834fce2b3',
+  dir = 'tree-sitter-php-' .. 'd5aea05a70c5d021fa746516391f156d35658875',
 }
 
 build = {
@@ -68,25 +68,28 @@ build = {
 ] @keyword.function
 
 [
-  "class"
   "clone"
   "declare"
   "default"
   "echo"
   "enddeclare"
-  "enum"
   "extends"
   "global"
   "goto"
   "implements"
   "insteadof"
-  "interface"
   "print"
-  "namespace"
   "new"
-  "trait"
   "unset"
 ] @keyword
+
+[
+  "enum"
+  "class"
+  "interface"
+  "namespace"
+  "trait"
+] @keyword.type
 
 [
   "abstract"
@@ -545,7 +548,7 @@ build = {
     .
     (argument
       (_
-        (string_value) @injection.content))))
+        (string_content) @injection.content))))
   (#set! injection.language "regex")
   (#lua-match? @_preg_func_identifier "^preg_"))
 
@@ -556,7 +559,7 @@ build = {
     .
     (argument
       (_
-        (string_value) @injection.content))))
+        (string_content) @injection.content))))
   (#set! injection.language "bash")
   (#any-of? @_shell_func_identifier
     "shell_exec" "escapeshellarg" "escapeshellcmd" "exec" "passthru" "proc_open" "shell_exec"
@@ -564,7 +567,7 @@ build = {
 
 (expression_statement
   (shell_command_expression
-    (string_value) @injection.content)
+    (string_content) @injection.content)
   (#set! injection.language "bash"))
 ]==],
     ["locals.scm"] = [==[

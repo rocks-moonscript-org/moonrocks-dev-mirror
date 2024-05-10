@@ -1,4 +1,4 @@
-local git_ref = '96a17c4c2dd345dc61f330d040684538d634bbc2'
+local git_ref = 'd4ebabd45bcb053fcc7f6688b5c8ed80c7ae7a32'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-perl-' .. '96a17c4c2dd345dc61f330d040684538d634bbc2',
+  dir = 'tree-sitter-perl-' .. 'd4ebabd45bcb053fcc7f6688b5c8ed80c7ae7a32',
 }
 
 build = {
@@ -63,7 +63,7 @@ build = {
     ["highlights.scm"] = [==[
 ((source_file
   .
-  (comment) @keyword.directive)
+  (comment) @keyword.directive @nospell)
   (#lua-match? @keyword.directive "^#!/"))
 
 [
@@ -315,7 +315,7 @@ build = {
 (keyval_expression
   hash: (_) @variable)
 
-(comment) @comment
+(comment) @comment @spell
 
 [
   "=>"
