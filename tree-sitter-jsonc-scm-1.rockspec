@@ -16,7 +16,7 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 3.0.0',
 }
 
 source = {
@@ -28,8 +28,8 @@ build = {
   type = "treesitter-parser",
   lang = "jsonc",
   sources = { "src/parser.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  generate = false,
+  generate_from_json = true,
   location = nil,
   copy_directories = { "queries" },
   queries = {

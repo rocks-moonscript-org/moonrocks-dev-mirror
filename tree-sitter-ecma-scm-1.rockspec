@@ -16,7 +16,7 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 3.0.0',
 }
 
 source = {
@@ -28,8 +28,8 @@ build = {
   type = "treesitter-parser",
   lang = "ecma",
   sources = {},
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
@@ -49,10 +49,11 @@ build = {
   (switch_statement)
   (switch_case)
   (switch_default)
-  (import_statement)
+  (import_statement)+
   (if_statement)
   (try_statement)
   (catch_clause)
+  (array)
   (object)
   (generator_function)
   (generator_function_declaration)
@@ -399,7 +400,6 @@ build = {
 
 [
   "break"
-  "class"
   "const"
   "debugger"
   "export"
@@ -412,6 +412,8 @@ build = {
   "var"
   "with"
 ] @keyword
+
+"class" @keyword.type
 
 [
   "async"
@@ -533,9 +535,13 @@ build = {
 ((comment) @injection.content
   (#set! injection.language "comment"))
 
-; html(`...`), html`...`, sql(...) etc
+; html(`...`), html`...`, sql(`...`), etc.
 (call_expression
-  function: (identifier) @injection.language
+  function: [
+    (await_expression
+      (identifier) @injection.language)
+    (identifier) @injection.language
+  ]
   arguments: [
     (arguments
       (template_string) @injection.content)
@@ -551,8 +557,13 @@ build = {
 
 ; svg`...` or svg(`...`)
 (call_expression
-  function: ((identifier) @_name
-    (#eq? @_name "svg"))
+  function: [
+    (await_expression
+      (identifier) @_name
+      (#eq? @_name "svg"))
+    ((identifier) @_name
+      (#eq? @_name "svg"))
+  ]
   arguments: [
     (arguments
       (template_string) @injection.content)
@@ -563,16 +574,26 @@ build = {
   (#set! injection.language "html"))
 
 (call_expression
-  function: ((identifier) @_name
-    (#eq? @_name "gql"))
+  function: [
+    (await_expression
+      (identifier) @_name
+      (#eq? @_name "gql"))
+    ((identifier) @_name
+      (#eq? @_name "gql"))
+  ]
   arguments: ((template_string) @injection.content
     (#offset! @injection.content 0 1 0 -1)
     (#set! injection.include-children)
     (#set! injection.language "graphql")))
 
 (call_expression
-  function: ((identifier) @_name
-    (#eq? @_name "hbs"))
+  function: [
+    (await_expression
+      (identifier) @_name
+      (#eq? @_name "hbs"))
+    ((identifier) @_name
+      (#eq? @_name "hbs"))
+  ]
   arguments: ((template_string) @injection.content
     (#offset! @injection.content 0 1 0 -1)
     (#set! injection.include-children)
@@ -583,8 +604,13 @@ build = {
 
 ; css`<css>`, keyframes`<css>`
 (call_expression
-  function: (identifier) @_name
-  (#any-of? @_name "css" "keyframes")
+  function: [
+    (await_expression
+      (identifier) @_name
+      (#any-of? @_name "css" "keyframes"))
+    ((identifier) @_name
+      (#any-of? @_name "css" "keyframes"))
+  ]
   arguments: ((template_string) @injection.content
     (#offset! @injection.content 0 1 0 -1)
     (#set! injection.include-children)
