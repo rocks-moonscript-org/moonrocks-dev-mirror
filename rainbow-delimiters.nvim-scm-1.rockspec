@@ -1,4 +1,4 @@
-local git_ref = '7ef0766b5cd2f5cdf4fcb08886f0a2ebf65981fa'
+local git_ref = 'dd1156723eb8483e4403eb8765bbdff456b6981d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'rainbow-delimiters.nvim-' .. '7ef0766b5cd2f5cdf4fcb08886f0a2ebf65981fa',
+  dir = 'rainbow-delimiters.nvim-' .. 'dd1156723eb8483e4403eb8765bbdff456b6981d',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

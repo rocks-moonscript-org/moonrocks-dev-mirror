@@ -1,4 +1,4 @@
-local git_ref = 'cf647c98dc2e9a8b83b348fa9a111449b5f29764'
+local git_ref = 'f2eed25f0f049105e451929a5a312a5f0c6bba7a'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'CodeGPT.nvim-' .. 'cf647c98dc2e9a8b83b348fa9a111449b5f29764',
+  dir = 'CodeGPT.nvim-' .. 'f2eed25f0f049105e451929a5a312a5f0c6bba7a',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
