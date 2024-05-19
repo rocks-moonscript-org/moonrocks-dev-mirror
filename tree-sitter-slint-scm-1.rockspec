@@ -16,7 +16,7 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
@@ -27,9 +27,9 @@ source = {
 build = {
   type = "treesitter-parser",
   lang = "slint",
-  sources = { "src/parser.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
@@ -95,6 +95,9 @@ build = {
   ]) @type
 
 (user_type_identifier) @type
+
+(enum_block
+  (user_type_identifier) @constant)
 
 ; Functions and callbacks
 (argument) @variable.parameter
@@ -233,7 +236,7 @@ build = {
 ; Keywords:
 (animate_option_identifier) @keyword
 
-(export) @keyword
+(export) @keyword.import
 
 (if_statement
   "if" @keyword.conditional)

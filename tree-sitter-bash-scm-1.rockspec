@@ -16,7 +16,7 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
@@ -27,9 +27,9 @@ source = {
 build = {
   type = "treesitter-parser",
   lang = "bash",
-  sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
@@ -140,12 +140,13 @@ build = {
 [
   "declare"
   "typeset"
-  "export"
   "readonly"
   "local"
   "unset"
   "unsetenv"
 ] @keyword
+
+"export" @keyword.import
 
 "function" @keyword.function
 

@@ -16,7 +16,7 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
@@ -27,9 +27,9 @@ source = {
 build = {
   type = "treesitter-parser",
   lang = "query",
-  sources = { "src/parser.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
@@ -155,7 +155,7 @@ build = {
   name: (identifier) @_name
   parameters: (parameters
     (string) @injection.content))
-  (#any-of? @_name "match" "not-match" "vim-match" "not-vim-match")
+  (#any-of? @_name "match" "not-match" "any-match" "vim-match" "not-vim-match" "any-vim-match")
   (#set! injection.language "regex")
   (#offset! @injection.content 0 1 0 -1))
 
@@ -163,7 +163,7 @@ build = {
   name: (identifier) @_name
   parameters: (parameters
     (string) @injection.content))
-  (#any-of? @_name "lua-match" "not-lua-match")
+  (#any-of? @_name "lua-match" "not-lua-match" "any-lua-match")
   (#set! injection.language "luap")
   (#offset! @injection.content 0 1 0 -1))
 

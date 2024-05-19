@@ -1,4 +1,4 @@
-local git_ref = '3d6124cfe88555ecee1ba97d6d76c70d13af927a'
+local git_ref = 'cab94791450524a542324d8cbe8017d69c516d8e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-wit-' .. '3d6124cfe88555ecee1ba97d6d76c70d13af927a',
+  dir = 'tree-sitter-wit-' .. 'cab94791450524a542324d8cbe8017d69c516d8e',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "wit",
-  sources = { "src/parser.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {

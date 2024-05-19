@@ -1,4 +1,4 @@
-local git_ref = 'e2f0b7cf8136b801e4743790b7a956ab29a4d6b0'
+local git_ref = 'c9c669b4513479e07a0ff44cf14f72351959ac21'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-swift-' .. 'e2f0b7cf8136b801e4743790b7a956ab29a4d6b0',
+  dir = 'tree-sitter-swift-' .. 'c9c669b4513479e07a0ff44cf14f72351959ac21',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "swift",
-  sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = true,
-  generate_requires_npm = false,
+  parser = true,
+  generate = true,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
@@ -103,11 +103,6 @@ build = {
   bound_identifier: (simple_identifier)) @variable
 
 [
-  "typealias"
-  "struct"
-  "class"
-  "actor"
-  "enum"
   "protocol"
   "extension"
   "indirect"
@@ -122,6 +117,13 @@ build = {
   "didSet"
   "willSet"
 ] @keyword
+
+[
+  "enum"
+  "struct"
+  "class"
+  "typealias"
+] @keyword.type
 
 [
   "async"

@@ -1,4 +1,4 @@
-local git_ref = 'fa5c61c7c5a2d9e8e99439e2cec90225f4acb86b'
+local git_ref = 'b5a23ead0f69d38b5c9a630f52f5c129132c16ed'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-solidity-' .. 'fa5c61c7c5a2d9e8e99439e2cec90225f4acb86b',
+  dir = 'tree-sitter-solidity-' .. 'b5a23ead0f69d38b5c9a630f52f5c129132c16ed',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "solidity",
-  sources = { "src/parser.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
@@ -320,39 +320,38 @@ build = {
   "=>"
 ] @punctuation.delimiter
 
-; Operators
-[
-  "&&"
-  "||"
-  ">>"
-  ">>>"
-  "<<"
-  "&"
-  "^"
-  "|"
-  "+"
-  "-"
-  "*"
-  "/"
-  "%"
-  "**"
-  "="
-  "<"
-  "<="
-  "=="
-  "!="
-  "!=="
-  ">="
-  ">"
-  "!"
-  "~"
-  "-"
-  "+"
-  "++"
-  "--"
-  ":="
-] @operator
-
+; Operators: currently broken: https://github.com/JoranHonig/tree-sitter-solidity/issues/59
+;[
+;  "&&"
+;  "||"
+;  ">>"
+;  ">>>"
+;  "<<"
+;  "&"
+;  "^"
+;  "|"
+;  "+"
+;  "-"
+;  "*"
+;  "/"
+;  "%"
+;  "**"
+;  "="
+;  "<"
+;  "<="
+;  "=="
+;  "!="
+;  "!=="
+;  ">="
+;  ">"
+;  "!"
+;  "~"
+;  "-"
+;  "+"
+;  "++"
+;  "--"
+;  ":="
+;] @operator
 [
   "delete"
   "new"

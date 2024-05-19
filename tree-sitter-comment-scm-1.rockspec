@@ -1,4 +1,4 @@
-local git_ref = 'aefcc2813392eb6ffe509aa0fc8b4e9b57413ee1'
+local git_ref = '5d8b29f6ef3bf64d59430dcfe76b31cc44b5abfd'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-comment-' .. 'aefcc2813392eb6ffe509aa0fc8b4e9b57413ee1',
+  dir = 'tree-sitter-comment-' .. '5d8b29f6ef3bf64d59430dcfe76b31cc44b5abfd',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "comment",
-  sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {

@@ -1,4 +1,4 @@
-local git_ref = '6e41628e9d18b19caea1cb1d72aae4ccff5bdfe9'
+local git_ref = '3a1ace906c151dd631cf6f149b5083f2b60e6a9e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-clojure-' .. '6e41628e9d18b19caea1cb1d72aae4ccff5bdfe9',
+  dir = 'tree-sitter-clojure-' .. '3a1ace906c151dd631cf6f149b5083f2b60e6a9e',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "clojure",
-  sources = { "src/parser.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {

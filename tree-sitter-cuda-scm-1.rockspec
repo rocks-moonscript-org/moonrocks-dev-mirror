@@ -1,4 +1,4 @@
-local git_ref = 'c794560823013fc4cc29944d862b7158d9585408'
+local git_ref = 'e7878a9cf4157e9d6c8013ff5605c9f26d62894d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-cuda-' .. 'c794560823013fc4cc29944d862b7158d9585408',
+  dir = 'tree-sitter-cuda-' .. 'e7878a9cf4157e9d6c8013ff5605c9f26d62894d',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "cuda",
-  sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = true,
   location = nil,
   copy_directories = { "queries" },
   queries = {

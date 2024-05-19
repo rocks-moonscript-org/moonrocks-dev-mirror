@@ -16,7 +16,7 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
@@ -27,9 +27,9 @@ source = {
 build = {
   type = "treesitter-parser",
   lang = "rust",
-  sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
@@ -91,7 +91,10 @@ build = {
 (mod_item
   name: (identifier) @module)
 
-(self) @variable.builtin
+[
+  (self)
+  "_"
+] @variable.builtin
 
 (label
   [
@@ -107,7 +110,10 @@ build = {
   (identifier) @function)
 
 (parameter
-  (identifier) @variable.parameter)
+  [
+    (identifier)
+    "_"
+  ] @variable.parameter)
 
 (closure_parameters
   (_) @variable.parameter)

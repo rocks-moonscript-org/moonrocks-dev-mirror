@@ -1,4 +1,4 @@
-local git_ref = 'ae2134af67f6c5e45587ace9ec748dd6e7b356a2'
+local git_ref = 'cd82eb40d31bdfe65f846f4e06292d6c804b5e0e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-latex-' .. 'ae2134af67f6c5e45587ace9ec748dd6e7b356a2',
+  dir = 'tree-sitter-latex-' .. 'cd82eb40d31bdfe65f846f4e06292d6c804b5e0e',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "latex",
-  sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = true,
-  generate_requires_npm = false,
+  parser = true,
+  generate = true,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
@@ -123,7 +123,7 @@ build = {
 
 (theorem_definition
   command: _ @function.macro
-  name: (curly_group_text
+  name: (curly_group_text_list
     (_) @label))
 
 (paired_delimiter_definition
@@ -384,10 +384,10 @@ build = {
   (comment_environment)
 ] @comment @spell
 
-((line_comment) @keyword.directive
+((line_comment) @keyword.directive @nospell
   (#lua-match? @keyword.directive "^%% !TeX"))
 
-((line_comment) @keyword.directive
+((line_comment) @keyword.directive @nospell
   (#lua-match? @keyword.directive "^%%&"))
 ]==],
     ["injections.scm"] = [==[

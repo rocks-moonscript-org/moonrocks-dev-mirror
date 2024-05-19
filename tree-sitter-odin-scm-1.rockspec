@@ -1,4 +1,4 @@
-local git_ref = 'b5f668ef8918aab13812ce73acd89fe191fb8c5e'
+local git_ref = 'f25b8c5201c1480dc0c8c4155a059a79a5a40719'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-odin-' .. 'b5f668ef8918aab13812ce73acd89fe191fb8c5e',
+  dir = 'tree-sitter-odin-' .. 'f25b8c5201c1480dc0c8c4155a059a79a5a40719',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "odin",
-  sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
@@ -238,7 +238,7 @@ build = {
 
 ((identifier) @type
   (#lua-match? @type "^[A-Z][a-zA-Z0-9]*$")
-  (#not-has-parent? @type parameter procedure_declaration))
+  (#not-has-parent? @type parameter procedure_declaration call_expression))
 
 ; Fields
 (member_expression

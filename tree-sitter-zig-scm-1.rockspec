@@ -16,7 +16,7 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
@@ -27,9 +27,9 @@ source = {
 build = {
   type = "treesitter-parser",
   lang = "zig",
-  sources = { "src/parser.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
@@ -152,6 +152,8 @@ field_constant: (IDENTIFIER) @constant
   "test"
   "opaque"
   "error"
+  "const"
+  "var"
 ] @keyword
 
 [
@@ -191,7 +193,10 @@ field_constant: (IDENTIFIER) @constant
   "continue"
 ] @keyword.repeat
 
-"usingnamespace" @keyword.import
+[
+  "usingnamespace"
+  "export"
+] @keyword.import
 
 [
   "try"
@@ -204,28 +209,22 @@ field_constant: (IDENTIFIER) @constant
 ] @type.builtin
 
 [
-  "const"
-  "var"
   "volatile"
   "allowzero"
   "noalias"
-] @keyword.modifier
-
-[
   "addrspace"
   "align"
   "callconv"
   "linksection"
+  "pub"
+  "inline"
+  "noinline"
+  "extern"
 ] @keyword.modifier
 
 [
   "comptime"
-  "export"
-  "extern"
-  "inline"
-  "noinline"
   "packed"
-  "pub"
   "threadlocal"
 ] @attribute
 
@@ -256,6 +255,7 @@ field_constant: (IDENTIFIER) @constant
   "."
   ","
   ":"
+  "=>"
 ] @punctuation.delimiter
 
 [
@@ -270,13 +270,21 @@ field_constant: (IDENTIFIER) @constant
   ")"
   "{"
   "}"
-  (Payload
-    "|")
-  (PtrPayload
-    "|")
-  (PtrIndexPayload
-    "|")
 ] @punctuation.bracket
+
+(Payload
+  "|" @punctuation.bracket)
+
+(PtrPayload
+  "|" @punctuation.bracket)
+
+(PtrIndexPayload
+  "|" @punctuation.bracket)
+
+(ParamType
+  (ErrorUnionExpr
+    (SuffixExpr
+      variable_type_function: (IDENTIFIER) @type)))
 ]==],
     ["indents.scm"] = [==[
 [

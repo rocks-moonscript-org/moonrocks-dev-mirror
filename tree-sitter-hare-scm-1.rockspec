@@ -16,7 +16,7 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
@@ -27,9 +27,9 @@ source = {
 build = {
   type = "treesitter-parser",
   lang = "hare",
-  sources = { "src/parser.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
@@ -76,7 +76,10 @@ build = {
   (#lua-match? @constant "^[A-Z_]+$"))
 
 ; Includes
-"use" @keyword.import
+[
+  "use"
+  "export"
+] @keyword.import
 
 (use_statement
   (scoped_type_identifier
@@ -97,7 +100,6 @@ build = {
 ; Keywords
 [
   "def"
-  "export"
   "let"
 ] @keyword
 

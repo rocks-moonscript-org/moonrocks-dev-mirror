@@ -1,4 +1,4 @@
-local git_ref = 'eb68645662a3f7bf7fdd4bcb9531585f54c8570e'
+local git_ref = '7ee8d928db5202f6831a78f8112fd693bf69f98b'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-go-' .. 'eb68645662a3f7bf7fdd4bcb9531585f54c8570e',
+  dir = 'tree-sitter-go-' .. '7ee8d928db5202f6831a78f8112fd693bf69f98b',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "go",
-  sources = { "src/parser.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {

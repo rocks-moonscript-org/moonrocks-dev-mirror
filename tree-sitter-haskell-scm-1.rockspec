@@ -1,4 +1,4 @@
-local git_ref = 'e29c59236283198d93740a796c50d1394bccbef5'
+local git_ref = 'a50070d5bb5bd5c1281740a6102ecf1f4b0c4f19'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-haskell-' .. 'e29c59236283198d93740a796c50d1394bccbef5',
+  dir = 'tree-sitter-haskell-' .. 'a50070d5bb5bd5c1281740a6102ecf1f4b0c4f19',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "haskell",
-  sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {

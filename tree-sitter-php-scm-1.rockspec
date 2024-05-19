@@ -1,4 +1,4 @@
-local git_ref = 'd5aea05a70c5d021fa746516391f156d35658875'
+local git_ref = '27afeb02e49ff30acd17b67897b1c0114561a38c'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-php-' .. 'd5aea05a70c5d021fa746516391f156d35658875',
+  dir = 'tree-sitter-php-' .. '27afeb02e49ff30acd17b67897b1c0114561a38c',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "php",
-  sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = "php",
   copy_directories = { "queries" },
   queries = {

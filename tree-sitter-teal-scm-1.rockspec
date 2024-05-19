@@ -16,7 +16,7 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
@@ -27,9 +27,9 @@ source = {
 build = {
   type = "treesitter-parser",
   lang = "teal",
-  sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = true,
-  generate_requires_npm = false,
+  parser = true,
+  generate = true,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
@@ -204,24 +204,24 @@ build = {
 ; Types
 (record_declaration
   .
-  "record" @keyword
+  "record" @keyword.type
   name: (identifier) @type)
 
 (anon_record
   .
-  "record" @keyword)
+  "record" @keyword.type)
 
 (record_body
   (record_declaration
     .
-    "record" @keyword
+    "record" @keyword.type
     .
     name: (identifier) @type))
 
 (record_body
   (enum_declaration
     .
-    "enum" @keyword
+    "enum" @keyword.type
     .
     name: (identifier) @type))
 
@@ -242,7 +242,7 @@ build = {
   (userdata) @keyword)
 
 (enum_declaration
-  "enum" @keyword
+  "enum" @keyword.type
   name: (identifier) @type)
 
 (type_declaration

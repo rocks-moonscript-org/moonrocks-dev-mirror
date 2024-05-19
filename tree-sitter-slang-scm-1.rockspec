@@ -1,4 +1,4 @@
-local git_ref = '68587530d86aaeb1f1cb17fdada795281cdd0556'
+local git_ref = '35684819cec627bc32955600ee9a093ed29c3375'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-slang-' .. '68587530d86aaeb1f1cb17fdada795281cdd0556',
+  dir = 'tree-sitter-slang-' .. '35684819cec627bc32955600ee9a093ed29c3375',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "slang",
-  sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = true,
   location = nil,
   copy_directories = { "queries" },
   queries = {

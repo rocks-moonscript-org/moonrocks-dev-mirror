@@ -1,4 +1,4 @@
-local git_ref = '710e881127512bda8157096e26c1f3e91702823a'
+local git_ref = '629676fc3919606964231b2c7b9677d6998a2cb4'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-diff-' .. '710e881127512bda8157096e26c1f3e91702823a',
+  dir = 'tree-sitter-diff-' .. '629676fc3919606964231b2c7b9677d6998a2cb4',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "diff",
-  sources = { "src/parser.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
@@ -48,7 +48,38 @@ build = {
 
 (location) @attribute
 
-(command) @function
+(command
+  "diff" @function
+  (argument) @variable.parameter)
+
+(filename) @string.special.path
+
+(mode) @number
+
+[
+  ".."
+  "+"
+  "++"
+  "+++"
+  "++++"
+  "-"
+  "--"
+  "---"
+  "----"
+] @punctuation.special
+
+[
+  (binary_change)
+  (similarity)
+  (file_change)
+] @label
+
+(index
+  "index" @keyword)
+
+(similarity
+  (score) @number
+  "%" @number)
 ]==],
   },
   extra_files = {
