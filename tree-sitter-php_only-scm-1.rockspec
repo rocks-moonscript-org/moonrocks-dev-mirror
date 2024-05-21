@@ -1,4 +1,4 @@
-local git_ref = 'd5aea05a70c5d021fa746516391f156d35658875'
+local git_ref = 'b38c53537769df05871643c9688c264074fb6076'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-php-' .. 'd5aea05a70c5d021fa746516391f156d35658875',
+  dir = 'tree-sitter-php-' .. 'b38c53537769df05871643c9688c264074fb6076',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "php_only",
-  sources = { "src/parser.c", "src/scanner.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = "php_only",
   copy_directories = { "queries" },
   queries = {
@@ -304,6 +304,16 @@ build = {
   ]
   (name) @constant)
 
+(scoped_property_access_expression
+  scope: [
+    (name) @type
+    (qualified_name
+      (name) @type)
+  ])
+
+(scoped_property_access_expression
+  name: (variable_name) @variable.member)
+
 (trait_declaration
   name: (name) @type)
 
@@ -480,6 +490,7 @@ build = {
   (switch_block)
   (match_block)
   (case_statement)
+  (default_statement)
 ] @indent.begin
 
 (return_statement

@@ -1,4 +1,4 @@
-local git_ref = '17144a77be0acdecebd9d557398883569fed41de'
+local git_ref = '9d3f6e526dd074b9edae9070b7bb778f00e87a5b'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,20 +16,20 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 1.3.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-go-template-' .. '17144a77be0acdecebd9d557398883569fed41de',
+  dir = 'tree-sitter-go-template-' .. '9d3f6e526dd074b9edae9070b7bb778f00e87a5b',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "helm",
-  sources = { "src/parser.c" },
-  generate_from_grammar = false,
-  generate_requires_npm = false,
+  parser = true,
+  generate = false,
+  generate_from_json = false,
   location = "dialects/helm",
   copy_directories = { "queries" },
   queries = {
