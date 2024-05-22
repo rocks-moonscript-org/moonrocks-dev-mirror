@@ -16,7 +16,7 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 3.0.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
@@ -27,7 +27,7 @@ source = {
 build = {
   type = "treesitter-parser",
   lang = "scfg",
-  sources = { "src/parser.c" },
+  parser = true,
   generate = true,
   generate_from_json = false,
   location = nil,

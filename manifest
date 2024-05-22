@@ -1009,6 +1009,13 @@ repository = {
          }
       }
    },
+   ['config.sile'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['conform.nvim'] = {
       ['scm-1'] = {
          {

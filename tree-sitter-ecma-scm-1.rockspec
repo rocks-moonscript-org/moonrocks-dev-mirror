@@ -16,7 +16,7 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 3.0.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
@@ -27,7 +27,7 @@ source = {
 build = {
   type = "treesitter-parser",
   lang = "ecma",
-  sources = {},
+  parser = false,
   generate = false,
   generate_from_json = false,
   location = nil,
@@ -376,19 +376,9 @@ build = {
 [
   "import"
   "from"
+  "as"
+  "export"
 ] @keyword.import
-
-(export_specifier
-  "as" @keyword.import)
-
-(import_specifier
-  "as" @keyword.import)
-
-(namespace_export
-  "as" @keyword.import)
-
-(namespace_import
-  "as" @keyword.import)
 
 [
   "for"
@@ -402,7 +392,6 @@ build = {
   "break"
   "const"
   "debugger"
-  "export"
   "extends"
   "get"
   "let"
