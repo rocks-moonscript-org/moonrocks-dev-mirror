@@ -1,4 +1,4 @@
-local git_ref = 'bc0c609e3568a171e0549b449aa1b2b4b5b20e8c'
+local git_ref = '69e0f1264f583dbe85a6bcd63c5ec9cb29f94571'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'neogit-' .. 'bc0c609e3568a171e0549b449aa1b2b4b5b20e8c',
+  dir = 'neogit-' .. '69e0f1264f583dbe85a6bcd63c5ec9cb29f94571',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
@@ -33,5 +33,5 @@ end
 
 build = {
   type = 'builtin',
-  copy_directories = { 'doc', 'ftplugin', 'plugin', 'syntax' } ,
+  copy_directories = { 'doc', 'plugin' } ,
 }

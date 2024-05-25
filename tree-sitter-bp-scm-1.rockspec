@@ -1,18 +1,18 @@
-local git_ref = '3321077d7446c1b3b017c294fd56ce028ed817fe'
+local git_ref = '2326d709fb9cf73cf124fdbc803c267f851721a4'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/ventojs/tree-sitter-vento'
+local repo_url = 'https://github.com/ambroisie/tree-sitter-bp'
 
 rockspec_format = '3.0'
-package = 'tree-sitter-vento'
+package = 'tree-sitter-bp'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser and Neovim queries for vento',
+  summary = 'tree-sitter parser and Neovim queries for bp',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/ventojs/tree-sitter-vento',
-  license = 'UNKNOWN'
+  homepage = 'https://github.com/ambroisie/tree-sitter-bp',
+  license = 'Apache-2.0'
 }
 
 build_dependencies = {
@@ -21,43 +21,140 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-vento-' .. '3321077d7446c1b3b017c294fd56ce028ed817fe',
+  dir = 'tree-sitter-bp-' .. '2326d709fb9cf73cf124fdbc803c267f851721a4',
 }
 
 build = {
   type = "treesitter-parser",
-  lang = "vento",
+  lang = "bp",
   parser = true,
   generate = false,
   generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
+    ["folds.scm"] = [==[
+[
+  (list_expression)
+  (map_expression)
+  (module)
+  (select_expression)
+] @fold
+]==],
     ["highlights.scm"] = [==[
 (comment) @comment @spell
 
-(keyword) @keyword
+(operator) @operator
 
-(tag
-  [
-    "{{"
-    "{{-"
-    "}}"
-    "-}}"
-  ] @punctuation.special)
+(integer_literal
+  "-" @operator)
 
-"|>" @operator
+[
+  ","
+  ":"
+] @punctuation.delimiter
+
+[
+  "("
+  ")"
+  "["
+  "]"
+  "{"
+  "}"
+] @punctuation.bracket
+
+(boolean_literal) @boolean
+
+(integer_literal) @number
+
+[
+  (raw_string_literal)
+  (interpreted_string_literal)
+] @string
+
+(escape_sequence) @string.escape
+
+(identifier) @variable
+
+(module
+  type: (identifier) @function.call)
+
+(module
+  (property
+    field: (identifier) @variable.parameter))
+
+[
+  (unset)
+  (default)
+] @variable.builtin
+
+(condition
+  name: (identifier) @function.builtin)
+
+(map_expression
+  (property
+    field: (identifier) @property))
+
+(select_expression
+  "select" @keyword.conditional)
+]==],
+    ["indents.scm"] = [==[
+(list_expression) @indent.begin
+
+(list_expression
+  "]" @indent.branch)
+
+(map_expression) @indent.begin
+
+(map_expression
+  "}" @indent.branch)
+
+(select_expression) @indent.begin
+
+(select_expression
+  ")" @indent.branch)
+
+(select_value) @indent.begin
+
+(select_value
+  ")" @indent.branch)
+
+(select_pattern
+  "(" @indent.begin)
+
+(select_pattern
+  ")" @indent.branch)
+
+(select_cases) @indent.begin
+
+(select_cases
+  "}" @indent.branch)
+
+(module) @indent.begin
+
+(module
+  ")" @indent.branch)
+
+(module
+  "}" @indent.branch)
 ]==],
     ["injections.scm"] = [==[
 ((comment) @injection.content
   (#set! injection.language "comment"))
+]==],
+    ["locals.scm"] = [==[
+(module
+  (property
+    field: (identifier) @local.definition.parameter))
 
-((content) @injection.content
-  (#set! injection.language "html")
-  (#set! injection.combined))
+(map_expression
+  (property
+    field: (identifier) @local.definition.field))
 
-((code) @injection.content
-  (#set! injection.language "javascript"))
+(assignment
+  left: (identifier) @local.definition.var)
+
+(identifier) @local.reference
 ]==],
   },
   extra_files = {

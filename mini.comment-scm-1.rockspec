@@ -1,4 +1,4 @@
-local git_ref = 'f9f1a646fd3d9df7397aa1b9550a875fe8189eb0'
+local git_ref = '6b6da2c272545ac6a201fb45af3aba66ef96d052'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'mini.comment-' .. 'f9f1a646fd3d9df7397aa1b9550a875fe8189eb0',
+  dir = 'mini.comment-' .. '6b6da2c272545ac6a201fb45af3aba66ef96d052',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

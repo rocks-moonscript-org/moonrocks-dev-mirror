@@ -1,4 +1,4 @@
-local git_ref = '7c5cbf0122ff2dfbb6a92f14885894f65949cc8b'
+local git_ref = '8756d19923ad871eb95f543a8a98c026b4a8494f'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'yanky.nvim-' .. '7c5cbf0122ff2dfbb6a92f14885894f65949cc8b',
+  dir = 'yanky.nvim-' .. '8756d19923ad871eb95f543a8a98c026b4a8494f',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

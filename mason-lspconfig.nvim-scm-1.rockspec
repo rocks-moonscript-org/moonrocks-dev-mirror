@@ -1,4 +1,4 @@
-local git_ref = '9ae570e206360e47d30b4c35a4550c165f4ea7b7'
+local git_ref = 'a4caa0d083aab56f6cd5acf2d42331b74614a585'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'mason-lspconfig.nvim-' .. '9ae570e206360e47d30b4c35a4550c165f4ea7b7',
+  dir = 'mason-lspconfig.nvim-' .. 'a4caa0d083aab56f6cd5acf2d42331b74614a585',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
