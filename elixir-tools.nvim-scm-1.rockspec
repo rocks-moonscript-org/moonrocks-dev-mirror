@@ -1,4 +1,4 @@
-local git_ref = '51eddb03a7a8c9f00d6415b356a4d3b75d8e75b6'
+local git_ref = '815cf0b0aab0421f8490199c0dd7442d22a7c1b7'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'elixir-tools.nvim-' .. '51eddb03a7a8c9f00d6415b356a4d3b75d8e75b6',
+  dir = 'elixir-tools.nvim-' .. '815cf0b0aab0421f8490199c0dd7442d22a7c1b7',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
