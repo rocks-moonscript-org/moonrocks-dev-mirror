@@ -1,4 +1,4 @@
-local git_ref = 'cc99a3f5e4281b63fdd63dca4750e808fd52628f'
+local git_ref = '336001d79dd62668088bc6fe6d72a774a449fa2d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,18 +16,18 @@ description = {
 }
 
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 3.0.0',
+  'luarocks-build-treesitter-parser >= 4.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-earthfile-' .. 'cc99a3f5e4281b63fdd63dca4750e808fd52628f',
+  dir = 'tree-sitter-earthfile-' .. '336001d79dd62668088bc6fe6d72a774a449fa2d',
 }
 
 build = {
   type = "treesitter-parser",
   lang = "earthfile",
-  sources = { "src/parser.c", "src/scanner.c" },
+  parser = true,
   generate = false,
   generate_from_json = false,
   location = nil,
