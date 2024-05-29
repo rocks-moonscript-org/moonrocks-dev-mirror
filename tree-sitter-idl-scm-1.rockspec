@@ -1,4 +1,4 @@
-local git_ref = '006a5266d771cab57da58a6ade483ebd3075638d'
+local git_ref = 'b5b53e2ca0521b98277d5e4b109f0b0e362e850e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-idl-' .. '006a5266d771cab57da58a6ade483ebd3075638d',
+  dir = 'tree-sitter-idl-' .. 'b5b53e2ca0521b98277d5e4b109f0b0e362e850e',
 }
 
 build = {
@@ -44,19 +44,45 @@ build = {
   "bitmask"
   "bitset"
   "@annotation"
-  "interface"
   "exception"
   "typedef"
+  "home"
+  "typeid"
+  "typeprefix"
+  (interface_kind)
+  (value_kind)
+  "component"
+  "porttype"
+  "connector"
+  "eventtype"
+  "valuetype"
 ] @keyword.type
+
+(import_dcl
+  "import" @keyword.directive)
 
 [
   "module"
   "attribute"
+  "factory"
+  "manages"
 ] @keyword
 
 [
   "const"
   "readonly"
+  "abstract"
+  "custom"
+  "supports"
+  "provides"
+  "uses"
+  "port"
+  "mirrorport"
+  "emits"
+  "publishes"
+  "consumes"
+  "primarykey"
+  "finder"
 ] @keyword.modifier
 
 [
@@ -80,13 +106,16 @@ build = {
   (unsigned_longlong_int)
   (floating_pt_type)
   (char_type)
-  (scoped_name)
   (string_type)
   (any_type)
   (fixed_pt_type)
   (sequence_type)
   (map_type)
+  (object_type)
+  (value_base_type)
 ] @type.builtin
+
+(scoped_name) @type
 
 (boolean_literal) @boolean
 
@@ -131,7 +160,8 @@ build = {
 (readonly_attr_declarator
   (simple_declarator) @variable.member)
 
-(attr_declarator) @variable.member
+(attr_declarator
+  (simple_declarator) @variable.member)
 
 (annotation_appl
   "@" @attribute
@@ -212,7 +242,7 @@ build = {
     "bitfield" @keyword.modifier
     (positive_int_const) @number
     (destination_type)* @type)
-  (identifier) @variable.parameter)
+  (identifier) @variable.member)
 
 (bit_value) @constant
 
@@ -231,14 +261,108 @@ build = {
   (scoped_name
     (identifier) @type))
 
-(simple_declarator
-  (identifier) @attribute)
-
-(array_declarator
-  (identifier) @attribute)
-
 (annotation_appl_param
   (identifier) @attribute)
+
+(home_header
+  (identifier) @type)
+
+(factory_dcl
+  (identifier) @type)
+
+(factory_param_dcl
+  "in" @keyword.modifier)
+
+(op_oneway_dcl
+  "oneway" @keyword.modifier
+  (identifier) @function.method)
+
+(in_param_dcl
+  "in" @keyword.modifier)
+
+(context_expr
+  "context" @keyword.modifier)
+
+(get_excep_expr
+  "getraises" @keyword.exception)
+
+(set_excep_expr
+  "setraises" @keyword.exception)
+
+(value_header
+  (identifier) @type)
+
+(value_abs_def
+  (identifier) @type)
+
+(value_forward_dcl
+  (identifier) @type)
+
+(value_box_def
+  (identifier) @type)
+
+(provides_dcl
+  (interface_type) @type
+  (identifier) @variable.member)
+
+(uses_dcl
+  (identifier) @variable.member)
+
+(component_forward_dcl
+  (identifier) @type)
+
+(component_header
+  (identifier) @type)
+
+(porttype_forward_dcl
+  (identifier) @type)
+
+(porttype_def
+  (identifier) @type)
+
+(port_dcl
+  (identifier) @variable.member)
+
+(connector_header
+  (identifier) @type)
+
+(emits_dcl
+  (identifier) @variable.member)
+
+(publishes_dcl
+  (identifier) @variable.member)
+
+(consumes_dcl
+  (identifier) @variable.member)
+
+(event_forward_dcl
+  (identifier) @type)
+
+(event_header
+  (identifier) @type)
+
+(event_abs_def
+  (identifier) @type)
+
+(template_module_dcl
+  (identifier) @type)
+
+(formal_parameter
+  (formal_parameter_type) @type
+  (identifier) @variable.member)
+
+(init_param_dcl
+  "in" @keyword.modifier
+  (simple_declarator) @variable.parameter)
+
+(finder_dcl
+  (identifier) @function.method)
+
+(member
+  identifier: (declarators) @variable.member)
+
+(factory_param_dcl
+  (simple_declarator) @variable.parameter)
 ]==],
     ["injections.scm"] = [==[
 ((comment) @injection.content
