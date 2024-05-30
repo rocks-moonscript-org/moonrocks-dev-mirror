@@ -1,4 +1,4 @@
-local git_ref = 'b5a23ead0f69d38b5c9a630f52f5c129132c16ed'
+local git_ref = '1c94fe3d5351dfcff3551ec1f49614cbf758e444'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-solidity-' .. 'b5a23ead0f69d38b5c9a630f52f5c129132c16ed',
+  dir = 'tree-sitter-solidity-' .. '1c94fe3d5351dfcff3551ec1f49614cbf758e444',
 }
 
 build = {
@@ -320,38 +320,39 @@ build = {
   "=>"
 ] @punctuation.delimiter
 
-; Operators: currently broken: https://github.com/JoranHonig/tree-sitter-solidity/issues/59
-;[
-;  "&&"
-;  "||"
-;  ">>"
-;  ">>>"
-;  "<<"
-;  "&"
-;  "^"
-;  "|"
-;  "+"
-;  "-"
-;  "*"
-;  "/"
-;  "%"
-;  "**"
-;  "="
-;  "<"
-;  "<="
-;  "=="
-;  "!="
-;  "!=="
-;  ">="
-;  ">"
-;  "!"
-;  "~"
-;  "-"
-;  "+"
-;  "++"
-;  "--"
-;  ":="
-;] @operator
+; Operators
+[
+  "&&"
+  "||"
+  ">>"
+  ">>>"
+  "<<"
+  "&"
+  "^"
+  "|"
+  "+"
+  "-"
+  "*"
+  "/"
+  "%"
+  "**"
+  "="
+  "<"
+  "<="
+  "=="
+  "!="
+  "!=="
+  ">="
+  ">"
+  "!"
+  "~"
+  "-"
+  "+"
+  "++"
+  "--"
+  ":="
+] @operator
+
 [
   "delete"
   "new"

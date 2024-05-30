@@ -1,4 +1,4 @@
-local git_ref = '5b088fac748f2666a315cafd1638a214388eb23e'
+local git_ref = '5aa9b88a8e3327276ec6e72de997f04ac80b1ae4'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-luau-' .. '5b088fac748f2666a315cafd1638a214388eb23e',
+  dir = 'tree-sitter-luau-' .. '5aa9b88a8e3327276ec6e72de997f04ac80b1ae4',
 }
 
 build = {
@@ -174,12 +174,10 @@ build = {
 (identifier) @variable
 
 ; Types
-(type
-  (identifier) @type)
+(type/identifier) @type
 
-(type
-  (generic_type
-    (identifier) @type))
+(generic_type
+  (identifier) @type)
 
 (builtin_type) @type.builtin
 
@@ -203,6 +201,8 @@ build = {
 
 ((identifier) @variable.builtin
   (#eq? @variable.builtin "self"))
+
+"..." @variable.builtin
 
 ((identifier) @module.builtin
   (#any-of? @module.builtin "_G" "debug" "io" "jit" "math" "os" "package" "string" "table" "utf8"))

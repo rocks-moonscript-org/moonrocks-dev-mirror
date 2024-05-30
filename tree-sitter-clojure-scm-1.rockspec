@@ -1,4 +1,4 @@
-local git_ref = '3a1ace906c151dd631cf6f149b5083f2b60e6a9e'
+local git_ref = 'f4236d4da8aa92bc105d9c118746474c608e6af7'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-clojure-' .. '3a1ace906c151dd631cf6f149b5083f2b60e6a9e',
+  dir = 'tree-sitter-clojure-' .. 'f4236d4da8aa92bc105d9c118746474c608e6af7',
 }
 
 build = {

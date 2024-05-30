@@ -1,4 +1,4 @@
-local git_ref = 'd25e8d183f319497b8b22a2a1585975b020da722'
+local git_ref = 'f767fb0ac5e711b6d44c5e0c8d1f349687a86ce0'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-query-' .. 'd25e8d183f319497b8b22a2a1585975b020da722',
+  dir = 'tree-sitter-query-' .. 'f767fb0ac5e711b6d44c5e0c8d1f349687a86ce0',
 }
 
 build = {
@@ -48,9 +48,6 @@ build = {
 
 (capture
   (identifier) @type)
-
-(anonymous_node
-  (identifier) @string)
 
 (predicate
   name: (identifier) @function.call)

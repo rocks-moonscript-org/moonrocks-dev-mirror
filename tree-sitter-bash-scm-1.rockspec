@@ -229,6 +229,12 @@ build = {
       (word) @variable.parameter)
   ])
 
+(declaration_command
+  (word) @variable.parameter)
+
+(unset_command
+  (word) @variable.parameter)
+
 (number) @number
 
 ((word) @number
