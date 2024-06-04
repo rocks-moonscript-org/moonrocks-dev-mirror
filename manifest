@@ -1671,6 +1671,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ['fennel-ls'] = {
