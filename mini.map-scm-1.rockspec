@@ -1,4 +1,4 @@
-local git_ref = '39300c553e8e2e65c373e04cf88939655f7a8abe'
+local git_ref = 'c208c89c4c3b122c1ce15eed53e6bc4abb58d27d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'mini.map-' .. '39300c553e8e2e65c373e04cf88939655f7a8abe',
+  dir = 'mini.map-' .. 'c208c89c4c3b122c1ce15eed53e6bc4abb58d27d',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
