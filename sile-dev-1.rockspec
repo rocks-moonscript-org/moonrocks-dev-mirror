@@ -5,22 +5,22 @@ version = "dev-1"
 
 source = {
    url = "git+https://github.com/sile-typesetter/sile.git",
-   branch = "master"
+   branch = "master",
 }
 
 description = {
    summary = "Simon’s Improved Layout Engine",
    detailed = [[SILE is a typesetting system; its job is to produce beautiful printed documents.
-     Conceptually, SILE is similar to TeX—from which it borrows some concepts and even
-     syntax and algorithms—but the similarities end there. Rather than being a
-     derivative of the TeX family SILE is a new typesetting and layout engine written
-     from the ground up using modern technologies and borrowing some ideas from
-     graphical systems such as InDesign.]],
+      Conceptually, SILE is similar to TeX—from which it borrows some concepts and even
+      syntax and algorithms—but the similarities end there. Rather than being a
+      derivative of the TeX family SILE is a new typesetting and layout engine written
+      from the ground up using modern technologies and borrowing some ideas from
+      graphical systems such as InDesign.]],
    license = "MIT",
    homepage = "https://github.com/sile-typesetter/fontproof",
    issues_url = "https://github.com/sile-typesetter/fontproof/issues",
    maintainer = "Caleb Maclennan <caleb@alerque.com>",
-   labels = { "typesetting" }
+   labels = { "typesetting" },
 }
 
 dependencies = {
@@ -28,26 +28,25 @@ dependencies = {
    "bit32", -- only required on Lua < 5.2, versions vary between Rock and VM provided
    "cassowary == 2.3.2-1",
    "cldr == 0.3.0-0",
-   "compat53 == 0.8-1", -- only required on Lua < 5.3
-   "cosmo == 16.06.04-1",
+   "compat53 == 0.13-1", -- only required on Lua < 5.3
    "fluent == 0.2.0-0",
    "linenoise == 0.9-1",
    "loadkit == 1.1.0-1",
-   "lpeg == 1.0.2-1",
+   "lpeg == 1.1.0-1",
    "lua-zlib == 1.2-2",
-   "lua_cliargs == 3.0-2",
+   "lua_cliargs == 3.0.2-1",
    "luaepnf == 0.3-2",
    "luaexpat == 1.5.1-1",
    "luafilesystem == 1.8.0-1",
    "luarepl == 0.10-1",
-   "luasec == 1.3.1-1",
+   "luasec == 1.3.2-1",
    "luasocket == 3.1.0-1",
-   "luautf8 == 0.1.5-1",
-   "penlight == 1.13.1-1",
-   "vstruct == 2.1.1-1"
+   "luautf8 == 0.1.5-2",
+   "penlight == 1.14.0-2",
+   "vstruct == 2.1.1-1",
 }
 
 build = {
    type = "builtin",
-   modules = {}
+   modules = {},
 }
