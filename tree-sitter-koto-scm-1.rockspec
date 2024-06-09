@@ -1,4 +1,4 @@
-local git_ref = '919440e1376109bab4edac52594c17c02ae0be5a'
+local git_ref = 'd4109879ba1387d19095269a7473bd7d274ab848'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-koto-' .. '919440e1376109bab4edac52594c17c02ae0be5a',
+  dir = 'tree-sitter-koto-' .. 'd4109879ba1387d19095269a7473bd7d274ab848',
 }
 
 build = {
@@ -188,16 +188,16 @@ build = {
 
 ; Definitions
 (arg
-  (identifier) @local.definition.parameter)
+  (variable) @local.definition.parameter)
 
 (assign
   (identifier) @local.definition.var)
 
 (for_args
-  (identifier) @local.definition.var)
+  (variable) @local.definition.var)
 
 (match_patterns
-  (identifier) @local.definition.var)
+  (variable) @local.definition.var)
 
 (import_item
   (identifier) @local.definition.import)
