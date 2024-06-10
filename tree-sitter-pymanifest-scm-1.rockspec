@@ -1,4 +1,4 @@
-local git_ref = 'e3b82b78721aee07f676dac8473ae69db51debcf'
+local git_ref = 'be062582956165019d3253794b4d712f66dfeaaa'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-pymanifest-' .. 'e3b82b78721aee07f676dac8473ae69db51debcf',
+  dir = 'tree-sitter-pymanifest-' .. 'be062582956165019d3253794b4d712f66dfeaaa',
 }
 
 build = {

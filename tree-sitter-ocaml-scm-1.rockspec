@@ -421,7 +421,7 @@ build = {
 
 ((else_clause
   (_) @_not_if) @indent.begin
-  (#not-has-type? @_not_if if_expression))
+  (#not-kind-eq? @_not_if "if_expression"))
 
 ((parameter) @indent.begin
   (#set! indent.start_at_same_line))

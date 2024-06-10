@@ -1,4 +1,4 @@
-local git_ref = '20ffd6d3b4da1acdbf2d08204b2130a5b2f7c4b3'
+local git_ref = '4864abb95a1f6e54d6b362677beef9fb674b41e9'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-cmake-' .. '20ffd6d3b4da1acdbf2d08204b2130a5b2f7c4b3',
+  dir = 'tree-sitter-cmake-' .. '4864abb95a1f6e54d6b362677beef9fb674b41e9',
 }
 
 build = {
@@ -77,8 +77,6 @@ build = {
   "$"
   "{"
   "}"
-  "<"
-  ">"
 ] @punctuation.special
 
 [

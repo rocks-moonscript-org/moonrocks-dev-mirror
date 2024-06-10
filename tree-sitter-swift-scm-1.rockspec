@@ -1,4 +1,4 @@
-local git_ref = '26354ddec08c7efde4fa16bd29429f3310d2e2c5'
+local git_ref = '13ffaec4068facfff608e3afbdb7a581c185f6a6'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-swift-' .. '26354ddec08c7efde4fa16bd29429f3310d2e2c5',
+  dir = 'tree-sitter-swift-' .. '13ffaec4068facfff608e3afbdb7a581c185f6a6',
 }
 
 build = {
@@ -412,7 +412,7 @@ build = {
     (_)* @indent.branch)
   .
   _ @indent.branch
-  (#not-has-type? @indent.branch type_parameters parameter))
+  (#not-kind-eq? @indent.branch "type_parameters" "parameter"))
 
 (ERROR
   [

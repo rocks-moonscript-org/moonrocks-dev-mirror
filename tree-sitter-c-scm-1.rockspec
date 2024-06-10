@@ -1,4 +1,4 @@
-local git_ref = '00ed08f1a6c18141bfd7a81638e4d239a0bb55cc'
+local git_ref = 'deca017a554045b4c203e7ddff39ae64ff05e071'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-c-' .. '00ed08f1a6c18141bfd7a81638e4d239a0bb55cc',
+  dir = 'tree-sitter-c-' .. 'deca017a554045b4c203e7ddff39ae64ff05e071',
 }
 
 build = {
@@ -419,14 +419,14 @@ build = {
 
 ((for_statement
   body: (_) @_body) @indent.begin
-  (#not-has-type? @_body compound_statement))
+  (#not-kind-eq? @_body "compound_statement"))
 
 (while_statement
   condition: (_) @indent.begin)
 
 ((while_statement
   body: (_) @_body) @indent.begin
-  (#not-has-type? @_body compound_statement))
+  (#not-kind-eq? @_body "compound_statement"))
 
 ((if_statement)
   .
@@ -440,7 +440,7 @@ build = {
 (if_statement
   consequence: (_
     ";" @indent.end) @_consequence
-  (#not-has-type? @_consequence compound_statement)
+  (#not-kind-eq? @_consequence "compound_statement")
   alternative: (else_clause
     "else" @indent.branch
     [

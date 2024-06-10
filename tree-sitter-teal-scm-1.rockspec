@@ -1,4 +1,4 @@
-local git_ref = '33482c92a0dfa694491d34e167a1d2f52b0dccb1'
+local git_ref = '19b02da829d1721a521bf7b802eb80a50bd53aab'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-teal-' .. '33482c92a0dfa694491d34e167a1d2f52b0dccb1',
+  dir = 'tree-sitter-teal-' .. '19b02da829d1721a521bf7b802eb80a50bd53aab',
 }
 
 build = {
@@ -343,7 +343,8 @@ build = {
 ; ('...'):format()
 ((function_call
   (method_index
-    (string) @printf
+    (parenthesized_expression
+      (string) @printf)
     key: (identifier) @_func))
   (#eq? @_func "format")
   (#set! injection.language "printf"))

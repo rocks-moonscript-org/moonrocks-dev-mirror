@@ -1,4 +1,4 @@
-local git_ref = 'b711df784dd43d0a8ed8ddbfca0ddcc3239d94b4'
+local git_ref = '2249c44ecd3f5cf22da3dcccfb74f816ddb29245'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-vimdoc-' .. 'b711df784dd43d0a8ed8ddbfca0ddcc3239d94b4',
+  dir = 'tree-sitter-vimdoc-' .. '2249c44ecd3f5cf22da3dcccfb74f816ddb29245',
 }
 
 build = {
@@ -34,16 +34,22 @@ build = {
   copy_directories = { "queries" },
   queries = {
     ["highlights.scm"] = [==[
-(h1) @markup.heading.1
+(h1
+  (delimiter) @markup.heading.1
+  (heading) @markup.heading.1)
 
-(h2) @markup.heading.2
+(h2
+  (delimiter) @markup.heading.2
+  (heading) @markup.heading.2)
 
-(h3) @markup.heading.3
-
-(column_heading) @markup.heading.4
+(h3
+  (heading) @markup.heading.3)
 
 (column_heading
-  "~" @markup.heading.4
+  (heading) @markup.heading.4)
+
+(column_heading
+  (delimiter) @markup.heading.4
   (#set! conceal ""))
 
 (tag
