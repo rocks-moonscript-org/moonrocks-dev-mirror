@@ -332,7 +332,7 @@ build = {
 
 ((for_loop
   body: (_) @_body) @indent.begin
-  (#not-has-type? @_body closure))
+  (#not-kind-eq? @_body "closure"))
 
 ; TODO: while, try
 (list
