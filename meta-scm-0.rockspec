@@ -9,12 +9,12 @@ source = {
 description = {
   summary = "lua meta methods library",
   detailed = [[
-set of meta methods:
-- recursive autoloader with preloading and match/iterate of submodules
-- require with dots `require "t/seo/google.com"`
-- relative `require ".submodule"` (after `local require = require "meta.require"(...)`)
-- module path normalizing
-- instance/type meta methods manipulations
+- recursive autoloader supporting dots in module names: `require "t/seo/google.com"`
+- module function library
+- instance/type meta methods manipulations with caching
+- non-object style mt creation
+- mt cache with auto type naming using relative module path
+- mt chaining, computed js-like properties
 ]],
   homepage = "https://github.com/luatoolz/lua-meta",
   license = "MIT",
@@ -39,27 +39,4 @@ test = {
 build = {
   copy_directories = {},
   type = "builtin",
-  modules = {
-    ["meta.cache"] = "meta/cache.lua",
-    ["meta.clone"] = "meta/clone.lua",
-    ["meta.computed"] = "meta/computed.lua",
-    ["meta.conf"] = "meta/conf.lua",
-    ["meta.dir"] = "meta/dir.lua",
-    ["meta.get"] = "meta/get.lua",
-    ["meta.init"] = "meta/init.lua",
-    ["meta.isdir"] = "meta/isdir.lua",
-    ["meta.loader"] = "meta/loader.lua",
-    ["meta.loaders"] = "meta/loaders.lua",
-    ["meta.memoize"] = "meta/memoize.lua",
-    ["meta.methods"] = "meta/methods.lua",
-    ["meta.mt"] = "meta/mt.lua",
-    ["meta.mtindex"] = "meta/mtindex.lua",
-    ["meta.path"] = "meta/path.lua",
-    ["meta.preload"] = "meta/preload.lua",
-    ["meta.prequire"] = "meta/prequire.lua",
-    ["meta.require"] = "meta/require.lua",
-    ["meta.searcher"] = "meta/searcher.lua",
-    ["meta.set"] = "meta/set.lua",
-    ["meta.sub"] = "meta/sub.lua",
-  }
 }

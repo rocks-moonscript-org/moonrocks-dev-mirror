@@ -1,4 +1,4 @@
-local git_ref = '08ed29989834f5f2606cb1ef9d5b24c5ea7b8fa5'
+local git_ref = 'fe5b2c9e2549862c3dc3f3c8e9cf7ddece0f40c2'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'kanagawa.nvim-' .. '08ed29989834f5f2606cb1ef9d5b24c5ea7b8fa5',
+  dir = 'kanagawa.nvim-' .. 'fe5b2c9e2549862c3dc3f3c8e9cf7ddece0f40c2',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
