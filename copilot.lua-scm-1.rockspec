@@ -1,4 +1,4 @@
-local git_ref = 'f7612f5af4a7d7615babf43ab1e67a2d790c13a6'
+local git_ref = '86537b286f18783f8b67bccd78a4ef4345679625'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'copilot.lua-' .. 'f7612f5af4a7d7615babf43ab1e67a2d790c13a6',
+  dir = 'copilot.lua-' .. '86537b286f18783f8b67bccd78a4ef4345679625',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
