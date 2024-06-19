@@ -1,8 +1,8 @@
-local git_ref = '7df2c0892e62efb81a7504d9799d4e0d0443d241'
+local git_ref = 'df46a85abda9f948d38f5d4e3684cec49c42fef2'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/nat-418/tree-sitter-roc'
+local repo_url = 'https://github.com/faldor20/tree-sitter-roc'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-roc'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for roc',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/nat-418/tree-sitter-roc',
+  homepage = 'https://github.com/faldor20/tree-sitter-roc',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-roc-' .. '7df2c0892e62efb81a7504d9799d4e0d0443d241',
+  dir = 'tree-sitter-roc-' .. 'df46a85abda9f948d38f5d4e3684cec49c42fef2',
 }
 
 build = {
@@ -115,29 +115,12 @@ build = {
 ] @keyword
 
 ;----headers-----
-(interface_header
-  (name) @type.definition)
-
-(imports
-  (imports_entry
-    (module) @module))
-
-(packages
-  (record_pattern
-    (record_field_pattern
-      (field_name) @module)))
-
-(app_name) @string.special
-
-(import_path) @string.special.path
-
 [
   "app"
-  "packages"
-  "provides"
-  "interface"
-  "exposes"
   "expect"
+  "module"
+  "package"
+  "import"
 ] @keyword
 
 [
@@ -220,7 +203,10 @@ build = {
   (float)
 ] @number.float
 
-(string) @string
+[
+  (string)
+  (multiline_string)
+] @string
 
 (char) @character
 ]==],
@@ -241,6 +227,10 @@ build = {
 ; (argument_patterns(long_identifier)@local.definition)
 (exposes_list
   (ident) @local.reference)
+
+(import_expr
+  (as)
+  (module) @local.definition)
 
 (opaque_type_def
   (apply_type
@@ -264,9 +254,6 @@ build = {
 
 (identifier_pattern
   (identifier) @local.definition)
-
-(exposes
-  (ident) @local.reference)
 
 (identifier) @local.reference
 

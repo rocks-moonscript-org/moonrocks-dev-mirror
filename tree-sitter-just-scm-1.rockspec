@@ -193,6 +193,9 @@ build = {
 (comment) @indent.auto
 ]==],
     ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+
 ; The right side of =~ literals
 (regex_literal
   (_) @injection.content
