@@ -1,4 +1,4 @@
-local git_ref = '13ffaec4068facfff608e3afbdb7a581c185f6a6'
+local git_ref = 'd657f98dd6bbc34cb48438c9e5956f15a6d89f1d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-swift-' .. '13ffaec4068facfff608e3afbdb7a581c185f6a6',
+  dir = 'tree-sitter-swift-' .. 'd657f98dd6bbc34cb48438c9e5956f15a6d89f1d',
 }
 
 build = {
@@ -135,6 +135,8 @@ build = {
   (setter_specifier)
   (modify_specifier)
 ] @keyword
+
+(shebang_line) @keyword.directive
 
 (class_body
   (property_declaration
@@ -466,6 +468,13 @@ build = {
 ] @indent.auto
 
 (directive) @indent.ignore
+]==],
+    ["injections.scm"] = [==[
+([
+  (comment)
+  (multiline_comment)
+] @injection.content
+  (#set! injection.language "comment"))
 ]==],
     ["locals.scm"] = [==[
 (import_declaration

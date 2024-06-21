@@ -284,6 +284,10 @@ build = {
 
 (er_attribute_comment) @string @spell
 ]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+]==],
   },
   extra_files = {
     ["nvim-treesitter-LICENSE"] = [[

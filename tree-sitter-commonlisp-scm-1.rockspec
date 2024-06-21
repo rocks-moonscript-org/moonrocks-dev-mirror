@@ -145,24 +145,19 @@ build = {
   (#lua-match? @variable.builtin "^[*].+[*]$"))
 
 ; quote
-"'" @string.escape
-
 (format_specifier) @string.escape
 
-(quoting_lit) @string.escape
+(quoting_lit
+  "'" @string.escape)
 
-; syntax quote
-"`" @string.escape
+(syn_quoting_lit
+  "`" @string.escape)
 
-"," @string.escape
+(unquoting_lit
+  "," @string.escape)
 
-",@" @string.escape
-
-(syn_quoting_lit) @string.escape
-
-(unquoting_lit) @none
-
-(unquote_splicing_lit) @none
+(unquote_splicing_lit
+  ",@" @string.escape)
 
 [
   "("
@@ -358,6 +353,13 @@ build = {
 ] @number
 
 (char_lit) @character
+]==],
+    ["injections.scm"] = [==[
+([
+  (comment)
+  (block_comment)
+] @injection.content
+  (#set! injection.language "comment"))
 ]==],
     ["locals.scm"] = [==[
 (defun_header

@@ -132,6 +132,10 @@ build = {
 ; Extras
 (fsh_comment) @comment @spell
 ]==],
+    ["injections.scm"] = [==[
+((fsh_comment) @injection.content
+  (#set! injection.language "comment"))
+]==],
   },
   extra_files = {
     ["nvim-treesitter-LICENSE"] = [[

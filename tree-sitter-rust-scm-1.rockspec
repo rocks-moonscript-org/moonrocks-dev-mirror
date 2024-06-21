@@ -57,6 +57,7 @@ build = {
   (macro_definition)
   (macro_invocation)
   (attribute_item)
+  (block)
 ] @fold
 ]==],
     ["highlights.scm"] = [==[

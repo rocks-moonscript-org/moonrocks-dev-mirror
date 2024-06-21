@@ -98,6 +98,10 @@ build = {
 
 (comment) @indent.ignore
 ]==],
+    ["injections.scm"] = [==[
+((junk) @injection.content
+  (#set! injection.language "comment"))
+]==],
   },
   extra_files = {
     ["nvim-treesitter-LICENSE"] = [[

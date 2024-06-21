@@ -64,7 +64,7 @@ build = {
 
 (aura) @constant.builtin
 
-(Gap) @comment
+(lineComment) @comment
 
 (boolean) @constant.builtin
 
@@ -77,6 +77,10 @@ build = {
 (lark) @operator
 
 (fullContext) @string.special.symbol
+]==],
+    ["injections.scm"] = [==[
+((lineComment) @injection.content
+  (#set! injection.language "comment"))
 ]==],
     ["locals.scm"] = [==[
 (tisfasTall

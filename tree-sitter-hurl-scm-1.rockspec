@@ -221,6 +221,9 @@ build = {
 (xml_close_tag) @indent.branch
 ]==],
     ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+
 ; injections.scm
 ((json_value) @injection.content
   (#set! injection.language "json"))

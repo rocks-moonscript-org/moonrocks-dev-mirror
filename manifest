@@ -69,6 +69,13 @@ repository = {
          }
       }
    },
+   ['airline-renderer-nerdfont.vim'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    alive = {
       ['scm-5'] = {
          {
@@ -1002,6 +1009,13 @@ repository = {
          }
       }
    },
+   ['conceal.vim'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['config.sile'] = {
       ['dev-1'] = {
          {
@@ -1143,6 +1157,13 @@ repository = {
       }
    },
    cpml = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['cppinsights.vim'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
@@ -1660,6 +1681,13 @@ repository = {
       }
    },
    fcgi = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['fcitx5-ui.nvim'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
@@ -9121,6 +9149,13 @@ repository = {
          }
       }
    },
+   ['template.vim'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    testluafilesystem = {
       ['scm-2'] = {
          {
@@ -11607,6 +11642,13 @@ repository = {
       }
    },
    ['vim-easyclip'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['vim-fencview'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"

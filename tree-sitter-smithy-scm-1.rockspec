@@ -149,6 +149,13 @@ build = {
 
 (documentation_comment) @comment.documentation @spell
 ]==],
+    ["injections.scm"] = [==[
+([
+  (comment)
+  (documentation_comment)
+] @injection.content
+  (#set! injection.language "comment"))
+]==],
   },
   extra_files = {
     ["nvim-treesitter-LICENSE"] = [[

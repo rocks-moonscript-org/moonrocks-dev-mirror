@@ -1,4 +1,4 @@
-local git_ref = '604d73c38d4c28ca68e9e441ffd405d68cb63051'
+local git_ref = '464654742cbfd3a3de560aba120998f1d5dfa844'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-corn-' .. '604d73c38d4c28ca68e9e441ffd405d68cb63051',
+  dir = 'tree-sitter-corn-' .. '464654742cbfd3a3de560aba120998f1d5dfa844',
 }
 
 build = {
@@ -41,9 +41,10 @@ build = {
 ] @fold
 ]==],
     ["highlights.scm"] = [==[
-"let" @keyword
-
-"in" @keyword
+[
+  "let"
+  "in"
+] @keyword
 
 [
   "{"
@@ -54,7 +55,14 @@ build = {
 
 "." @punctuation.delimiter
 
+[
+  ".."
+  "="
+] @operator
+
 (input) @constant
+
+(null) @constant.builtin
 
 (comment) @comment @spell
 
@@ -64,9 +72,12 @@ build = {
 
 (float) @number.float
 
+(float
+  "." @number.float)
+
 (boolean) @boolean
 
-(null) @keyword
+(path_seg) @property
 ]==],
     ["indents.scm"] = [==[
 [
@@ -93,6 +104,10 @@ build = {
 
 (array
   "]" @indent.end)
+]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
 ]==],
     ["locals.scm"] = [==[
 ; scopes

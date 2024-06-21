@@ -152,6 +152,9 @@ build = {
   "!=" @punctuation.delimiter)
 ]==],
     ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+
 ((javascript) @injection.content
   (#set! injection.language "javascript"))
 

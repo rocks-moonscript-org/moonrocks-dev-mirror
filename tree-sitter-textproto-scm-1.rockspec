@@ -45,7 +45,7 @@ build = {
 
 (field_name) @variable.member
 
-(comment) @comment
+(comment) @comment @spell
 
 (number) @number
 
@@ -80,6 +80,10 @@ build = {
 
 (message_list
   (close_square) @indent.branch)
+]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
 ]==],
   },
   extra_files = {

@@ -1,4 +1,4 @@
-local git_ref = 'ba1b3868eaa960b945593404af9a7c2f296d3643'
+local git_ref = '5a7b14074bca95b25935e865ca8f1efad32317e4'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-snakemake-' .. 'ba1b3868eaa960b945593404af9a7c2f296d3643',
+  dir = 'tree-sitter-snakemake-' .. '5a7b14074bca95b25935e865ca8f1efad32317e4',
 }
 
 build = {
@@ -38,6 +38,7 @@ build = {
 
 [
   (rule_definition)
+  (rule_inheritance)
   (module_definition)
   (checkpoint_definition)
 ] @fold

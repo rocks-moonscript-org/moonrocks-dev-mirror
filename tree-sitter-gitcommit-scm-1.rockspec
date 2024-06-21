@@ -45,7 +45,7 @@ build = {
 
 (change) @keyword
 
-(filepath) @string.special.url
+(filepath) @string.special.path
 
 (arrow) @punctuation.delimiter
 

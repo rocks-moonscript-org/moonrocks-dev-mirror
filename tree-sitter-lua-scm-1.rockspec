@@ -331,7 +331,6 @@ build = {
   (return_statement)
   (table_constructor)
   (arguments)
-  (return_statement)
 ] @indent.begin
 
 [

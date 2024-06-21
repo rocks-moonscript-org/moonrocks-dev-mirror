@@ -1,4 +1,4 @@
-local git_ref = '1c94fe3d5351dfcff3551ec1f49614cbf758e444'
+local git_ref = 'ee5a2d2ba30b487c4bbf613d2ef310a454c09c7c'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-solidity-' .. '1c94fe3d5351dfcff3551ec1f49614cbf758e444',
+  dir = 'tree-sitter-solidity-' .. 'ee5a2d2ba30b487c4bbf613d2ef310a454c09c7c',
 }
 
 build = {
@@ -372,6 +372,10 @@ build = {
 
 ((comment) @comment.documentation
   (#lua-match? @comment.documentation "^/[*][*][^*].*[*]/$"))
+]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
 ]==],
   },
   extra_files = {

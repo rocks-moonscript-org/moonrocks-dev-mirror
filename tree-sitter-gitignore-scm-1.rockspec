@@ -68,6 +68,10 @@ build = {
 
 (bracket_char_class) @constant.builtin
 ]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+]==],
   },
   extra_files = {
     ["nvim-treesitter-LICENSE"] = [[

@@ -196,6 +196,9 @@ build = {
   field: (identifier) @variable.member)
 
 ; Variables
+(variable_declarator
+  (identifier) @property)
+
 (field_declaration
   (modifiers
     (modifier
@@ -210,9 +213,6 @@ build = {
       ]))
   (variable_declarator
     name: (identifier) @constant))
-
-(variable_declarator
-  (identifier) @property)
 
 ((identifier) @constant
   (#lua-match? @constant "^[A-Z][A-Z0-9_]+$")) ; SCREAM SNAKE CASE
@@ -302,6 +302,13 @@ build = {
 ] @keyword.type
 
 "System.runAs" @function.builtin
+]==],
+    ["injections.scm"] = [==[
+([
+  (line_comment)
+  (block_comment)
+] @injection.content
+  (#set! injection.language "comment"))
 ]==],
     ["locals.scm"] = [==[
 ; declarations

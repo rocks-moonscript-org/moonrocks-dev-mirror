@@ -174,6 +174,9 @@ build = {
 (binding
   name: (identifier) @variable.parameter)
 
+(lambda_expression
+  parameters: (identifier) @variable.parameter)
+
 ; expressions
 (field_expression
   field: (identifier) @variable.member)
@@ -231,7 +234,6 @@ build = {
   ; `macro` not implemented yet
   "object"
   "override"
-  "package"
   "val"
   "var"
   "with"
@@ -265,6 +267,8 @@ build = {
 
 (wildcard) @variable.parameter
 
+(namespace_wildcard) @punctuation.special
+
 (annotation) @attribute
 
 ; special keywords
@@ -289,6 +293,7 @@ build = {
 [
   "."
   ","
+  ":"
 ] @punctuation.delimiter
 
 [
@@ -302,6 +307,9 @@ build = {
 
 [
   "=>"
+  "?=>"
+  "="
+  "!"
   "<-"
   "@"
 ] @operator
@@ -309,6 +317,7 @@ build = {
 [
   "import"
   "export"
+  "package"
 ] @keyword.import
 
 [
@@ -331,6 +340,10 @@ build = {
 (case_block
   (case_clause
     "case" @keyword.conditional))
+
+(case_block
+  (case_clause
+    "=>" @punctuation.delimiter))
 
 (operator_identifier) @operator
 

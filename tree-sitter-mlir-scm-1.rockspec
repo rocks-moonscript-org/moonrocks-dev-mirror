@@ -1,4 +1,4 @@
-local git_ref = '00c32d8562dc957b187da110a3443307962b8da8'
+local git_ref = '268bc99020f7ba7a219f839e3a6a31c36ad0826b'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-mlir-' .. '00c32d8562dc957b187da110a3443307962b8da8',
+  dir = 'tree-sitter-mlir-' .. '268bc99020f7ba7a219f839e3a6a31c36ad0826b',
 }
 
 build = {
@@ -382,6 +382,10 @@ build = {
 (value_use) @variable
 
 (comment) @comment @spell
+]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
 ]==],
     ["locals.scm"] = [==[
 (region) @local.scope

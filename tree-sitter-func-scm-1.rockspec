@@ -202,6 +202,10 @@ build = {
 ; Comments
 (comment) @comment @spell
 ]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+]==],
   },
   extra_files = {
     ["nvim-treesitter-LICENSE"] = [[

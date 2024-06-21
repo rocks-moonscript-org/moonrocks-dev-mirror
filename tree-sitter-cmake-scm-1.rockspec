@@ -1,4 +1,4 @@
-local git_ref = '4864abb95a1f6e54d6b362677beef9fb674b41e9'
+local git_ref = '69d7a8b0f7493b0dbb07d54e8fea96c5421e8a71'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-cmake-' .. '4864abb95a1f6e54d6b362677beef9fb674b41e9',
+  dir = 'tree-sitter-cmake-' .. '69d7a8b0f7493b0dbb07d54e8fea96c5421e8a71',
 }
 
 build = {
@@ -293,6 +293,13 @@ build = {
 ")" @indent.end
 
 (argument_list) @indent.auto
+]==],
+    ["injections.scm"] = [==[
+([
+  (bracket_comment)
+  (line_comment)
+] @injection.content
+  (#set! injection.language "comment"))
 ]==],
   },
   extra_files = {

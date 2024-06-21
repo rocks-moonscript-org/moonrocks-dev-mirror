@@ -401,6 +401,13 @@ build = {
   (xhp_close)
 ] @tag
 ]==],
+    ["injections.scm"] = [==[
+([
+  (comment)
+  (heredoc)
+] @injection.content
+  (#set! injection.language "comment"))
+]==],
   },
   extra_files = {
     ["nvim-treesitter-LICENSE"] = [[

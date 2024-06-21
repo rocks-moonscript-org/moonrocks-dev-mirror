@@ -123,6 +123,9 @@ build = {
 (comment) @indent.ignore
 ]==],
     ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+
 ; Pass code blocks to Cpp highlighter
 (code
   (code_body) @injection.content

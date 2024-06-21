@@ -336,6 +336,10 @@ build = {
   .
   (comment) @comment.documentation)
 ]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+]==],
     ["locals.scm"] = [==[
 ;  Better highlighting by referencing to the definition, for variable
 ;  references. However, this is not yet supported by neovim

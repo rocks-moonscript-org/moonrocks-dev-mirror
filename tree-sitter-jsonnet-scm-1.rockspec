@@ -182,6 +182,10 @@ build = {
       (id) @variable.parameter))?
   ")")
 ]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+]==],
     ["locals.scm"] = [==[
 (parenthesis) @local.scope
 

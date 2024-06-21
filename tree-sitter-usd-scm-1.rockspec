@@ -236,6 +236,10 @@ build = {
   "}"
 ] @indent.branch
 ]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+]==],
     ["locals.scm"] = [==[
 [
   (block)

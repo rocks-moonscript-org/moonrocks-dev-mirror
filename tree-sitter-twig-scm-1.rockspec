@@ -1,4 +1,4 @@
-local git_ref = 'eaf80e6af969e25993576477a9dbdba3e48c1305'
+local git_ref = '085648e01d1422163a1702a44e72303b4e2a0bd1'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-twig-' .. 'eaf80e6af969e25993576477a9dbdba3e48c1305',
+  dir = 'tree-sitter-twig-' .. '085648e01d1422163a1702a44e72303b4e2a0bd1',
 }
 
 build = {
@@ -117,6 +117,9 @@ build = {
   ] @punctuation.bracket)
 ]==],
     ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+
 ((content) @injection.content
   (#set! injection.language "html")
   (#set! injection.combined))

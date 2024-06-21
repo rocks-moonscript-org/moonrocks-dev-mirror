@@ -195,6 +195,10 @@ build = {
 
 (comment_statement) @indent.ignore
 ]==],
+    ["injections.scm"] = [==[
+((comment_statement) @injection.content
+  (#set! injection.language "comment"))
+]==],
     ["locals.scm"] = [==[
 [
   (element_node)

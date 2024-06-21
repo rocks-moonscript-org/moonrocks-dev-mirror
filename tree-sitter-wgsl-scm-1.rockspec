@@ -205,6 +205,13 @@ build = {
   (block_comment)
 ] @indent.auto
 ]==],
+    ["injections.scm"] = [==[
+([
+  (line_comment)
+  (block_comment)
+] @injection.content
+  (#set! injection.language "comment"))
+]==],
   },
   extra_files = {
     ["nvim-treesitter-LICENSE"] = [[

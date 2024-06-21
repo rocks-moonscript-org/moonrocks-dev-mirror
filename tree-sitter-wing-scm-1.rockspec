@@ -157,6 +157,10 @@ build = {
 
 "return" @keyword.return
 ]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+]==],
     ["locals.scm"] = [==[
 (block) @local.scope
 

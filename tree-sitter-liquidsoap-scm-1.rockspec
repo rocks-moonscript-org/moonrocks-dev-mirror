@@ -163,7 +163,7 @@ build = {
 
 (bool) @boolean
 
-(comment) @comment
+(comment) @comment @spell
 
 (regexp) @string.regexp
 
@@ -236,6 +236,10 @@ build = {
 ] @indent.branch @indent.end
 
 (comment) @indent.auto
+]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
 ]==],
     ["locals.scm"] = [==[
 [

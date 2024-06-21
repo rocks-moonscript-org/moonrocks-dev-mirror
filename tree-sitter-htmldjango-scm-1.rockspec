@@ -64,6 +64,15 @@ build = {
 
 (variable_name) @variable
 
+(unpaired_statement
+  (tag_name)
+  (variable
+    (variable_name) @variable.parameter)
+  .
+  "="
+  .
+  (_))
+
 (filter_name) @function.method
 
 (filter_argument) @variable.parameter
@@ -114,6 +123,12 @@ build = {
 (branch_statement) @indent.branch
 ]==],
     ["injections.scm"] = [==[
+([
+  (paired_comment)
+  (unpaired_comment)
+] @injection.content
+  (#set! injection.language "comment"))
+
 ((content) @injection.content
   (#set! injection.language "html")
   (#set! injection.combined))

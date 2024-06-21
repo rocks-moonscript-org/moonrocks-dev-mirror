@@ -134,6 +134,10 @@ build = {
   (each_statement)
 ] @indent.begin
 ]==],
+    ["injections.scm"] = [==[
+((single_line_comment) @injection.content
+  (#set! injection.language "comment"))
+]==],
   },
   extra_files = {
     ["nvim-treesitter-LICENSE"] = [[
