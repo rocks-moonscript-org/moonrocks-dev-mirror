@@ -36,6 +36,15 @@ build = {
     ["highlights.scm"] = [==[
 (metadata) @comment
 
+(comment) @comment @spell
+
+[
+  "{"
+  "}"
+] @punctuation.bracket
+
+"%" @punctuation.special
+
 (ingredient
   "@" @punctuation.delimiter
   (name)? @string.special.symbol
@@ -56,6 +65,10 @@ build = {
   (amount
     (quantity)? @number
     (units)? @constant)?)
+]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
 ]==],
   },
   extra_files = {

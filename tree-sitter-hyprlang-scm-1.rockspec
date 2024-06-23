@@ -1,4 +1,4 @@
-local git_ref = 'e5da7d0aa44403153e0394d87d9edea4e5bd6609'
+local git_ref = 'c9012d6dcaaa939f17c21e1fdb17b013d139e6b9'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-hyprlang-' .. 'e5da7d0aa44403153e0394d87d9edea4e5bd6609',
+  dir = 'tree-sitter-hyprlang-' .. 'c9012d6dcaaa939f17c21e1fdb17b013d139e6b9',
 }
 
 build = {
@@ -75,6 +75,8 @@ build = {
   (legacy_hex)
   (angle)
   (hex)
+  (display)
+  (position)
 ] @number
 
 "deg" @type
@@ -103,6 +105,9 @@ build = {
 "}" @indent.branch
 ]==],
     ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+
 (exec
   (string) @injection.content
   (#set! injection.language "bash"))
