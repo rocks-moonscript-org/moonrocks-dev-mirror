@@ -201,6 +201,13 @@ build = {
 
 (comment) @indent.ignore
 ]==],
+    ["injections.scm"] = [==[
+([
+  (comment)
+  (afx_comment)
+] @injection.content
+  (#set! injection.language "comment"))
+]==],
     ["locals.scm"] = [==[
 ; Fusion base
 (block) @local.scope
