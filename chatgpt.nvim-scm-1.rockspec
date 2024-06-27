@@ -1,4 +1,4 @@
-local git_ref = 'df53728e05129278d6ea26271ec086aa013bed90'
+local git_ref = 'f081338f07216a46d3915ce46c1fcb083bcb5016'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'ChatGPT.nvim-' .. 'df53728e05129278d6ea26271ec086aa013bed90',
+  dir = 'ChatGPT.nvim-' .. 'f081338f07216a46d3915ce46c1fcb083bcb5016',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

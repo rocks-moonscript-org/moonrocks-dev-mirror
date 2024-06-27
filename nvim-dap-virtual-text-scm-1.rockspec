@@ -16,7 +16,7 @@ description = {
   license = 'GPL-3.0'
 }
 
-dependencies = { 'lua >= 5.1', 'nvim-dap', 'nvim-treesitter' } 
+dependencies = { 'lua >= 5.1', 'nvim-dap' } 
 
 test_dependencies = { }
 
