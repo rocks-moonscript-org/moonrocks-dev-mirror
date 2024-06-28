@@ -1,4 +1,4 @@
-local git_ref = '75de06f8edbd0006997a19b760045753d4f6693c'
+local git_ref = 'a1c5476732686da2a51218f47580f0dc1a3b8aa9'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,13 +16,13 @@ description = {
   license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1', 'nvim-web-devicons', 'nvim-treesitter' } 
+dependencies = { 'lua >= 5.1', 'nvim-web-devicons' } 
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'aerial.nvim-' .. '75de06f8edbd0006997a19b760045753d4f6693c',
+  dir = 'aerial.nvim-' .. 'a1c5476732686da2a51218f47580f0dc1a3b8aa9',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

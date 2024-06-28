@@ -33,5 +33,5 @@ end
 
 build = {
   type = 'builtin',
-  copy_directories = { 'autoload', 'doc' } ,
+  copy_directories = { 'autoload', 'doc', 'ftdetect' } ,
 }

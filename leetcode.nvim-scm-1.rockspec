@@ -1,4 +1,4 @@
-local git_ref = '458da8ea7e73e8ed221165aa56a595e33c4ec644'
+local git_ref = '02fb2c855658ad6b60e43671f6b040c812181a1d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,13 +16,13 @@ description = {
   license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1', 'telescope.nvim', 'nui.nvim', 'nvim-treesitter' } 
+dependencies = { 'lua >= 5.1', 'telescope.nvim', 'nui.nvim', 'nvim-web-devicons' } 
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'leetcode.nvim-' .. '458da8ea7e73e8ed221165aa56a595e33c4ec644',
+  dir = 'leetcode.nvim-' .. '02fb2c855658ad6b60e43671f6b040c812181a1d',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

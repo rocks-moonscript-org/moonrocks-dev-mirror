@@ -16,7 +16,7 @@ description = {
   license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1', 'nvim-treesitter' } 
+dependencies = { 'lua >= 5.1', 'nvim-treesitter-legacy-api' } 
 
 test_dependencies = { }
 
