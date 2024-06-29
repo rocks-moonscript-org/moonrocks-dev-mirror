@@ -8224,6 +8224,13 @@ repository = {
          }
       }
    },
+   ['rocks-edit.nvim'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['rocks-fs'] = {
       ['dev-1'] = {
          {
