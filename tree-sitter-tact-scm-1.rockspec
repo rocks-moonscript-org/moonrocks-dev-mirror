@@ -1,4 +1,4 @@
-local git_ref = '034df2162ed7b654efd999942e266be713c7cde0'
+local git_ref = '91cc49a83f4f0b3a756bf7d0e65403a9cf757003'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-tact-' .. '034df2162ed7b654efd999942e266be713c7cde0',
+  dir = 'tree-sitter-tact-' .. '91cc49a83f4f0b3a756bf7d0e65403a9cf757003',
 }
 
 build = {
@@ -36,7 +36,7 @@ build = {
     ["folds.scm"] = [==[
 [
   ; import …
-  (import_statement)+
+  (import)+
   ; (…, …)
   (parameter_list)
   (argument_list)
@@ -162,7 +162,7 @@ build = {
 
 ; string.special.path
 ; -------------------
-(import_statement
+(import
   library: (string) @string.special.path)
 
 ; boolean
@@ -171,7 +171,10 @@ build = {
 
 ; constant
 ; --------
-(constant
+(global_constant
+  name: (identifier) @constant)
+
+(storage_constant
   name: (identifier) @constant)
 
 ; constant.builtin
@@ -196,15 +199,10 @@ build = {
 (field_access_expression
   name: (identifier) @variable.member)
 
-(trait_body
-  (constant
-    name: (identifier) @variable.member))
-
-(contract_body
-  (constant
-    name: (identifier) @variable.member))
-
 (field
+  name: (identifier) @variable.member)
+
+(storage_variable
   name: (identifier) @variable.member)
 
 ; number
@@ -302,7 +300,7 @@ build = {
 (native_function
   name: (identifier) @function)
 
-(static_function
+(global_function
   name: (identifier) @function)
 
 (func_identifier) @function
@@ -321,7 +319,7 @@ build = {
 (external_function
   "external" @function.method)
 
-(function
+(storage_function
   name: (identifier) @function.method)
 
 ; function.call
@@ -343,15 +341,8 @@ build = {
     "contractAddress" "contractAddressExt" "emit" "cell" "ton" "dump" "dumpStack" "beginString"
     "beginComment" "beginTailString" "beginStringFromBuilder" "beginCell" "emptyCell" "randomInt"
     "random" "checkSignature" "checkDataSignature" "sha256" "min" "max" "abs" "pow" "pow2" "throw"
-    "nativeThrowWhen" "nativeThrowUnless" "getConfigParam" "nativeRandomize" "nativeRandomizeLt"
+    "nativeThrowIf" "nativeThrowUnless" "getConfigParam" "nativeRandomize" "nativeRandomizeLt"
     "nativePrepareRandom" "nativeRandom" "nativeRandomInterval" "nativeReserve"))
-
-; comment
-; -------
-(comment) @comment @spell
-
-((comment) @comment.documentation
-  (#lua-match? @comment.documentation "^/[*][*][^*].*[*]/$"))
 
 ; attribute
 ; ---------
@@ -359,6 +350,13 @@ build = {
   "@name"
   "@interface"
 ] @attribute
+
+; comment
+; -------
+(comment) @comment @spell
+
+((comment) @comment.documentation
+  (#lua-match? @comment.documentation "^/[*][*][^*].*[*]/$"))
 ]==],
     ["indents.scm"] = [==[
 ; indent.begin       ; indent children when matching this node
@@ -420,12 +418,12 @@ build = {
 ; Scopes       @local.scope
 ; -------------------------
 [
-  (static_function)
+  (global_function)
   (init_function)
   (bounced_function)
   (receive_function)
   (external_function)
-  (function)
+  (storage_function)
   (block_statement)
 ] @local.scope
 
@@ -436,11 +434,14 @@ build = {
   name: (identifier) @local.definition.var)
 
 ; constants
-(constant
+(global_constant
+  name: (identifier) @local.definition.constant)
+
+(storage_constant
   name: (identifier) @local.definition.constant)
 
 ; functions
-(static_function
+(global_function
   name: (identifier) @local.definition.function
   (#set! definition.var.scope parent))
 
@@ -461,7 +462,7 @@ build = {
   "external" @local.definition.method
   (#set! definition.var.scope parent))
 
-(function
+(storage_function
   name: (identifier) @local.definition.method
   (#set! definition.var.scope parent))
 
@@ -472,12 +473,12 @@ build = {
 ; user-defined types (structs and messages)
 (type_identifier) @local.definition.type
 
-; fields (and properties)
+; fields (of messages and structs)
 (field
   name: (identifier) @local.definition.field)
 
 ; imports
-(import_statement
+(import
   (string) @local.definition.import)
 
 ; References   @local.reference

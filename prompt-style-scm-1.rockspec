@@ -1,4 +1,4 @@
-local git_ref = 'f9d8ee1cf8d739d58870c35dc1bb0ee46b5a57c8'
+local git_ref = '1acf468e74f56a92cea11120966ade95ba55c6a7'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -16,13 +16,18 @@ description = {
   license = 'GPL-3.0'
 }
 
-dependencies = { 'lua >= 5.1' } 
+dependencies = {
+    "lua >= 5.1",
+    "ansicolors",
+    "luafilesystem",
+    "luaprompt"
+}
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'prompt-style.lua-' .. 'f9d8ee1cf8d739d58870c35dc1bb0ee46b5a57c8',
+  dir = 'prompt-style.lua-' .. '1acf468e74f56a92cea11120966ade95ba55c6a7',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
@@ -33,5 +38,14 @@ end
 
 build = {
   type = 'builtin',
-  copy_directories = { },
+  modules = {["prompt-style"] = "prompt-style.lua"},
+  install = {
+      -- cannot use _VERSION
+      bin = {
+          "bin/nvimp",
+          "bin/texluap",
+          "bin/pandocp",
+          "bin/neomuttp"
+      },
+  },
 }
