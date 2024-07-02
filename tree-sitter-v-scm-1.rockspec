@@ -44,6 +44,8 @@ build = {
 ] @fold
 ]==],
     ["highlights.scm"] = [==[
+(shebang) @keyword.directive
+
 ; Includes
 [
   "import"
@@ -336,6 +338,7 @@ build = {
 
 (_
   (line_comment)+ @comment.documentation
+  .
   [
     (function_declaration)
     (type_declaration)

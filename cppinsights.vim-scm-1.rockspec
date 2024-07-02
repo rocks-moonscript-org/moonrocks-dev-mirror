@@ -1,4 +1,4 @@
-local git_ref = '43efd86037ed08fc2d654de4d25c72787b6dce21'
+local git_ref = '4cc9c5556566e40cf21008b7aeba95ec211d6bb7'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -12,7 +12,7 @@ description = {
   summary = 'Vim extension for C++ Insights.',
   detailed = '',
   labels = { 'cppinsights', 'vim' } ,
-  homepage = 'https://github.com/Freed-Wu/cppinsights.vim',
+  homepage = 'https://luarocks.org/modules/Freed-Wu/cppinsights.vim',
   license = 'GPL-3.0'
 }
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'cppinsights.vim-' .. '43efd86037ed08fc2d654de4d25c72787b6dce21',
+  dir = 'cppinsights.vim-' .. '4cc9c5556566e40cf21008b7aeba95ec211d6bb7',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

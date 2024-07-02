@@ -1,17 +1,17 @@
-local git_ref = 'cd95a67cea8c839d62fc5206ed1f5c66ff9ca255'
+local git_ref = '8e3a4205b76236bb6dbebdbee5afc262ce38bb62'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/tree-sitter/tree-sitter-ocaml'
+local repo_url = 'https://github.com/opa-oz/tree-sitter-robots-txt'
 
 rockspec_format = '3.0'
-package = 'tree-sitter-ocaml_interface'
+package = 'tree-sitter-robots'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser and Neovim queries for ocaml_interface',
+  summary = 'tree-sitter parser and Neovim queries for robots',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/tree-sitter/tree-sitter-ocaml',
+  homepage = 'https://github.com/opa-oz/tree-sitter-robots-txt',
   license = 'UNKNOWN'
 }
 
@@ -21,32 +21,30 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-ocaml-' .. 'cd95a67cea8c839d62fc5206ed1f5c66ff9ca255',
+  dir = 'tree-sitter-robots-txt-' .. '8e3a4205b76236bb6dbebdbee5afc262ce38bb62',
 }
 
 build = {
   type = "treesitter-parser",
-  lang = "ocaml_interface",
+  lang = "robots",
   parser = true,
   generate = false,
   generate_from_json = false,
-  location = "grammars/interface",
+  location = nil,
   copy_directories = { "queries" },
   queries = {
-    ["folds.scm"] = [==[
-; inherits: ocaml
-]==],
     ["highlights.scm"] = [==[
-; inherits: ocaml
-]==],
-    ["indents.scm"] = [==[
-; inherits: ocaml
+(comment) @comment @spell
+
+(directive) @property
+
+(value) @string
+
+":" @punctuation.delimiter
 ]==],
     ["injections.scm"] = [==[
-; inherits: ocaml
-]==],
-    ["locals.scm"] = [==[
-; inherits: ocaml
+((comment) @injection.content
+  (#set! injection.language "comment"))
 ]==],
   },
   extra_files = {

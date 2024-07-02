@@ -1,4 +1,4 @@
-local git_ref = 'edd817e0532f179b7f7f371dc180629070945f0c'
+local git_ref = '821994a8029b0e271171da4331b8cfc0294d08ed'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-gitcommit-' .. 'edd817e0532f179b7f7f371dc180629070945f0c',
+  dir = 'tree-sitter-gitcommit-' .. '821994a8029b0e271171da4331b8cfc0294d08ed',
 }
 
 build = {
@@ -50,8 +50,6 @@ build = {
 (arrow) @punctuation.delimiter
 
 (subject) @markup.heading @spell
-
-(overflow) @comment.warning @spell
 
 (subject
   (subject_prefix) @function @nospell)

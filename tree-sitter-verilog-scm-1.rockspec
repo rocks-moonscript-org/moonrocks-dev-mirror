@@ -66,7 +66,6 @@ build = {
   "localparam"
   "defparam"
   "assign"
-  "typedef"
   "modport"
   "fork"
   "join"
@@ -88,6 +87,7 @@ build = {
   "enum"
   "struct"
   "union"
+  "typedef"
 ] @keyword.type
 
 [
@@ -140,9 +140,6 @@ build = {
   (package_identifier
     (simple_identifier) @constant))
 
-(parameter_port_list
-  "#" @constructor)
-
 [
   "="
   "-"
@@ -154,12 +151,9 @@ build = {
   "|"
   "&&"
   "||"
-  ":"
-  "{"
-  "}"
-  "'{"
   "<="
   "@"
+  "@*"
   "=="
   "!="
   "==="
@@ -174,7 +168,11 @@ build = {
   "|="
   (unary_operator)
   (inc_or_dec_operator)
+  "#"
 ] @operator
+
+(parameter_port_list
+  "#" @constructor)
 
 [
   "or"
@@ -204,6 +202,8 @@ build = {
 [
   "signed"
   "unsigned"
+  "input"
+  "output"
 ] @keyword.modifier
 
 (data_type
@@ -241,9 +241,16 @@ build = {
 [
   ";"
   "::"
+  ":"
   ","
   "."
 ] @punctuation.delimiter
+
+(conditional_expression
+  [
+    "?"
+    ":"
+  ] @keyword.conditional.ternary)
 
 (default_nettype_compiler_directive
   (default_nettype_value) @string)
@@ -267,7 +274,7 @@ build = {
   (unbased_unsized_literal)
 ] @number
 
-(time_unit) @attribute
+(time_unit) @type.builtin
 
 (checker_instantiation
   (checker_identifier
@@ -351,6 +358,9 @@ build = {
   "]"
   "("
   ")"
+  "{"
+  "}"
+  "'{"
 ] @punctuation.bracket
 ]==],
     ["injections.scm"] = [==[

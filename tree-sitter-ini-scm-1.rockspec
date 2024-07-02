@@ -54,6 +54,10 @@ build = {
 
 ; (setting_value) @none ; grammar does not support subtypes
 ]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
+]==],
   },
   extra_files = {
     ["nvim-treesitter-LICENSE"] = [[

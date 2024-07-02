@@ -1,4 +1,4 @@
-local git_ref = 'cd82eb40d31bdfe65f846f4e06292d6c804b5e0e'
+local git_ref = '08d8b885a3fa67a6e8aa8edd8988eaa55db46ba4'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-latex-' .. 'cd82eb40d31bdfe65f846f4e06292d6c804b5e0e',
+  dir = 'tree-sitter-latex-' .. '08d8b885a3fa67a6e8aa8edd8988eaa55db46ba4',
 }
 
 build = {
@@ -304,12 +304,10 @@ build = {
     (_) @markup.strong))
   (#any-of? @_name "\\textbf" "\\mathbf"))
 
-((generic_command
-  command: (command_name) @_name
-  .
-  arg: (curly_group
-    (_) @markup.link.url))
-  (#any-of? @_name "\\url" "\\href"))
+(hyperlink
+  command: _ @function @nospell
+  uri: (curly_group_uri
+    (_) @markup.link.url @nospell))
 
 ; File inclusion commands
 (class_include

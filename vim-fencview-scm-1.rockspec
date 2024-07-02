@@ -1,4 +1,4 @@
-local git_ref = 'be0b97141814991da7de5e37654e697d7a2abf22'
+local git_ref = '6313e23e97ea5333869bf7a0584ad888099c46bb'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'vim-fencview-' .. 'be0b97141814991da7de5e37654e697d7a2abf22',
+  dir = 'vim-fencview-' .. '6313e23e97ea5333869bf7a0584ad888099c46bb',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

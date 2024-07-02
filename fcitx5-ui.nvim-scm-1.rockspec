@@ -1,4 +1,4 @@
-local git_ref = '2612c6cfeb2f31de45a6a7096428ef32f885070e'
+local git_ref = '12aa137a218584ca799762b76e9589bafec9eb8e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'fcitx5-ui.nvim-' .. '2612c6cfeb2f31de45a6a7096428ef32f885070e',
+  dir = 'fcitx5-ui.nvim-' .. '12aa137a218584ca799762b76e9589bafec9eb8e',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

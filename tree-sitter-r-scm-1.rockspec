@@ -1,4 +1,4 @@
-local git_ref = '391400572538ff9854341a175ed8ab4b1e45f44b'
+local git_ref = 'b1e211f52ad8f8e1e182bbbcc16dcd5e3688eb7d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-r-' .. '391400572538ff9854341a175ed8ab4b1e45f44b',
+  dir = 'tree-sitter-r-' .. 'b1e211f52ad8f8e1e182bbbcc16dcd5e3688eb7d',
 }
 
 build = {
@@ -34,7 +34,6 @@ build = {
   copy_directories = { "queries" },
   queries = {
     ["highlights.scm"] = [==[
-; highlights.scm
 ; Literals
 (integer) @number
 
@@ -45,8 +44,10 @@ build = {
 (string) @string
 
 (string
-  (escape_sequence) @string.escape)
+  (string_content
+    (escape_sequence) @string.escape))
 
+; Comments
 (comment) @comment @spell
 
 ((program
@@ -54,116 +55,109 @@ build = {
   (comment) @keyword.directive @nospell)
   (#lua-match? @keyword.directive "^#!/"))
 
-(identifier) @variable
-
-((dollar
-  (identifier) @variable.builtin)
-  (#eq? @variable.builtin "self"))
-
-(dollar
-  _
-  (identifier) @variable.member)
-
-; Parameters
-(formal_parameters
-  (identifier) @variable.parameter)
-
-(formal_parameters
-  (default_parameter
-    name: (identifier) @variable.parameter))
-
-(default_argument
-  name: (identifier) @variable.parameter)
-
-; Namespace
-(namespace_get
-  namespace: (identifier) @module)
-
-(namespace_get_internal
-  namespace: (identifier) @module)
-
 ; Operators
 [
+  "?"
+  ":="
   "="
   "<-"
   "<<-"
   "->"
-] @operator
-
-(unary
-  operator: [
-    "-"
-    "+"
-    "!"
-    "~"
-    "?"
-  ] @operator)
-
-(binary
-  operator: [
-    "-"
-    "+"
-    "*"
-    "/"
-    "^"
-    "<"
-    ">"
-    "<="
-    ">="
-    "=="
-    "!="
-    "||"
-    "|"
-    "&&"
-    "&"
-    ":"
-    "~"
-  ] @operator)
-
-[
+  "->>"
+  "~"
   "|>"
-  (special)
+  "||"
+  "|"
+  "&&"
+  "&"
+  "<"
+  "<="
+  ">"
+  ">="
+  "=="
+  "!="
+  "+"
+  "-"
+  "*"
+  "/"
+  "::"
+  ":::"
+  "**"
+  "^"
+  "$"
+  "@"
+  ":"
+  "!"
+  "special"
 ] @operator
 
-(lambda_function
-  "\\" @operator)
-
+; Punctuation
 [
   "("
   ")"
-  "["
-  "]"
   "{"
   "}"
+  "["
+  "]"
+  "[["
+  "]]"
 ] @punctuation.bracket
 
-"," @punctuation.delimiter
+(comma) @punctuation.delimiter
 
-(dollar
-  _
-  "$" @operator)
+; Variables
+(identifier) @variable
 
-(subset2
-  "[[" @punctuation.bracket
-  "]]" @punctuation.bracket)
+; Functions
+(binary_operator
+  lhs: (identifier) @function
+  operator: "<-"
+  rhs: (function_definition))
 
-[
-  (dots)
-  (break)
-  (next)
-] @keyword
+(binary_operator
+  lhs: (identifier) @function
+  operator: "="
+  rhs: (function_definition))
 
-[
-  (nan)
-  (na)
-  (null)
-  (inf)
-] @constant.builtin
+; Calls
+(call
+  function: (identifier) @function.call)
+
+(extract_operator
+  rhs: (identifier) @variable.member)
+
+function: (extract_operator
+  rhs: (identifier) @function.method.call)
+
+; Parameters
+(parameters
+  (parameter
+    name: (identifier) @variable.parameter))
+
+(arguments
+  (argument
+    name: (identifier) @variable.parameter))
+
+; Namespace
+(namespace_operator
+  lhs: (identifier) @module)
+
+(call
+  function: (namespace_operator
+    rhs: (identifier) @function))
+
+; Keywords
+(function_definition
+  name: "function" @keyword.function)
+
+(function_definition
+  name: "\\" @operator)
+
+(return) @keyword.return
 
 [
   "if"
   "else"
-  "switch"
 ] @keyword.conditional
 
 [
@@ -171,6 +165,8 @@ build = {
   "repeat"
   "for"
   "in"
+  (break)
+  (next)
 ] @keyword.repeat
 
 [
@@ -178,32 +174,21 @@ build = {
   (false)
 ] @boolean
 
-"function" @keyword.function
-
-; Functions/Methods
-(call
-  function: (identifier) @function.call)
-
-(call
-  (namespace_get
-    function: (identifier) @function.call))
-
-(call
-  (namespace_get_internal
-    function: (identifier) @function.call))
-
-(call
-  function: (dollar
-    _
-    (identifier) @function.method.call))
+[
+  (null)
+  (inf)
+  (nan)
+  (na)
+  (dots)
+  (dot_dot_i)
+] @constant.builtin
 ]==],
     ["indents.scm"] = [==[
 [
-  (brace_list)
-  (paren_list)
-  (special)
-  (pipe)
+  (braced_expression)
+  (parenthesized_expression)
   (call)
+  "special"
   "|>"
   "if"
   "else"
@@ -212,16 +197,19 @@ build = {
   "for"
 ] @indent.begin
 
-(binary
-  operator: (special)) @indent.begin
+(binary_operator
+  rhs: (_) @_no_indent
+  (#not-kind-eq? @_no_indent function_definition)) @indent.begin
 
 [
   "}"
   ")"
 ] @indent.branch
 
-((formal_parameters
-  (identifier)) @indent.align
+((parameters
+  .
+  (parameter
+    name: (identifier))) @indent.align
   (#set! indent.open_delimiter "(")
   (#set! indent.close_delimiter ")"))
 
@@ -240,17 +228,23 @@ build = {
 ; locals.scm
 (function_definition) @local.scope
 
-(formal_parameters
-  (identifier) @local.definition.parameter)
-
-(left_assignment
+(argument
   name: (identifier) @local.definition)
 
-(equals_assignment
+(parameter
   name: (identifier) @local.definition)
 
-(right_assignment
-  name: (identifier) @local.definition)
+(binary_operator
+  lhs: (identifier) @local.definition
+  operator: "<-")
+
+(binary_operator
+  lhs: (identifier) @local.definition
+  operator: "=")
+
+(binary_operator
+  operator: "->"
+  rhs: (identifier) @local.definition)
 
 (identifier) @local.reference
 ]==],

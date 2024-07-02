@@ -1,4 +1,4 @@
-local git_ref = 'efc01869ccc2feb1c4a04e410d64dce9b3566f10'
+local git_ref = 'b06cd72d701055b65b07e69bba1387f9b08a678e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -12,7 +12,7 @@ description = {
   summary = 'Display emoji in your vim',
   detailed = '',
   labels = { 'conceal', 'emoji', 'vim' } ,
-  homepage = 'https://github.com/Freed-Wu/conceal.vim',
+  homepage = 'https://luarocks.org/modules/Freed-Wu/conceal.vim',
   license = 'GPL-3.0'
 }
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'conceal.vim-' .. 'efc01869ccc2feb1c4a04e410d64dce9b3566f10',
+  dir = 'conceal.vim-' .. 'b06cd72d701055b65b07e69bba1387f9b08a678e',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

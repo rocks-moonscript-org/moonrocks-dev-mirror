@@ -1,4 +1,4 @@
-local git_ref = '05f949d3c1c15e3261473a244d3ce87777374dec'
+local git_ref = 'd853661ca680d8ff7f8d800182d5782b61d0dd58'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-sparql-' .. '05f949d3c1c15e3261473a244d3ce87777374dec',
+  dir = 'tree-sitter-sparql-' .. 'd853661ca680d8ff7f8d800182d5782b61d0dd58',
 }
 
 build = {
