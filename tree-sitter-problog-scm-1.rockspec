@@ -1,17 +1,17 @@
-local git_ref = '5c9b47c6a978072808b356065fe8f223cdc8fc07'
+local git_ref = 'd8bc22c007825d3af3d62b4326f9d8f9ca529974'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/dlvandenberg/tree-sitter-angular'
+local repo_url = 'https://github.com/foxyseta/tree-sitter-prolog'
 
 rockspec_format = '3.0'
-package = 'tree-sitter-angular'
+package = 'tree-sitter-problog'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser and Neovim queries for angular',
+  summary = 'tree-sitter parser and Neovim queries for problog',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/dlvandenberg/tree-sitter-angular',
+  homepage = 'https://github.com/foxyseta/tree-sitter-prolog',
   license = 'UNKNOWN'
 }
 
@@ -21,181 +21,32 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-angular-' .. '5c9b47c6a978072808b356065fe8f223cdc8fc07',
+  dir = 'tree-sitter-prolog-' .. 'd8bc22c007825d3af3d62b4326f9d8f9ca529974',
 }
 
 build = {
   type = "treesitter-parser",
-  lang = "angular",
+  lang = "problog",
   parser = true,
   generate = false,
-  generate_from_json = true,
-  location = nil,
+  generate_from_json = false,
+  location = "grammars/problog",
   copy_directories = { "queries" },
   queries = {
     ["folds.scm"] = [==[
-; inherits: html
+; inherits: prolog
 ]==],
     ["highlights.scm"] = [==[
-; inherits: html_tags
+; inherits: prolog
 
-(identifier) @variable
-
-(pipe_operator) @operator
-
-[
-  (string)
-  (static_member_expression)
-] @string
-
-(number) @number
-
-(pipe_call
-  name: (identifier) @function)
-
-(pipe_call
-  arguments: (pipe_arguments
-    (identifier) @variable.parameter))
-
-(structural_directive
-  "*" @keyword
-  (identifier) @keyword)
-
-(attribute
-  (attribute_name) @variable.member
-  (#lua-match? @variable.member "#.*"))
-
-(binding_name
-  (identifier) @keyword)
-
-(event_binding
-  (binding_name
-    (identifier) @keyword))
-
-(event_binding
-  "\"" @punctuation.delimiter)
-
-(property_binding
-  "\"" @punctuation.delimiter)
-
-(structural_assignment
-  operator: (identifier) @keyword)
-
-(member_expression
-  property: (identifier) @property)
-
-(call_expression
-  function: (identifier) @function)
-
-(call_expression
-  function: ((identifier) @function.builtin
-    (#eq? @function.builtin "$any")))
-
-(pair
-  key: ((identifier) @variable.builtin
-    (#eq? @variable.builtin "$implicit")))
-
-((control_keyword) @keyword.repeat
-  (#any-of? @keyword.repeat "for" "empty"))
-
-((control_keyword) @keyword.conditional
-  (#any-of? @keyword.conditional "if" "else" "switch" "case" "default"))
-
-((control_keyword) @keyword.coroutine
-  (#any-of? @keyword.coroutine "defer" "placeholder" "loading"))
-
-((control_keyword) @keyword.exception
-  (#eq? @keyword.exception "error"))
-
-(special_keyword) @keyword
-
-((identifier) @boolean
-  (#any-of? @boolean "true" "false"))
-
-((identifier) @variable.builtin
-  (#any-of? @variable.builtin "this" "$event"))
-
-((identifier) @constant.builtin
-  (#eq? @constant.builtin "null"))
-
-[
-  (ternary_operator)
-  (conditional_operator)
-] @keyword.conditional.ternary
-
-[
-  "("
-  ")"
-  "["
-  "]"
-  "{"
-  "}"
-  "@"
-  "} @"
-  (if_end_expression)
-  (for_end_expression)
-  (switch_end_expression)
-  (case_end_expression)
-  (default_end_expression)
-  (defer_end_expression)
-] @punctuation.bracket
-
-(two_way_binding
-  [
-    "[("
-    ")]"
-  ] @punctuation.bracket)
-
-[
-  "{{"
-  "}}"
-] @punctuation.special
-
-[
-  ";"
-  "."
-  ","
-  "?."
-] @punctuation.delimiter
-
-(nullish_coalescing_expression
-  (coalescing_operator) @operator)
-
-(concatenation_expression
-  "+" @operator)
-
-(icu_clause) @keyword.operator
-
-(icu_category) @keyword.conditional
-
-(binary_expression
-  [
-    "-"
-    "&&"
-    "+"
-    "<"
-    "<="
-    "="
-    "=="
-    "==="
-    "!="
-    "!=="
-    ">"
-    ">="
-    "*"
-    "/"
-    "||"
-    "%"
-  ] @operator)
+(probability_label
+  _ @attribute)
 ]==],
     ["indents.scm"] = [==[
-; inherits: html_tags
+; inherits: prolog
 ]==],
     ["injections.scm"] = [==[
-; inherits: html_tags
-]==],
-    ["locals.scm"] = [==[
-; inherits: html
+; inherits: prolog
 ]==],
   },
   extra_files = {

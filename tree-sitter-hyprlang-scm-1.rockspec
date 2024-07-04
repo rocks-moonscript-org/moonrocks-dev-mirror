@@ -1,4 +1,4 @@
-local git_ref = 'c9012d6dcaaa939f17c21e1fdb17b013d139e6b9'
+local git_ref = '6858695eba0e63b9e0fceef081d291eb352abce8'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -12,7 +12,7 @@ description = {
   summary = 'tree-sitter parser and Neovim queries for hyprlang',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/tree-sitter-grammars/tree-sitter-hyprlang',
-  license = 'Apache-2.0'
+  license = 'UNKNOWN'
 }
 
 build_dependencies = {
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-hyprlang-' .. 'c9012d6dcaaa939f17c21e1fdb17b013d139e6b9',
+  dir = 'tree-sitter-hyprlang-' .. '6858695eba0e63b9e0fceef081d291eb352abce8',
 }
 
 build = {

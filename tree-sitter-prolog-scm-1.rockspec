@@ -1,17 +1,17 @@
-local git_ref = '5c9b47c6a978072808b356065fe8f223cdc8fc07'
+local git_ref = 'd8bc22c007825d3af3d62b4326f9d8f9ca529974'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/dlvandenberg/tree-sitter-angular'
+local repo_url = 'https://github.com/foxyseta/tree-sitter-prolog'
 
 rockspec_format = '3.0'
-package = 'tree-sitter-angular'
+package = 'tree-sitter-prolog'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser and Neovim queries for angular',
+  summary = 'tree-sitter parser and Neovim queries for prolog',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/dlvandenberg/tree-sitter-angular',
+  homepage = 'https://github.com/foxyseta/tree-sitter-prolog',
   license = 'UNKNOWN'
 }
 
@@ -21,181 +21,92 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-angular-' .. '5c9b47c6a978072808b356065fe8f223cdc8fc07',
+  dir = 'tree-sitter-prolog-' .. 'd8bc22c007825d3af3d62b4326f9d8f9ca529974',
 }
 
 build = {
   type = "treesitter-parser",
-  lang = "angular",
+  lang = "prolog",
   parser = true,
   generate = false,
-  generate_from_json = true,
-  location = nil,
+  generate_from_json = false,
+  location = "grammars/prolog",
   copy_directories = { "queries" },
   queries = {
     ["folds.scm"] = [==[
-; inherits: html
+[
+  (directive_term)
+  (clause_term)
+  (arg_list)
+  (list_notation)
+] @fold
 ]==],
     ["highlights.scm"] = [==[
-; inherits: html_tags
+(comment) @comment @spell
 
-(identifier) @variable
+(atom) @constant
 
-(pipe_operator) @operator
-
-[
-  (string)
-  (static_member_expression)
-] @string
-
-(number) @number
-
-(pipe_call
-  name: (identifier) @function)
-
-(pipe_call
-  arguments: (pipe_arguments
-    (identifier) @variable.parameter))
-
-(structural_directive
-  "*" @keyword
-  (identifier) @keyword)
-
-(attribute
-  (attribute_name) @variable.member
-  (#lua-match? @variable.member "#.*"))
-
-(binding_name
-  (identifier) @keyword)
-
-(event_binding
-  (binding_name
-    (identifier) @keyword))
-
-(event_binding
-  "\"" @punctuation.delimiter)
-
-(property_binding
-  "\"" @punctuation.delimiter)
-
-(structural_assignment
-  operator: (identifier) @keyword)
-
-(member_expression
-  property: (identifier) @property)
-
-(call_expression
-  function: (identifier) @function)
-
-(call_expression
-  function: ((identifier) @function.builtin
-    (#eq? @function.builtin "$any")))
-
-(pair
-  key: ((identifier) @variable.builtin
-    (#eq? @variable.builtin "$implicit")))
-
-((control_keyword) @keyword.repeat
-  (#any-of? @keyword.repeat "for" "empty"))
-
-((control_keyword) @keyword.conditional
-  (#any-of? @keyword.conditional "if" "else" "switch" "case" "default"))
-
-((control_keyword) @keyword.coroutine
-  (#any-of? @keyword.coroutine "defer" "placeholder" "loading"))
-
-((control_keyword) @keyword.exception
-  (#eq? @keyword.exception "error"))
-
-(special_keyword) @keyword
-
-((identifier) @boolean
+((atom) @boolean
   (#any-of? @boolean "true" "false"))
 
-((identifier) @variable.builtin
-  (#any-of? @variable.builtin "this" "$event"))
+(functional_notation
+  function: (atom) @function.call)
 
-((identifier) @constant.builtin
-  (#eq? @constant.builtin "null"))
+(integer) @number
+
+(float_number) @number.float
+
+(directive_head) @operator
+
+(operator_notation
+  operator: _ @operator)
 
 [
-  (ternary_operator)
-  (conditional_operator)
-] @keyword.conditional.ternary
-
-[
-  "("
-  ")"
-  "["
-  "]"
-  "{"
-  "}"
-  "@"
-  "} @"
-  (if_end_expression)
-  (for_end_expression)
-  (switch_end_expression)
-  (case_end_expression)
-  (default_end_expression)
-  (defer_end_expression)
+  (open)
+  (open_ct)
+  (close)
+  (open_list)
+  "|"
+  (close_list)
+  (open_curly)
+  (close_curly)
 ] @punctuation.bracket
 
-(two_way_binding
-  [
-    "[("
-    ")]"
-  ] @punctuation.bracket)
-
 [
-  "{{"
-  "}}"
-] @punctuation.special
-
-[
-  ";"
-  "."
-  ","
-  "?."
+  (arg_list_separator)
+  (comma)
+  (end)
+  (list_notation_separator)
 ] @punctuation.delimiter
 
-(nullish_coalescing_expression
-  (coalescing_operator) @operator)
+(operator_notation
+  operator: (semicolon) @punctuation.delimiter)
 
-(concatenation_expression
-  "+" @operator)
+(double_quoted_list_notation) @string
 
-(icu_clause) @keyword.operator
-
-(icu_category) @keyword.conditional
-
-(binary_expression
-  [
-    "-"
-    "&&"
-    "+"
-    "<"
-    "<="
-    "="
-    "=="
-    "==="
-    "!="
-    "!=="
-    ">"
-    ">="
-    "*"
-    "/"
-    "||"
-    "%"
-  ] @operator)
+(variable_term) @variable
 ]==],
     ["indents.scm"] = [==[
-; inherits: html_tags
+(directive_term) @indent.zero
+
+(clause_term) @indent.zero
+
+(functional_notation
+  (atom)
+  (open_ct) @indent.begin
+  (close) @indent.end)
+
+(list_notation
+  (open_list) @indent.begin
+  (close_list) @indent.end)
+
+(curly_bracketed_notation
+  (open_curly) @indent.begin
+  (close_curly) @indent.end)
 ]==],
     ["injections.scm"] = [==[
-; inherits: html_tags
-]==],
-    ["locals.scm"] = [==[
-; inherits: html
+((comment) @injection.content
+  (#set! injection.language "comment"))
 ]==],
   },
   extra_files = {
