@@ -499,10 +499,11 @@ build = {
 (statement_block
   "{" @indent.branch)
 
-(parenthesized_expression
-  ("("
-    (_)
-    ")" @indent.end))
+((parenthesized_expression
+  "("
+  (_)
+  ")" @indent.end) @_outer
+  (#not-has-parent? @_outer if_statement))
 
 [
   "}"
@@ -515,6 +516,10 @@ build = {
   (comment)
   (ERROR)
 ] @indent.auto
+
+(if_statement
+  consequence: (_) @indent.dedent
+  (#not-kind-eq? @indent.dedent statement_block)) @indent.begin
 ]==],
     ["injections.scm"] = [==[
 (((comment) @_jsdoc_comment
