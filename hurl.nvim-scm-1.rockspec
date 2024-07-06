@@ -1,28 +1,28 @@
-local git_ref = 'd052bf31cc01bb1dde0afd129d8dcdd9f36b9d35'
+local git_ref = '2b2bff7f2b30fe1a583d0ecfb86735698673a67a'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/echasnovski/mini.diff'
+local repo_url = 'https://github.com/jellydn/hurl.nvim'
 
 rockspec_format = '3.0'
-package = 'mini.diff'
+package = 'hurl.nvim'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Work with diff hunks in Neovim. Part of the mini.nvim suite.',
+  summary = 'Run HTTP requests directly from `.hurl` files.',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/echasnovski/mini.diff',
+  homepage = 'https://github.com/jellydn/hurl.nvim',
   license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1' } 
+dependencies = { 'lua >= 5.1', 'nui.nvim', 'plenary.nvim' } 
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'mini.diff-' .. 'd052bf31cc01bb1dde0afd129d8dcdd9f36b9d35',
+  dir = 'hurl.nvim-' .. '2b2bff7f2b30fe1a583d0ecfb86735698673a67a',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
