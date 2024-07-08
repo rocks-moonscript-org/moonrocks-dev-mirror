@@ -1,4 +1,4 @@
-local git_ref = 'babc457e41127b456bc004d2c2302602ecd598ec'
+local git_ref = '1ee294a97e091d3cf967974df622c0d887890dc2'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'mini.bufremove-' .. 'babc457e41127b456bc004d2c2302602ecd598ec',
+  dir = 'mini.bufremove-' .. '1ee294a97e091d3cf967974df622c0d887890dc2',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

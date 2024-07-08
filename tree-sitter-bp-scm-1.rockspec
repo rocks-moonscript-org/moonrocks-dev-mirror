@@ -1,4 +1,4 @@
-local git_ref = '2326d709fb9cf73cf124fdbc803c267f851721a4'
+local git_ref = '4e60cf3c2e613625c06f6f85540b3631e2d06cd3'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-bp-' .. '2326d709fb9cf73cf124fdbc803c267f851721a4',
+  dir = 'tree-sitter-bp-' .. '4e60cf3c2e613625c06f6f85540b3631e2d06cd3',
 }
 
 build = {
@@ -86,6 +86,7 @@ build = {
 [
   (unset)
   (default)
+  (any)
 ] @variable.builtin
 
 (condition
@@ -153,6 +154,9 @@ build = {
 
 (assignment
   left: (identifier) @local.definition.var)
+
+(pattern_binding
+  binding: (identifier) @local.definition.var)
 
 (identifier) @local.reference
 ]==],

@@ -3,7 +3,7 @@ package = "meta"
 version = "scm-0"
 
 source = {
-  url = "git+https://github.com/luatoolz/lua-meta",
+  url = "git+https://github.com/luatoolz/meta",
 }
 
 description = {
@@ -16,9 +16,9 @@ description = {
 - mt cache with auto type naming using relative module path
 - mt chaining, computed js-like properties
 ]],
-  homepage = "https://github.com/luatoolz/lua-meta",
+  homepage = "https://github.com/luatoolz/meta",
   license = "MIT",
-  issues_url = "https://github.com/luatoolz/lua-meta/issues",
+  issues_url = "https://github.com/luatoolz/meta/issues",
   maintainer = "luatoolz@somahorse.com"
 }
 
