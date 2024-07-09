@@ -1,7 +1,9 @@
 ---@diagnostic disable: lowercase-global
 
+rockspec_format = '3.0'
+
 package = 'luals2dox'
-version = 'scm-1'
+version = 'scm-2'
 source = {
    url = 'git+https://github.com/AndreasMatthias/Luals2dox.git',
    branch = 'main'
@@ -14,15 +16,17 @@ description = {
       Lua files shall be annotated for use with LuaLS, the Lua Language Server,
       that is a necessary requirement for Luals2dox.
    ]],
+   labels ={'doxygen', 'documentation'},
    homepage = 'https://github.com/AndreasMatthias/Luals2dox',
    license = 'GPLv3'
 }
 
 dependencies = {
+   'lua >= 5.3',
    'lpeg',
    'argparse',
    'lua-cjson',
-   'luaposix',
+   'penlight',
    'f-strings',
 }
 
@@ -39,7 +43,3 @@ build = {
       }
    },
 }
-
--- Local Variables:
--- mode: lua
--- End:

@@ -1,4 +1,4 @@
-local git_ref = 'b76b906cd6ed3c3152a47924a8eb5dcb35b326d8'
+local git_ref = 'f626d41b9110e6ab853538d8b939979a0f1adfeb'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'melange-nvim-' .. 'b76b906cd6ed3c3152a47924a8eb5dcb35b326d8',
+  dir = 'melange-nvim-' .. 'f626d41b9110e6ab853538d8b939979a0f1adfeb',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
@@ -33,5 +33,5 @@ end
 
 build = {
   type = 'builtin',
-  copy_directories = { 'colors' } ,
+  copy_directories = { 'autoload', 'colors' } ,
 }

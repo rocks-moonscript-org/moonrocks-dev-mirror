@@ -1,4 +1,4 @@
-local git_ref = 'f98deb33805485b56a8d44d1a27d16874af00d7f'
+local git_ref = '6e8bd008bacd5ad001c3953017c1dca20709e915'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'treesj-' .. 'f98deb33805485b56a8d44d1a27d16874af00d7f',
+  dir = 'treesj-' .. '6e8bd008bacd5ad001c3953017c1dca20709e915',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

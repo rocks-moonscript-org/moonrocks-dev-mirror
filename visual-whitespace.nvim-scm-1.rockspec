@@ -1,19 +1,19 @@
-local git_ref = '11aea08aa084f9d523b0142c2cd9441b8ede09ed'
+local git_ref = 'e22d8508a0236f274dde39775ee127c85d30c0c0'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/Eandrju/cellular-automaton.nvim'
+local repo_url = 'https://github.com/mcauley-penney/visual-whitespace.nvim'
 
 rockspec_format = '3.0'
-package = 'cellular-automaton.nvim'
+package = 'visual-whitespace.nvim'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Lets you execute aesthetically pleasing, cellular automaton animations based on the content of neovim buffer.',
+  summary = 'A Neovim plugin to reveal whitespace characters in visual mode, like VSCode',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/Eandrju/cellular-automaton.nvim',
-  license = 'MIT'
+  homepage = 'https://github.com/mcauley-penney/visual-whitespace.nvim',
+  license = 'UNKNOWN'
 }
 
 dependencies = { 'lua >= 5.1' } 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'cellular-automaton.nvim-' .. '11aea08aa084f9d523b0142c2cd9441b8ede09ed',
+  dir = 'visual-whitespace.nvim-' .. 'e22d8508a0236f274dde39775ee127c85d30c0c0',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

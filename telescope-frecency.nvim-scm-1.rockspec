@@ -1,4 +1,4 @@
-local git_ref = 'f3f93253797714aecfb95ef7e25f8ff7693430b9'
+local git_ref = '631bf1af1d12468655efb472dd2b176a693803f5'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'telescope-frecency.nvim-' .. 'f3f93253797714aecfb95ef7e25f8ff7693430b9',
+  dir = 'telescope-frecency.nvim-' .. '631bf1af1d12468655efb472dd2b176a693803f5',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
