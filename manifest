@@ -8228,6 +8228,13 @@ repository = {
          }
       }
    },
+   ['rime.nvim'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    rings = {
       ['1.2.1rc1-1'] = {
          {
@@ -9209,6 +9216,13 @@ repository = {
       }
    },
    ['telescope-frecency.nvim'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['telescope-fzf-native.nvim'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
