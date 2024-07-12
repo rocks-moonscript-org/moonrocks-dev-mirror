@@ -1,4 +1,4 @@
-local git_ref = 'dcc727329d383145a57f8ce7209f20c19a3765c6'
+local git_ref = '321c03fd838df7f742705ac586010e3603af51b9'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-idl-' .. 'dcc727329d383145a57f8ce7209f20c19a3765c6',
+  dir = 'tree-sitter-idl-' .. '321c03fd838df7f742705ac586010e3603af51b9',
 }
 
 build = {
@@ -86,6 +86,27 @@ build = {
 ] @keyword.modifier
 
 [
+  "SEQUENTIAL"
+  "HASH"
+  "FINAL"
+  "APPENDABLE"
+  "MUTABLE"
+  "c"
+  "c++"
+  "java"
+  "idl"
+  "*"
+  "BEGIN_FILE"
+  "BEFORE_DECLARATION"
+  "BEGIN_DECLARATION"
+  "END_DECLARATION"
+  "AFTER_DECLARATION"
+  "END_FILE"
+  "CORBA"
+  "DDS"
+] @constant
+
+[
   "switch"
   "case"
   "default"
@@ -115,11 +136,18 @@ build = {
   (value_base_type)
 ] @type.builtin
 
+(escape_sequence) @string.escape
+
 (scoped_name) @type
 
 (boolean_literal) @boolean
 
-(number_literal) @number
+(integer_literal) @number
+
+[
+  (floating_pt_literal)
+  (fixed_pt_literal)
+] @number.float
 
 (char_literal) @character
 
@@ -147,7 +175,7 @@ build = {
   "~"
   "|"
   "^"
-  "$"
+  "&"
 ] @operator
 
 [
@@ -164,15 +192,54 @@ build = {
   (simple_declarator) @variable.member)
 
 (annotation_appl
-  "@" @attribute
+  "@" @attribute)
+
+(annotation_appl_custom_body
   (scoped_name) @attribute)
+
+(annotation_appl_builtin_body
+  (_
+    [
+      "id"
+      "autoid"
+      "optional"
+      "position"
+      "value"
+      "extensibility"
+      "final"
+      "appendable"
+      "mutable"
+      "key"
+      "must_understand"
+      "default_literal"
+      "default"
+      "range"
+      "min"
+      "max"
+      "unit"
+      "bit_bound"
+      "external"
+      "nested"
+      "verbatim"
+      "service"
+      "oneway"
+      "ami"
+    ] @attribute.builtin))
+
+(min_expr
+  "min" @attribute.builtin)
+
+(max_expr
+  "max" @attribute.builtin)
 
 (op_dcl
   (identifier) @function.method)
 
 (type_declarator
-  (simple_type_spec) @type
-  (any_declarators) @type)
+  (simple_type_spec) @type)
+
+(type_declarator
+  (any_declarators) @variable.member)
 
 (param_dcl
   (simple_declarator) @variable.parameter)
@@ -241,8 +308,8 @@ build = {
   (bitfield_spec
     "bitfield" @keyword.modifier
     (positive_int_const) @number
-    (destination_type)* @type)
-  (identifier) @variable.member)
+    (destination_type)? @type)
+  (identifier)* @variable.member)
 
 (bit_value) @constant
 
@@ -363,6 +430,37 @@ build = {
 
 (factory_param_dcl
   (simple_declarator) @variable.parameter)
+
+(element_spec
+  (declarator) @variable.member)
+
+(preproc_include
+  (keyword_include) @type
+  path: (_) @string)
+
+(system_lib_string
+  "<" @string
+  ">" @string)
+
+(extend_annotation_appl
+  "//@" @attribute
+  (annotation_appl_custom_body))
+
+(extend_annotation_appl
+  "//@" @attribute.builtin
+  (annotation_appl_builtin_body))
+]==],
+    ["indents.scm"] = [==[
+";" @indent.end
+
+"}" @indent.branch
+
+(definition) @indent.begin
+
+[
+  (preproc_define)
+  (preproc_include)
+] @indent.ignore
 ]==],
     ["injections.scm"] = [==[
 ((comment) @injection.content
