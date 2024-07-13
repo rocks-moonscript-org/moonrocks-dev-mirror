@@ -1,4 +1,4 @@
-local git_ref = 'cab94791450524a542324d8cbe8017d69c516d8e'
+local git_ref = 'cd7e6534fd9a22e3e9a7a85feecf4e35461e47cb'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-wit-' .. 'cab94791450524a542324d8cbe8017d69c516d8e',
+  dir = 'tree-sitter-wit-' .. 'cd7e6534fd9a22e3e9a7a85feecf4e35461e47cb',
 }
 
 build = {
@@ -103,8 +103,8 @@ build = {
 (enum_items
   name: (id) @type)
 
-(enum_body
-  enum_cases: (id) @constant)
+(enum_case
+  name: (id) @constant)
 
 (resource_item
   name: (id) @type)
@@ -181,6 +181,8 @@ build = {
   "}"
   "("
   ")"
+  ">"
+  "<"
 ] @punctuation.bracket
 
 "=" @operator

@@ -1,8 +1,8 @@
-local git_ref = '085437f5cb117703b7f520dd92161140a684f092'
+local git_ref = '7f789ea7ef765080f71a298fc96b7c957fa24422'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/BonaBeavis/tree-sitter-turtle'
+local repo_url = 'https://github.com/GordianDziwis/tree-sitter-turtle'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-turtle'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for turtle',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/BonaBeavis/tree-sitter-turtle',
+  homepage = 'https://github.com/GordianDziwis/tree-sitter-turtle',
   license = 'UNKNOWN'
 }
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-turtle-' .. '085437f5cb117703b7f520dd92161140a684f092',
+  dir = 'tree-sitter-turtle-' .. '7f789ea7ef765080f71a298fc96b7c957fa24422',
 }
 
 build = {
@@ -35,7 +35,8 @@ build = {
   queries = {
     ["folds.scm"] = [==[
 [
-  (statement)
+  (directive)
+  (triple)
   (blank_node_property_list)
 ] @fold
 ]==],
@@ -105,7 +106,8 @@ build = {
 ]==],
     ["indents.scm"] = [==[
 [
-  (statement)
+  (directive)
+  (triple)
   (blank_node_property_list)
   (collection)
 ] @indent.begin
@@ -120,7 +122,7 @@ build = {
   (#set! injection.language "comment"))
 ]==],
     ["locals.scm"] = [==[
-(turtle_doc) @local.scope
+(document) @local.scope
 
 (subject
   [

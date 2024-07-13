@@ -1,4 +1,4 @@
-local git_ref = '200f9dab6b23f3b9bb8f67fc811221517f56c373'
+local git_ref = 'bba02e79f85e335f310fc95e21c677e49f2c4439'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -21,7 +21,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-tlaplus-' .. '200f9dab6b23f3b9bb8f67fc811221517f56c373',
+  dir = 'tree-sitter-tlaplus-' .. 'bba02e79f85e335f310fc95e21c677e49f2c4439',
 }
 
 build = {
@@ -129,7 +129,7 @@ build = {
   "or"
   "procedure"
   "process"
-  "skip"
+  (pcal_skip)
   "variable"
   "variables"
   "when"
@@ -162,7 +162,7 @@ build = {
   (pcal_end_with)
 ] @keyword.repeat
 
-"return" @keyword.return
+(pcal_return) @keyword.return
 
 "print" @function.macro
 

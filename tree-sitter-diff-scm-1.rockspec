@@ -34,6 +34,8 @@ build = {
   copy_directories = { "queries" },
   queries = {
     ["highlights.scm"] = [==[
+(comment) @comment @spell
+
 [
   (addition)
   (new_file)
@@ -80,6 +82,10 @@ build = {
 (similarity
   (score) @number
   "%" @number)
+]==],
+    ["injections.scm"] = [==[
+((comment) @injection.content
+  (#set! injection.language "comment"))
 ]==],
   },
   extra_files = {

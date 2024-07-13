@@ -2,7 +2,7 @@ local git_ref = 'd853661ca680d8ff7f8d800182d5782b61d0dd58'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/BonaBeavis/tree-sitter-sparql'
+local repo_url = 'https://github.com/GordianDziwis/tree-sitter-sparql'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-sparql'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for sparql',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/BonaBeavis/tree-sitter-sparql',
+  homepage = 'https://github.com/GordianDziwis/tree-sitter-sparql',
   license = 'UNKNOWN'
 }
 
