@@ -9092,6 +9092,13 @@ repository = {
          }
       }
    },
+   ['t-format-json'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['t-net-ip'] = {
       ['scm-0'] = {
          {

@@ -1,8 +1,8 @@
-local git_ref = '6deae0cbb458c849a4d1e2985093e9c9c32d7fd0'
+local git_ref = 'a5512800ea0220da4abbae61b8aea8423d1549aa'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://git.sr.ht/~rockorager/tree-sitter-scfg'
+local repo_url = 'https://github.com/rockorager/tree-sitter-scfg'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-scfg'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for scfg',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://git.sr.ht/~rockorager/tree-sitter-scfg',
+  homepage = 'https://github.com/rockorager/tree-sitter-scfg',
   license = 'UNKNOWN'
 }
 
@@ -20,8 +20,8 @@ build_dependencies = {
 }
 
 source = {
-  url = repo_url .. '/archive/' .. git_ref .. '.tar.gz',
-  dir = 'tree-sitter-scfg-' .. '6deae0cbb458c849a4d1e2985093e9c9c32d7fd0',
+  url = repo_url .. '/archive/' .. git_ref .. '.zip',
+  dir = 'tree-sitter-scfg-' .. 'a5512800ea0220da4abbae61b8aea8423d1549aa',
 }
 
 build = {
