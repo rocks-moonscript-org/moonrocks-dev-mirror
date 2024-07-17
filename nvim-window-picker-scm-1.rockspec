@@ -1,18 +1,18 @@
-local git_ref = 'd58f9cb13400aedc5b5a0ef70fcdf31871ba2ee6'
+local git_ref = '41cfaa428577c53552200a404ae9b3a0b5719706'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/echasnovski/mini.diff'
+local repo_url = 'https://github.com/s1n7ax/nvim-window-picker'
 
 rockspec_format = '3.0'
-package = 'mini.diff'
+package = 'nvim-window-picker'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Work with diff hunks in Neovim. Part of the mini.nvim suite.',
+  summary = 'This plugins prompts the user to pick a window and returns the window id of the picked window.',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/echasnovski/mini.diff',
+  homepage = 'https://github.com/s1n7ax/nvim-window-picker',
   license = 'MIT'
 }
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'mini.diff-' .. 'd58f9cb13400aedc5b5a0ef70fcdf31871ba2ee6',
+  dir = 'nvim-window-picker-' .. '41cfaa428577c53552200a404ae9b3a0b5719706',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
@@ -33,5 +33,5 @@ end
 
 build = {
   type = 'builtin',
-  copy_directories = { 'doc' } ,
+  copy_directories = { },
 }

@@ -1,19 +1,19 @@
-local git_ref = 'd58f9cb13400aedc5b5a0ef70fcdf31871ba2ee6'
+local git_ref = '1b24dc6050c34e8cd377b6b4cd6abe40509e0187'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/echasnovski/mini.diff'
+local repo_url = 'https://github.com/kevinhwang91/nvim-bqf'
 
 rockspec_format = '3.0'
-package = 'mini.diff'
+package = 'nvim-bqf'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Work with diff hunks in Neovim. Part of the mini.nvim suite.',
+  summary = 'Better quickfix window in Neovim, polish old quickfix window.',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/echasnovski/mini.diff',
-  license = 'MIT'
+  homepage = 'https://github.com/kevinhwang91/nvim-bqf',
+  license = 'BSD-3-Clause'
 }
 
 dependencies = { 'lua >= 5.1' } 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'mini.diff-' .. 'd58f9cb13400aedc5b5a0ef70fcdf31871ba2ee6',
+  dir = 'nvim-bqf-' .. '1b24dc6050c34e8cd377b6b4cd6abe40509e0187',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
@@ -33,5 +33,5 @@ end
 
 build = {
   type = 'builtin',
-  copy_directories = { 'doc' } ,
+  copy_directories = { 'after', 'doc', 'plugin' } ,
 }

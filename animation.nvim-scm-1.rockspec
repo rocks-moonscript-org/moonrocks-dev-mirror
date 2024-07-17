@@ -1,28 +1,28 @@
-local git_ref = 'd58f9cb13400aedc5b5a0ef70fcdf31871ba2ee6'
+local git_ref = 'fb77091ab72ec9971aee0562e7081182527aaa6a'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/echasnovski/mini.diff'
+local repo_url = 'https://github.com/anuvyklack/animation.nvim'
 
 rockspec_format = '3.0'
-package = 'mini.diff'
+package = 'animation.nvim'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Work with diff hunks in Neovim. Part of the mini.nvim suite.',
+  summary = 'An OOP library to create animations in Neovim.',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/echasnovski/mini.diff',
+  homepage = 'https://github.com/anuvyklack/animation.nvim',
   license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1' } 
+dependencies = { 'lua >= 5.1', 'middleclass' } 
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'mini.diff-' .. 'd58f9cb13400aedc5b5a0ef70fcdf31871ba2ee6',
+  dir = 'animation.nvim-' .. 'fb77091ab72ec9971aee0562e7081182527aaa6a',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
