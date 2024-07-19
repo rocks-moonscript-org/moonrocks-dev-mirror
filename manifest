@@ -11525,6 +11525,13 @@ repository = {
          }
       }
    },
+   ['tree-sitter-vhdl'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['tree-sitter-vhs'] = {
       ['scm-1'] = {
          {

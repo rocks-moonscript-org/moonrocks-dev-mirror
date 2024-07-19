@@ -1,17 +1,17 @@
-local git_ref = '7862a3424832c3a9d45eb21143b375837bd6573b'
+local git_ref = '4ab3e251eae8890a020d083d00acd1b8c2653c07'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/hankthetank27/tree-sitter-liquid'
+local repo_url = 'https://github.com/jpt13653903/tree-sitter-vhdl'
 
 rockspec_format = '3.0'
-package = 'tree-sitter-liquid'
+package = 'tree-sitter-vhdl'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser and Neovim queries for liquid',
+  summary = 'tree-sitter parser and Neovim queries for vhdl',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/hankthetank27/tree-sitter-liquid',
+  homepage = 'https://github.com/jpt13653903/tree-sitter-vhdl',
   license = 'UNKNOWN'
 }
 
@@ -21,172 +21,502 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-liquid-' .. '7862a3424832c3a9d45eb21143b375837bd6573b',
+  dir = 'tree-sitter-vhdl-' .. '4ab3e251eae8890a020d083d00acd1b8c2653c07',
 }
 
 build = {
   type = "treesitter-parser",
-  lang = "liquid",
+  lang = "vhdl",
   parser = true,
   generate = false,
   generate_from_json = false,
   location = nil,
   copy_directories = { "queries" },
   queries = {
+    ["folds.scm"] = [==[
+[
+  (block_comment)
+  (architecture_definition)
+  (architecture_head)
+  (concurrent_block)
+  (configuration_declaration)
+  (component_instantiation_statement)
+  (generic_map_aspect)
+  (port_map_aspect)
+  (process_statement)
+  (process_head)
+  (sequential_block)
+  (block_configuration)
+  (block_statement)
+  (block_head)
+  (component_declaration)
+  (component_configuration)
+  (generic_clause)
+  (port_clause)
+  (entity_declaration)
+  (entity_head)
+  (entity_body)
+  (package_declaration)
+  (package_definition)
+  (function_specification)
+  (subprogram_declaration)
+  (subprogram_definition)
+  (subprogram_head)
+  (procedure_specification)
+  (sequential_block)
+  (loop_statement)
+  (if_statement_block)
+  (if_statement)
+  (elsif_statement)
+  (else_statement)
+  (case_statement)
+  (case_statement_alternative)
+  (for_generate_statement)
+  (if_generate_statement)
+  (if_generate)
+  (elsif_generate)
+  (else_generate)
+  (case_generate_statement)
+  (case_generate_alternative)
+  (type_declaration)
+] @fold
+]==],
     ["highlights.scm"] = [==[
-((comment) @comment @spell
-  (#set! priority 110))
+(line_comment
+  (comment_content) @spell) @comment
 
-(raw_statement
-  (raw_content) @spell
-  (#set! priority 110))
+(block_comment
+  (comment_content) @spell) @comment.documentation
 
-((identifier) @variable
-  (#set! priority 110))
-
-((string) @string
-  (#set! priority 110))
-
-((boolean) @boolean
-  (#set! priority 110))
-
-((number) @number
-  (#set! priority 110))
-
-(filter
-  name: (identifier) @function.call
-  (#set! priority 110))
-
-([
-  "as"
-  "assign"
-  "capture"
-  "decrement"
-  "echo"
-  "endcapture"
-  "endform"
-  "endjavascript"
-  "endraw"
-  "endschema"
-  "endstyle"
-  "form"
-  "increment"
-  "javascript"
-  "layout"
-  "liquid"
-  "raw"
-  "schema"
-  "style"
-  "with"
-] @keyword
-  (#set! priority 110))
-
-([
-  "case"
-  "else"
-  "elsif"
-  "endcase"
-  "endif"
-  "endunless"
-  "if"
-  "unless"
-  "when"
-] @keyword.conditional
-  (#set! priority 110))
-
-([
-  (break_statement)
-  (continue_statement)
-  "by"
-  "cycle"
-  "endfor"
-  "endpaginate"
-  "endtablerow"
-  "for"
-  "paginate"
-  "tablerow"
-] @keyword.repeat
-  (#set! priority 110))
-
-([
-  "and"
-  "contains"
-  "in"
-  "or"
-] @keyword.operator
-  (#set! priority 110))
-
-([
-  "{{"
-  "}}"
-  "{{-"
-  "-}}"
-  "{%"
-  "%}"
-  "{%-"
-  "-%}"
-] @tag.delimiter
-  (#set! priority 110))
+(identifier) @variable
 
 [
-  "include"
-  "render"
-  "section"
-  "sections"
+  "access"
+  "after"
+  "alias"
+  "architecture"
+  "array"
+  ; "assume"
+  "attribute"
+  "block"
+  "body"
+  "component"
+  "configuration"
+  "context"
+  ; "cover"
+  "disconnect"
+  "entity"
+  ; "fairness"
+  "file"
+  "force"
+  "generate"
+  "generic"
+  "group"
+  "label"
+  "literal"
+  "map"
+  "new"
+  "package"
+  "parameter"
+  "port"
+  "property"
+  "range"
+  "reject"
+  "release"
+  ; "restrict"
+  "sequence"
+  "transport"
+  "unaffected"
+  "view"
+  ; "vmode"
+  ; "vpkg"
+  ; "vprop"
+  "vunit"
+] @keyword
+
+[
+  (ALL)
+  (OTHERS)
+  "<>"
+  (DEFAULT)
+  (OPEN)
+] @constant.builtin
+
+[
+  "is"
+  "begin"
+  "end"
+] @keyword
+
+(parameter_specification
+  "in" @keyword)
+
+[
+  "process"
+  "wait"
+  "on"
+  "until"
+] @keyword.coroutine
+
+(end_process
+  "end" @keyword.coroutine)
+
+(timeout_clause
+  "for" @keyword.coroutine)
+
+[
+  "function"
+  "procedure"
+] @keyword.function
+
+(subprogram_end
+  "end" @keyword.function)
+
+[
+  "to"
+  "downto"
+  "of"
+] @keyword.operator
+
+[
+  "library"
+  "use"
 ] @keyword.import
 
 [
-  "|"
-  ":"
-  "="
-  "+"
-  "-"
+  "subtype"
+  "type"
+  "record"
+  "units"
+  "constant"
+  "signal"
+  "variable"
+] @keyword.type
+
+[
+  "protected"
+  "private"
+  "pure"
+  "impure"
+  "inertial"
+  "postponed"
+  ; "strong"
+  "guarded"
+  "out"
+  "inout"
+  "linkage"
+  "buffer"
+  "register"
+  "bus"
+  "shared"
+] @keyword.modifier
+
+(mode
+  "in" @keyword.modifier)
+
+(force_mode
+  "in" @keyword.modifier)
+
+[
+  "while"
+  "loop"
+  "next"
+  "exit"
+] @keyword.repeat
+
+(end_loop
+  "end" @keyword.repeat)
+
+(for_loop
+  "for" @keyword.repeat)
+
+(block_configuration
+  "for" @keyword)
+
+(configuration_specification
+  "for" @keyword)
+
+(component_configuration
+  "for" @keyword)
+
+(end_for
+  "for" @keyword)
+
+"return" @keyword.return
+
+[
+  "assert"
+  "report"
+  "severity"
+] @keyword.debug
+
+[
+  "if"
+  "then"
+  "elsif"
+  "case"
+] @keyword.conditional
+
+(end_if
+  "end" @keyword.conditional)
+
+(end_case
+  "end" @keyword.conditional)
+
+(when_element
+  "when" @keyword.conditional)
+
+(case_generate_alternative
+  "when" @keyword.conditional)
+
+(else_statement
+  "else" @keyword.conditional)
+
+(else_generate
+  "else" @keyword.conditional)
+
+[
+  "with"
+  "select"
+] @keyword.conditional.ternary
+
+(when_expression
+  "when" @keyword.conditional.ternary)
+
+(else_expression
+  "else" @keyword.conditional.ternary)
+
+(else_waveform
+  "else" @keyword.conditional.ternary)
+
+(else_expression_or_unaffected
+  "else" @keyword.conditional.ternary)
+
+"null" @constant.builtin
+
+(user_directive) @keyword.directive
+
+(protect_directive) @keyword.directive
+
+(warning_directive) @keyword.directive
+
+(error_directive) @keyword.directive
+
+(if_conditional_analysis
+  "if" @keyword.directive)
+
+(if_conditional_analysis
+  "then" @keyword.directive)
+
+(elsif_conditional_analysis
+  "elsif" @keyword.directive)
+
+(else_conditional_analysis
+  "else" @keyword.directive)
+
+(end_conditional_analysis
+  "end" @keyword.directive)
+
+(end_conditional_analysis
+  "if" @keyword.directive)
+
+(directive_body) @keyword.directive
+
+(directive_constant_builtin) @constant.macro
+
+(directive_error) @comment.error
+
+(directive_protect) @keyword.directive
+
+(directive_warning) @comment.warning
+
+[
+  (condition_conversion)
+  (relational_operator)
+  (sign)
+  (adding_operator)
+  (exponentiate)
+  (variable_assignment)
+  (signal_assignment)
   "*"
   "/"
-  "%"
-  "^"
-  "=="
-  "<"
-  "<="
-  "!="
-  ">="
-  ">"
+  ":"
+  "=>"
 ] @operator
 
 [
-  "]"
-  "["
-  ")"
-  "("
-] @punctuation.bracket
+  (unary_operator)
+  (logical_operator)
+  (shift_operator)
+  "mod"
+  "not"
+  "rem"
+] @keyword.operator
 
 [
+  "'"
   ","
   "."
+  ";"
 ] @punctuation.delimiter
+
+[
+  "("
+  ")"
+  "["
+  "]"
+  "<<"
+  ">>"
+] @punctuation.bracket
+
+"@" @punctuation.special
+
+[
+  (decimal_integer)
+  (string_literal_std_logic)
+] @number
+
+(decimal_float) @number.float
+
+(bit_string_length) @property
+
+(bit_string_base) @type.builtin
+
+(bit_string_value) @number
+
+(based_literal
+  (based_base) @type.builtin
+  (based_integer) @number)
+
+(based_literal
+  (based_base) @type.builtin
+  (based_float) @number.float)
+
+(string_literal) @string @spell
+
+(character_literal) @character
+
+(library_constant_std_logic) @constant.builtin
+
+(library_constant) @constant.builtin
+
+(library_function) @function.builtin
+
+(library_constant_boolean) @boolean
+
+(library_constant_character) @character
+
+(library_constant_debug) @keyword.debug
+
+(unit) @keyword.modifier
+
+(library_constant_unit) @keyword.modifier
+
+(label) @label
+
+(generic_map_aspect
+  "generic" @constructor
+  "map" @constructor)
+
+(port_map_aspect
+  "port" @constructor
+  "map" @constructor)
+
+(selection
+  (identifier) @variable.member)
+
+(_
+  view: (_) @type)
+
+(_
+  type: (_) @type)
+
+(_
+  library: (_) @module)
+
+(_
+  package: (_) @module)
+
+(_
+  entity: (_) @module)
+
+(_
+  component: (_) @module)
+
+(_
+  configuration: (_) @property)
+
+(_
+  architecture: (_) @property)
+
+(_
+  function: (_) @function)
+
+(_
+  procedure: (_) @function.method)
+
+(_
+  attribute: (_) @attribute)
+
+(_
+  constant: (_) @constant)
+
+(_
+  generic: (_) @variable.parameter)
+
+(_
+  view: (name
+    (_)) @type)
+
+(_
+  type: (name
+    (_)) @type)
+
+(_
+  entity: (name
+    (_)) @module)
+
+(_
+  component: (name
+    (_)) @module)
+
+(_
+  configuration: (name
+    (_)) @module)
+
+(library_type) @type.builtin
+
+[
+  (attribute_function)
+  (attribute_impure_function)
+  (attribute_mode_view)
+  (attribute_pure_function)
+  (attribute_range)
+  (attribute_signal)
+  (attribute_subtype)
+  (attribute_type)
+  (attribute_value)
+  (library_attribute)
+] @attribute.builtin
+
+(library_namespace) @module.builtin
+
+(subtype_declaration
+  (identifier) @type.definition)
+
+(type_declaration
+  (identifier) @type.definition)
+
+(mode_view_declaration
+  (identifier) @type.definition)
 ]==],
     ["injections.scm"] = [==[
-((template_content) @injection.content
-  (#set! injection.language "html")
-  (#set! injection.combined))
+(line_comment
+  (comment_content) @injection.content
+  (#set! injection.language "comment"))
 
-; TODO we can switch to quantifiers once neovim 0.10 becomes stable
-(javascript_statement
-  (js_content) @injection.content
-  (#set! injection.language "javascript")
-  (#set! injection.combined))
-
-(schema_statement
-  (json_content) @injection.content
-  (#set! injection.language "json")
-  (#set! injection.combined))
-
-(style_statement
-  (style_content) @injection.content
-  (#set! injection.language "css")
-  (#set! injection.combined))
-
-((comment) @injection.content
+(block_comment
+  (comment_content) @injection.content
   (#set! injection.language "comment"))
 ]==],
   },

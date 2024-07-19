@@ -12,7 +12,7 @@ description = {
   summary = 'tree-sitter parser and Neovim queries for ralph',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/alephium/tree-sitter-ralph',
-  license = 'Apache-2.0'
+  license = 'UNKNOWN'
 }
 
 build_dependencies = {

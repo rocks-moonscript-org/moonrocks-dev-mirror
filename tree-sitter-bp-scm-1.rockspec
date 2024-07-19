@@ -12,7 +12,7 @@ description = {
   summary = 'tree-sitter parser and Neovim queries for bp',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/ambroisie/tree-sitter-bp',
-  license = 'Apache-2.0'
+  license = 'UNKNOWN'
 }
 
 build_dependencies = {

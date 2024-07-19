@@ -1,4 +1,4 @@
-local git_ref = 'dd0f5ebb06431505a6de75fd1bc50cd62226adef'
+local git_ref = '35c154a4b904cbe2aa7acce00a8c1c54a8831780'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'neovim-session-manager-' .. 'dd0f5ebb06431505a6de75fd1bc50cd62226adef',
+  dir = 'neovim-session-manager-' .. '35c154a4b904cbe2aa7acce00a8c1c54a8831780',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
