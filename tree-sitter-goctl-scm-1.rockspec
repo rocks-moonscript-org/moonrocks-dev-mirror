@@ -15,6 +15,8 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
   'luarocks-build-treesitter-parser >= 4.0.0',
 }
@@ -33,7 +35,121 @@ build = {
   location = nil,
   copy_directories = { "queries" },
   queries = {
-    ["*"] = [==[
+    ["folds.scm"] = [==[
+[
+  (typeGroupSpec)
+  (typeSingleSpec)
+  (typeStruct)
+  (serviceSpec)
+  (serviceBody)
+  (importStatement)
+  (serviceServerSpec)
+  (infoStatement)
+  (structType)
+] @fold
+]==],
+    ["highlights.scm"] = [==[
+; Key Symbol
+"=" @operator
+
+[
+  "."
+  ","
+  ":"
+  ";"
+] @punctuation.delimiter
+
+[
+  "("
+  ")"
+  "{"
+  "}"
+  "["
+  "]"
+] @punctuation.bracket
+
+; Keywords
+[
+  "syntax"
+  "info"
+  "service"
+] @keyword
+
+"import" @keyword.import
+
+"returns" @keyword.return
+
+[
+  "type"
+  "struct"
+] @keyword.type
+
+[
+  "@doc"
+  "@handler"
+  "@server"
+] @attribute
+
+; Service
+(serviceName) @type
+
+; Httpmethod
+(HTTPMETHOD) @keyword.operator
+
+; Field
+(fieldType) @type.builtin
+
+(fieldName) @variable.member
+
+(anonymousField) @variable.member
+
+; Functions
+(handlerValue) @function.method
+
+; Strings
+(VALUE) @string
+
+(tag) @string.documentation
+
+(PATH) @string.special.path
+
+; Comments
+(comment) @comment @spell
+
+(key) @variable.member
+
+(identValue) @string
+
+(DURATION) @number
+
+(NUMBER) @number
+
+; Struct
+(structNameId) @type
+
+(body) @type
+]==],
+    ["indents.scm"] = [==[
+[
+  (importGroup)
+  (typeGroupSpec)
+  (structType)
+  (infoStatement)
+  (serviceServerSpec)
+  (serviceSpec)
+] @indent.begin
+
+[
+  ")"
+  "}"
+] @indent.branch @indent.end
+
+(comment) @indent.ignore
+]==],
+    ["injections.scm"] = [==[
+; Inject comment language for goctl
+((comment) @injection.content
+  (#set! injection.language "comment"))
 ]==],
   },
   extra_files = {
