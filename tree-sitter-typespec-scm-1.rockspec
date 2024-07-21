@@ -12,11 +12,13 @@ description = {
   summary = 'tree-sitter parser and Neovim queries for typespec',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/happenslol/tree-sitter-typespec',
-  license = 'Apache-2.0'
+  license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {

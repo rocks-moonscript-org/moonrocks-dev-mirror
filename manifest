@@ -9169,6 +9169,13 @@ repository = {
          }
       }
    },
+   ['t-storage-redis'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['tabby.nvim'] = {
       ['scm-1'] = {
          {
@@ -9334,13 +9341,6 @@ repository = {
    },
    ['telescope-undo.nvim'] = {
       ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   teml = {
-      ['dev-1'] = {
          {
             arch = "rockspec"
          }
