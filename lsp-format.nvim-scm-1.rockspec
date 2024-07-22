@@ -1,19 +1,19 @@
-local git_ref = '3ef372f649b9edf983606398907f103fca436b2a'
+local git_ref = '3612642b0e2eb85015838df5dcfbacb61f15db98'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/folke/lazydev.nvim'
+local repo_url = 'https://github.com/lukas-reineke/lsp-format.nvim'
 
 rockspec_format = '3.0'
-package = 'lazydev.nvim'
+package = 'lsp-format.nvim'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Faster LuaLS setup for Neovim',
+  summary = 'A wrapper around Neovims native LSP formatting.',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/folke/lazydev.nvim',
-  license = 'Apache-2.0'
+  homepage = 'https://github.com/lukas-reineke/lsp-format.nvim',
+  license = 'UNKNOWN'
 }
 
 dependencies = { 'lua >= 5.1' } 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'lazydev.nvim-' .. '3ef372f649b9edf983606398907f103fca436b2a',
+  dir = 'lsp-format.nvim-' .. '3612642b0e2eb85015838df5dcfbacb61f15db98',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

@@ -1,18 +1,18 @@
-local git_ref = 'cf48d4dfce44e0b9a2e19a008d6ec6ea6f01a83b'
+local git_ref = '573b37c2f6ed79a6b3e3c6bd18bb305a72db4dc6'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/nvim-telescope/telescope-fzf-native.nvim'
+local repo_url = 'https://github.com/udayvir-singh/hibiscus.nvim'
 
 rockspec_format = '3.0'
-package = 'telescope-fzf-native.nvim'
+package = 'hibiscus.nvim'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'FZF sorter for telescope written in C',
+  summary = '🌺 Flavored Fennel Macros for Neovim',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/nvim-telescope/telescope-fzf-native.nvim',
+  homepage = 'https://github.com/udayvir-singh/hibiscus.nvim',
   license = 'MIT'
 }
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'telescope-fzf-native.nvim-' .. 'cf48d4dfce44e0b9a2e19a008d6ec6ea6f01a83b',
+  dir = 'hibiscus.nvim-' .. '573b37c2f6ed79a6b3e3c6bd18bb305a72db4dc6',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
@@ -33,5 +33,5 @@ end
 
 build = {
   type = 'builtin',
-  copy_directories = { },
+  copy_directories = { 'doc' } ,
 }

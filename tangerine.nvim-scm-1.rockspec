@@ -1,19 +1,19 @@
-local git_ref = '3ef372f649b9edf983606398907f103fca436b2a'
+local git_ref = '10e1f8a70e4e3a2dddb4a1880943d70fb21d95df'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/folke/lazydev.nvim'
+local repo_url = 'https://github.com/udayvir-singh/tangerine.nvim'
 
 rockspec_format = '3.0'
-package = 'lazydev.nvim'
+package = 'tangerine.nvim'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Faster LuaLS setup for Neovim',
+  summary = '🍊 Sweet Fennel integration for Neovim',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/folke/lazydev.nvim',
-  license = 'Apache-2.0'
+  homepage = 'https://github.com/udayvir-singh/tangerine.nvim',
+  license = 'MIT'
 }
 
 dependencies = { 'lua >= 5.1' } 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'lazydev.nvim-' .. '3ef372f649b9edf983606398907f103fca436b2a',
+  dir = 'tangerine.nvim-' .. '10e1f8a70e4e3a2dddb4a1880943d70fb21d95df',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
