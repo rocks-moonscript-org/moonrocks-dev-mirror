@@ -1,4 +1,4 @@
-local git_ref = 'a52579670e2b14ec03d410c3c980fafaf6d659c4'
+local git_ref = '2d037f2f2bf668737f72e6be6eda4b7918b68d86'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -12,16 +12,18 @@ description = {
   summary = 'tree-sitter parser and Neovim queries for facility',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/FacilityApi/tree-sitter-facility',
-  license = 'Apache-2.0'
+  license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-facility-' .. 'a52579670e2b14ec03d410c3c980fafaf6d659c4',
+  dir = 'tree-sitter-facility-' .. '2d037f2f2bf668737f72e6be6eda4b7918b68d86',
 }
 
 build = {
@@ -66,7 +68,10 @@ build = {
   "errors"
 ] @keyword
 
-"method" @keyword.function
+[
+  "method"
+  "event"
+] @keyword.function
 
 [
   "enum"

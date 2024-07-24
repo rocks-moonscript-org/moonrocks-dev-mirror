@@ -15,8 +15,10 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
@@ -352,6 +354,18 @@ build = {
   (#eq? @_command "printf")
   (#eq? @_arg "--")
   (#set! injection.language "printf"))
+
+((command
+  name: (command_name) @_command
+  .
+  argument: [
+    (string)
+    (raw_string)
+  ] @injection.content)
+  (#eq? @_command "bind")
+  (#offset! @injection.content 0 1 0 -1)
+  (#set! injection.include-children)
+  (#set! injection.language "readline"))
 ]==],
     ["locals.scm"] = [==[
 ; Scopes

@@ -1,4 +1,4 @@
-local git_ref = 'a4f14aa248b84df73cc1c00bf06edac8d7c96acd'
+local git_ref = 'de0d0ee129cf643872e8e0d5c4a6589b5a3aae23'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -15,13 +15,15 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-templ-' .. 'a4f14aa248b84df73cc1c00bf06edac8d7c96acd',
+  dir = 'tree-sitter-templ-' .. 'de0d0ee129cf643872e8e0d5c4a6589b5a3aae23',
 }
 
 build = {
@@ -33,6 +35,23 @@ build = {
   location = nil,
   copy_directories = { "queries" },
   queries = {
+    ["folds.scm"] = [==[
+[
+  (component_block)
+  (css_declaration)
+  (script_declaration)
+  (element)
+  (style_element)
+  (script_element)
+  (component_switch_statement)
+  (field_declaration_list)
+  (block)
+  (interface_type)
+  (comment)
+  (const_declaration)
+  (var_declaration)
+] @fold
+]==],
     ["highlights.scm"] = [==[
 ; inherits: go
 

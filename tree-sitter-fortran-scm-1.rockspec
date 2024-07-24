@@ -1,4 +1,4 @@
-local git_ref = 'dde9829554b831cf6cbf927294f22dfb9a8f0419'
+local git_ref = '6b633433fb3f132f21250cf8e8be76d5a6389b7e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -15,13 +15,15 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-fortran-' .. 'dde9829554b831cf6cbf927294f22dfb9a8f0419',
+  dir = 'tree-sitter-fortran-' .. '6b633433fb3f132f21250cf8e8be76d5a6389b7e',
 }
 
 build = {

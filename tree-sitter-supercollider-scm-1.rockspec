@@ -12,11 +12,13 @@ description = {
   summary = 'tree-sitter parser and Neovim queries for supercollider',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/madskjeldgaard/tree-sitter-supercollider',
-  license = 'Apache-2.0'
+  license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {

@@ -1,4 +1,4 @@
-local git_ref = '5a7b14074bca95b25935e865ca8f1efad32317e4'
+local git_ref = '46d4de8e6cfca8a97c0489aea936bb15beeaf666'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -15,13 +15,15 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-snakemake-' .. '5a7b14074bca95b25935e865ca8f1efad32317e4',
+  dir = 'tree-sitter-snakemake-' .. '46d4de8e6cfca8a97c0489aea936bb15beeaf666',
 }
 
 build = {
@@ -90,7 +92,8 @@ build = {
 
 ; Wildcard names
 (wildcard
-  (identifier) @variable)
+  (identifier) @variable
+  (flag) @variable.parameter.builtin)
 
 ; builtin variables
 ((identifier) @variable.builtin

@@ -1,4 +1,4 @@
-local git_ref = '7218cf622b057ae9c530e1f0a7a3ce49806ca55e'
+local git_ref = '7ab8221e3f378a3b04b4b488f07c1f408c5bd0d8'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -15,13 +15,15 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1', 'tree-sitter-html_tags' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-svelte-' .. '7218cf622b057ae9c530e1f0a7a3ce49806ca55e',
+  dir = 'tree-sitter-svelte-' .. '7ab8221e3f378a3b04b4b488f07c1f408c5bd0d8',
 }
 
 build = {

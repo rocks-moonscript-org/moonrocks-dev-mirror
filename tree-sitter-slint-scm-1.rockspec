@@ -1,4 +1,4 @@
-local git_ref = 'd82ab8c19ea1b60ff570256eaef7d137cc5ecb63'
+local git_ref = '4a0558cc0fcd7a6110815b9bbd7cc12d7ab31e74'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -12,16 +12,18 @@ description = {
   summary = 'tree-sitter parser and Neovim queries for slint',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/slint-ui/tree-sitter-slint',
-  license = 'Apache-2.0'
+  license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-slint-' .. 'd82ab8c19ea1b60ff570256eaef7d137cc5ecb63',
+  dir = 'tree-sitter-slint-' .. '4a0558cc0fcd7a6110815b9bbd7cc12d7ab31e74',
 }
 
 build = {

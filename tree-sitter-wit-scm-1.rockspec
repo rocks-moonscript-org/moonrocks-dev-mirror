@@ -12,11 +12,13 @@ description = {
   summary = 'tree-sitter parser and Neovim queries for wit',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/liamwh/tree-sitter-wit',
-  license = 'Apache-2.0'
+  license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
@@ -33,6 +35,20 @@ build = {
   location = nil,
   copy_directories = { "queries" },
   queries = {
+    ["folds.scm"] = [==[
+[
+  (world_items)
+  (world_body)
+  (interface_items)
+  (interface_body)
+] @fold
+
+(world_items
+  [
+    (use_item)
+    (import_item)
+  ])+ @fold
+]==],
     ["highlights.scm"] = [==[
 (comment) @comment @spell
 
@@ -40,7 +56,7 @@ build = {
   (id)) @type
 
 (package_decl
-  (id)) @module
+  (id) @module)
 
 (valid_semver) @string.special
 
@@ -74,7 +90,7 @@ build = {
   alias: (id) @type.definition)
 
 (func_item
-  name: (id) @function)
+  name: (id) @function.method)
 
 (handle
   (id) @type)
@@ -98,7 +114,7 @@ build = {
   name: (id) @type)
 
 (variant_case
-  name: (id) @type)
+  name: (id) @constant)
 
 (enum_items
   name: (id) @type)
@@ -110,15 +126,24 @@ build = {
   name: (id) @type)
 
 (resource_method
+  (id) @function.method)
+
+(resource_method
   "constructor" @constructor)
 
 (toplevel_use_item
   "use" @keyword.import)
 
+(toplevel_use_item
+  alias: (id) @module)
+
 (use_item
   "use" @keyword.import)
 
 (use_path
+  (id) @module)
+
+(use_names_item
   (id) @module)
 
 "func" @keyword.function
@@ -141,6 +166,7 @@ build = {
   "include"
   "import"
   "export"
+  "as"
 ] @keyword.import
 
 [
@@ -154,6 +180,8 @@ build = {
   "s64"
   "f32"
   "f64"
+  "float32" ; deprecated
+  "float64" ; deprecated
   "char"
   "bool"
   "string"
@@ -166,7 +194,7 @@ build = {
 
 [
   "@"
-  "->"
+  "_"
 ] @punctuation.special
 
 [
@@ -174,6 +202,8 @@ build = {
   ";"
   ":"
   ","
+  "."
+  "->"
 ] @punctuation.delimiter
 
 [

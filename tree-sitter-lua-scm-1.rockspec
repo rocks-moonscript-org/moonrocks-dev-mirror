@@ -15,8 +15,10 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
@@ -212,7 +214,7 @@ build = {
 
 ; Tables
 (field
-  name: (identifier) @variable.member)
+  name: (identifier) @property)
 
 (dot_index_expression
   field: (identifier) @variable.member)
@@ -335,9 +337,11 @@ build = {
 
 [
   "end"
-  ")"
   "}"
 ] @indent.end
+
+(")" @indent.end
+  (#not-has-parent? @indent.end parameters))
 
 (return_statement
   (expression_list
@@ -358,6 +362,9 @@ build = {
 (comment) @indent.auto
 
 (string) @indent.auto
+
+(ERROR
+  "function") @indent.begin
 ]==],
     ["injections.scm"] = [==[
 ((function_call

@@ -15,8 +15,10 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
@@ -104,13 +106,13 @@ exception: "!" @keyword.exception
 (PtrTypeStart
   "c" @variable.builtin)
 
-((ContainerDeclType
-  [
-    (ErrorUnionExpr)
-    "enum"
-  ])
+(ContainerDecl
+  (ContainerDeclType
+    "enum")
   (ContainerField
-    (IDENTIFIER) @constant))
+    (ErrorUnionExpr
+      (SuffixExpr
+        (IDENTIFIER) @constant))))
 
 field_constant: (IDENTIFIER) @constant
 
@@ -242,6 +244,7 @@ field_constant: (IDENTIFIER) @constant
   (AssignOp)
   (MultiplyOp)
   (PrefixOp)
+  "="
   "*"
   "**"
   "->"
@@ -279,6 +282,9 @@ field_constant: (IDENTIFIER) @constant
   "|" @punctuation.bracket)
 
 (PtrIndexPayload
+  "|" @punctuation.bracket)
+
+(PtrListPayload
   "|" @punctuation.bracket)
 
 (ParamType

@@ -1,4 +1,4 @@
-local git_ref = 'ccc2408e558029ad82b0dea63ff55ada495965da'
+local git_ref = '0dee05ef958ba2eae88d1e65f24b33cad70d4367'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -15,13 +15,15 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-python-' .. 'ccc2408e558029ad82b0dea63ff55ada495965da',
+  dir = 'tree-sitter-python-' .. '0dee05ef958ba2eae88d1e65f24b33cad70d4367',
 }
 
 build = {
@@ -506,7 +508,6 @@ build = {
     ["indents.scm"] = [==[
 [
   (import_from_statement)
-  (parenthesized_expression)
   (generator_expression)
   (list_comprehension)
   (set_comprehension)
@@ -529,6 +530,10 @@ build = {
 ((set) @indent.align
   (#set! indent.open_delimiter "{")
   (#set! indent.close_delimiter "}"))
+
+((parenthesized_expression) @indent.align
+  (#set! indent.open_delimiter "(")
+  (#set! indent.close_delimiter ")"))
 
 ((for_statement) @indent.begin
   (#set! indent.immediate 1))
@@ -573,14 +578,40 @@ build = {
 ((case_clause) @indent.begin
   (#set! indent.immediate 1))
 
+; if (cond1
+;     or cond2
+;         or cond3):
+;     pass
+;
 (if_statement
   condition: (parenthesized_expression) @indent.align
+  (#lua-match? @indent.align "^%([^\n]")
   (#set! indent.open_delimiter "(")
   (#set! indent.close_delimiter ")")
   (#set! indent.avoid_last_matching_next 1))
 
+; while (
+;     cond1
+;     or cond2
+;         or cond3):
+;     pass
+;
 (while_statement
   condition: (parenthesized_expression) @indent.align
+  (#lua-match? @indent.align "[^\n ]%)$")
+  (#set! indent.open_delimiter "(")
+  (#set! indent.close_delimiter ")")
+  (#set! indent.avoid_last_matching_next 1))
+
+; if (
+;     cond1
+;     or cond2
+;         or cond3):
+;     pass
+;
+(if_statement
+  condition: (parenthesized_expression) @indent.align
+  (#lua-match? @indent.align "[^\n ]%)$")
   (#set! indent.open_delimiter "(")
   (#set! indent.close_delimiter ")")
   (#set! indent.avoid_last_matching_next 1))
@@ -597,6 +628,11 @@ build = {
   (#set! indent.close_delimiter ")"))
 
 ((parameters) @indent.align
+  (#set! indent.open_delimiter "(")
+  (#set! indent.close_delimiter ")"))
+
+((parameters) @indent.align
+  (#lua-match? @indent.align "[^\n ]%)$")
   (#set! indent.open_delimiter "(")
   (#set! indent.close_delimiter ")")
   (#set! indent.avoid_last_matching_next 1))
@@ -635,9 +671,6 @@ build = {
   ":"
   .
   (#lua-match? @indent.branch "^elif"))
-
-(parenthesized_expression
-  ")" @indent.end)
 
 (generator_expression
   ")" @indent.end)

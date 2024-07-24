@@ -1,4 +1,4 @@
-local git_ref = '08d8b885a3fa67a6e8aa8edd8988eaa55db46ba4'
+local git_ref = '6706f88d5b563ed8aaf7babb45e5f85dab001db1'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -15,13 +15,15 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-latex-' .. '08d8b885a3fa67a6e8aa8edd8988eaa55db46ba4',
+  dir = 'tree-sitter-latex-' .. '6706f88d5b563ed8aaf7babb45e5f85dab001db1',
 }
 
 build = {
@@ -51,26 +53,31 @@ build = {
 ]==],
     ["highlights.scm"] = [==[
 ; General syntax
-(command_name) @function
-
-(text_mode
-  [
-    "\\text"
-    "\\intertext"
-    "\\shortintertext"
-  ] @function)
+(command_name) @function @nospell
 
 (caption
   command: _ @function)
 
+; Turn spelling on for text
+(text) @spell
+
+; \text, \intertext, \shortintertext, ...
+(text_mode
+  command: _ @function @nospell
+  content: (curly_group
+    (_) @none @spell))
+
+; Variables, parameters
+(placeholder) @variable
+
 (key_value_pair
-  key: (_) @variable.parameter
+  key: (_) @variable.parameter @nospell
   value: (_))
 
-[
-  (brack_group)
-  (brack_group_argc)
-] @variable.parameter
+(curly_group_spec
+  (text) @variable.parameter)
+
+(brack_group_argc) @variable.parameter
 
 [
   (operator)
@@ -81,8 +88,7 @@ build = {
 
 "\\item" @punctuation.special
 
-((word) @punctuation.delimiter
-  (#eq? @punctuation.delimiter "&"))
+(delimiter) @punctuation.delimiter
 
 [
   "["
@@ -95,46 +101,42 @@ build = {
 (begin
   command: _ @module
   name: (curly_group_text
-    (text) @label))
+    (text) @label @nospell))
 
 (end
   command: _ @module
   name: (curly_group_text
-    (text) @label))
+    (text) @label @nospell))
 
 ; Definitions and references
 (new_command_definition
-  command: _ @function.macro
-  declaration: (curly_group_command_name
-    (_) @function))
+  command: _ @function.macro @nospell)
 
 (old_command_definition
-  command: _ @function.macro
-  declaration: (_) @function)
+  command: _ @function.macro @nospell)
 
 (let_command_definition
-  command: _ @function.macro
-  declaration: (_) @function)
+  command: _ @function.macro @nospell)
 
 (environment_definition
-  command: _ @function.macro
+  command: _ @function.macro @nospell
   name: (curly_group_text
     (_) @markup.link))
 
 (theorem_definition
-  command: _ @function.macro
+  command: _ @function.macro @nospell
   name: (curly_group_text_list
-    (_) @label))
+    (_) @label @nospell))
 
 (paired_delimiter_definition
-  command: _ @function.macro
+  command: _ @function.macro @nospell
   declaration: (curly_group_command_name
     (_) @function))
 
 (label_definition
   command: _ @function.macro
   name: (curly_group_text
-    (_) @markup.link))
+    (_) @markup.link @nospell))
 
 (label_reference_range
   command: _ @function.macro
@@ -155,13 +157,18 @@ build = {
   number: (_) @markup.link)
 
 (citation
-  command: _ @function.macro
-  keys: (curly_group_text_list) @markup.link)
+  command: _ @function.macro @nospell
+  keys: (curly_group_text_list) @markup.link @nospell)
+
+(hyperlink
+  command: _ @function @nospell
+  uri: (curly_group_uri
+    (_) @markup.link.url @nospell))
 
 (glossary_entry_definition
-  command: _ @function.macro
+  command: _ @function.macro @nospell
   name: (curly_group_text
-    (_) @markup.link))
+    (_) @markup.link @nospell))
 
 (glossary_entry_reference
   command: _ @function.macro
@@ -169,9 +176,9 @@ build = {
     (_) @markup.link))
 
 (acronym_definition
-  command: _ @function.macro
+  command: _ @function.macro @nospell
   name: (curly_group_text
-    (_) @markup.link))
+    (_) @markup.link @nospell))
 
 (acronym_reference
   command: _ @function.macro
@@ -187,26 +194,6 @@ build = {
   command: _ @function.macro
   name: (curly_group_text
     (_) @markup.link))
-
-; Formatting
-(text_mode
-  content: (curly_group
-    (_) @none @spell))
-
-(math_environment
-  (begin
-    command: _ @markup.math
-    name: (curly_group_text
-      (_) @markup.math)))
-
-(math_environment
-  (_) @markup.math)
-
-(math_environment
-  (end
-    command: _ @markup.math
-    name: (curly_group_text
-      (_) @markup.math)))
 
 ; Sectioning
 (title_declaration
@@ -283,31 +270,20 @@ build = {
 ((generic_command
   command: (command_name) @_name
   arg: (curly_group
-    (text) @markup.heading))
+    (_) @markup.heading))
   (#eq? @_name "\\frametitle"))
 
 ((generic_command
   command: (command_name) @_name
   arg: (curly_group
     (_) @markup.italic))
-  (#eq? @_name "\\emph"))
-
-((generic_command
-  command: (command_name) @_name
-  arg: (curly_group
-    (_) @markup.italic))
-  (#any-of? @_name "\\textit" "\\mathit"))
+  (#any-of? @_name "\\emph" "\\textit" "\\mathit"))
 
 ((generic_command
   command: (command_name) @_name
   arg: (curly_group
     (_) @markup.strong))
   (#any-of? @_name "\\textbf" "\\mathbf"))
-
-(hyperlink
-  command: _ @function @nospell
-  uri: (curly_group_uri
-    (_) @markup.link.url @nospell))
 
 ; File inclusion commands
 (class_include
@@ -320,12 +296,16 @@ build = {
 
 (latex_include
   command: _ @keyword.import
-  path: (curly_group_path) @string)
+  path: (curly_group_path) @string.special.path)
+
+(verbatim_include
+  command: _ @keyword.import
+  path: (curly_group_path) @string.special.path)
 
 (import_include
   command: _ @keyword.import
-  directory: (curly_group_path) @string
-  file: (curly_group_path) @string)
+  directory: (curly_group_path) @string.special.path
+  file: (curly_group_path) @string.special.path)
 
 (bibstyle_include
   command: _ @keyword.import
@@ -333,7 +313,7 @@ build = {
 
 (bibtex_include
   command: _ @keyword.import
-  paths: (curly_group_path_list) @string)
+  paths: (curly_group_path_list) @string.special.path)
 
 (biblatex_include
   "\\addbibresource" @keyword.import
@@ -341,41 +321,53 @@ build = {
 
 (graphics_include
   command: _ @keyword.import
-  path: (curly_group_path) @string)
+  path: (curly_group_path) @string.special.path)
+
+(svg_include
+  command: _ @keyword.import
+  path: (curly_group_path) @string.special.path)
+
+(inkscape_include
+  command: _ @keyword.import
+  path: (curly_group_path) @string.special.path)
 
 (tikz_library_import
   command: _ @keyword.import
   paths: (curly_group_path_list) @string)
 
-(text) @spell
-
-(inline_formula) @nospell
-
-(displayed_equation) @nospell
-
-(key_value_pair) @nospell
-
-(generic_environment
-  begin: _ @nospell
-  end: _ @nospell)
-
-(citation
-  keys: _ @nospell)
-
-(command_name) @nospell
-
-(label_definition) @nospell
-
-(label_reference) @nospell
-
-(label_reference_range) @nospell
+; Turn spelling off for whole nodes
+[
+  (label_reference)
+  (label_reference_range)
+  (label_number)
+  (glossary_entry_reference)
+  (acronym_reference)
+  (color_definition)
+  (color_reference)
+  (class_include)
+  (package_include)
+  (latex_include)
+  (verbatim_include)
+  (import_include)
+  (bibstyle_include)
+  (bibtex_include)
+  (biblatex_include)
+  (graphics_include)
+  (svg_include)
+  (inkscape_include)
+  (tikz_library_import)
+] @nospell
 
 ; Math
 [
   (displayed_equation)
   (inline_formula)
-] @markup.math
+] @markup.math @nospell
 
+(math_environment
+  (_) @markup.math)
+
+; Comments
 [
   (line_comment)
   (block_comment)
@@ -408,18 +400,23 @@ build = {
   code: (source_code) @injection.content
   (#set! injection.language "python"))
 
+(luacode_environment
+  code: (source_code) @injection.content
+  (#set! injection.language "lua"))
+
+(asy_environment
+  code: (source_code) @injection.content
+  (#set! injection.language "c"))
+
+(asydef_environment
+  code: (source_code) @injection.content
+  (#set! injection.language "c"))
+
 (minted_environment
   (begin
     language: (curly_group_text
       (text) @injection.language))
   (source_code) @injection.content)
-
-((generic_environment
-  (begin
-    name: (curly_group_text
-      (text) @_env))) @injection.content
-  (#set! injection.language "c")
-  (#any-of? @_env "asy" "asydef"))
 ]==],
   },
   extra_files = {

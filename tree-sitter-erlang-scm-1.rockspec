@@ -1,4 +1,4 @@
-local git_ref = '9a04980accfe29a708e738376af50b96d8b562b7'
+local git_ref = '19ca500fa5a17ab58dc18aa03b50e2db305e7a8a'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -15,13 +15,15 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-erlang-' .. '9a04980accfe29a708e738376af50b96d8b562b7',
+  dir = 'tree-sitter-erlang-' .. '19ca500fa5a17ab58dc18aa03b50e2db305e7a8a',
 }
 
 build = {
