@@ -1,4 +1,4 @@
-local git_ref = '5c9b47c6a978072808b356065fe8f223cdc8fc07'
+local git_ref = '31182d43b062a350d4bd2449f2fc0d5654972be9'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -15,13 +15,15 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1', 'tree-sitter-html', 'tree-sitter-html_tags' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-angular-' .. '5c9b47c6a978072808b356065fe8f223cdc8fc07',
+  dir = 'tree-sitter-angular-' .. '31182d43b062a350d4bd2449f2fc0d5654972be9',
 }
 
 build = {
@@ -131,13 +133,6 @@ build = {
   "{"
   "}"
   "@"
-  "} @"
-  (if_end_expression)
-  (for_end_expression)
-  (switch_end_expression)
-  (case_end_expression)
-  (default_end_expression)
-  (defer_end_expression)
 ] @punctuation.bracket
 
 (two_way_binding
@@ -190,6 +185,21 @@ build = {
 ]==],
     ["indents.scm"] = [==[
 ; inherits: html_tags
+
+[
+  (statement_block)
+  (switch_statement)
+] @indent.begin
+
+(statement_block
+  "{" @indent.branch)
+
+(statement_block
+  "}" @indent.end)
+
+"}" @indent.branch
+
+"}" @indent.end
 ]==],
     ["injections.scm"] = [==[
 ; inherits: html_tags

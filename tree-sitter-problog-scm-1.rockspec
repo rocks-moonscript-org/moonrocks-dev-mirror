@@ -15,8 +15,10 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1', 'tree-sitter-prolog' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {

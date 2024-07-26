@@ -15,8 +15,10 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
@@ -33,6 +35,16 @@ build = {
   location = nil,
   copy_directories = { "queries" },
   queries = {
+    ["folds.scm"] = [==[
+[
+  (if_action)
+  (range_action)
+  (block_action)
+  (with_action)
+  (define_action)
+  (comment)
+] @fold
+]==],
     ["highlights.scm"] = [==[
 ; Priorities of the highlight queries are raised, so that they overrule the
 ; often surrounding and overlapping highlights from the non-gotmpl injections.
@@ -199,6 +211,20 @@ build = {
   (#eq? @_function "html")
   (#offset! @injection.content 0 1 0 -1)
   (#set! injection.language "html"))
+]==],
+    ["locals.scm"] = [==[
+[
+  (if_action)
+  (range_action)
+  (block_action)
+  (with_action)
+  (define_action)
+] @local.scope
+
+(variable_definition
+  variable: (variable) @local.definition.var)
+
+(variable) @local.reference
 ]==],
   },
   extra_files = {
