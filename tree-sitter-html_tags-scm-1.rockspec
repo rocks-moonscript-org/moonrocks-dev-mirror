@@ -12,11 +12,13 @@ description = {
   summary = 'tree-sitter parser and Neovim queries for html_tags',
   labels = { 'neovim', 'tree-sitter' } ,
   homepage = 'https://github.com/nvim-neorocks/luarocks-stub',
-  license = 'Apache-2.0'
+  license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
@@ -129,7 +131,8 @@ build = {
   (attribute_name) @_attr
   (quoted_attribute_value
     (attribute_value) @string.special.url))
-  (#any-of? @_attr "href" "src"))
+  (#any-of? @_attr "href" "src")
+  (#set! @string.special.url "url" @string.special.url))
 
 [
   "<"
