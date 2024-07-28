@@ -1,4 +1,4 @@
-local git_ref = 'a478beb76be72fa8f305f5fe9cc6141ac91b91a4'
+local git_ref = '4f897d5e3f0e38bf8fbb55e8f39dc97d2bc2229e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -15,13 +15,15 @@ description = {
   license = 'UNKNOWN'
 }
 
+dependencies = { 'lua >= 5.1' } 
+
 build_dependencies = {
-  'luarocks-build-treesitter-parser >= 4.0.0',
+  'luarocks-build-treesitter-parser >= 5.0.0',
 }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-systemverilog-' .. 'a478beb76be72fa8f305f5fe9cc6141ac91b91a4',
+  dir = 'tree-sitter-systemverilog-' .. '4f897d5e3f0e38bf8fbb55e8f39dc97d2bc2229e',
 }
 
 build = {
