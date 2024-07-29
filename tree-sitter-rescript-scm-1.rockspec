@@ -1,17 +1,17 @@
-local git_ref = '281d184b8240b2b22670b8907b57b6d6842db6f3'
+local git_ref = '444c127686714b2358622427c3bdba7eb09021c6'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/opa-oz/tree-sitter-nginx'
+local repo_url = 'https://github.com/rescript-lang/tree-sitter-rescript'
 
 rockspec_format = '3.0'
-package = 'tree-sitter-nginx'
+package = 'tree-sitter-rescript'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser and Neovim queries for nginx',
+  summary = 'tree-sitter parser and Neovim queries for rescript',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/opa-oz/tree-sitter-nginx',
+  homepage = 'https://github.com/rescript-lang/tree-sitter-rescript',
   license = 'UNKNOWN'
 }
 
@@ -23,12 +23,12 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-nginx-' .. '281d184b8240b2b22670b8907b57b6d6842db6f3',
+  dir = 'tree-sitter-rescript-' .. '444c127686714b2358622427c3bdba7eb09021c6',
 }
 
 build = {
   type = "treesitter-parser",
-  lang = "nginx",
+  lang = "rescript",
   parser = true,
   generate = false,
   generate_from_json = false,
@@ -36,72 +36,439 @@ build = {
   copy_directories = { "queries" },
   queries = {
     ["folds.scm"] = [==[
-(block) @fold
+[
+  (block)
+  (function)
+  (module_declaration)
+  (type_declaration)
+  (external_declaration)
+  (call_expression)
+  (switch_expression)
+  (parenthesized_expression)
+  (record)
+  (include_statement)+
+] @fold
 ]==],
     ["highlights.scm"] = [==[
 (comment) @comment @spell
 
-(value) @variable
+; Identifiers
+;------------
+; Escaped identifiers like \"+."
+((value_identifier) @constant.macro
+  (#lua-match? @constant.macro "^%.*$"))
+
+(value_identifier) @variable
 
 [
-  (location_modifier)
-  "="
-] @operator
+  (type_identifier)
+  (unit_type)
+  (list)
+  (list_pattern)
+] @type
+
+((type_identifier) @type.builtin
+  (#any-of? @type.builtin "int" "char" "string" "float" "bool" "unit"))
 
 [
-  (keyword)
-  "location"
+  (variant_identifier)
+  (polyvar_identifier)
+] @constructor
+
+(record_type_field
+  (property_identifier) @property)
+
+(record_field
+  (property_identifier) @property)
+
+(object
+  (field
+    (property_identifier) @property))
+
+(object_type
+  (field
+    (property_identifier) @property))
+
+(module_identifier) @module
+
+(member_expression
+  (property_identifier) @variable.member)
+
+(value_identifier_path
+  (module_identifier)
+  (value_identifier) @variable)
+
+(record_pattern
+  (value_identifier_path
+    (value_identifier) @variable.member))
+
+(record_pattern
+  (value_identifier) @variable)
+
+(labeled_argument
+  label: (value_identifier) @variable.parameter)
+
+; Parameters
+;----------------
+(list_pattern
+  (value_identifier) @variable.parameter)
+
+(spread_pattern
+  (value_identifier) @variable.parameter)
+
+; String literals
+;----------------
+[
+  (string)
+  (template_string)
+] @string
+
+(character) @character
+
+(escape_sequence) @string.escape
+
+; Other literals
+;---------------
+[
+  (true)
+  (false)
+] @boolean
+
+(number) @number
+
+(polyvar) @constructor
+
+(polyvar_string) @constructor
+
+; Functions
+;----------
+; parameter(s) in parens
+(parameter
+  (value_identifier) @variable.parameter)
+
+(labeled_parameter
+  (value_identifier) @variable.parameter)
+
+; single parameter with no parens
+(function
+  parameter: (value_identifier) @variable.parameter)
+
+(parameter
+  (tuple_pattern
+    (tuple_item_pattern
+      (value_identifier) @variable.parameter)))
+
+(parameter
+  (array_pattern
+    (value_identifier) @variable.parameter))
+
+(parameter
+  (record_pattern
+    (value_identifier) @variable.parameter))
+
+; function identifier in let binding
+(let_binding
+  pattern: (value_identifier) @function
+  body: (function))
+
+; function calls
+(call_expression
+  function: (value_identifier_path
+    (value_identifier) @function.method.call .))
+
+(call_expression
+  function: (value_identifier) @function.call)
+
+; highlight the right-hand side of a pipe operator as a function call
+(pipe_expression
+  (value_identifier) @function.call .)
+
+(pipe_expression
+  (value_identifier_path
+    (value_identifier) @function.method.call .) .)
+
+; Meta
+;-----
+(decorator_identifier) @attribute
+
+(extension_identifier) @keyword
+
+"%" @keyword
+
+; Misc
+;-----
+(polyvar_type_pattern
+  "#" @constructor)
+
+[
+  "include"
+  "open"
+] @keyword.import
+
+[
+  "private"
+  "mutable"
+  "rec"
+] @keyword.modifier
+
+"type" @keyword.type
+
+[
+  "and"
+  "with"
+  "as"
+] @keyword.operator
+
+[
+  "export"
+  "external"
+  "let"
+  "module"
+  "assert"
+  "await"
+  "lazy"
+  "constraint"
 ] @keyword
+
+"await" @keyword.coroutine
+
+(function
+  "async" @keyword.coroutine)
+
+(module_unpack
+  "unpack" @keyword)
 
 [
   "if"
-  "map"
+  "else"
+  "switch"
+  "when"
 ] @keyword.conditional
 
-(boolean) @boolean
+[
+  "exception"
+  "try"
+  "catch"
+] @keyword.exception
+
+(call_expression
+  function: (value_identifier) @keyword.exception
+  (#eq? @keyword.exception "raise"))
 
 [
-  (auto)
-  (constant)
-  (level)
-  (connection_method)
-  (var)
-  (condition)
-] @variable.builtin
+  "for"
+  "in"
+  "to"
+  "downto"
+  "while"
+] @keyword.repeat
 
 [
-  (file)
-  (mask)
-] @string.special.path
+  "."
+  ","
+  "|"
+  ":"
+] @punctuation.delimiter
 
 [
-  (string_literal)
-  (quoted_string_literal)
-] @string
+  "++"
+  "+"
+  "+."
+  "-"
+  "-."
+  "*"
+  "**"
+  "*."
+  "/."
+  "<="
+  "=="
+  "==="
+  "!"
+  "!="
+  "!=="
+  ">="
+  "&&"
+  "||"
+  "="
+  ":="
+  "->"
+  "|>"
+  ":>"
+  "+="
+  "=>"
+  (uncurry)
+] @operator
 
-(directive
-  (variable
-    (keyword) @variable.parameter))
-
-(location_route) @string.special
-
-";" @punctuation.delimiter
+; Explicitly enclose these operators with binary_expression
+; to avoid confusion with JSX tag delimiters
+(binary_expression
+  [
+    "<"
+    ">"
+    "/"
+  ] @operator)
 
 [
-  (numeric_literal)
-  (time)
-  (size)
-  (cpumask)
-] @number
-
-[
+  "("
+  ")"
   "{"
   "}"
+  "["
+  "]"
+  "<"
+  ">"
 ] @punctuation.bracket
+
+(unit
+  [
+    "("
+    ")"
+  ] @constant.builtin)
+
+(template_substitution
+  "${" @punctuation.special
+  "}" @punctuation.special) @none
+
+(polyvar_type
+  [
+    "["
+    "[>"
+    "[<"
+    "]"
+  ] @punctuation.bracket)
+
+[
+  "~"
+  "?"
+  ".."
+  "..."
+] @punctuation.special
+
+(ternary_expression
+  [
+    "?"
+    ":"
+  ] @keyword.conditional.ternary)
+
+; JSX
+;----------
+(jsx_identifier) @tag
+
+(jsx_element
+  open_tag: (jsx_opening_element
+    [
+      "<"
+      ">"
+    ] @tag.delimiter))
+
+(jsx_element
+  close_tag: (jsx_closing_element
+    [
+      "<"
+      "/"
+      ">"
+    ] @tag.delimiter))
+
+(jsx_self_closing_element
+  [
+    "/"
+    ">"
+    "<"
+  ] @tag.delimiter)
+
+(jsx_fragment
+  [
+    ">"
+    "<"
+    "/"
+  ] @tag.delimiter)
+
+(jsx_attribute
+  (property_identifier) @tag.attribute)
+]==],
+    ["indents.scm"] = [==[
+[
+  (block)
+  (record_type)
+  (record)
+  (parenthesized_expression)
+  (call_expression)
+  (function_type_parameters)
+  (function)
+  (switch_match)
+  (let_declaration)
+  (jsx_element)
+  (jsx_fragment)
+  (jsx_self_closing_element)
+  (object_type)
+] @indent.begin
+
+[
+  "}"
+  ")"
+  (jsx_closing_element)
+] @indent.branch @indent.end
+
+(jsx_self_closing_element
+  "/" @indent.branch
+  ">"? @indent.end)
+
+; </> is captured as 3 different anonymous nodes
+(jsx_fragment
+  "<"
+  "<" @indent.branch)
+
+(jsx_fragment
+  ">"
+  ">" @indent.end)
+
+(comment) @indent.auto
 ]==],
     ["injections.scm"] = [==[
 ((comment) @injection.content
   (#set! injection.language "comment"))
+
+(extension_expression
+  (extension_identifier) @_name
+  (#eq? @_name "re")
+  (expression_statement
+    (_) @injection.content
+    (#set! injection.language "regex")))
+
+(extension_expression
+  (extension_identifier) @_name
+  (#eq? @_name "raw")
+  (expression_statement
+    (_
+      (_) @injection.content
+      (#set! injection.language "javascript"))))
+
+(extension_expression
+  (extension_identifier) @_name
+  (#eq? @_name "graphql")
+  (expression_statement
+    (_
+      (_) @injection.content
+      (#set! injection.language "graphql"))))
+
+(extension_expression
+  (extension_identifier) @_name
+  (#eq? @_name "relay")
+  (expression_statement
+    (_
+      (_) @injection.content
+      (#set! injection.language "graphql"))))
+]==],
+    ["locals.scm"] = [==[
+(switch_expression) @local.scope
+
+; Definitions
+;------------
+(type_declaration) @local.definition.type
+
+(let_binding) @local.definition.var
+
+(module_declaration) @local.definition.namespace
 ]==],
   },
   extra_files = {
