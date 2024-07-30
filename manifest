@@ -906,6 +906,13 @@ repository = {
          }
       }
    },
+   ['code-stats.nvim'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['code_runner.nvim'] = {
       ['scm-1'] = {
          {
@@ -7024,6 +7031,41 @@ repository = {
          }
       }
    },
+   ['neotest-dart'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['neotest-deno'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['neotest-jest'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['neotest-minitest'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['neotest-phpunit'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['neotest-plenary'] = {
       ['scm-1'] = {
          {
@@ -7031,7 +7073,42 @@ repository = {
          }
       }
    },
+   ['neotest-python'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['neotest-rspec'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['neotest-rust'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['neotest-scala'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['neotest-stenciljs'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['neotest-testthat'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"

@@ -1,4 +1,4 @@
-local git_ref = 'd64a8b7e8730095ff634e6586584e8543043e986'
+local git_ref = '6993189dd0ee38299879a1a0064718a8392e8713'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'neovim-ayu-' .. 'd64a8b7e8730095ff634e6586584e8543043e986',
+  dir = 'neovim-ayu-' .. '6993189dd0ee38299879a1a0064718a8392e8713',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

@@ -1,28 +1,28 @@
-local git_ref = 'f45b52f8f87792e8659526f23261ffe278a54be5'
+local git_ref = '33b9335cd8c2be4dcf9dd8f196b24325e7c2e8e7'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/max397574/better-escape.nvim'
+local repo_url = 'https://github.com/sidlatau/neotest-dart'
 
 rockspec_format = '3.0'
-package = 'better-escape.nvim'
+package = 'neotest-dart'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Escape from insert mode without delay when typing',
+  summary = 'Neotest adapter for Dart/Flutter.',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/max397574/better-escape.nvim',
-  license = 'GPL-3.0'
+  homepage = 'https://github.com/sidlatau/neotest-dart',
+  license = 'UNKNOW'
 }
 
-dependencies = { 'lua >= 5.1' } 
+dependencies = { 'lua >= 5.1', 'neotest', 'tree-sitter-dart' } 
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'better-escape.nvim-' .. 'f45b52f8f87792e8659526f23261ffe278a54be5',
+  dir = 'neotest-dart-' .. '33b9335cd8c2be4dcf9dd8f196b24325e7c2e8e7',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

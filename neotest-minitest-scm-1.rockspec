@@ -1,28 +1,28 @@
-local git_ref = 'f45b52f8f87792e8659526f23261ffe278a54be5'
+local git_ref = '0543bf4e997b2c970707cb297e2f74c438eb0653'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/max397574/better-escape.nvim'
+local repo_url = 'https://github.com/zidhuss/neotest-minitest'
 
 rockspec_format = '3.0'
-package = 'better-escape.nvim'
+package = 'neotest-minitest'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Escape from insert mode without delay when typing',
+  summary = 'Neotest adapter for Minitest',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/max397574/better-escape.nvim',
-  license = 'GPL-3.0'
+  homepage = 'https://github.com/zidhuss/neotest-minitest',
+  license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1' } 
+dependencies = { 'lua >= 5.1', 'neotest', 'tree-sitter-ruby' } 
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'better-escape.nvim-' .. 'f45b52f8f87792e8659526f23261ffe278a54be5',
+  dir = 'neotest-minitest-' .. '0543bf4e997b2c970707cb297e2f74c438eb0653',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

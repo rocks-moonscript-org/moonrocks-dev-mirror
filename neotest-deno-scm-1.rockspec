@@ -1,28 +1,28 @@
-local git_ref = '99aef1d68a01dd8fd8d37bbf62d67766f97311e3'
+local git_ref = '7136b9342aeecb675c7c16a0bde327d7fcb00a1c'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/echasnovski/mini.files'
+local repo_url = 'https://github.com/MarkEmmons/neotest-deno'
 
 rockspec_format = '3.0'
-package = 'mini.files'
+package = 'neotest-deno'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Navigate and manipulate the file system in Neovim. Part of the mini.nvim suite.',
+  summary = '🧪 Neotest adapter for Deno',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/echasnovski/mini.files',
+  homepage = 'https://github.com/MarkEmmons/neotest-deno',
   license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1' } 
+dependencies = { 'lua >= 5.1', 'neotest', 'tree-sitter-typescript' } 
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'mini.files-' .. '99aef1d68a01dd8fd8d37bbf62d67766f97311e3',
+  dir = 'neotest-deno-' .. '7136b9342aeecb675c7c16a0bde327d7fcb00a1c',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

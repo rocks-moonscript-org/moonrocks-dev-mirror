@@ -1,28 +1,28 @@
-local git_ref = 'f45b52f8f87792e8659526f23261ffe278a54be5'
+local git_ref = 'baae8dfa0a3aaacd9f0bb6845d6348f5bcdc48bb'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/max397574/better-escape.nvim'
+local repo_url = 'https://github.com/olimorris/neotest-phpunit'
 
 rockspec_format = '3.0'
-package = 'better-escape.nvim'
+package = 'neotest-phpunit'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Escape from insert mode without delay when typing',
+  summary = '🧪 Neotest adapter for PHPUnit',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/max397574/better-escape.nvim',
-  license = 'GPL-3.0'
+  homepage = 'https://github.com/olimorris/neotest-phpunit',
+  license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1' } 
+dependencies = { 'lua >= 5.1', 'neotest', 'tree-sitter-php' } 
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'better-escape.nvim-' .. 'f45b52f8f87792e8659526f23261ffe278a54be5',
+  dir = 'neotest-phpunit-' .. 'baae8dfa0a3aaacd9f0bb6845d6348f5bcdc48bb',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

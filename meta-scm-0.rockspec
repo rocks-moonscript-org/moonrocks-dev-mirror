@@ -25,7 +25,8 @@ description = {
 dependencies = {
   "lua >= 5.1",
   "paths",
-  "compat53"
+  "compat53",
+  "luassert",
 }
 
 test_dependencies = {

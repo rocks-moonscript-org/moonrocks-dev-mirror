@@ -1,28 +1,28 @@
-local git_ref = 'f45b52f8f87792e8659526f23261ffe278a54be5'
+local git_ref = '685f0fac6196862b47025c6b91513af6a406501a'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/max397574/better-escape.nvim'
+local repo_url = 'https://github.com/stevanmilic/neotest-scala'
 
 rockspec_format = '3.0'
-package = 'better-escape.nvim'
+package = 'neotest-scala'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Escape from insert mode without delay when typing',
+  summary = '🧪 Neotest adapter for Scala',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/max397574/better-escape.nvim',
-  license = 'GPL-3.0'
+  homepage = 'https://github.com/stevanmilic/neotest-scala',
+  license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1' } 
+dependencies = { 'lua >= 5.1', 'neotest', 'tree-sitter-scala' } 
 
 test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'better-escape.nvim-' .. 'f45b52f8f87792e8659526f23261ffe278a54be5',
+  dir = 'neotest-scala-' .. '685f0fac6196862b47025c6b91513af6a406501a',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
