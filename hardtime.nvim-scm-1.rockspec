@@ -1,4 +1,4 @@
-local git_ref = '9a4e24fb40482dc85a93bf6cf344a030b9bf9a39'
+local git_ref = '91c6be1a54fa057002e21ae209a49436bd215355'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'hardtime.nvim-' .. '9a4e24fb40482dc85a93bf6cf344a030b9bf9a39',
+  dir = 'hardtime.nvim-' .. '91c6be1a54fa057002e21ae209a49436bd215355',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
@@ -33,5 +33,5 @@ end
 
 build = {
   type = 'builtin',
-  copy_directories = { 'doc', 'plugin' } ,
+  copy_directories = { 'doc' } ,
 }

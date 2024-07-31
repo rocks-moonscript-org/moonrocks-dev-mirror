@@ -16,7 +16,7 @@ description = {
   license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1' } 
+dependencies = { 'lua >= 5.1', 'tree-sitter-latex' } 
 
 test_dependencies = { }
 

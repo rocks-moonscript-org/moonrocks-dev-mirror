@@ -1,4 +1,4 @@
-local git_ref = '31f65a1bbddd7de9a639d8d0e32b8066c0de1da1'
+local git_ref = '4f7d18cb471ede7407dd966c7563868cae7f4f99'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'vim-moonfly-colors-' .. '31f65a1bbddd7de9a639d8d0e32b8066c0de1da1',
+  dir = 'vim-moonfly-colors-' .. '4f7d18cb471ede7407dd966c7563868cae7f4f99',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
