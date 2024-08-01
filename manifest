@@ -11735,6 +11735,13 @@ repository = {
          }
       }
    },
+   ['tree-sitter-vrl'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['tree-sitter-vue'] = {
       ['scm-1'] = {
          {

@@ -23,6 +23,7 @@ dependencies = {
   "t-env",
   "redis-lua",
   "lua-resty-redis",
+  "t-format-json",
 }
 
 test_dependencies = {

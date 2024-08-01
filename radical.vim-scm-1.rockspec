@@ -13,7 +13,7 @@ description = {
   detailed = '',
   labels = { 'neovim' } ,
   homepage = 'https://github.com/glts/vim-radical',
-  license = 'vim-license'
+  license = 'VIM'
 }
 
 dependencies = { 'lua >= 5.1', 'repeat.vim' } 

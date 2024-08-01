@@ -13,7 +13,7 @@ description = {
   detailed = '',
   labels = { 'neovim' } ,
   homepage = 'https://github.com/svermeulen/vim-easyclip',
-  license = 'vim-license'
+  license = 'VIM'
 }
 
 dependencies = { 'lua >= 5.1', 'repeat.vim' } 
