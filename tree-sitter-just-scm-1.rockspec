@@ -1,4 +1,4 @@
-local git_ref = '379fbe36d1e441bc9414ea050ad0c85c9d6935ea'
+local git_ref = '6648ac1c0cdadaec8ee8bcf9a4ca6ace5102cf21'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-just-' .. '379fbe36d1e441bc9414ea050ad0c85c9d6935ea',
+  dir = 'tree-sitter-just-' .. '6648ac1c0cdadaec8ee8bcf9a4ca6ace5102cf21',
 }
 
 build = {
@@ -147,7 +147,7 @@ build = {
 ; Fallback highlighting for recipe bodies
 (recipe
   (recipe_body) @string
-  (#set! "priority" 90))
+  (#set! priority 90))
 
 ; Ref: https://just.systems/man/en/chapter_26.html
 ;(setting (identifier) @error)

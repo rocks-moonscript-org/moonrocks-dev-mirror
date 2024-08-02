@@ -1,4 +1,4 @@
----@diagnostic disable: lowercase-global
+---@diagnostic disable: codestyle-check, lowercase-global
 rockspec_format = "3.0"
 package = "citeproc-lua"
 version = "dev-1"
@@ -32,8 +32,6 @@ build = {
       ["citeproc.init"] = "citeproc/citeproc.lua",
       ["citeproc.ir-node"] = "citeproc/citeproc-ir-node.lua",
       ["citeproc.journal-data"] = "citeproc/citeproc-journal-data.lua",
-      ["citeproc.latex"] = "citeproc/citeproc-latex.lua",
-      ["citeproc.latex-core"] = "citeproc/citeproc-latex-core.lua",
       ["citeproc.latex-data"] = "citeproc/citeproc-latex-data.lua",
       ["citeproc.latex-parser"] = "citeproc/citeproc-latex-parser.lua",
       ["citeproc.lua-uca.collator"] = "submodules/lua-uca/src/lua-uca/lua-uca-collator.lua",
@@ -58,6 +56,7 @@ build = {
       ["citeproc.luaxml.stack"] = "submodules/luaxml/luaxml-stack.lua",
       ["citeproc.luaxml.testxml"] = "submodules/luaxml/luaxml-testxml.lua",
       ["citeproc.luaxml.transform"] = "submodules/luaxml/luaxml-transform.lua",
+      ["citeproc.manager"] = "citeproc/citeproc-manager.lua",
       ["citeproc.node-bibliography"] = "citeproc/citeproc-node-bibliography.lua",
       ["citeproc.node-choose"] = "citeproc/citeproc-node-choose.lua",
       ["citeproc.node-citation"] = "citeproc/citeproc-node-citation.lua",
