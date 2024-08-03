@@ -1,4 +1,4 @@
-local git_ref = '3e6c8bbdb5b3485f8a50d951040a6d80c70a97b0'
+local git_ref = '1a6683f6809f7bc630f10fcad7d9ac6471deb706'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-idl-' .. '3e6c8bbdb5b3485f8a50d951040a6d80c70a97b0',
+  dir = 'tree-sitter-idl-' .. '1a6683f6809f7bc630f10fcad7d9ac6471deb706',
 }
 
 build = {
@@ -88,27 +88,6 @@ build = {
 ] @keyword.modifier
 
 [
-  "SEQUENTIAL"
-  "HASH"
-  "FINAL"
-  "APPENDABLE"
-  "MUTABLE"
-  "c"
-  "c++"
-  "java"
-  "idl"
-  "*"
-  "BEGIN_FILE"
-  "BEFORE_DECLARATION"
-  "BEGIN_DECLARATION"
-  "END_DECLARATION"
-  "AFTER_DECLARATION"
-  "END_FILE"
-  "CORBA"
-  "DDS"
-] @constant
-
-[
   "switch"
   "case"
   "default"
@@ -136,6 +115,8 @@ build = {
   (map_type)
   (object_type)
   (value_base_type)
+  (wide_string_type)
+  (wide_char_type)
 ] @type.builtin
 
 (escape_sequence) @string.escape
@@ -153,7 +134,11 @@ build = {
 
 (char_literal) @character
 
+(wide_character_literal) @character
+
 (string_literal) @string
+
+(wide_string_literal) @string
 
 [
   "("
@@ -198,41 +183,6 @@ build = {
 
 (annotation_appl_custom_body
   (scoped_name) @attribute)
-
-(annotation_appl_builtin_body
-  (_
-    [
-      "id"
-      "autoid"
-      "optional"
-      "position"
-      "value"
-      "extensibility"
-      "final"
-      "appendable"
-      "mutable"
-      "key"
-      "must_understand"
-      "default_literal"
-      "default"
-      "range"
-      "min"
-      "max"
-      "unit"
-      "bit_bound"
-      "external"
-      "nested"
-      "verbatim"
-      "service"
-      "oneway"
-      "ami"
-    ] @attribute.builtin))
-
-(min_expr
-  "min" @attribute.builtin)
-
-(max_expr
-  "max" @attribute.builtin)
 
 (op_dcl
   (identifier) @function.method)
@@ -451,6 +401,20 @@ build = {
 (extend_annotation_appl
   "//@" @attribute.builtin
   (annotation_appl_builtin_body))
+
+[
+  (autoid_kind)
+  (extensibility_kind)
+  (verbatim_language)
+  (placement_kind)
+  (service_platform)
+  (try_construct_fail_action)
+  (data_representation_mask)
+] @constant
+
+(anno_name) @attribute.builtin
+
+(range_kind) @attribute.builtin
 ]==],
     ["indents.scm"] = [==[
 ";" @indent.end

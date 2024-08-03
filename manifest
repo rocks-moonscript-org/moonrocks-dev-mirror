@@ -6961,6 +6961,13 @@ repository = {
          }
       }
    },
+   ['ndb.lua'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['neo-tree.nvim'] = {
       ['scm-1'] = {
          {
