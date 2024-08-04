@@ -1,4 +1,4 @@
-local git_ref = '2825fb578325ac308945318881445a89ea06e0f6'
+local git_ref = '0d5a05e543af2de60cdb5e71f0f5888c95ab936f'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-matlab-' .. '2825fb578325ac308945318881445a89ea06e0f6',
+  dir = 'tree-sitter-matlab-' .. '0d5a05e543af2de60cdb5e71f0f5888c95ab936f',
 }
 
 build = {

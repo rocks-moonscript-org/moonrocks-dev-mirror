@@ -1,4 +1,4 @@
-local git_ref = '804d86fd4ad286bd0cc1c1f0f7b28bd7af6755ad'
+local git_ref = 'fc15514b2f1dbba9c58528d15a3708f89eda6a01'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-powershell-' .. '804d86fd4ad286bd0cc1c1f0f7b28bd7af6755ad',
+  dir = 'tree-sitter-powershell-' .. 'fc15514b2f1dbba9c58528d15a3708f89eda6a01',
 }
 
 build = {
@@ -120,7 +120,10 @@ build = {
   "enum"
 ] @keyword.type
 
-(class_attribute) @keyword.modifier
+[
+  "data"
+  (class_attribute)
+] @keyword.modifier
 
 [
   "throw"
@@ -140,8 +143,6 @@ build = {
   "begin"
   "process"
   "end"
-  ; TODO: not supported by parser yet, can be used to declare constants
-  "data"
 ] @keyword
 
 ; Operators
@@ -196,7 +197,15 @@ build = {
 ((variable) @variable.builtin
   (#lua-match? @variable.builtin "^\$env:"))
 
+(data_name
+  (simple_name) @constant)
+
 (comment) @comment @spell
+
+((program
+  .
+  (comment) @keyword.directive)
+  (#lua-match? @keyword.directive "^#!/"))
 
 ; Booleans
 ;---------
@@ -519,6 +528,10 @@ build = {
                             (type_spec) @local.definition.associated)
                           (unary_expression
                             (variable) @local.definition.var))))))))))))))
+
+; data sections
+(data_name
+  (simple_name) @local.definition.var)
 
 ; References
 ;-----------

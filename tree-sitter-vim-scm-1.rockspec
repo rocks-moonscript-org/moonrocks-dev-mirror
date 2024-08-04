@@ -1,4 +1,4 @@
-local git_ref = 'b448ca63f972ade12c373c808acdd2bf972937db'
+local git_ref = 'f3cd62d8bd043ef20507e84bb6b4b53731ccf3a7'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-vim-' .. 'b448ca63f972ade12c373c808acdd2bf972937db',
+  dir = 'tree-sitter-vim-' .. 'f3cd62d8bd043ef20507e84bb6b4b53731ccf3a7',
 }
 
 build = {

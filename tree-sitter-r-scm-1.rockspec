@@ -190,8 +190,6 @@ function: (extract_operator
   (braced_expression)
   (parenthesized_expression)
   (call)
-  "special"
-  "|>"
   "if"
   "else"
   "while"

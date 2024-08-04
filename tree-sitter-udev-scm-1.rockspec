@@ -48,12 +48,12 @@ build = {
 ((fmt_sub
   .
   _ @character.special)
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 ((var_sub
   .
   _ @variable.builtin)
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 [
   (system_const)
@@ -64,24 +64,24 @@ build = {
 ] @attribute
 
 ((attribute) @attribute
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 ((env_var) @constant
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 ((pattern) @string.special
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 ([
   "\\\""
   (c_escape)
 ] @string.escape
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 (octal) @number
 
 ((number) @number
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 [
   (match_op)
@@ -89,13 +89,13 @@ build = {
 ] @operator
 
 ("+" @punctuation.special
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 ([
   "{"
   "}"
 ] @punctuation.bracket
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 [
   ","

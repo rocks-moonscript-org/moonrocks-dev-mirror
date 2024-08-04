@@ -51,7 +51,7 @@ build = {
     ["highlights.scm"] = [==[
 ; Variables
 ((identifier) @variable
-  (#set! "priority" 95))
+  (#set! priority 95))
 
 ; Includes
 [

@@ -81,7 +81,7 @@ build = {
 (inline_link
   (link_text) @_label
   (link_destination) @_url
-  (#set! @_label "url" @_url))
+  (#set! @_label url @_url))
 
 ; Conceal image links
 (image
@@ -125,6 +125,13 @@ build = {
   (uri_autolink)
   (email_autolink)
 ] @markup.link.url @nospell
+
+((link_destination) @_url
+  (#set! @_url url @_url))
+
+((uri_autolink) @_url
+  (#offset! @_url 0 1 0 -1)
+  (#set! @_url url @_url))
 
 (entity_reference) @nospell
 

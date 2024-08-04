@@ -97,7 +97,7 @@ build = {
 
 ((scoped_type_identifier
   path: (_) @module)
-  (#set! "priority" 105))
+  (#set! priority 105))
 
 ; Keywords
 [
@@ -151,7 +151,7 @@ build = {
 
 ; Labels
 ((label) @label
-  (#set! "priority" 105))
+  (#set! priority 105))
 
 ; Functions
 (function_declaration
@@ -202,7 +202,7 @@ build = {
 ((member_expression
   "."
   (_) @variable.member)
-  (#set! "priority" 105))
+  (#set! priority 105))
 
 (field
   .
@@ -346,7 +346,8 @@ build = {
 
 (if_statement
   ("("
-    condition: (_)")") @indent.begin)
+    condition: (_)
+    ")") @indent.begin)
 
 [
   "}"

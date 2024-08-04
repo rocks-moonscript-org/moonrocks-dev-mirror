@@ -94,8 +94,8 @@ build = {
 (comment) @comment @spell
 ]==],
     ["injections.scm"] = [==[
-((comment) @injection.language
-  (#set! @injection.language "comment"))
+((comment) @injection.content
+  (#set! injection.language "comment"))
 ]==],
   },
   extra_files = {

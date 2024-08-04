@@ -111,7 +111,7 @@ build = {
     "else"
     "when"
   ] @keyword.conditional.ternary)
-  (#set! "priority" 105))
+  (#set! priority 105))
 
 ; Repeats
 [

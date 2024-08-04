@@ -716,15 +716,15 @@ build = {
   .
   (symbol) @keyword.import
   (#eq? @keyword.import "require")
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 (quote
   .
   (symbol)
-  (#set! "priority" 105)) @string.special.symbol
+  (#set! priority 105)) @string.special.symbol
 
 ((sexp_comment) @comment
-  (#set! "priority" 110))
+  (#set! priority 110))
 ]==],
     ["injections.scm"] = [==[
 ([

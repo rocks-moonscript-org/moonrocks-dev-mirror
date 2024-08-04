@@ -127,7 +127,7 @@ build = {
 ; Decorators
 ((decorator
   "@" @attribute)
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 (decorator
   (identifier) @attribute)
@@ -387,6 +387,9 @@ build = {
 
 (aliased_import
   "as" @keyword.import)
+
+(wildcard_import
+  "*" @character.special)
 
 [
   "if"

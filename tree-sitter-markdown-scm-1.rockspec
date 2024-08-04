@@ -92,7 +92,7 @@ build = {
 (indented_code_block) @markup.raw.block
 
 ((fenced_code_block) @markup.raw.block
-  (#set! "priority" 90))
+  (#set! priority 90))
 
 (fenced_code_block
   (fenced_code_block_delimiter) @markup.raw.block
@@ -150,13 +150,13 @@ build = {
 (task_list_marker_checked) @markup.list.checked
 
 ((block_quote) @markup.quote
-  (#set! "priority" 90))
+  (#set! priority 90))
 
 ([
   (plus_metadata)
   (minus_metadata)
 ] @keyword.directive
-  (#set! "priority" 90))
+  (#set! priority 90))
 
 [
   (block_continuation)

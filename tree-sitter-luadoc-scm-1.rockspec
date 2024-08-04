@@ -159,7 +159,7 @@ build = {
     "["
     "]"
   ] @type)
-  (#set! "priority" 105))
+  (#set! priority 105))
 
 (type) @type
 

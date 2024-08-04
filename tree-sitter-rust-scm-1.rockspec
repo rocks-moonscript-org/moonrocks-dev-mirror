@@ -447,6 +447,9 @@ build = {
   "||"
 ] @operator
 
+(use_wildcard
+  "*" @character.special)
+
 ; Punctuation
 [
   "("

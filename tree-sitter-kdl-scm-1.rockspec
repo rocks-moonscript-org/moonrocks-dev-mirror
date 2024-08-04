@@ -105,16 +105,16 @@ build = {
 
 (node
   (node_comment)
-  (#set! "priority" 105)) @comment
+  (#set! priority 105)) @comment
 
 (node
   (node_field
     (node_field_comment)
-    (#set! "priority" 105)) @comment)
+    (#set! priority 105)) @comment)
 
 (node_children
   (node_children_comment)
-  (#set! "priority" 105)) @comment
+  (#set! priority 105)) @comment
 ]==],
     ["indents.scm"] = [==[
 (node

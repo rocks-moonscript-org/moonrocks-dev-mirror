@@ -85,7 +85,7 @@ build = {
 ; =============================================================================
 ; catch all rules
 ((identifier) @variable
-  (#set! "priority" 99))
+  (#set! priority 99))
 
 ; NOTE: we need priority, since (identifier) is most specific and we have to
 ; capture nodes containing (identifier) as a whole, while overruling the
@@ -93,7 +93,7 @@ build = {
 (type_expression) @type
 
 ; NOTE: has to be after
-; ((identifier) @variable (#set! "priority" 99))
+; ((identifier) @variable (#set! priority 99))
 ; overrule identifiers in pragmas in (proc_type)s and (pragma_expression)s
 (proc_type
   pragmas: (pragma_list) @variable)
@@ -1123,7 +1123,7 @@ build = {
     (exported_symbol
       (accent_quoted) @local.definition.function)
   ]
-  (#set! "definition.function.scope" "parent"))
+  (#set! definition.function.scope "parent"))
 
 (func_declaration
   name: [
@@ -1134,7 +1134,7 @@ build = {
     (exported_symbol
       (accent_quoted) @local.definition.function)
   ]
-  (#set! "definition.function.scope" "parent"))
+  (#set! definition.function.scope "parent"))
 
 (iterator_declaration
   name: [
@@ -1145,7 +1145,7 @@ build = {
     (exported_symbol
       (accent_quoted) @local.definition.function)
   ]
-  (#set! "definition.function.scope" "parent"))
+  (#set! definition.function.scope "parent"))
 
 (converter_declaration
   name: [
@@ -1156,7 +1156,7 @@ build = {
     (exported_symbol
       (accent_quoted) @local.definition.function)
   ]
-  (#set! "definition.function.scope" "parent"))
+  (#set! definition.function.scope "parent"))
 
 ; ==============================================================================
 ; @local.definition.method     ; methods
@@ -1169,7 +1169,7 @@ build = {
     (exported_symbol
       (accent_quoted) @local.definition.method)
   ]
-  (#set! "definition.method.scope" "parent"))
+  (#set! definition.method.scope "parent"))
 
 ; ==============================================================================
 ; @local.definition.var        ; variables
@@ -1283,7 +1283,7 @@ build = {
     (exported_symbol
       (accent_quoted) @local.definition.macro)
   ]
-  (#set! "definition.macro.scope" "parent"))
+  (#set! definition.macro.scope "parent"))
 
 (macro_declaration
   name: [
@@ -1294,7 +1294,7 @@ build = {
     (exported_symbol
       (accent_quoted) @local.definition.macro)
   ]
-  (#set! "definition.macro.scope" "parent"))
+  (#set! definition.macro.scope "parent"))
 
 ; ==============================================================================
 ; @local.definition.type       ; types or classes

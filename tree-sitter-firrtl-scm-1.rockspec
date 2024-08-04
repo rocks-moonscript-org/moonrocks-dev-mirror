@@ -136,7 +136,7 @@ build = {
 ] @variable.member
 
 ((field_id) @variable.member
-  (#set! "priority" 105))
+  (#set! priority 105))
 
 (port
   (identifier) @variable.member)

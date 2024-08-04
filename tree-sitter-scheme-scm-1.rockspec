@@ -62,7 +62,7 @@ build = {
   (comment)
   (directive)
 ] @comment
-  (#set! "priority" 105))
+  (#set! priority 105))
 
 (escape_sequence) @string.escape
 

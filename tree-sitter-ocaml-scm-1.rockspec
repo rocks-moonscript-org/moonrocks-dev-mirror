@@ -159,7 +159,7 @@ build = {
 ;----------
 ; Don't let normal parens take priority over this
 ((unit) @constant.builtin
-  (#set! "priority" 105))
+  (#set! priority 105))
 
 (boolean) @boolean
 

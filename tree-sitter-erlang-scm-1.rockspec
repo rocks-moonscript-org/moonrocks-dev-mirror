@@ -1,4 +1,4 @@
-local git_ref = '19ca500fa5a17ab58dc18aa03b50e2db305e7a8a'
+local git_ref = '8f41b588fe38b981156651ef56b192ed3d158efd'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-erlang-' .. '19ca500fa5a17ab58dc18aa03b50e2db305e7a8a',
+  dir = 'tree-sitter-erlang-' .. '8f41b588fe38b981156651ef56b192ed3d158efd',
 }
 
 build = {
@@ -48,7 +48,7 @@ build = {
 ]==],
     ["highlights.scm"] = [==[
 ((atom) @constant
-  (#set! "priority" "90"))
+  (#set! priority "90"))
 
 (var) @variable
 
@@ -135,15 +135,15 @@ build = {
 
 ; Macros
 ((macro_call_expr) @constant.macro
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 ; Preprocessor
 (pp_define
   lhs: _ @constant.macro
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 (_preprocessor_directive) @keyword.directive
-(#set! "priority" 99)
+(#set! priority 99)
 
 ; Attributes
 (pp_include) @keyword.import
@@ -157,7 +157,7 @@ build = {
 (export_type_attribute
   types: (fa
     fun: _ @type
-    (#set! "priority" 101)))
+    (#set! priority 101)))
 
 (behaviour_attribute) @keyword.import
 

@@ -97,7 +97,7 @@ build = {
 ; Decorators
 ((decorator
   "@" @attribute)
-  (#set! "priority" 101))
+  (#set! priority 101))
 
 (decorator
   (identifier) @attribute)

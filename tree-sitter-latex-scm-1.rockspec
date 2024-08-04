@@ -1,4 +1,4 @@
-local git_ref = '6706f88d5b563ed8aaf7babb45e5f85dab001db1'
+local git_ref = 'efe5afdbb59b70214e6d70db5197dc945d5b213e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-latex-' .. '6706f88d5b563ed8aaf7babb45e5f85dab001db1',
+  dir = 'tree-sitter-latex-' .. 'efe5afdbb59b70214e6d70db5197dc945d5b213e',
 }
 
 build = {
@@ -90,6 +90,12 @@ build = {
 
 (delimiter) @punctuation.delimiter
 
+(math_delimiter
+  left_command: _ @punctuation.delimiter
+  left_delimiter: _ @punctuation.delimiter
+  right_command: _ @punctuation.delimiter
+  right_delimiter: _ @punctuation.delimiter)
+
 [
   "["
   "]"
@@ -121,7 +127,7 @@ build = {
 (environment_definition
   command: _ @function.macro @nospell
   name: (curly_group_text
-    (_) @markup.link))
+    (_) @label @nospell))
 
 (theorem_definition
   command: _ @function.macro @nospell

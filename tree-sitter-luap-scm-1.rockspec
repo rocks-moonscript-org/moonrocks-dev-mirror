@@ -70,7 +70,11 @@ build = {
 (negated_set
   (character) @constant)
 
-(class) @keyword
+(class) @string.escape
+
+(class
+  "%" @string.regexp
+  (escape_char) @string.regexp)
 
 (negated_set
   "^" @operator)

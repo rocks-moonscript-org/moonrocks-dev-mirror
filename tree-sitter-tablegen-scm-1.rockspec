@@ -151,7 +151,7 @@ build = {
   (bang_operator)
   (cond_operator)
 ] @function
-  (#set! "priority" 105))
+  (#set! priority 105))
 
 ; Operators
 [

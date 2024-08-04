@@ -63,7 +63,7 @@ build = {
     ["highlights.scm"] = [==[
 ; Lower priority to prefer @variable.parameter when identifier appears in parameter_declaration.
 ((identifier) @variable
-  (#set! "priority" 95))
+  (#set! priority 95))
 
 (preproc_def
   (preproc_arg) @variable)
