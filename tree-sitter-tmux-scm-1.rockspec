@@ -1,4 +1,4 @@
-local git_ref = '9138ea508410e0f34da2666609f600f65e944f22'
+local git_ref = '0252ecd080016e45e6305ef1a943388f5ae2f4b4'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-tmux-' .. '9138ea508410e0f34da2666609f600f65e944f22',
+  dir = 'tree-sitter-tmux-' .. '0252ecd080016e45e6305ef1a943388f5ae2f4b4',
 }
 
 build = {

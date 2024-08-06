@@ -46,7 +46,7 @@ build = {
 ((command_paragraph
   (command) @keyword
   (content) @string)
-  (#set! "priority" 99))
+  (#set! priority 99))
 
 (command_paragraph
   (command) @keyword

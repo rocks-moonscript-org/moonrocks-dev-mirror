@@ -1,4 +1,4 @@
-local git_ref = '750dde90ed9cdbd82493bc28478d8ab1976b0e9f'
+local git_ref = 'ac584585a15c4cacd6cda8e6bfe7cb1ca7b3898e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-d-' .. '750dde90ed9cdbd82493bc28478d8ab1976b0e9f',
+  dir = 'tree-sitter-d-' .. 'ac584585a15c4cacd6cda8e6bfe7cb1ca7b3898e',
 }
 
 build = {
@@ -449,11 +449,12 @@ build = {
 
 ((call_expression
   (type) @_printf
-  (arguments
+  (named_arguments
     "("
     .
-    (expression
-      (string_literal) @injection.content)))
+    (named_argument
+      (expression
+        (string_literal) @injection.content))))
   (#eq? @_printf "printf")
   (#offset! @injection.content 0 1 0 -1)
   (#set! injection.language "printf"))
@@ -478,7 +479,7 @@ build = {
 (module_def
   (module_declaration
     (module_fqn) @local.definition.namespace)
-  (#set! "definition.namespace.scope" "global"))
+  (#set! definition.namespace.scope "global"))
 
 (enum_declaration
   (enum_member

@@ -1,4 +1,4 @@
-local git_ref = 'f3615006429251a966d7452bd46a0171364bcb7b'
+local git_ref = '105ee343682b7eee86b38ec6858a269e16474a72'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-groovy-' .. 'f3615006429251a966d7452bd46a0171364bcb7b',
+  dir = 'tree-sitter-groovy-' .. '105ee343682b7eee86b38ec6858a269e16474a72',
 }
 
 build = {
@@ -193,6 +193,8 @@ build = {
   "--"
   "!"
 ] @operator
+
+(wildcard_import) @character.special
 
 (string
   "/" @string)

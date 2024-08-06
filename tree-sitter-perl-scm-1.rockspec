@@ -1,4 +1,4 @@
-local git_ref = '7581cbf8fb793bce94d0241c89fe49b01b1477f9'
+local git_ref = '3a21d9cb2a20a062c17f8f53d5983fd473c4673c'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-perl-' .. '7581cbf8fb793bce94d0241c89fe49b01b1477f9',
+  dir = 'tree-sitter-perl-' .. '3a21d9cb2a20a062c17f8f53d5983fd473c4673c',
 }
 
 build = {
@@ -335,7 +335,7 @@ build = {
   ")"
 ] @punctuation.bracket
   ; priority hack so nvim + ts-cli behave the same
-  (#set! "priority" 90))
+  (#set! priority 90))
 ]==],
     ["injections.scm"] = [==[
 ; an injections.scm file for nvim-treesitter

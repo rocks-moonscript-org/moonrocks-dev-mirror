@@ -1,4 +1,4 @@
-local git_ref = 'd8bc22c007825d3af3d62b4326f9d8f9ca529974'
+local git_ref = '93c69d2f84d8a167c0a3f4a8d51ccefe365a4dc8'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-prolog-' .. 'd8bc22c007825d3af3d62b4326f9d8f9ca529974',
+  dir = 'tree-sitter-prolog-' .. '93c69d2f84d8a167c0a3f4a8d51ccefe365a4dc8',
 }
 
 build = {
