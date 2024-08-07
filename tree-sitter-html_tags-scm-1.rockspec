@@ -45,7 +45,7 @@ build = {
 
 ((attribute
   (quoted_attribute_value) @string)
-  (#set! "priority" 99))
+  (#set! priority 99))
 
 (text) @none @spell
 
@@ -132,7 +132,7 @@ build = {
   (quoted_attribute_value
     (attribute_value) @string.special.url))
   (#any-of? @_attr "href" "src")
-  (#set! @string.special.url "url" @string.special.url))
+  (#set! @string.special.url url @string.special.url))
 
 [
   "<"
