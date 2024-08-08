@@ -1,4 +1,4 @@
-local git_ref = 'de6587e99371aeb92cfda3415b6a696c1f55d397'
+local git_ref = 'fe25ff07fa451112b0e47825e98e7b6b8b771680'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'guard-collection-' .. 'de6587e99371aeb92cfda3415b6a696c1f55d397',
+  dir = 'guard-collection-' .. 'fe25ff07fa451112b0e47825e98e7b6b8b771680',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
