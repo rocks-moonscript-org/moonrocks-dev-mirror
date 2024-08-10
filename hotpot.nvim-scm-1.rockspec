@@ -1,19 +1,19 @@
-local git_ref = '99e4b2081de1d9162666cc7b563cbeb01c26b66b'
+local git_ref = '13896d3688da9a6fa3ba50126badc31a31e4decd'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/mfussenegger/nvim-jdtls'
+local repo_url = 'https://github.com/rktjmp/hotpot.nvim'
 
 rockspec_format = '3.0'
-package = 'nvim-jdtls'
+package = 'hotpot.nvim'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'Extensions for the built-in LSP support in Neovim for eclipse.jdt.ls',
+  summary = ':stew: Carl Weathers #1 Neovim Plugin.',
   detailed = '',
-  labels = { 'neovim' } ,
-  homepage = 'https://github.com/mfussenegger/nvim-jdtls',
-  license = 'GPL-3.0'
+  labels = { 'carl-weathers', 'fennel', 'lisp', 'lua', 'neovim', 'neovim-plugin' } ,
+  homepage = 'https://github.com/rktjmp/hotpot.nvim',
+  license = 'MIT'
 }
 
 dependencies = { 'lua >= 5.1' } 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'nvim-jdtls-' .. '99e4b2081de1d9162666cc7b563cbeb01c26b66b',
+  dir = 'hotpot.nvim-' .. '13896d3688da9a6fa3ba50126badc31a31e4decd',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

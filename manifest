@@ -308,6 +308,18 @@ repository = {
          }
       }
    },
+   ['azy.nvim'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-2'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['barbecue.nvim'] = {
       ['scm-1'] = {
          {
@@ -2694,6 +2706,13 @@ repository = {
          }
       },
       ['dev-2'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['hotpot.nvim'] = {
+      ['scm-1'] = {
          {
             arch = "rockspec"
          }
