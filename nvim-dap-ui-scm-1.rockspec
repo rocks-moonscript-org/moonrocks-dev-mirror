@@ -16,7 +16,7 @@ description = {
   license = 'MIT'
 }
 
-dependencies = { 'lua >= 5.1', 'nvim-dap' } 
+dependencies = { 'lua >= 5.1', 'nvim-dap', 'nvim-nio' } 
 
 test_dependencies = { }
 
