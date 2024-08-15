@@ -1,4 +1,4 @@
-local git_ref = '46d4de8e6cfca8a97c0489aea936bb15beeaf666'
+local git_ref = 'e909815acdbe37e69440261ebb1091ed52e1dec6'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-snakemake-' .. '46d4de8e6cfca8a97c0489aea936bb15beeaf666',
+  dir = 'tree-sitter-snakemake-' .. 'e909815acdbe37e69440261ebb1091ed52e1dec6',
 }
 
 build = {
@@ -61,10 +61,9 @@ build = {
     name: _ @keyword))
 
 ; Subordinate directives (eg. input, output)
-(_
-  body: (_
-    (directive
-      name: _ @label)))
+body: (_
+  (directive
+    name: _ @label))
 
 ; rule/module/checkpoint names
 (rule_definition
@@ -78,11 +77,14 @@ build = {
 
 ; Rule imports
 (rule_import
-  "use" @keyword.import
-  "rule" @keyword.import
-  "from" @keyword.import
-  "as"? @keyword.import
-  "with"? @keyword.import)
+  [
+    "use"
+    "rule"
+    "from"
+    "exclude"
+    "as"
+    "with"
+  ] @keyword.import)
 
 ; Rule inheritance
 (rule_inheritance
@@ -92,7 +94,9 @@ build = {
 
 ; Wildcard names
 (wildcard
-  (identifier) @variable
+  (identifier) @variable)
+
+(wildcard
   (flag) @variable.parameter.builtin)
 
 ; builtin variables
@@ -137,11 +141,20 @@ build = {
 ((rule_inheritance) @indent.begin
   (#set! indent.immediate 1))
 
+((rule_import
+  "with"
+  ":") @indent.begin
+  (#set! indent.immediate 1))
+
 ((module_definition) @indent.begin
   (#set! indent.immediate 1))
 
 ((directive) @indent.begin
   (#set! indent.immediate 1))
+
+; end indentation after last parameter node (no following ',')
+(directive_parameters
+  (_) @indent.end .)
 ]==],
     ["injections.scm"] = [==[
 ; inherits: python

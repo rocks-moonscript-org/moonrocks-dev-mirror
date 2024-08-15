@@ -339,7 +339,8 @@ build = {
   (comment) @comment.documentation)
 ]==],
     ["injections.scm"] = [==[
-((comment) @injection.content
+((comment
+  (text) @injection.content)
   (#set! injection.language "comment"))
 ]==],
     ["locals.scm"] = [==[

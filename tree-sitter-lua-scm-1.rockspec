@@ -338,6 +338,7 @@ build = {
 [
   "end"
   "}"
+  "]]"
 ] @indent.end
 
 (")" @indent.end
