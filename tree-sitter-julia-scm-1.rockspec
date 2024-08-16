@@ -1,4 +1,4 @@
-local git_ref = 'f1baa5f8e271109d01cc8ff7473c11df2d8a9aee'
+local git_ref = 'a528de39923448e6b809a6b9f686f3472728f202'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-julia-' .. 'f1baa5f8e271109d01cc8ff7473c11df2d8a9aee',
+  dir = 'tree-sitter-julia-' .. 'a528de39923448e6b809a6b9f686f3472728f202',
 }
 
 build = {
@@ -481,6 +481,7 @@ build = {
     (abstract_definition)
     (struct_definition)
     (function_definition)
+    (macro_definition)
     (assignment)
     (const_statement)
   ]

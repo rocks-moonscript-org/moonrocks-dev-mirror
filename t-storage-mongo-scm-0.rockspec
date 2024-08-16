@@ -19,7 +19,6 @@ t.storage.mongo: mongodb object interface for `t` lib
 
 dependencies = {
   "lua >= 5.1",
-  "t",
   "t-env",
   "t-format-json",
   "lua-mongo",
