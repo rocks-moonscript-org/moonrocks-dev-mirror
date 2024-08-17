@@ -40,19 +40,30 @@ build = {
 
 (pod) @fold
 
-; fold the block-typed package statements only
+; fold the block-typed package and class statements only
 (package_statement
+  (block)) @fold
+
+(class_statement
   (block)) @fold
 
 [
   (subroutine_declaration_statement)
+  (method_declaration_statement)
   (conditional_statement)
   (loop_statement)
   (for_statement)
   (cstyle_for_statement)
   (block_statement)
+  (defer_statement)
   (phaser_statement)
 ] @fold
+
+(try_statement
+  (block) @fold)
+
+(eval_expression
+  (block) @fold)
 
 (anonymous_subroutine_expression) @fold
 
@@ -97,9 +108,18 @@ build = {
 ("continue" @keyword.repeat
   (block))
 
+[
+  "try"
+  "catch"
+  "finally"
+] @keyword.exception
+
 "return" @keyword.return
 
-"sub" @keyword.function
+[
+  "sub"
+  "method"
+] @keyword.function
 
 [
   "map"
@@ -107,14 +127,20 @@ build = {
   "sort"
 ] @function.builtin
 
-"package" @keyword.import
+[
+  "package"
+  "class"
+] @keyword.import
 
 [
+  "defer"
   "do"
+  "eval"
   "my"
   "our"
   "local"
   "state"
+  "field"
   "last"
   "next"
   "redo"
@@ -194,10 +220,16 @@ build = {
 (package_statement
   (package) @type)
 
+(class_statement
+  (package) @type)
+
 (require_expression
   (bareword) @type)
 
 (subroutine_declaration_statement
+  name: (bareword) @function)
+
+(method_declaration_statement
   name: (bareword) @function)
 
 (attribute_name) @attribute
