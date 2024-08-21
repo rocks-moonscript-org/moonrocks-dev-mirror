@@ -1,4 +1,4 @@
-local git_ref = '7862a3424832c3a9d45eb21143b375837bd6573b'
+local git_ref = '4c19cc5b2b408de590f83497a90cc941ed59ea06'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-liquid-' .. '7862a3424832c3a9d45eb21143b375837bd6573b',
+  dir = 'tree-sitter-liquid-' .. '4c19cc5b2b408de590f83497a90cc941ed59ea06',
 }
 
 build = {
@@ -63,6 +63,7 @@ build = {
   "as"
   "assign"
   "capture"
+  (custom_unpaired_statement)
   "decrement"
   "echo"
   "endcapture"
@@ -132,6 +133,7 @@ build = {
 
 [
   "include"
+  "include_relative"
   "render"
   "section"
   "sections"
