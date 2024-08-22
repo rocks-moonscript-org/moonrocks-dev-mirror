@@ -7851,6 +7851,13 @@ repository = {
          }
       }
    },
+   orgmode = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    orm = {
       ['scm-1'] = {
          {
