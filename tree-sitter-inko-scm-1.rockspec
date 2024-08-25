@@ -198,6 +198,8 @@ build = {
 
 (constant_pattern) @constant
 
+(boolean_pattern) @boolean
+
 ; Types
 (generic_type
   name: _ @type)
