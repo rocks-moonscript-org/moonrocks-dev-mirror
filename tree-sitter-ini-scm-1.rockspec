@@ -57,7 +57,8 @@ build = {
 ; (setting_value) @none ; grammar does not support subtypes
 ]==],
     ["injections.scm"] = [==[
-((comment) @injection.content
+((comment
+  (text) @injection.content)
   (#set! injection.language "comment"))
 ]==],
   },

@@ -1,4 +1,4 @@
-local git_ref = '7ee8d928db5202f6831a78f8112fd693bf69f98b'
+local git_ref = '8c0f0e7a6012283d9f0dd650feb8075ad1ffad5e'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-go-' .. '7ee8d928db5202f6831a78f8112fd693bf69f98b',
+  dir = 'tree-sitter-go-' .. '8c0f0e7a6012283d9f0dd650feb8075ad1ffad5e',
 }
 
 build = {
@@ -334,7 +334,7 @@ build = {
 (import_spec_list
   ")" @indent.branch)
 
-(var_declaration
+(var_spec_list
   ")" @indent.branch)
 
 [

@@ -126,6 +126,19 @@ build = {
 
 "=" @operator
 ]==],
+    ["indents.scm"] = [==[
+[
+  (message_body)
+  (enum_body)
+] @indent.begin
+
+"}" @indent.end @indent.branch
+
+[
+  (ERROR)
+  (comment)
+] @indent.auto
+]==],
     ["injections.scm"] = [==[
 ((comment) @injection.content
   (#set! injection.language "comment"))
