@@ -1,4 +1,4 @@
-local git_ref = '8d9d372b09fa4c3735657c5fc2ad03e53a5f05f5'
+local git_ref = 'dc5e8a14cb1f45582a8c221a270a199a5f8bdb63'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-kotlin-' .. '8d9d372b09fa4c3735657c5fc2ad03e53a5f05f5',
+  dir = 'tree-sitter-kotlin-' .. 'dc5e8a14cb1f45582a8c221a270a199a5f8bdb63',
 }
 
 build = {
@@ -230,7 +230,7 @@ build = {
 ] @number
 
 [
-  "null"
+  (null_literal)
   ; should be highlighted the same as booleans
   (boolean_literal)
 ] @boolean

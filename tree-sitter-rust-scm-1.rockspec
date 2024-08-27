@@ -1,4 +1,4 @@
-local git_ref = '9c84af007b0f144954adb26b3f336495cbb320a7'
+local git_ref = '2b43eafe64470846cdaa0eaae1e287c120ee5f03'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-rust-' .. '9c84af007b0f144954adb26b3f336495cbb320a7',
+  dir = 'tree-sitter-rust-' .. '2b43eafe64470846cdaa0eaae1e287c120ee5f03',
 }
 
 build = {
@@ -87,6 +87,8 @@ build = {
 (primitive_type) @type.builtin
 
 (field_identifier) @variable.member
+
+(shorthand_field_identifier) @variable.member
 
 (shorthand_field_initializer
   (identifier) @variable.member)

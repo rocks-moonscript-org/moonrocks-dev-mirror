@@ -1,4 +1,4 @@
-local git_ref = '304611b5eaf53aca07459a0a03803b83b6dfd3b3'
+local git_ref = 'f5ecaaa869a845e689399092cb9a61feca66cf12'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-leo-' .. '304611b5eaf53aca07459a0a03803b83b6dfd3b3',
+  dir = 'tree-sitter-leo-' .. 'f5ecaaa869a845e689399092cb9a61feca66cf12',
 }
 
 build = {
@@ -68,6 +68,8 @@ build = {
 ] @keyword.modifier
 
 "self" @variable.builtin
+
+"async" @keyword.coroutine
 
 [
   "finalize"
@@ -226,6 +228,8 @@ build = {
   (signed_literal)
   (unsigned_literal)
 ] @number
+
+(string_literal) @string
 
 (annotation) @attribute
 ]==],

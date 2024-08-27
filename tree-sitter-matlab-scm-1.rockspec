@@ -1,4 +1,4 @@
-local git_ref = '0d5a05e543af2de60cdb5e71f0f5888c95ab936f'
+local git_ref = '306c43ab28b7b8a4976e40ff0a7c26b019ad52df'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-matlab-' .. '0d5a05e543af2de60cdb5e71f0f5888c95ab936f',
+  dir = 'tree-sitter-matlab-' .. '306c43ab28b7b8a4976e40ff0a7c26b019ad52df',
 }
 
 build = {
@@ -264,6 +264,9 @@ build = {
   (comment)
   (line_continuation)
 ] @comment @spell
+
+((comment) @keyword.directive
+  (#lua-match? @keyword.directive "^%%%% "))
 ]==],
     ["indents.scm"] = [==[
 "end" @indent.end @indent.branch

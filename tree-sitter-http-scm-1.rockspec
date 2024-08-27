@@ -1,4 +1,4 @@
-local git_ref = '5ae6c7cfa62a7d7325c26171a1de4f6b866702b5'
+local git_ref = 'bbcd67642e5749b90277c353b72e762f3be16993'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-http-' .. '5ae6c7cfa62a7d7325c26171a1de4f6b866702b5',
+  dir = 'tree-sitter-http-' .. 'bbcd67642e5749b90277c353b72e762f3be16993',
 }
 
 build = {
@@ -36,53 +36,39 @@ build = {
   copy_directories = { "queries" },
   queries = {
     ["highlights.scm"] = [==[
-; Keywords
-(scheme) @module
-
 ; Methods
 (method) @function.method
 
 ; Headers
 (header
-  name: (name) @constant)
+  name: (_) @constant)
 
 ; Variables
 (variable_declaration
   name: (identifier) @variable)
 
-; Fields
-(pair
-  name: (identifier) @variable.member)
-
-; URL / Host
-(host) @string.special.url
-
-(path
-  (identifier) @string.special.url)
-
-; Parameters
-(query_param
-  (key) @variable.parameter)
-
 ; Operators
-[
-  "="
-  "?"
-  "&"
-  "@"
-  "<"
-] @operator
+(comment
+  "=" @operator)
+
+(variable_declaration
+  "=" @operator)
+
+; keywords
+(comment
+  "@" @keyword
+  name: (_) @keyword)
 
 ; Literals
-(target_url) @string.special.url
+(request
+  url: (_) @string.special.url)
 
 (http_version) @constant
 
-(string) @string
+; Response
+(status_code) @number
 
-(number) @number
-
-(boolean) @boolean
+(status_text) @string
 
 ; Punctuation
 [
@@ -90,14 +76,18 @@ build = {
   "}}"
 ] @punctuation.bracket
 
-":" @punctuation.delimiter
+(header
+  ":" @punctuation.delimiter)
 
 ; external JSON body
 (external_body
-  file_path: (path) @string.special.path)
+  path: (_) @string.special.path)
 
 ; Comments
-(comment) @comment @spell
+[
+  (comment)
+  (request_separator)
+] @comment @spell
 ]==],
     ["injections.scm"] = [==[
 ; Comments
@@ -111,12 +101,23 @@ build = {
 ((xml_body) @injection.content
   (#set! injection.language "xml"))
 
-((graphql_body) @injection.content
+((graphql_data) @injection.content
   (#set! injection.language "graphql"))
 
-; Lua scripting
-((script_variable) @injection.content
-  (#set! injection.language "lua"))
+; Script (default to javascript)
+((script) @injection.content
+  (#offset! @injection.content 0 2 0 -2)
+  (#set! injection.language "javascript"))
+
+; Script with other languages
+((comment
+  name: (_) @_name
+  (#eq? @_name "lang")
+  value: (_) @injection.language)
+  .
+  (_
+    (script) @injection.content
+    (#offset! @injection.content 0 2 0 -2)))
 ]==],
   },
   extra_files = {
