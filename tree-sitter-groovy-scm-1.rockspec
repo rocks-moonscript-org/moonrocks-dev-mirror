@@ -1,4 +1,4 @@
-local git_ref = '6b91d508bee2e7679fcdac5312644fc5e5cfacb8'
+local git_ref = '171b3b7412bc93284fc0dad0a7a7bbbbd1b51289'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-groovy-' .. '6b91d508bee2e7679fcdac5312644fc5e5cfacb8',
+  dir = 'tree-sitter-groovy-' .. '171b3b7412bc93284fc0dad0a7a7bbbbd1b51289',
 }
 
 build = {

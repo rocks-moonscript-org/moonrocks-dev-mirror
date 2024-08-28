@@ -21,6 +21,7 @@ dependencies = {
   "lua >= 5.1",
   "t-format-json",
   "t",
+  "t-def",
 }
 
 test_dependencies = {

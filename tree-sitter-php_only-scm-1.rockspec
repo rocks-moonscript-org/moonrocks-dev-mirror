@@ -1,4 +1,4 @@
-local git_ref = 'c07d69739ba71b5a449bdbb7735991f8aabf8546'
+local git_ref = 'a552625b56c19006932cff1f207ebc07b55ed12d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-php-' .. 'c07d69739ba71b5a449bdbb7735991f8aabf8546',
+  dir = 'tree-sitter-php-' .. 'a552625b56c19006932cff1f207ebc07b55ed12d',
 }
 
 build = {
@@ -278,10 +278,26 @@ build = {
     (name) @type
     (qualified_name
       (name) @type)
+    alias: (name) @type.definition
   ])
 
-(namespace_aliasing_clause
-  (name) @type.definition)
+(namespace_use_clause
+  type: "function"
+  [
+    (name) @function
+    (qualified_name
+      (name) @function)
+    alias: (name) @function
+  ])
+
+(namespace_use_clause
+  type: "const"
+  [
+    (name) @constant
+    (qualified_name
+      (name) @constant)
+    alias: (name) @constant
+  ])
 
 (class_interface_clause
   [
@@ -426,9 +442,8 @@ build = {
   name: (namespace_name
     (name) @module))
 
-(namespace_name_as_prefix
-  (namespace_name
-    (name) @module))
+(namespace_name
+  (name) @module)
 
 ; Attributes
 (attribute_list) @attribute
@@ -493,12 +508,13 @@ build = {
   (match_block)
   (case_statement)
   (default_statement)
+  (property_hook_list)
 ] @indent.begin
 
 (return_statement
   [
     (object_creation_expression)
-    (anonymous_function_creation_expression)
+    (anonymous_function)
     (arrow_function)
     (match_expression)
   ]) @indent.dedent
@@ -528,6 +544,9 @@ build = {
 
 (return_statement
   ";" @indent.end)
+
+(property_hook_list
+  "}" @indent.end)
 
 (ERROR
   "(" @indent.align
@@ -601,7 +620,7 @@ build = {
   name: (name) @local.definition.function) @local.scope
   (#set! definition.function.scope "parent"))
 
-(anonymous_function_creation_expression
+(anonymous_function
   (anonymous_function_use_clause
     (variable_name
       (name) @local.definition.var))) @local.scope

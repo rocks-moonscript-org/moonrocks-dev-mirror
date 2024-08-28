@@ -1,4 +1,4 @@
-local git_ref = '0ffe457fb6aabf064f173fd30ea356845cef2513'
+local git_ref = '7dbc1e2d0e2d752577655881f73b4573f3fe85d4'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-ruby-' .. '0ffe457fb6aabf064f173fd30ea356845cef2513',
+  dir = 'tree-sitter-ruby-' .. '7dbc1e2d0e2d752577655881f73b4573f3fe85d4',
 }
 
 build = {
@@ -221,10 +221,10 @@ build = {
 
 ; Literals
 [
-  (string)
-  (bare_string)
-  (subshell)
-  (heredoc_body)
+  (string_content)
+  (heredoc_content)
+  "\""
+  "`"
 ] @string
 
 [
@@ -239,11 +239,8 @@ build = {
   (hash_key_symbol)
 ] @string.special.symbol
 
-(pair
-  key: (hash_key_symbol)
-  ":" @constant)
-
-(regex) @string.regexp
+(regex
+  (string_content) @string.regexp)
 
 (escape_sequence) @string.escape
 
@@ -325,7 +322,14 @@ build = {
   ";"
   "."
   "&."
+  "::"
 ] @punctuation.delimiter
+
+(regex
+  "/" @punctuation.bracket)
+
+(pair
+  ":" @punctuation.delimiter)
 
 [
   "("
@@ -338,9 +342,12 @@ build = {
   "%i("
 ] @punctuation.bracket
 
+(block_parameters
+  "|" @punctuation.bracket)
+
 (interpolation
   "#{" @punctuation.special
-  "}" @punctuation.special) @none
+  "}" @punctuation.special)
 ]==],
     ["indents.scm"] = [==[
 [
