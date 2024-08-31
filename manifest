@@ -8528,6 +8528,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-718'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    restia = {
