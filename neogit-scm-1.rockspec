@@ -1,4 +1,4 @@
-local git_ref = '2b74a777b963dfdeeabfabf84d5ba611666adab4'
+local git_ref = '8a60ac4b97c1a7c667506425cb9d5ffca5b8dc8d'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'neogit-' .. '2b74a777b963dfdeeabfabf84d5ba611666adab4',
+  dir = 'neogit-' .. '8a60ac4b97c1a7c667506425cb9d5ffca5b8dc8d',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
