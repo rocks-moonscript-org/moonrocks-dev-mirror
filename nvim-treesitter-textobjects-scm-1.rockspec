@@ -1,4 +1,4 @@
-local git_ref = '11fc609715e3d7b0f41ab17d5aaa683b15c59558'
+local git_ref = '35ef33c4690008687303483ce1d0567d238898f3'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'nvim-treesitter-textobjects-' .. '11fc609715e3d7b0f41ab17d5aaa683b15c59558',
+  dir = 'nvim-treesitter-textobjects-' .. '35ef33c4690008687303483ce1d0567d238898f3',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

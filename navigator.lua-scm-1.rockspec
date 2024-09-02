@@ -1,4 +1,4 @@
-local git_ref = 'db3ac40bd4793abf90372687e35ece1c8969acc9'
+local git_ref = '53efe4b5cea5e99d2216449330f205d71251fdc7'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'navigator.lua-' .. 'db3ac40bd4793abf90372687e35ece1c8969acc9',
+  dir = 'navigator.lua-' .. '53efe4b5cea5e99d2216449330f205d71251fdc7',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

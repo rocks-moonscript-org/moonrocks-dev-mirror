@@ -1,21 +1,21 @@
-local git_ref = '602cc4b050ef1e14a69acc2ea094968bf928fa59'
+local git_ref = 'a260911201684f80cf815418b3771e6c39309f81'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/aheber/tree-sitter-sfapex'
+local repo_url = 'https://github.com/NullVoxPopuli/tree-sitter-glimmer-javascript'
 
 rockspec_format = '3.0'
-package = 'tree-sitter-sflog'
+package = 'tree-sitter-glimmer_javascript'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser and Neovim queries for sflog',
+  summary = 'tree-sitter parser and Neovim queries for glimmer_javascript',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/aheber/tree-sitter-sfapex',
+  homepage = 'https://github.com/NullVoxPopuli/tree-sitter-glimmer-javascript',
   license = 'UNKNOWN'
 }
 
-dependencies = { 'lua >= 5.1' } 
+dependencies = { 'lua >= 5.1', 'tree-sitter-ecma' } 
 
 build_dependencies = {
   'luarocks-build-treesitter-parser >= 5.0.0',
@@ -23,67 +23,107 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-sfapex-' .. '602cc4b050ef1e14a69acc2ea094968bf928fa59',
+  dir = 'tree-sitter-glimmer-javascript-' .. 'a260911201684f80cf815418b3771e6c39309f81',
 }
 
 build = {
   type = "treesitter-parser",
-  lang = "sflog",
+  lang = "glimmer_javascript",
   parser = true,
   generate = false,
-  generate_from_json = false,
-  location = "sflog",
+  generate_from_json = true,
+  location = nil,
   copy_directories = { "queries" },
   queries = {
     ["highlights.scm"] = [==[
-; highlights.scm
-[
-  "|"
-  "|["
-  "]"
-  "("
-  ")"
-  "|("
-  ")|"
-] @punctuation.bracket
+; inherits: ecma
 
-[
-  ","
-  ";"
-  ":"
-] @punctuation.delimiter
+(glimmer_opening_tag) @tag.builtin
 
-"EXTERNAL" @keyword
+(glimmer_closing_tag) @tag.builtin
 
-"out of" @property
+; Copied from javascript
+; Parameters
+(formal_parameters
+  (identifier) @variable.parameter)
 
-(number) @number
+(formal_parameters
+  (rest_pattern
+    (identifier) @variable.parameter))
 
-(identifier) @variable
+; ({ a }) => null
+(formal_parameters
+  (object_pattern
+    (shorthand_property_identifier_pattern) @variable.parameter))
 
-(version) @string.special
+; ({ a = b }) => null
+(formal_parameters
+  (object_pattern
+    (object_assignment_pattern
+      (shorthand_property_identifier_pattern) @variable.parameter)))
 
-(anonymous_block) @string
+; ({ a: b }) => null
+(formal_parameters
+  (object_pattern
+    (pair_pattern
+      value: (identifier) @variable.parameter)))
 
-(limit) @property
+; ([ a ]) => null
+(formal_parameters
+  (array_pattern
+    (identifier) @variable.parameter))
 
-(time) @function
+; ({ a } = { a }) => null
+(formal_parameters
+  (assignment_pattern
+    (object_pattern
+      (shorthand_property_identifier_pattern) @variable.parameter)))
 
-(limit
-  (identifier) @string)
+; ({ a = b } = { a }) => null
+(formal_parameters
+  (assignment_pattern
+    (object_pattern
+      (object_assignment_pattern
+        (shorthand_property_identifier_pattern) @variable.parameter))))
 
-(event_detail
-  (event_detail_value) @string)
+; a => null
+(arrow_function
+  parameter: (identifier) @variable.parameter)
 
-(log_level_setting
-  (component) @type)
+; optional parameters
+(formal_parameters
+  (assignment_pattern
+    left: (identifier) @variable.parameter))
 
-(log_level_setting
-  (log_level) @constant)
+; punctuation
+(optional_chain) @punctuation.delimiter
+]==],
+    ["indents.scm"] = [==[
+; inherits: ecma
 
-(log_entry
-  (event_identifier
-    (identifier) @type))
+(glimmer_opening_tag) @indent.begin
+
+(glimmer_closing_tag) @indent.end
+]==],
+    ["injections.scm"] = [==[
+; inherits: ecma
+
+; Parse Ember/Glimmer/Handlebars/HTMLBars/etc. template literals
+; e.g.: await render(hbs`<SomeComponent />`)
+(call_expression
+  function: ((identifier) @_name
+    (#eq? @_name "hbs"))
+  arguments: ((template_string) @glimmer
+    (#offset! @glimmer 0 1 0 -1)))
+
+; Ember Unified <template> syntax
+; e.g.: <template><SomeComponent @arg={{double @value}} /></template>
+((glimmer_template) @injection.content
+  (#set! injection.language "glimmer")
+  (#set! injection.include-children))
+]==],
+    ["locals.scm"] = [==[
+; inherits: ecma
 ]==],
   },
   extra_files = {

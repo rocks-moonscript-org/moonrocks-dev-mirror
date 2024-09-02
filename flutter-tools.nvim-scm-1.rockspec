@@ -1,4 +1,4 @@
-local git_ref = 'de817aaf2f1553db3da3650b196e8936b04e7f14'
+local git_ref = 'ea1d398f543a54ba95357c3b8bb9d6f68eaec36c'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'flutter-tools.nvim-' .. 'de817aaf2f1553db3da3650b196e8936b04e7f14',
+  dir = 'flutter-tools.nvim-' .. 'ea1d398f543a54ba95357c3b8bb9d6f68eaec36c',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

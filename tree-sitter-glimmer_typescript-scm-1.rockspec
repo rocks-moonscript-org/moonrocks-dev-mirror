@@ -1,21 +1,21 @@
-local git_ref = '602cc4b050ef1e14a69acc2ea094968bf928fa59'
+local git_ref = '9d018a0f93417e6951264a26093b89ee63df7315'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/aheber/tree-sitter-sfapex'
+local repo_url = 'https://github.com/NullVoxPopuli/tree-sitter-glimmer-typescript'
 
 rockspec_format = '3.0'
-package = 'tree-sitter-sflog'
+package = 'tree-sitter-glimmer_typescript'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'tree-sitter parser and Neovim queries for sflog',
+  summary = 'tree-sitter parser and Neovim queries for glimmer_typescript',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/aheber/tree-sitter-sfapex',
+  homepage = 'https://github.com/NullVoxPopuli/tree-sitter-glimmer-typescript',
   license = 'UNKNOWN'
 }
 
-dependencies = { 'lua >= 5.1' } 
+dependencies = { 'lua >= 5.1', 'tree-sitter-typescript' } 
 
 build_dependencies = {
   'luarocks-build-treesitter-parser >= 5.0.0',
@@ -23,67 +23,47 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-sfapex-' .. '602cc4b050ef1e14a69acc2ea094968bf928fa59',
+  dir = 'tree-sitter-glimmer-typescript-' .. '9d018a0f93417e6951264a26093b89ee63df7315',
 }
 
 build = {
   type = "treesitter-parser",
-  lang = "sflog",
+  lang = "glimmer_typescript",
   parser = true,
   generate = false,
-  generate_from_json = false,
-  location = "sflog",
+  generate_from_json = true,
+  location = nil,
   copy_directories = { "queries" },
   queries = {
     ["highlights.scm"] = [==[
-; highlights.scm
-[
-  "|"
-  "|["
-  "]"
-  "("
-  ")"
-  "|("
-  ")|"
-] @punctuation.bracket
+; inherits: typescript
 
-[
-  ","
-  ";"
-  ":"
-] @punctuation.delimiter
+; Sub-language delimeters
+(glimmer_opening_tag) @tag.builtin
 
-"EXTERNAL" @keyword
+(glimmer_closing_tag) @tag.builtin
+]==],
+    ["indents.scm"] = [==[
+(glimmer_opening_tag) @indent.begin
 
-"out of" @property
+(glimmer_closing_tag) @indent.end
+]==],
+    ["injections.scm"] = [==[
+; inherits: typescript
 
-(number) @number
+; Parse Ember/Glimmer/Handlebars/HTMLBars/etc. template literals
+; e.g.: await render(hbs`<SomeComponent />`)
+(call_expression
+  function: ((identifier) @_name
+    (#eq? @_name "hbs"))
+  arguments: ((template_string) @glimmer
+    (#offset! @glimmer 0 1 0 -1)))
 
-(identifier) @variable
-
-(version) @string.special
-
-(anonymous_block) @string
-
-(limit) @property
-
-(time) @function
-
-(limit
-  (identifier) @string)
-
-(event_detail
-  (event_detail_value) @string)
-
-(log_level_setting
-  (component) @type)
-
-(log_level_setting
-  (log_level) @constant)
-
-(log_entry
-  (event_identifier
-    (identifier) @type))
+; Ember Unified <template> syntax
+; e.g.: <template><SomeComponent @arg={{double @value}} /></template>
+((glimmer_template) @injection.content
+  (#set! injection.language "glimmer")
+  (#set! injection.include-children))
 ]==],
   },
   extra_files = {
