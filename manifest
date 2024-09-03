@@ -1068,6 +1068,13 @@ repository = {
          }
       }
    },
+   ['conceal.nvim'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['conceal.vim'] = {
       ['scm-1'] = {
          {
@@ -1656,6 +1663,13 @@ repository = {
       }
    },
    exc = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['exemplum.nvim'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
@@ -10403,6 +10417,20 @@ repository = {
       }
    },
    ['tree-sitter-fusion'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['tree-sitter-gap'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['tree-sitter-gaptst'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
