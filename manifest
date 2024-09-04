@@ -11095,6 +11095,13 @@ repository = {
          }
       }
    },
+   ['tree-sitter-nu'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['tree-sitter-objc'] = {
       ['scm-1'] = {
          {
@@ -12305,6 +12312,13 @@ repository = {
       }
    },
    ['vim-fencview'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['vim-floatterm'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"

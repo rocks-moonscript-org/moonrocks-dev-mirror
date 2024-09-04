@@ -1,19 +1,19 @@
-local git_ref = '47de35b54ec95bb049f52016632394b914d4d9e9'
+local git_ref = '4e28c8dd0271e10a5f55142fb6fe9b1599ee6160'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/lukas-reineke/lsp-format.nvim'
+local repo_url = 'https://github.com/voldikss/vim-floaterm'
 
 rockspec_format = '3.0'
-package = 'lsp-format.nvim'
+package = 'vim-floatterm'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'A wrapper around Neovims native LSP formatting.',
+  summary = '💻 Terminal manager for (neo)vim',
   detailed = '',
   labels = { 'neovim' } ,
-  homepage = 'https://github.com/lukas-reineke/lsp-format.nvim',
-  license = 'UNKNOWN'
+  homepage = 'https://github.com/voldikss/vim-floaterm',
+  license = 'MIT'
 }
 
 dependencies = { 'lua >= 5.1' } 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'lsp-format.nvim-' .. '47de35b54ec95bb049f52016632394b914d4d9e9',
+  dir = 'vim-floaterm-' .. '4e28c8dd0271e10a5f55142fb6fe9b1599ee6160',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
@@ -33,5 +33,5 @@ end
 
 build = {
   type = 'builtin',
-  copy_directories = { 'doc' } ,
+  copy_directories = { 'autoload', 'doc', 'plugin' } ,
 }

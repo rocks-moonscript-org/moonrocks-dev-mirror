@@ -1,3 +1,4 @@
+rockspec_format = "3.0"
 package = "silex.sile"
 version = "dev-1"
 source = {
@@ -25,6 +26,7 @@ build = {
     ["sile.silex.compat"]   = "silex/compat.lua",
     ["sile.silex.ast"]      = "silex/ast.lua",
     ["sile.silex.override"] = "silex/override.lua",
+    ["sile.silex.types"]    = "silex/types.lua",
 
     ["sile.silex.classes.base"]     = "silex/classes/base.lua",
     ["sile.silex.typesetters.base"] = "silex/typesetters/base.lua",
