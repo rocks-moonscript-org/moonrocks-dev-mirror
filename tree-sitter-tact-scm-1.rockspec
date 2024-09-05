@@ -1,4 +1,4 @@
-local git_ref = '91cc49a83f4f0b3a756bf7d0e65403a9cf757003'
+local git_ref = 'b3710fe2723bd9b285de7f3d0c0717bebf3f17bd'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-tact-' .. '91cc49a83f4f0b3a756bf7d0e65403a9cf757003',
+  dir = 'tree-sitter-tact-' .. 'b3710fe2723bd9b285de7f3d0c0717bebf3f17bd',
 }
 
 build = {
@@ -193,10 +193,6 @@ build = {
 ; --------
 (instance_argument
   name: (identifier) @variable.member)
-
-(lvalue
-  (_)
-  (_) @variable.member)
 
 (field_access_expression
   name: (identifier) @variable.member)
@@ -490,8 +486,8 @@ build = {
 (value_expression
   (identifier) @local.reference)
 
-(lvalue
-  (identifier) @local.reference)
+(field_access_expression
+  name: (identifier) @local.reference)
 ]==],
   },
   extra_files = {
