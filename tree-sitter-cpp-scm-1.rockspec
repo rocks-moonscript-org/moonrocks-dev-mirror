@@ -1,4 +1,4 @@
-local git_ref = 'b1a4e2b25148f3cfcb5f241cbc4c49f001a6fb35'
+local git_ref = '30f973c2244f0bff444186185f475c3bd76bc3a5'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-cpp-' .. 'b1a4e2b25148f3cfcb5f241cbc4c49f001a6fb35',
+  dir = 'tree-sitter-cpp-' .. '30f973c2244f0bff444186185f475c3bd76bc3a5',
 }
 
 build = {
@@ -284,7 +284,7 @@ build = {
   "private"
   "protected"
   "final"
-  (virtual)
+  "virtual"
 ] @keyword.modifier
 
 [

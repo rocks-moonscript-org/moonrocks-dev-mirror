@@ -2,7 +2,7 @@ local git_ref = 'da605af8c5999b43e6839b575eae5e6cafabb06f'
 local modrev = 'scm'
 local specrev = '1'
 
-local repo_url = 'https://github.com/alexlafroscia/tree-sitter-glimmer'
+local repo_url = 'https://github.com/ember-tooling/tree-sitter-glimmer'
 
 rockspec_format = '3.0'
 package = 'tree-sitter-glimmer'
@@ -11,7 +11,7 @@ version = modrev ..'-'.. specrev
 description = {
   summary = 'tree-sitter parser and Neovim queries for glimmer',
   labels = { 'neovim', 'tree-sitter' } ,
-  homepage = 'https://github.com/alexlafroscia/tree-sitter-glimmer',
+  homepage = 'https://github.com/ember-tooling/tree-sitter-glimmer',
   license = 'UNKNOWN'
 }
 
@@ -198,8 +198,27 @@ build = {
 (comment_statement) @indent.ignore
 ]==],
     ["injections.scm"] = [==[
+; comments
 ((comment_statement) @injection.content
   (#set! injection.language "comment"))
+
+; <style> tags
+((element_node
+  (element_node_start
+    (tag_name) @_tag_name
+    (#eq? @_tag_name "style"))) @injection.content
+  (#offset! @injection.content 0 7 0 -8)
+  (#set! injection.language "css")
+  (#set! injection.include-children))
+
+; <script> tags
+((element_node
+  (element_node_start
+    (tag_name) @_tag_name
+    (#eq? @_tag_name "script"))) @injection.content
+  (#offset! @injection.content 0 8 0 -9)
+  (#set! injection.language "glimmer_javascript")
+  (#set! injection.include-children))
 ]==],
     ["locals.scm"] = [==[
 [

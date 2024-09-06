@@ -1,4 +1,4 @@
-local git_ref = 'bd1d35cf3e013dc7e189b46a593bdc2b281b0dd7'
+local git_ref = '76e0c25844a66ebc6e866d690fcc5f4e90698947'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-wing-' .. 'bd1d35cf3e013dc7e189b46a593bdc2b281b0dd7',
+  dir = 'tree-sitter-wing-' .. '76e0c25844a66ebc6e866d690fcc5f4e90698947',
 }
 
 build = {
@@ -45,11 +45,13 @@ build = {
   (while_statement)
   (if_statement)
   (if_let_statement)
-  (elif_block)
+  (else_if_block)
   (struct_definition)
   (enum_definition)
   (try_catch_statement)
   (method_definition)
+  (import_statement)+
+  (initializer)
 ] @fold
 ]==],
     ["highlights.scm"] = [==[
@@ -63,16 +65,33 @@ build = {
 (custom_type) @type
 
 (class_field
-  name: (identifier) @variable.member)
+  name: (identifier) @property)
+
+(struct_field
+  name: (identifier) @property)
 
 (class_definition
+  name: (identifier) @type)
+
+(struct_definition
+  name: (identifier) @type)
+
+(interface_definition
   name: (identifier) @type)
 
 (method_definition
   name: (identifier) @function.method)
 
+(json_literal_member
+  (identifier) @property)
+
 ; Functions
 (keyword_argument_key) @variable.parameter
+
+(parameter_definition
+  name: (identifier) @variable.parameter)
+
+(variadic) @variable.parameter.builtin
 
 (call
   caller: (reference
@@ -92,7 +111,17 @@ build = {
 
 (bool) @boolean
 
-(builtin_type) @type.builtin
+[
+  (builtin_type)
+  "MutSet"
+  "MutMap"
+  "MutArray"
+  "Json"
+  "Set"
+  "Map"
+  "Array"
+  "MutJson"
+] @type.builtin
 
 (json_container_type) @type.builtin
 
@@ -100,16 +129,12 @@ build = {
 (comment) @comment @spell
 
 [
-  "("
-  ")"
-  "{"
-  "}"
-] @punctuation.bracket
-
-[
   "-"
+  "-="
   "+"
+  "+="
   "*"
+  "**"
   "/"
   "%"
   "<"
@@ -123,23 +148,54 @@ build = {
   "&&"
   "??"
   "||"
+  "?"
 ] @operator
+
+[
+  "("
+  ")"
+  "{"
+  "}"
+  "["
+  "]"
+] @punctuation.bracket
+
+(mutable_container_type
+  [
+    "<"
+    ">"
+  ] @punctuation.bracket)
+
+(immutable_container_type
+  [
+    "<"
+    ">"
+  ] @punctuation.bracket)
 
 [
   ";"
   "."
   ","
+  ":"
+  "=>"
 ] @punctuation.delimiter
 
 [
   "as"
-  "bring"
   "let"
   "new"
-  (inflight_specifier)
+  (phase_specifier)
+  "impl"
+  "test"
 ] @keyword
 
-"class" @keyword.type
+"bring" @keyword.import
+
+[
+  "class"
+  "struct"
+  "interface"
+] @keyword.type
 
 [
   "for"
@@ -155,13 +211,46 @@ build = {
   "pub"
   "protected"
   "internal"
+  "extern"
+  (static)
 ] @keyword.modifier
 
 "return" @keyword.return
+
+(import_statement
+  module_name: (identifier) @module)
+
+(import_statement
+  alias: (identifier) @module)
+
+(call
+  (reference
+    (nested_identifier
+      object: (reference) @_ref
+      property: (member_identifier) @_ident))
+  (argument_list
+    (positional_argument
+      (string) @string.regexp))
+  (#eq? @_ref "regex")
+  (#eq? @_ident "compile")
+  (#offset! @string.regexp 0 1 0 -1))
 ]==],
     ["injections.scm"] = [==[
 ((comment) @injection.content
   (#set! injection.language "comment"))
+
+(call
+  (reference
+    (nested_identifier
+      object: (reference) @_ref
+      property: (member_identifier) @_ident))
+  (argument_list
+    (positional_argument
+      (string) @injection.content))
+  (#eq? @_ref "regex")
+  (#eq? @_ident "compile")
+  (#offset! @injection.content 0 1 0 -1)
+  (#set! injection.language "regex"))
 ]==],
     ["locals.scm"] = [==[
 (block) @local.scope

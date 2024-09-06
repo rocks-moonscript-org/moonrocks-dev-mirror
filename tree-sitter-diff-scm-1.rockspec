@@ -35,6 +35,13 @@ build = {
   location = nil,
   copy_directories = { "queries" },
   queries = {
+    ["folds.scm"] = [==[
+[
+  (block)
+  (hunks)
+  (hunk)
+] @fold
+]==],
     ["highlights.scm"] = [==[
 (comment) @comment @spell
 

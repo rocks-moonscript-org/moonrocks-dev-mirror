@@ -1,4 +1,4 @@
-local git_ref = '31a64b28292aac6adf44071e449fa03fb80eaf4e'
+local git_ref = 'fd7f7402db6e66afd70b402fb2e367b2d71c10d6'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-c-sharp-' .. '31a64b28292aac6adf44071e449fa03fb80eaf4e',
+  dir = 'tree-sitter-c-sharp-' .. 'fd7f7402db6e66afd70b402fb2e367b2d71c10d6',
 }
 
 build = {
@@ -415,6 +415,9 @@ initializer: (initializer_expression) @fold
 (preproc_pragma
   (identifier) @constant)
 
+(preproc_if
+  (identifier) @constant)
+
 [
   "if"
   "else"
@@ -423,15 +426,6 @@ initializer: (initializer_expression) @fold
   "case"
   "when"
 ] @keyword.conditional
-
-(preproc_pragma
-  (identifier) @constant)
-
-(preproc_if
-  (identifier) @constant)
-
-(preproc_if
-  (identifier) @constant)
 
 [
   "while"

@@ -1,4 +1,4 @@
-local git_ref = '7f80a0441ff2ca6aa8ced8e1ee87cead9dd26515'
+local git_ref = 'd63bc6c08a88715c89f4b1b06642e130dd899aba'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'v-analyzer-' .. '7f80a0441ff2ca6aa8ced8e1ee87cead9dd26515',
+  dir = 'v-analyzer-' .. 'd63bc6c08a88715c89f4b1b06642e130dd899aba',
 }
 
 build = {

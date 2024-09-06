@@ -1,4 +1,4 @@
-local git_ref = '5168c746ce9956bf424a6bb873dfb49774d7994c'
+local git_ref = '047ea51e1f20fbfd21c991c68e8c3cdf1e0e1ba9'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'airline-renderer-nerdfont.vim-' .. '5168c746ce9956bf424a6bb873dfb49774d7994c',
+  dir = 'airline-renderer-nerdfont.vim-' .. '047ea51e1f20fbfd21c991c68e8c3cdf1e0e1ba9',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

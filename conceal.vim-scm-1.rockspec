@@ -1,4 +1,4 @@
-local git_ref = 'b06cd72d701055b65b07e69bba1387f9b08a678e'
+local git_ref = 'd6c60d65561fcff744f261a7b79983a9f7e93be7'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'conceal.vim-' .. 'b06cd72d701055b65b07e69bba1387f9b08a678e',
+  dir = 'conceal.vim-' .. 'd6c60d65561fcff744f261a7b79983a9f7e93be7',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

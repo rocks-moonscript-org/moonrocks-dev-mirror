@@ -1,4 +1,4 @@
-local git_ref = '87176e524f0a98f5be75fa44f4f0ff5c6eac069c'
+local git_ref = '962568c9efa71d25720ab42c5d36e222626ef3a6'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-ini-' .. '87176e524f0a98f5be75fa44f4f0ff5c6eac069c',
+  dir = 'tree-sitter-ini-' .. '962568c9efa71d25720ab42c5d36e222626ef3a6',
 }
 
 build = {
@@ -40,7 +40,7 @@ build = {
 ]==],
     ["highlights.scm"] = [==[
 (section_name
-  (text) @type) ; consistency with toml
+  (text) @markup.heading)
 
 (comment) @comment @spell
 
@@ -54,7 +54,7 @@ build = {
 (setting
   (setting_name) @property)
 
-; (setting_value) @none ; grammar does not support subtypes
+(setting_value) @string
 ]==],
     ["injections.scm"] = [==[
 ((comment
