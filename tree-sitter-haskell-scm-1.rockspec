@@ -1,4 +1,4 @@
-local git_ref = 'a50070d5bb5bd5c1281740a6102ecf1f4b0c4f19'
+local git_ref = '558b997049fddcb07fc513528189c57d6129a260'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-haskell-' .. 'a50070d5bb5bd5c1281740a6102ecf1f4b0c4f19',
+  dir = 'tree-sitter-haskell-' .. '558b997049fddcb07fc513528189c57d6129a260',
 }
 
 build = {

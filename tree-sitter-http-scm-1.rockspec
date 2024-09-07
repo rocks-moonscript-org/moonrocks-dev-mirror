@@ -1,4 +1,4 @@
-local git_ref = 'bbcd67642e5749b90277c353b72e762f3be16993'
+local git_ref = '7c68e1c8ce6eeef6bc4b749330c540dbbda5ba44'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-http-' .. 'bbcd67642e5749b90277c353b72e762f3be16993',
+  dir = 'tree-sitter-http-' .. '7c68e1c8ce6eeef6bc4b749330c540dbbda5ba44',
 }
 
 build = {
@@ -105,19 +105,15 @@ build = {
   (#set! injection.language "graphql"))
 
 ; Script (default to javascript)
-((script) @injection.content
-  (#offset! @injection.content 0 2 0 -2)
-  (#set! injection.language "javascript"))
-
-; Script with other languages
 ((comment
   name: (_) @_name
   (#eq? @_name "lang")
-  value: (_) @injection.language)
+  value: (_) @injection.language)?
   .
   (_
     (script) @injection.content
-    (#offset! @injection.content 0 2 0 -2)))
+    (#offset! @injection.content 0 2 0 -2))
+  (#set! injection.language "javascript"))
 ]==],
   },
   extra_files = {

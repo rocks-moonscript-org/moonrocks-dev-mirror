@@ -1,4 +1,4 @@
-local git_ref = 'dc5e8a14cb1f45582a8c221a270a199a5f8bdb63'
+local git_ref = 'ec985672ff21f7fd7f835869d8021e8f87304bb4'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-kotlin-' .. 'dc5e8a14cb1f45582a8c221a270a199a5f8bdb63',
+  dir = 'tree-sitter-kotlin-' .. 'ec985672ff21f7fd7f835869d8021e8f87304bb4',
 }
 
 build = {

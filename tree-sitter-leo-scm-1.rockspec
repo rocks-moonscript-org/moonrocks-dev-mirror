@@ -1,4 +1,4 @@
-local git_ref = 'f5ecaaa869a845e689399092cb9a61feca66cf12'
+local git_ref = '6ca11a96fc2cab51217e0cf4a2f9ed3ea63e28fb'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -23,7 +23,7 @@ build_dependencies = {
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'tree-sitter-leo-' .. 'f5ecaaa869a845e689399092cb9a61feca66cf12',
+  dir = 'tree-sitter-leo-' .. '6ca11a96fc2cab51217e0cf4a2f9ed3ea63e28fb',
 }
 
 build = {
@@ -36,10 +36,6 @@ build = {
   copy_directories = { "queries" },
   queries = {
     ["highlights.scm"] = [==[
-(variable_identifier) @variable
-
-(constant_identifier) @constant
-
 [
   "assert"
   "assert_eq"
@@ -68,6 +64,8 @@ build = {
 ] @keyword.modifier
 
 "self" @variable.builtin
+
+"network" @variable.builtin
 
 "async" @keyword.coroutine
 
@@ -153,16 +151,21 @@ build = {
 (boolean_literal) @boolean
 
 (constant_declaration
-  (identifier) @constant)
+  (identifier
+    (constant_identifier) @constant))
 
-[
-  (program_id)
-  (this_program_id)
-] @string.special
+(variable
+  (constant_identifier) @constant)
+
+(associated_constant) @constant
+
+(variable) @variable
+
+(program_id) @string.special
 
 ;record declaration
 (record_declaration
-  (identifier) @variable.member)
+  (identifier) @type.definition)
 
 ;struct component
 (struct_component_declaration
@@ -170,17 +173,25 @@ build = {
 
 (type) @type
 
-(associated_constant) @constant
-
 [
   (block_height)
+  (self_address)
   (self_caller)
   (self_signer)
+  (network_id)
 ] @constant.builtin
 
 (free_function_call
   (locator
     (identifier) @function))
+
+(associated_function_call
+  (named_type
+    (identifier
+      (constant_identifier) @function)))
+
+(associated_function_call
+  (identifier) @function.call)
 
 (record_type
   (locator
@@ -211,11 +222,10 @@ build = {
   (identifier) @variable.parameter)
 
 (struct_declaration
-  name: (identifier) @variable.member)
+  name: (identifier) @type.definition)
 
 (variable_declaration
-  (identifier_or_identifiers
-    (identifier) @variable))
+  (identifier) @variable)
 
 [
   (address_literal)
