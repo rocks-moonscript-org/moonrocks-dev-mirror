@@ -41,9 +41,8 @@ build = {
     ["highlights.scm"] = [==[
 (comment) @comment @spell
 
-; consistency with toml and ini
 (section
-  (section_name) @type)
+  (section_name) @string.special.path)
 
 (character_choice
   (character) @constant)
