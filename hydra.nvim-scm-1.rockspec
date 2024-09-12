@@ -1,4 +1,4 @@
-local git_ref = '8578056a2226ed49fc608167edc143a87f75d809'
+local git_ref = '7f5341643107d05a8d7d4fdea00b29af28517380'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'hydra.nvim-' .. '8578056a2226ed49fc608167edc143a87f75d809',
+  dir = 'hydra.nvim-' .. '7f5341643107d05a8d7d4fdea00b29af28517380',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
