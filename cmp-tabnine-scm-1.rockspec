@@ -1,4 +1,4 @@
-local git_ref = '0f4bf271a8f1eb2c5add4dab712c67aa1f9ca7bd'
+local git_ref = 'c0167cdc86c15e782c5461ee62aebee89231c2ed'
 local modrev = 'scm'
 local specrev = '1'
 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'cmp-tabnine-' .. '0f4bf271a8f1eb2c5add4dab712c67aa1f9ca7bd',
+  dir = 'cmp-tabnine-' .. 'c0167cdc86c15e782c5461ee62aebee89231c2ed',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
