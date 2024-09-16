@@ -5,12 +5,12 @@ source = {
    branch = "master"
 }
 description = {
-   summary = "Project initializer and runner",
+   summary = "Initialize and manage projects easily with json blueprints",
    homepage = "https://github.com/johron/pues",
    license = "GPL-3.0"
 }
 dependencies = {
-   "lua>=5.4",
+   "lua>=5.1",
    "luafilesystem>=1.8.0-1",
    "lunajson>=1.2.3-1",
    "luazip>=1.2.5-1"
@@ -24,6 +24,7 @@ build = {
       ["pues.command.help"] = "pues/command/help.lua",
       ["pues.command.license"] = "pues/command/license.lua",
       ["pues.command.manage"] = "pues/command/manage.lua",
+      ["pues.command.install"] = "pues/command/install.lua",
       ["pues.util.io"] = "pues/util/io.lua",
       ["pues.util.json"] = "pues/util/json.lua",
       ["pues.util.misc"] = "pues/util/misc.lua"

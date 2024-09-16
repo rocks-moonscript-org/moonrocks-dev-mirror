@@ -20,6 +20,7 @@ pluggable lib to define types fast
 dependencies = {
   "lua >= 5.1",
   "meta",
+  "date",
   "luassert",
 }
 
