@@ -11963,6 +11963,13 @@ repository = {
          }
       }
    },
+   ['tree-sitter-kcl'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['tree-sitter-kconfig'] = {
       ['scm-1'] = {
          {
