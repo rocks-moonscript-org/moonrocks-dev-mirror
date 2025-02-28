@@ -9619,6 +9619,13 @@ repository = {
          }
       }
    },
+   rough = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['rpi-gpio'] = {
       ['scm-1'] = {
          {
