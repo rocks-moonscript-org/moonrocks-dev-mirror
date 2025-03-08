@@ -5144,6 +5144,13 @@ repository = {
          }
       }
    },
+   ['lua-marionette'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-mbedtls'] = {
       ['git-1'] = {
          {
@@ -8780,6 +8787,20 @@ repository = {
    },
    ['package-info.nvim'] = {
       ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['paged-markdown-3'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['paged-markdown-3-pdf'] = {
+      ['scm-0'] = {
          {
             arch = "rockspec"
          }
