@@ -11116,6 +11116,13 @@ repository = {
          }
       }
    },
+   ['tree-sitter-blade'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['tree-sitter-blueprint'] = {
       ['scm-1'] = {
          {
