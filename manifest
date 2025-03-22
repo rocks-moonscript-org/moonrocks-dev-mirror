@@ -10785,6 +10785,13 @@ repository = {
          }
       }
    },
+   ['texture-share-vk'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    tgbot = {
       ['scm-1'] = {
          {
