@@ -11158,6 +11158,13 @@ repository = {
          }
       }
    },
+   ['tree-sitter-caddy'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['tree-sitter-cairo'] = {
       ['scm-1'] = {
          {
@@ -11915,6 +11922,13 @@ repository = {
       }
    },
    ['tree-sitter-java'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['tree-sitter-javadoc'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
