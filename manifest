@@ -3711,6 +3711,13 @@ repository = {
          }
       }
    },
+   ['lapis-stats'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lapis-systemd'] = {
       ['dev-1'] = {
          {
