@@ -7186,6 +7186,13 @@ repository = {
          }
       }
    },
+   ['min-theme.nvim'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    mineunit = {
       ['scm-1'] = {
          {
