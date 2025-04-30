@@ -5307,6 +5307,13 @@ repository = {
          }
       }
    },
+   ['lua-ranges'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-replace'] = {
       ['dev-1'] = {
          {
