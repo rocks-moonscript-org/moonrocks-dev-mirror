@@ -8490,6 +8490,13 @@ repository = {
          }
       }
    },
+   ['nvim-rockydocs'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['nvim-scrollbar'] = {
       ['scm-1'] = {
          {
