@@ -7731,6 +7731,13 @@ repository = {
          }
       }
    },
+   ['mossy.nvim'] = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['move.nvim'] = {
       ['scm-1'] = {
          {
