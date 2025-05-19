@@ -8100,6 +8100,21 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['scm-6'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-7'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-8'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ['neotest-zig'] = {
