@@ -8106,6 +8106,31 @@ repository = {
             arch = "rockspec"
          }
       },
+      ['scm-13'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-14'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-15'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-16'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-17'] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ['scm-4'] = {
          {
             arch = "rockspec"
@@ -11333,6 +11358,13 @@ repository = {
       }
    },
    ['tree-sitter-c'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ['tree-sitter-c3'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
