@@ -6371,6 +6371,13 @@ repository = {
          }
       }
    },
+   ['luarocks-build-list'] = {
+      ['scm-0'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['luarocks-build-lr-hooks'] = {
       ['scm-0'] = {
          {
