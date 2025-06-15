@@ -9137,6 +9137,13 @@ repository = {
          }
       }
    },
+   pipeflow = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    pkgbuild = {
       ['scm-1'] = {
          {
