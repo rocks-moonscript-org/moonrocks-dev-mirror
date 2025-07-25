@@ -2068,13 +2068,6 @@ repository = {
          }
       }
    },
-   filemod = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    finally = {
       ['scm-0'] = {
          {
@@ -2137,13 +2130,6 @@ repository = {
       }
    },
    ['flit.nvim'] = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   float = {
       ['scm-1'] = {
          {
             arch = "rockspec"
@@ -2415,13 +2401,6 @@ repository = {
    },
    giflib = {
       ['dev-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   gincltex = {
-      ['scm-1'] = {
          {
             arch = "rockspec"
          }
@@ -2706,6 +2685,11 @@ repository = {
          }
       },
       ['dev-2'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['dev-3'] = {
          {
             arch = "rockspec"
          }
@@ -7603,13 +7587,6 @@ repository = {
          }
       }
    },
-   multido = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    multikey = {
       ['scm-0'] = {
          {
@@ -7703,13 +7680,6 @@ repository = {
    },
    ['ndb.lua'] = {
       ['scm-0'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   needspace = {
-      ['scm-1'] = {
          {
             arch = "rockspec"
          }
@@ -9126,13 +9096,6 @@ repository = {
          }
       }
    },
-   preview = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    primes = {
       ['dev-1'] = {
          {
@@ -10417,13 +10380,6 @@ repository = {
       }
    },
    suspend = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   ['svn-prov'] = {
       ['scm-1'] = {
          {
             arch = "rockspec"
@@ -13564,13 +13520,6 @@ repository = {
          }
       }
    },
-   varwidth = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    vectorize = {
       ['scm-0'] = {
          {
@@ -13955,13 +13904,6 @@ repository = {
          }
       }
    },
-   xkeyval = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    xmlpeg = {
       ['scm-0'] = {
          {
@@ -14006,13 +13948,6 @@ repository = {
       }
    },
    ['yanky.nvim'] = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   ydoc = {
       ['scm-1'] = {
          {
             arch = "rockspec"
