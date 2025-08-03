@@ -4140,6 +4140,13 @@ repository = {
          }
       }
    },
+   lmt = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ln = {
       ['scm-1'] = {
          {
