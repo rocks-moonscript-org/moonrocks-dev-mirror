@@ -1,13 +1,18 @@
 package = 'lua-schema'
-version = '0.0.1-3'
+version = '0.0.2-1'
 source = {
-    url = 'https://framagit.org/fperrad/lua-schema/raw/releases/lua-schema-0.0.1.tar.gz',
-    md5 = '7c36f0b23233514d8e9e1f53eafb8ce5',
-    dir = 'lua-schema-0.0.1',
+    url = 'https://framagit.org/fperrad/lua-schema/raw/releases/lua-schema-0.0.2.tar.gz',
+    md5 = 'c8ca4b5221b4ab94e99c83eaffdce918',
+    dir = 'lua-schema-0.0.2',
 }
 description = {
     summary = "JSON Schema data validator",
-    detailed = "TODO",
+    detailed = [[
+lua-schema is a JSON Schema (classical & modern) data validator.
+
+It validates data from a JSON instance or from any equivalent data model,
+for example CBOR, Message Pack, UBJSON or just plain Lua.
+    ]],
     homepage = 'https://fperrad.frama.io/lua-schema',
     maintainer = 'Francois Perrad',
     license = 'MIT/X11'
@@ -31,5 +36,5 @@ build = {
         ['schema.keyword']      = 'src/schema/keyword.lua',
         ['schema.utils']        = 'src/schema/utils.lua',
     },
-    copy_directories = { 'test' },
+    copy_directories = { 'docs', 'test' },
 }
