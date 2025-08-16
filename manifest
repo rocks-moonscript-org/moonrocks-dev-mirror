@@ -374,13 +374,6 @@ repository = {
          }
       }
    },
-   ['babel-base'] = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    ['bamboo.nvim'] = {
       ['scm-1'] = {
          {
@@ -2157,13 +2150,6 @@ repository = {
    },
    fontproof = {
       ['dev-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   footmisc = {
-      ['scm-1'] = {
          {
             arch = "rockspec"
          }
@@ -5238,6 +5224,13 @@ repository = {
          }
       },
       ['0.0.2-1'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      },
+      ['0.0.3-1'] = {
          {
             arch = "rockspec"
          }, {
