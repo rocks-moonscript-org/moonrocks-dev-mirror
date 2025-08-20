@@ -8010,6 +8010,16 @@ repository = {
             arch = "rockspec"
          }
       },
+      ['scm-44'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['scm-45'] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ['scm-5'] = {
          {
             arch = "rockspec"
