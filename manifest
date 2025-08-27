@@ -1704,13 +1704,6 @@ repository = {
          }
       }
    },
-   elgui = {
-      ['dev-2'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    ['elixir-tools.nvim'] = {
       ['scm-1'] = {
          {
@@ -3624,7 +3617,7 @@ repository = {
          }
       }
    },
-   ldm = {
+   ldf = {
       ['dev-1'] = {
          {
             arch = "rockspec"
@@ -3944,18 +3937,6 @@ repository = {
          }
       }
    },
-   ljuv = {
-      ['dev-1'] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ['scm-2'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    ['llm.nvim'] = {
       ['scm-1'] = {
          {
@@ -4190,13 +4171,6 @@ repository = {
          }
       },
       ['scm-4'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   ['love-threadpool'] = {
-      ['dev-1'] = {
          {
             arch = "rockspec"
          }
