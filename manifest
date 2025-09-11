@@ -9634,6 +9634,15 @@ repository = {
          }
       }
    },
+   ['routex-client'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
    ['rpi-gpio'] = {
       ['scm-1'] = {
          {
