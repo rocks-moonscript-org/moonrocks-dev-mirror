@@ -205,6 +205,13 @@ repository = {
          }
       }
    },
+   astal = {
+      ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    async = {
       ['scm-0'] = {
          {
@@ -13794,6 +13801,11 @@ repository = {
    },
    webscraper = {
       ['dev-1'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['dev-2'] = {
          {
             arch = "rockspec"
          }
