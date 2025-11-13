@@ -5238,6 +5238,13 @@ repository = {
          }, {
             arch = "src"
          }
+      },
+      ['0.0.6-1'] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
       }
    },
    ['lua-sdl2'] = {
