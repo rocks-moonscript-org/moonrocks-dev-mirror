@@ -4747,6 +4747,13 @@ repository = {
          }
       }
    },
+   ['lua-git2-tmp'] = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['lua-glob'] = {
       ['scm-1'] = {
          {
