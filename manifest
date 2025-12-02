@@ -9340,6 +9340,16 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['dev-4'] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ['dev-5'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    pues = {
