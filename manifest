@@ -9182,6 +9182,13 @@ repository = {
          }
       }
    },
+   ["pnpoly.lua"] = {
+      ["scm-0"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    pop3 = {
       ["scm-0"] = {
          {
