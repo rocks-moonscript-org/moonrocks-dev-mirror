@@ -83,6 +83,13 @@ repository = {
          }
       }
    },
+   ["airtable-lua"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    alive = {
       ["scm-11"] = {
          {
@@ -5235,36 +5242,6 @@ repository = {
       ["scm-1"] = {
          {
             arch = "rockspec"
-         }
-      }
-   },
-   ["lua-schema"] = {
-      ["0.0.6-1"] = {
-         {
-            arch = "rockspec"
-         }, {
-            arch = "src"
-         }
-      },
-      ["0.0.7-1"] = {
-         {
-            arch = "rockspec"
-         }, {
-            arch = "src"
-         }
-      },
-      ["0.0.8-1"] = {
-         {
-            arch = "rockspec"
-         }, {
-            arch = "src"
-         }
-      },
-      ["0.0.9-1"] = {
-         {
-            arch = "rockspec"
-         }, {
-            arch = "src"
          }
       }
    },
