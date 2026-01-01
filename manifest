@@ -1070,6 +1070,13 @@ repository = {
          }
       }
    },
+   ["codecompanion.nvim"] = {
+      ["dev-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ["codeium.nvim"] = {
       ["scm-1"] = {
          {
