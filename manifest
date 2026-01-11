@@ -4488,13 +4488,6 @@ repository = {
          }
       }
    },
-   ["lua utf-8"] = {
-      ["scm-"] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    ["lua-ahocorasick"] = {
       ["scm-0"] = {
          {
@@ -8155,6 +8148,21 @@ repository = {
          }
       },
       ["scm-61"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-62"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-63"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-64"] = {
          {
             arch = "rockspec"
          }
