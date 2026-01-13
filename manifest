@@ -1648,6 +1648,13 @@ repository = {
          }
       }
    },
+   dlopen = {
+      ["dev-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    doma = {
       ["dev-1"] = {
          {
@@ -13562,6 +13569,13 @@ repository = {
       }
    },
    ["tree-sitter-ziggy_schema"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["tree-sitter-zsh"] = {
       ["scm-1"] = {
          {
             arch = "rockspec"
