@@ -1,0 +1,37 @@
+local git_ref = '395ac481e197784e410b59b987fadaf9e7481df1'
+local modrev = 'scm'
+local specrev = '11'
+
+local repo_url = 'https://github.com/NeogitOrg/neogit'
+
+rockspec_format = '3.0'
+package = 'neogit'
+version = modrev ..'-'.. specrev
+
+description = {
+  summary = 'An interactive and powerful Git interface for Neovim, inspired by Magit',
+  detailed = '',
+  labels = { 'neovim' } ,
+  homepage = 'https://github.com/NeogitOrg/neogit',
+  license = 'MIT'
+}
+
+dependencies = { 'lua >= 5.1', 'plenary.nvim' } 
+
+test_dependencies = { }
+
+source = {
+  url = repo_url .. '/archive/' .. git_ref .. '.zip',
+  dir = 'neogit-' .. '395ac481e197784e410b59b987fadaf9e7481df1',
+}
+
+if modrev == 'scm' or modrev == 'dev' then
+  source = {
+    url = repo_url:gsub('https', 'git')
+  }
+end
+
+build = {
+  type = 'builtin',
+  copy_directories = { 'doc', 'plugin' } ,
+}
