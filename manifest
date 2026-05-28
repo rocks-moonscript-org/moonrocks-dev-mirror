@@ -32,6 +32,16 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    adscaptcha = {
@@ -43,6 +53,36 @@ repository = {
    },
    ["aerial.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
          {
             arch = "rockspec"
          }
@@ -76,13 +116,6 @@ repository = {
          }
       }
    },
-   ["airline-renderer-nerdfont.vim"] = {
-      ["scm-1"] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    ["airtable-lua"] = {
       ["scm-1"] = {
          {
@@ -109,6 +142,41 @@ repository = {
    },
    ["alpha-nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
          {
             arch = "rockspec"
          }
@@ -198,6 +266,18 @@ repository = {
          }
       }
    },
+   argy = {
+      ["dev-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["dev-2"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    arrr = {
       ["dev-1"] = {
          {
@@ -224,6 +304,21 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["dev-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["dev-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["dev-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    async = {
@@ -242,6 +337,32 @@ repository = {
    },
    atentu = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   atmos = {
+      ["dev-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["atmos-env-pico"] = {
+      ["dev-2"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["atmos-lang"] = {
+      ["dev-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["dev-2"] = {
          {
             arch = "rockspec"
          }
@@ -301,6 +422,26 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["autoclose.nvim"] = {
@@ -329,13 +470,6 @@ repository = {
    },
    autossl = {
       ["scm-0"] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   ["avante.nvim"] = {
-      ["scm-1"] = {
          {
             arch = "rockspec"
          }
@@ -421,6 +555,36 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    base2base = {
@@ -477,6 +641,16 @@ repository = {
    },
    ["better-escape.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -603,6 +777,252 @@ repository = {
          }
       },
       ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["blink-cmp-ghostty"] = {
+      ["scm-29"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-30"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-31"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-32"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-33"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-34"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-35"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-36"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-37"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-38"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-39"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-40"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-41"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-42"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-43"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-44"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-45"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-46"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["blink-cmp-ssh"] = {
+      ["scm-24"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-25"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-26"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-27"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-28"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-29"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-30"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-31"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-32"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-33"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-34"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-35"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-36"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-37"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-38"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["blink-cmp-tmux"] = {
+      ["scm-28"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-29"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-30"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-31"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-32"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-33"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-34"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-35"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-36"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-37"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-38"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-39"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-40"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-41"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-42"] = {
          {
             arch = "rockspec"
          }
@@ -803,6 +1223,16 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["ccc.nvim"] = {
@@ -846,6 +1276,13 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
       }
    },
    chain = {
@@ -870,6 +1307,20 @@ repository = {
       }
    },
    chngpage = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   chrono = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["chrono-clock"] = {
       ["scm-1"] = {
          {
             arch = "rockspec"
@@ -906,6 +1357,11 @@ repository = {
    },
    ["clangd_extensions.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -998,6 +1454,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["cmp-nvim-lsp"] = {
@@ -1070,13 +1531,6 @@ repository = {
          }
       }
    },
-   ["codecompanion.nvim"] = {
-      ["dev-1"] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    ["codeium.nvim"] = {
       ["scm-1"] = {
          {
@@ -1100,6 +1554,21 @@ repository = {
    },
    ["colorful-winsep.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
          {
             arch = "rockspec"
          }
@@ -1197,6 +1666,41 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["convert-charsets"] = {
@@ -1225,6 +1729,8 @@ repository = {
       ["cvs-6"] = {
          {
             arch = "rockspec"
+         }, {
+            arch = "src"
          }
       }
    },
@@ -1251,6 +1757,81 @@ repository = {
    },
    ["copilot.lua"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-10"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-11"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-12"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-13"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-14"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-15"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-16"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-9"] = {
          {
             arch = "rockspec"
          }
@@ -1323,6 +1904,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    cpml = {
@@ -1340,6 +1926,13 @@ repository = {
       }
    },
    ["cppinsights.vim"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   cppjieba = {
       ["scm-1"] = {
          {
             arch = "rockspec"
@@ -1464,6 +2057,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    danetool = {
@@ -1475,6 +2073,11 @@ repository = {
    },
    ["dashboard-nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -1737,6 +2340,16 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    elan = {
@@ -1755,6 +2368,21 @@ repository = {
    },
    ["elixir-tools.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
          {
             arch = "rockspec"
          }
@@ -1831,6 +2459,13 @@ repository = {
          }
       }
    },
+   ["eth-secp256k1"] = {
+      ["dev-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    evdev = {
       ["scm-1"] = {
          {
@@ -1847,6 +2482,16 @@ repository = {
    },
    ["everforest-nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -1867,6 +2512,13 @@ repository = {
       }
    },
    exc = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["executioner.nvim"] = {
       ["scm-1"] = {
          {
             arch = "rockspec"
@@ -1931,13 +2583,6 @@ repository = {
    },
    fakeredis = {
       ["scm-1"] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
-   ["fancytoc.sile"] = {
-      ["dev-1"] = {
          {
             arch = "rockspec"
          }
@@ -2148,6 +2793,13 @@ repository = {
          }
       }
    },
+   flowerpot = {
+      ["dev-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    fltk4lua = {
       ["scm-0"] = {
          {
@@ -2172,6 +2824,26 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    fmtstr = {
@@ -2192,6 +2864,358 @@ repository = {
    },
    fontproof = {
       ["dev-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["forge.nvim"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-401"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-402"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-403"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-404"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-405"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-406"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-407"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-408"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-409"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-410"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-411"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-412"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-413"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-414"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-415"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-416"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-417"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-418"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-419"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-420"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-421"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-422"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-423"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-424"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-425"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-428"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-429"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-430"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-431"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-433"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-434"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-435"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-436"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-437"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-438"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-439"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-440"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-441"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-442"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-443"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-444"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-445"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-446"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-447"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-448"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-449"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-462"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-463"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-464"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-465"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-467"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-468"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-469"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-470"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-471"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-472"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-475"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-476"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-477"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-478"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-479"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-480"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-481"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-482"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-483"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-484"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-485"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-486"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-487"] = {
          {
             arch = "rockspec"
          }
@@ -2346,6 +3370,21 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    get_os_name = {
@@ -2430,6 +3469,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["glance.nvim"] = {
@@ -2481,6 +3525,36 @@ repository = {
    },
    ["go.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
          {
             arch = "rockspec"
          }
@@ -2616,10 +3690,25 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["gruvbox.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -2791,6 +3880,16 @@ repository = {
    },
    ["hlchunk.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -3176,6 +4275,13 @@ repository = {
          }
       }
    },
+   igbew = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    imagesize = {
       ["dev-1"] = {
          {
@@ -3197,6 +4303,20 @@ repository = {
          }
       }
    },
+   ["img-clip.nvim"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["immut.lua"] = {
+      ["scm-0"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    immutable = {
       ["dev-1"] = {
          {
@@ -3211,6 +4331,13 @@ repository = {
          }
       }
    },
+   imsg = {
+      ["scm-0"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ["inc-rename.nvim"] = {
       ["scm-1"] = {
          {
@@ -3220,6 +4347,11 @@ repository = {
    },
    ["incline.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -3307,7 +4439,7 @@ repository = {
          }
       }
    },
-   ["jieba.nvim"] = {
+   jieba = {
       ["scm-1"] = {
          {
             arch = "rockspec"
@@ -3341,6 +4473,23 @@ repository = {
       }
    },
    ["kanagawa.nvim"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   kapo = {
       ["scm-1"] = {
          {
             arch = "rockspec"
@@ -3702,10 +4851,20 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["leetcode.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -3841,6 +5000,13 @@ repository = {
    },
    libatscc2lua = {
       ["scm-0"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   liblgd = {
+      ["dev-1"] = {
          {
             arch = "rockspec"
          }
@@ -4154,6 +5320,13 @@ repository = {
          }
       }
    },
+   localrocks = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    logger = {
       ["scm-1"] = {
          {
@@ -4451,6 +5624,21 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["lspkind.nvim"] = {
@@ -4462,6 +5650,21 @@ repository = {
    },
    ["lspsaga.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
          {
             arch = "rockspec"
          }
@@ -4775,13 +5978,6 @@ repository = {
          }
       }
    },
-   ["lua-git2-tmp"] = {
-      ["scm-1"] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    ["lua-glob"] = {
       ["scm-1"] = {
          {
@@ -4854,6 +6050,13 @@ repository = {
    },
    ["lua-lcdproc"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["lua-libdeflate"] = {
+      ["dev-1"] = {
          {
             arch = "rockspec"
          }
@@ -4999,6 +6202,13 @@ repository = {
       }
    },
    ["lua-mtrace"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["lua-nkeys"] = {
       ["scm-1"] = {
          {
             arch = "rockspec"
@@ -5175,6 +6385,27 @@ repository = {
          }
       }
    },
+   ["lua-resty-nginx-confgen"] = {
+      ["scm-0"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["lua-resty-nginx-manager"] = {
+      ["scm-0"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["lua-resty-nginx-runner"] = {
+      ["scm-0"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ["lua-resty-r3"] = {
       ["dev-1"] = {
          {
@@ -5240,6 +6471,28 @@ repository = {
    },
    ["lua-rover-old"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["lua-rpg"] = {
+      ["dev-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["dev-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["dev-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["dev-4"] = {
          {
             arch = "rockspec"
          }
@@ -5357,6 +6610,13 @@ repository = {
       }
    },
    ["lua-testclass"] = {
+      ["scm-0"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["lua-timescaledb"] = {
       ["scm-0"] = {
          {
             arch = "rockspec"
@@ -5630,6 +6890,13 @@ repository = {
          }
       }
    },
+   luacov = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ["luacov-console"] = {
       ["scm-0"] = {
          {
@@ -5880,6 +7147,21 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    lualink = {
@@ -5919,6 +7201,15 @@ repository = {
    },
    luamidi = {
       ["0.2-1"] = {
+         {
+            arch = "rockspec"
+         }, {
+            arch = "src"
+         }
+      }
+   },
+   luamoji = {
+      ["scm-1"] = {
          {
             arch = "rockspec"
          }, {
@@ -6150,6 +7441,13 @@ repository = {
    },
    ["luarocks-build-fennel"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["luarocks-build-hooks"] = {
+      ["dev-1"] = {
          {
             arch = "rockspec"
          }
@@ -6856,6 +8154,41 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mason-nvim-dap.nvim"] = {
@@ -6874,6 +8207,41 @@ repository = {
    },
    ["mason.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
          {
             arch = "rockspec"
          }
@@ -7049,10 +8417,30 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.align"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -7063,10 +8451,45 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.base16"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -7077,10 +8500,30 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.bracketed"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -7091,10 +8534,47 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.clue"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["mini.cmdline"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -7105,10 +8585,25 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.comment"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -7119,10 +8614,45 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.cursorword"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -7133,10 +8663,35 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.diff"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
          {
             arch = "rockspec"
          }
@@ -7147,10 +8702,30 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.extra"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
          {
             arch = "rockspec"
          }
@@ -7161,10 +8736,45 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.fuzzy"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -7175,10 +8785,30 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.hipatterns"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
          {
             arch = "rockspec"
          }
@@ -7189,10 +8819,35 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.icons"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
          {
             arch = "rockspec"
          }
@@ -7203,10 +8858,30 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.jump"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -7217,10 +8892,25 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.keymap"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -7231,10 +8921,35 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.misc"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -7245,10 +8960,30 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.notify"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
          {
             arch = "rockspec"
          }
@@ -7259,10 +8994,145 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-10"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-11"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-12"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-13"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-14"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-15"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-16"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-17"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-18"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-19"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-20"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-21"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-22"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-23"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-24"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-25"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-26"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-9"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.operators"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -7273,10 +9143,40 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.pick"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
          {
             arch = "rockspec"
          }
@@ -7287,10 +9187,35 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.snippets"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -7301,10 +9226,25 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.starter"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -7315,10 +9255,35 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.surround"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
          {
             arch = "rockspec"
          }
@@ -7329,10 +9294,35 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.test"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
          {
             arch = "rockspec"
          }
@@ -7343,10 +9333,25 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.visits"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -7358,6 +9363,13 @@ repository = {
             arch = "rockspec"
          }, {
             arch = "src"
+         }
+      }
+   },
+   ["minijinja-lua"] = {
+      ["dev-2"] = {
+         {
+            arch = "rockspec"
          }
       }
    },
@@ -7413,6 +9425,11 @@ repository = {
    },
    ["modicator.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -7669,6 +9686,26 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["navigator.nvim"] = {
@@ -7718,6 +9755,61 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-10"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-11"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-12"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-9"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["neoai.nvim"] = {
@@ -7736,6 +9828,111 @@ repository = {
    },
    ["neoconf.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-10"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-11"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-12"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-13"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-14"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-15"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-16"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-17"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-18"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-19"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-20"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-21"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-22"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-9"] = {
          {
             arch = "rockspec"
          }
@@ -7760,6 +9957,61 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-10"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-11"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-12"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-9"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    neorg = {
@@ -7781,6 +10033,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["neotest-bun"] = {
@@ -7799,6 +10056,16 @@ repository = {
    },
    ["neotest-dart"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -8179,6 +10446,21 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-66"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-67"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-68"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-7"] = {
          {
             arch = "rockspec"
@@ -8320,10 +10602,50 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["nlsp-settings.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
          {
             arch = "rockspec"
          }
@@ -8371,6 +10693,13 @@ repository = {
          }
       }
    },
+   nom = {
+      ["dev-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ["none-ls-extras.nvim"] = {
       ["scm-1"] = {
          {
@@ -8380,6 +10709,78 @@ repository = {
    },
    ["none-ls.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["nonicons.nvim"] = {
+      ["scm-54"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-55"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-56"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-57"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-58"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-59"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-60"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-61"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-62"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-63"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-64"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-65"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-66"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-68"] = {
          {
             arch = "rockspec"
          }
@@ -8411,6 +10812,16 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["nvim-asciidoc-preview"] = {
@@ -8422,6 +10833,11 @@ repository = {
    },
    ["nvim-autopairs"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -8450,6 +10866,11 @@ repository = {
    },
    ["nvim-colorizer.lua"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -8516,6 +10937,23 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["nvim-esmodtree"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["nvim-fzf"] = {
@@ -8537,6 +10975,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["nvim-lightbulb"] = {
@@ -8544,10 +10987,35 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["nvim-lint"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
          {
             arch = "rockspec"
          }
@@ -8569,6 +11037,26 @@ repository = {
    },
    ["nvim-metals"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
          {
             arch = "rockspec"
          }
@@ -8621,6 +11109,16 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["nvim-spectre"] = {
@@ -8632,6 +11130,11 @@ repository = {
    },
    ["nvim-spider"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -8649,6 +11152,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["nvim-treesitter-legacy-api"] = {
@@ -8663,10 +11171,20 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["nvim-ts-autotag"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -8681,6 +11199,11 @@ repository = {
    },
    ["nvim-various-textobjs"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -8719,10 +11242,225 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-10"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-11"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-12"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-13"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-14"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-15"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-16"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-17"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-18"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-19"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-20"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-21"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-22"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-23"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-24"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-25"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-26"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-27"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-28"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-29"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-30"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-31"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-32"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-33"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-9"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["octo.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-10"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-11"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-12"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-9"] = {
          {
             arch = "rockspec"
          }
@@ -8754,6 +11492,26 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ollama = {
@@ -8765,6 +11523,16 @@ repository = {
    },
    ["omnisharp-extended-lsp.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -8782,6 +11550,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["onedarkpro.nvim"] = {
@@ -8789,10 +11562,20 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["onenord.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -8919,6 +11702,13 @@ repository = {
          }
       }
    },
+   ["osm2pgsql-themepark"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ["other.nvim"] = {
       ["scm-1"] = {
          {
@@ -8945,10 +11735,35 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["package-info.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -9097,10 +11912,27 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["persistence.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["pico-sdl"] = {
+      ["dev-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["dev-2"] = {
          {
             arch = "rockspec"
          }
@@ -9277,14 +12109,59 @@ repository = {
          }
       }
    },
-   primes = {
-      ["dev-1"] = {
+   ["preview.nvim"] = {
+      ["scm-107"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-109"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-110"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-111"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-112"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-113"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-114"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-115"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-116"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-117"] = {
          {
             arch = "rockspec"
          }
       }
    },
-   ["printoptions.sile"] = {
+   primes = {
       ["dev-1"] = {
          {
             arch = "rockspec"
@@ -9455,6 +12332,13 @@ repository = {
          }
       }
    },
+   ["pvz.nvim"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ["qrcode.sile"] = {
       ["dev-1"] = {
          {
@@ -9464,6 +12348,16 @@ repository = {
    },
    ["quicker.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -9478,6 +12372,26 @@ repository = {
    },
    ["rainbow-delimiters.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
          {
             arch = "rockspec"
          }
@@ -9572,6 +12486,66 @@ repository = {
    },
    ["refactoring.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-10"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-11"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-12"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-13"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-9"] = {
          {
             arch = "rockspec"
          }
@@ -9815,6 +12789,21 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    rough = {
@@ -9828,8 +12817,6 @@ repository = {
       ["scm-1"] = {
          {
             arch = "rockspec"
-         }, {
-            arch = "src"
          }
       }
    },
@@ -10055,6 +13042,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    seed = {
@@ -10196,6 +13188,13 @@ repository = {
          }
       }
    },
+   ["shlex-lpeg"] = {
+      ["dev-2"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    showkeys = {
       ["dev-1"] = {
          {
@@ -10229,7 +13228,7 @@ repository = {
          }
       }
    },
-   ["silex.sile"] = {
+   silicord = {
       ["dev-1"] = {
          {
             arch = "rockspec"
@@ -10273,6 +13272,46 @@ repository = {
    },
    ["smart-splits.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-9"] = {
          {
             arch = "rockspec"
          }
@@ -10329,6 +13368,16 @@ repository = {
    },
    ["snacks.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -10473,6 +13522,16 @@ repository = {
    },
    ["startup.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -10925,6 +13984,21 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["telescope-project.nvim"] = {
@@ -11102,6 +14176,16 @@ repository = {
    },
    ["tmux.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -12203,6 +15287,13 @@ repository = {
          }
       }
    },
+   ["tree-sitter-jjdescription"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ["tree-sitter-jq"] = {
       ["scm-1"] = {
          {
@@ -12534,6 +15625,371 @@ repository = {
    },
    ["tree-sitter-nu"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-10"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-11"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-12"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-13"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-14"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-15"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-16"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-17"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-18"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-19"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-20"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-21"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-22"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-23"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-24"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-25"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-26"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-27"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-28"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-29"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-30"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-31"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-32"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-33"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-34"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-35"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-36"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-37"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-38"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-39"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-40"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-41"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-42"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-43"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-44"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-45"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-46"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-47"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-48"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-49"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-50"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-51"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-52"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-53"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-54"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-55"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-56"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-57"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-58"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-59"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-60"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-61"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-62"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-63"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-64"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-65"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-66"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-67"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-68"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-69"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-70"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-71"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-72"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-73"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-74"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-9"] = {
          {
             arch = "rockspec"
          }
@@ -13587,6 +17043,16 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    treh = {
@@ -13680,6 +17146,13 @@ repository = {
    },
    ["typescript-tools.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["typst-lua"] = {
+      ["dev-1"] = {
          {
             arch = "rockspec"
          }
@@ -13872,10 +17345,35 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["vim-moonfly-colors"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
          {
             arch = "rockspec"
          }
@@ -13886,6 +17384,21 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["vim-startuptime"] = {
@@ -13893,10 +17406,60 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["vim-test"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-9"] = {
          {
             arch = "rockspec"
          }
@@ -13925,6 +17488,11 @@ repository = {
    },
    ["visual-whitespace.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -14265,6 +17833,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    yenc = {
@@ -14337,6 +17910,16 @@ repository = {
    },
    ["zk-nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
