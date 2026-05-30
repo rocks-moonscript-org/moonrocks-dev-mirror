@@ -1252,6 +1252,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["ccc.nvim"] = {
@@ -1811,6 +1816,11 @@ repository = {
          }
       },
       ["scm-16"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-17"] = {
          {
             arch = "rockspec"
          }
@@ -8820,6 +8830,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.files"] = {
@@ -8854,6 +8869,11 @@ repository = {
          }
       },
       ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
          {
             arch = "rockspec"
          }
@@ -9182,6 +9202,11 @@ repository = {
          }
       },
       ["scm-27"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-28"] = {
          {
             arch = "rockspec"
          }
@@ -10990,6 +11015,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["nvim-comment"] = {
@@ -11485,6 +11515,11 @@ repository = {
          }
       },
       ["scm-33"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-34"] = {
          {
             arch = "rockspec"
          }
@@ -13408,6 +13443,11 @@ repository = {
    },
    ["smart-splits.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-10"] = {
          {
             arch = "rockspec"
          }
@@ -16135,6 +16175,16 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-78"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-79"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-8"] = {
          {
             arch = "rockspec"
@@ -17576,6 +17626,11 @@ repository = {
    },
    ["vim-test"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-10"] = {
          {
             arch = "rockspec"
          }
