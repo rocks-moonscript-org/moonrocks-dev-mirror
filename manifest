@@ -8709,6 +8709,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.colors"] = {
@@ -9251,6 +9256,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-30"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-4"] = {
          {
             arch = "rockspec"
@@ -9528,6 +9538,11 @@ repository = {
          }
       },
       ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -10084,6 +10099,11 @@ repository = {
          }
       },
       ["scm-23"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-24"] = {
          {
             arch = "rockspec"
          }
@@ -11570,6 +11590,11 @@ repository = {
          }
       },
       ["scm-34"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-35"] = {
          {
             arch = "rockspec"
          }
@@ -16275,6 +16300,16 @@ repository = {
          }
       },
       ["scm-83"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-84"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-85"] = {
          {
             arch = "rockspec"
          }
