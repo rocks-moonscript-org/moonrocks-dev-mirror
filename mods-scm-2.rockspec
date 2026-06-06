@@ -1,20 +1,15 @@
 rockspec_format = "3.0"
 
 package = "mods"
-version = "scm-1"
+version = "scm-2"
 source = {
-  url = "git+https://github.com/luamod/mods.git",
+  url = "git+https://github.com/BlueLua/mods.git",
 }
 
 description = {
   summary = "Pure Lua modules",
-  homepage = "https://luamod.github.io/mods",
+  homepage = "https://BlueLua.github.io/mods",
   license = "MIT",
-  detailed = [[
-Mods provides small, focused Lua modules:
-fs, calendar, glob, is, keyword, List, log, ntpath, operator, path, posixpath,
-repr, runtime, Set, str, stringcase, tbl, template, and validate.
-]],
 }
 
 dependencies = {
@@ -24,7 +19,7 @@ dependencies = {
 build = {
   type = "builtin",
   modules = {
-    ["mods"] = "src/mods/init.lua",
+    mods = "src/mods/init.lua",
     ["mods._compat"] = "src/mods/_compat.lua",
     ["mods._date_duration"] = "src/mods/_date_duration.lua",
     ["mods.calendar"] = "src/mods/calendar.lua",
