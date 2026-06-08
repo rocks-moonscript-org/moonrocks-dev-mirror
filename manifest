@@ -8939,6 +8939,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.files"] = {
@@ -9098,10 +9103,20 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.input"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -9124,6 +9139,11 @@ repository = {
          }
       },
       ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
          {
             arch = "rockspec"
          }
@@ -9383,6 +9403,11 @@ repository = {
          }
       },
       ["scm-34"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-35"] = {
          {
             arch = "rockspec"
          }
@@ -14041,6 +14066,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["statuscol.nvim"] = {
@@ -16613,6 +16643,16 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-95"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-96"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["tree-sitter-objc"] = {
@@ -18507,6 +18547,11 @@ repository = {
          }
       },
       ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
          {
             arch = "rockspec"
          }
