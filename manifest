@@ -1864,6 +1864,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-19"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-2"] = {
          {
             arch = "rockspec"
@@ -8322,6 +8327,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-10"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-2"] = {
          {
             arch = "rockspec"
@@ -8384,6 +8394,11 @@ repository = {
          }
       },
       ["scm-10"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-11"] = {
          {
             arch = "rockspec"
          }
@@ -9103,6 +9118,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.indentscope"] = {
@@ -9134,6 +9154,11 @@ repository = {
          }
       },
       ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -9244,6 +9269,11 @@ repository = {
          }
       },
       ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
          {
             arch = "rockspec"
          }
@@ -9429,6 +9459,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-36"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-4"] = {
          {
             arch = "rockspec"
@@ -9491,6 +9526,11 @@ repository = {
    },
    ["mini.pick"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-10"] = {
          {
             arch = "rockspec"
          }
@@ -10349,6 +10389,11 @@ repository = {
          }
       },
       ["scm-28"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-29"] = {
          {
             arch = "rockspec"
          }
@@ -11890,6 +11935,16 @@ repository = {
          }
       },
       ["scm-42"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-43"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-44"] = {
          {
             arch = "rockspec"
          }
@@ -16237,6 +16292,16 @@ repository = {
          }
       },
       ["scm-102"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-103"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-104"] = {
          {
             arch = "rockspec"
          }
