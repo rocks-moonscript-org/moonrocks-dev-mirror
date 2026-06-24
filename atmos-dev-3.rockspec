@@ -1,5 +1,5 @@
 package = "atmos"
-version = "dev-1"
+version = "dev-3"
 source = {
    url = "git+https://github.com/lua-atmos/atmos",
    branch = "main",
@@ -17,12 +17,23 @@ description = {
         - A `task` primitive with deterministic scheduling provides predictable
           behavior and safe abortion.
         - Structured primitives compose concurrent tasks with lexical scope (e.g.,
-          `watching`, `every`, `par_or`).
+          `watching`, `loop_on`, `par_any`).
         - A `tasks` container primitive holds attached tasks and controls their
           lifecycle.
     - Event Signaling Mechanisms:
         - An `await` primitive suspends a task and waits for events.
         - An `emit` primitive signals events and awakes awaiting tasks.
+
+    Atmos also complements its core synchronous concurrency model with
+    Functional Streams (à la ReactiveX) and Multithreading Parallelism
+    (via LuaLanes):
+
+    - Functional Streams:
+        - Interoperability with tasks & events.
+        - Safe finalization of stateful streams.
+    - Asynchronous Parallelism:
+        - A `thread` primitive offloads computations to isolated OS threads.
+        - Safe abortion and finalization for threads.
 
     Atmos is inspired by synchronous programming languages like Céu
     and Esterel.
@@ -32,7 +43,7 @@ description = {
 }
 dependencies = {
    "lua >= 5.4",
-   "f-streams ~> 0.2",
+   "f-streams",
 }
 build = {
    type = "builtin",
