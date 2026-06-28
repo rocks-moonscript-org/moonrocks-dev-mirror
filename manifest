@@ -3369,6 +3369,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-516"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    forget = {
@@ -9563,6 +9568,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.keymap"] = {
@@ -9882,6 +9892,11 @@ repository = {
          }
       },
       ["scm-44"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-45"] = {
          {
             arch = "rockspec"
          }
@@ -10750,6 +10765,11 @@ repository = {
          }
       },
       ["scm-18"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-19"] = {
          {
             arch = "rockspec"
          }
