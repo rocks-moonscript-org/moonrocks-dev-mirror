@@ -11141,6 +11141,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-37"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-4"] = {
          {
             arch = "rockspec"
@@ -11218,6 +11223,11 @@ repository = {
          }
       },
       ["scm-15"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-16"] = {
          {
             arch = "rockspec"
          }
@@ -12567,6 +12577,11 @@ repository = {
          }
       },
       ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
          {
             arch = "rockspec"
          }
