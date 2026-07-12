@@ -609,6 +609,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-11"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-2"] = {
          {
             arch = "rockspec"
@@ -11470,6 +11475,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-40"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-5"] = {
          {
             arch = "rockspec"
@@ -12512,6 +12522,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["nvim-comment"] = {
@@ -13247,6 +13262,11 @@ repository = {
          }
       },
       ["scm-65"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-66"] = {
          {
             arch = "rockspec"
          }
@@ -16833,6 +16853,13 @@ repository = {
          }
       }
    },
+   ["tree-sitter-expando"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ["tree-sitter-facility"] = {
       ["scm-1"] = {
          {
@@ -18990,6 +19017,13 @@ repository = {
       }
    },
    ["tree-sitter-tmux"] = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   ["tree-sitter-tmuxf"] = {
       ["scm-1"] = {
          {
             arch = "rockspec"
