@@ -9491,6 +9491,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-18"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-2"] = {
          {
             arch = "rockspec"
@@ -10282,6 +10287,11 @@ repository = {
          }
       },
       ["scm-54"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-55"] = {
          {
             arch = "rockspec"
          }
@@ -12583,6 +12593,11 @@ repository = {
    },
    ["nvim-dap-ui"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
