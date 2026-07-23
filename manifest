@@ -1362,6 +1362,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-9"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["ccc.nvim"] = {
@@ -9575,6 +9580,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-19"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-2"] = {
          {
             arch = "rockspec"
@@ -10390,6 +10400,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-59"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-6"] = {
          {
             arch = "rockspec"
@@ -10465,6 +10480,11 @@ repository = {
          }
       },
       ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-7"] = {
          {
             arch = "rockspec"
          }
@@ -13456,6 +13476,11 @@ repository = {
          }
       },
       ["scm-67"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-68"] = {
          {
             arch = "rockspec"
          }
