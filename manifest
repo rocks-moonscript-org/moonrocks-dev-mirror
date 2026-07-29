@@ -1133,6 +1133,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["blitz-extensions"] = {
@@ -1658,6 +1663,26 @@ repository = {
          }
       },
       ["scm-50"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-51"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-52"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-53"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-54"] = {
          {
             arch = "rockspec"
          }
@@ -2819,6 +2844,11 @@ repository = {
          }
       },
       ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
          {
             arch = "rockspec"
          }
@@ -11644,6 +11674,16 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-21"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-22"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-3"] = {
          {
             arch = "rockspec"
@@ -18375,6 +18415,21 @@ repository = {
          }
       },
       ["scm-113"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-114"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-115"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-116"] = {
          {
             arch = "rockspec"
          }
