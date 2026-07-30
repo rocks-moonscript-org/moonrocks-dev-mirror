@@ -1687,6 +1687,21 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-55"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-56"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-57"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-7"] = {
          {
             arch = "rockspec"
@@ -11564,6 +11579,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["navigator.nvim"] = {
@@ -11680,6 +11700,11 @@ repository = {
          }
       },
       ["scm-22"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-23"] = {
          {
             arch = "rockspec"
          }
@@ -12777,6 +12802,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-9"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    nn = {
@@ -13469,6 +13499,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    oauth_light = {
@@ -13827,6 +13862,16 @@ repository = {
          }
       },
       ["scm-71"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-72"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-73"] = {
          {
             arch = "rockspec"
          }
@@ -14267,6 +14312,11 @@ repository = {
          }
       },
       ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
          {
             arch = "rockspec"
          }
@@ -14919,6 +14969,11 @@ repository = {
          }
       },
       ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-6"] = {
          {
             arch = "rockspec"
          }
@@ -18434,6 +18489,16 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-117"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-118"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-12"] = {
          {
             arch = "rockspec"
@@ -20843,6 +20908,13 @@ repository = {
    },
    yenc = {
       ["scm-0"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
+   yoda = {
+      ["dev-1"] = {
          {
             arch = "rockspec"
          }
