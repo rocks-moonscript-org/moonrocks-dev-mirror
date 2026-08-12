@@ -2123,6 +2123,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-10"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-2"] = {
          {
             arch = "rockspec"
@@ -2154,6 +2159,11 @@ repository = {
          }
       },
       ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-9"] = {
          {
             arch = "rockspec"
          }
@@ -2873,6 +2883,11 @@ repository = {
          }
       },
       ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
          {
             arch = "rockspec"
          }
@@ -11881,6 +11896,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-27"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-3"] = {
          {
             arch = "rockspec"
@@ -14114,6 +14134,11 @@ repository = {
          }
       },
       ["scm-74"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-75"] = {
          {
             arch = "rockspec"
          }
