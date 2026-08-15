@@ -1,6 +1,6 @@
-local git_ref = 'e7dd173bf4dad3b007445d498315d240b0024db0'
+local git_ref = 'da55309cad5047fc7b9ce375b82013b9e441d4db'
 local modrev = 'scm'
-local specrev = '1'
+local specrev = '101'
 
 local repo_url = 'https://github.com/barrettruth/forge.nvim'
 
@@ -9,11 +9,11 @@ package = 'forge.nvim'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = 'forge workflow for Neovim',
+  summary = '',
   detailed = '',
   labels = { },
   homepage = 'https://github.com/barrettruth/forge.nvim',
-  license = 'MIT'
+  license = 'GPL-3.0'
 }
 
 dependencies = { 'lua >= 5.1' } 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'forge.nvim-' .. 'e7dd173bf4dad3b007445d498315d240b0024db0',
+  dir = 'forge.nvim-' .. 'da55309cad5047fc7b9ce375b82013b9e441d4db',
 }
 
 if modrev == 'scm' or modrev == 'dev' then

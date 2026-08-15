@@ -3458,382 +3458,37 @@ repository = {
       }
    },
    ["forge.nvim"] = {
-      ["scm-1"] = {
+      ["scm-101"] = {
          {
             arch = "rockspec"
          }
       },
-      ["scm-401"] = {
+      ["scm-105"] = {
          {
             arch = "rockspec"
          }
       },
-      ["scm-402"] = {
+      ["scm-108"] = {
          {
             arch = "rockspec"
          }
       },
-      ["scm-403"] = {
+      ["scm-128"] = {
          {
             arch = "rockspec"
          }
       },
-      ["scm-404"] = {
+      ["scm-136"] = {
          {
             arch = "rockspec"
          }
       },
-      ["scm-405"] = {
+      ["scm-139"] = {
          {
             arch = "rockspec"
          }
       },
-      ["scm-406"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-407"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-408"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-409"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-410"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-411"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-412"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-413"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-414"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-415"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-416"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-417"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-418"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-419"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-420"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-421"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-422"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-423"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-424"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-425"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-428"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-429"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-430"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-431"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-433"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-434"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-435"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-436"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-437"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-438"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-439"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-440"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-441"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-442"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-443"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-444"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-445"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-446"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-447"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-448"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-449"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-462"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-463"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-464"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-465"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-467"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-468"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-469"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-470"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-471"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-472"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-475"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-476"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-477"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-478"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-479"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-480"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-481"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-482"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-483"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-484"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-485"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-486"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-487"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-507"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-511"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-512"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-514"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-515"] = {
-         {
-            arch = "rockspec"
-         }
-      },
-      ["scm-516"] = {
+      ["scm-146"] = {
          {
             arch = "rockspec"
          }
@@ -10861,6 +10516,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-65"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-7"] = {
          {
             arch = "rockspec"
@@ -11902,6 +11562,11 @@ repository = {
          }
       },
       ["scm-27"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-28"] = {
          {
             arch = "rockspec"
          }
@@ -14639,6 +14304,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-9"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["paged-markdown-3"] = {
@@ -16324,6 +15994,11 @@ repository = {
          }
       },
       ["scm-25"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-26"] = {
          {
             arch = "rockspec"
          }
@@ -18879,6 +18554,16 @@ repository = {
          }
       },
       ["scm-126"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-127"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-128"] = {
          {
             arch = "rockspec"
          }
