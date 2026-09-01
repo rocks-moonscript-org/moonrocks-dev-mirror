@@ -2906,6 +2906,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    elan = {
@@ -3918,6 +3923,16 @@ repository = {
    },
    ["glance.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -14215,7 +14230,22 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-79"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-80"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-81"] = {
          {
             arch = "rockspec"
          }
@@ -14873,6 +14903,11 @@ repository = {
          }
       },
       ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-5"] = {
          {
             arch = "rockspec"
          }
@@ -21504,6 +21539,11 @@ repository = {
    },
    ["zk-nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-10"] = {
          {
             arch = "rockspec"
          }
