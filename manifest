@@ -1168,6 +1168,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-6"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["blitz-extensions"] = {
@@ -3832,6 +3837,11 @@ repository = {
          }
       },
       ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-9"] = {
          {
             arch = "rockspec"
          }
@@ -9540,6 +9550,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-9"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.cmdline"] = {
@@ -10842,6 +10857,11 @@ repository = {
          }
       },
       ["scm-72"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-73"] = {
          {
             arch = "rockspec"
          }
