@@ -1180,6 +1180,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["blitz-extensions"] = {
@@ -2370,6 +2375,11 @@ repository = {
          }
       },
       ["scm-30"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-31"] = {
          {
             arch = "rockspec"
          }
@@ -3710,6 +3720,11 @@ repository = {
    },
    ["friendly-snippets"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
@@ -5414,6 +5429,11 @@ repository = {
    },
    ["leap.nvim"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-10"] = {
          {
             arch = "rockspec"
          }
@@ -9269,6 +9289,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-13"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-2"] = {
          {
             arch = "rockspec"
@@ -9493,6 +9518,11 @@ repository = {
          }
       },
       ["scm-7"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-8"] = {
          {
             arch = "rockspec"
          }
@@ -10893,6 +10923,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-74"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-8"] = {
          {
             arch = "rockspec"
@@ -11005,6 +11040,11 @@ repository = {
          }
       },
       ["scm-15"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-16"] = {
          {
             arch = "rockspec"
          }
@@ -12016,6 +12056,11 @@ repository = {
          }
       },
       ["scm-34"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-35"] = {
          {
             arch = "rockspec"
          }
@@ -16673,6 +16718,11 @@ repository = {
          }
       },
       ["scm-30"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-31"] = {
          {
             arch = "rockspec"
          }
