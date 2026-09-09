@@ -507,6 +507,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["autoclose.nvim"] = {
@@ -2384,6 +2389,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-32"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-4"] = {
          {
             arch = "rockspec"
@@ -3489,6 +3499,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-8"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    fmtstr = {
@@ -3725,6 +3740,11 @@ repository = {
          }
       },
       ["scm-2"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-3"] = {
          {
             arch = "rockspec"
          }
@@ -8989,6 +9009,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-22"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-3"] = {
          {
             arch = "rockspec"
@@ -10415,6 +10440,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-9"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.keymap"] = {
@@ -10928,6 +10958,11 @@ repository = {
             arch = "rockspec"
          }
       },
+      ["scm-75"] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ["scm-8"] = {
          {
             arch = "rockspec"
@@ -11253,6 +11288,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-4"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["mini.statusline"] = {
@@ -11388,6 +11428,11 @@ repository = {
    },
    ["mini.test"] = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-10"] = {
          {
             arch = "rockspec"
          }
@@ -14696,6 +14741,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-5"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["onenord.nvim"] = {
@@ -14862,6 +14912,11 @@ repository = {
          }
       },
       ["scm-3"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-4"] = {
          {
             arch = "rockspec"
          }
