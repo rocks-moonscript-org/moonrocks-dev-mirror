@@ -1,19 +1,19 @@
-local git_ref = 'da55309cad5047fc7b9ce375b82013b9e441d4db'
+local git_ref = '4b4ddd196526fd3d6fd091d931810f9743e936d3'
 local modrev = 'scm'
-local specrev = '101'
+local specrev = '6'
 
-local repo_url = 'https://github.com/barrettruth/forge.nvim'
+local repo_url = 'https://github.com/gbprod/yanky.nvim'
 
 rockspec_format = '3.0'
-package = 'forge.nvim'
+package = 'yanky.nvim'
 version = modrev ..'-'.. specrev
 
 description = {
-  summary = '',
+  summary = 'Improved Yank and Put functionalities for Neovim',
   detailed = '',
-  labels = { },
-  homepage = 'https://github.com/barrettruth/forge.nvim',
-  license = 'GPL-3.0'
+  labels = { 'neovim' } ,
+  homepage = 'https://github.com/gbprod/yanky.nvim',
+  license = 'WTFPL'
 }
 
 dependencies = { 'lua >= 5.1' } 
@@ -22,7 +22,7 @@ test_dependencies = { }
 
 source = {
   url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = 'forge.nvim-' .. 'da55309cad5047fc7b9ce375b82013b9e441d4db',
+  dir = 'yanky.nvim-' .. '4b4ddd196526fd3d6fd091d931810f9743e936d3',
 }
 
 if modrev == 'scm' or modrev == 'dev' then
