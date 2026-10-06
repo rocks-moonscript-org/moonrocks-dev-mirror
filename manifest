@@ -2081,6 +2081,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["scm-55"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    ["cqueues-pgsql"] = {
@@ -20962,6 +20967,11 @@ repository = {
    },
    volksdata = {
       ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }
