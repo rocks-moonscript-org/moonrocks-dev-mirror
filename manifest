@@ -8684,6 +8684,13 @@ repository = {
          }
       }
    },
+   mhttp = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    microscope = {
       ["scm-0"] = {
          {
@@ -14857,7 +14864,7 @@ repository = {
       }
    },
    pocket_archive = {
-      ["scm-1"] = {
+      ["scm-2"] = {
          {
             arch = "rockspec"
          }

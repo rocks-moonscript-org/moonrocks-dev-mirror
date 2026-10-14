@@ -1,11 +1,10 @@
 package = "pocket_archive"
-version = "scm-1"
+version = "scm-2"
 rockspec_format = "3.0"
 
 source = {
     url = "git+https://git.knowledgetx.com/scossu/pocket_archive.git",
     branch = "master",
-    tag = "HEAD",
 }
 
 description = {
@@ -18,41 +17,45 @@ description = {
     ]],
     homepage = "http://git.knowledgetx.com/scossu/pocket_archive",
     license =
-        "https://git.knowledgetx.com/scossu/pocket_archive/src/master/LICENSE"
+        "https://git.knowledgetx.com/scossu/pocket_archive/src/master/LICENSE",
+    labels = {
+        "rdf",
+        "archive",
+    },
 }
 
 supported_platforms = { "linux", }
 
 dependencies = {
-   "lua >= 5.4",
+   "lua >= 5.4, <6",
 
    "cli",
    "datafile",
    "etlua",
    "scossu/ftcsv",  -- TODO Use root package when changes are published to new release.
+   "http",
+   "inotify",
    "libmagic",
    "lua-cjson",
+   "lua-discount",
    "lua-vips",
    "luaposix",
+   "luarocks",  -- To find module paths.
+   "mimetypes",
    "penlight",
    "sllog",
    "luasocket",
-   "pegasus",
    "volksdata",
-   "watchdog",
 }
 
 test_dependencies = {
-    "busted",
+    "u-test",
     "htmlparser",
 }
 
 build = {
     type = "builtin",
     modules = {
-        -- markdown is not set up for Lua 5.4 and cannot be installed via
-        -- Luarocks. Embedding the source here.
-        ["markdown"] = "ext/markdown/markdown.lua",
         ["monocypher"] = {
             "ext/monocypher/monocypher.c",
             "ext/monocypher/lua_monocypher.c",
@@ -60,13 +63,15 @@ build = {
         ["pocket_archive"] = "src/core.lua",
         ["pocket_archive.api"] = "src/api.lua",
         ["pocket_archive.cmdoc"] = "src/cmdoc.lua",
+        ["pocket_archive.config_parser"] = "src/config_parser.lua",
         ["pocket_archive.flags"] = "src/flags.lua",
         ["pocket_archive.fs"] = "src/fs.lua",
         ["pocket_archive.model"] = "src/model.lua",
-        ["pocket_archive.repo"] = "src/repo.lua",
         ["pocket_archive.presentation"] = "src/presentation.lua",
+        ["pocket_archive.repo"] = "src/repo.lua",
         ["pocket_archive.submission"] = "src/submission.lua",
         ["pocket_archive.transformers"] = "src/transformers.lua",
+        ["pocket_archive.tree"] = "src/tree.lua",
         ["pocket_archive.validator"] = "src/validator.lua",
     },
     install = {bin = {
@@ -81,4 +86,9 @@ build = {
         "templates",
         "test",
     },
+}
+
+test = {
+    type = "command",
+    command = "PKAR_CONFIG_DIR=test/config lua run_tests.lua",
 }
