@@ -2352,6 +2352,13 @@ repository = {
          }
       }
    },
+   digest = {
+      ["scm-0"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    dinner = {
       ["scm-2"] = {
          {
