@@ -555,6 +555,13 @@ repository = {
          }
       }
    },
+   ["avante.nvim"] = {
+      ["dev-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    avro = {
       ["scm-0"] = {
          {
