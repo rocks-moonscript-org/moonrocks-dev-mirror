@@ -1,5 +1,5 @@
 package = "pocket_archive"
-version = "scm-4"
+version = "scm-0"
 rockspec_format = "3.0"
 
 source = {
@@ -59,8 +59,9 @@ build = {
             "ext/monocypher/monocypher.c",
             "ext/monocypher/lua_monocypher.c",
         },
+
         ["pocket_archive"] = "src/core.lua",
-        ["pocket_archive.api"] = "src/api.lua",
+        ["pocket_archive.admin"] = "src/admin.lua",
         ["pocket_archive.cmdoc"] = "src/cmdoc.lua",
         ["pocket_archive.config_parser"] = "src/config_parser.lua",
         ["pocket_archive.flags"] = "src/flags.lua",
@@ -72,6 +73,8 @@ build = {
         ["pocket_archive.transformers"] = "src/transformers.lua",
         ["pocket_archive.tree"] = "src/tree.lua",
         ["pocket_archive.validator"] = "src/validator.lua",
+
+        ["table_serializer"] = "ext/lua_table_serializer/serialize_lua_graph.lua",
     },
     install = {bin = {
         pkar = "src/util/pkar.lua",
